@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -221,7 +222,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Corporate Events Booking Section - with button moved */}
+        {/* Corporate Events Booking Section - Moved before Featured Programs */}
         <section className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -262,7 +263,7 @@ export default function Index() {
                   </li>
                 </ul>
                 
-                {/* Moved button here - right after the text content */}
+                {/* Button right after the text content */}
                 <div className="mb-6 sm:mb-8">
                   <Button asChild size="lg" className="btn-primary">
                     <Link to="/eventos-corporativos">¿Quieres celebrar un evento de Innovación?</Link>
