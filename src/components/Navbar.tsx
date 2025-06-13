@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map(link => <li key={link.name} className="relative">
-              <Link to={link.path} className="font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full">
+              <Link to={link.path} className={cn("font-medium transition-colors hover:text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full", scrolled ? "text-foreground" : "text-white")}>
                 {link.name}
               </Link>
             </li>)}
@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center space-x-2">
           <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="rounded-full">
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className={cn("rounded-full", scrolled ? "text-foreground" : "text-white hover:text-white")}>
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
