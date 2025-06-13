@@ -1,10 +1,8 @@
 
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
@@ -54,35 +52,15 @@ export default function HeroSection() {
             />
           </div>
           
-          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">
+          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 tracking-wide border-b border-white/30 pb-2">
             Un proyecto de Grupo Martínez
           </span>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight">
             Turismo sostenible y desarrollo digital de las empresas canarias
           </h1>
-          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones innovadoras que conectan el turismo responsable con las nuevas tecnologías.
           </p>
-          
-          {/* Líneas de actuación */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
-              <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-xs sm:text-sm">Innovación</h3>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
-              <Building2 className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-xs sm:text-sm">Transformación Empresarial</h3>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
-              <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-xs sm:text-sm">Sostenibilidad</h3>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
-              <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-xs sm:text-sm">Inteligencia Artificial</h3>
-            </div>
-          </div>
           
           <div className="flex justify-center mb-8 sm:mb-12">
             <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white">
@@ -108,4 +86,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
