@@ -327,7 +327,7 @@ export default function Index() {
                 {t.home.cta.description}
               </p>
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/booking">{t.home.cta.bookNow}</Link>
+                <Link to="/booking">¿Quiere organizar un congreso de Innovación?</Link>
               </Button>
             </div>
           </div>
