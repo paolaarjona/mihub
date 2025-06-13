@@ -10,6 +10,8 @@ import BookingPage from "./pages/BookingPage";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Amenities from "./pages/Amenities";
+import Proyectos from "./pages/Proyectos";
+import EventosCorporativos from "./pages/EventosCorporativos";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -26,6 +28,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/apartments" element={<Apartments />} />
+            <Route path="/proyectos" element={<Proyectos />} />
+            <Route path="/eventos-corporativos" element={<EventosCorporativos />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
