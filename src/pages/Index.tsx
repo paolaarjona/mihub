@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -60,24 +59,19 @@ export default function Index() {
   // Metodología en 3 fases - orientada a implementar proyectos de innovación
   const methodology = [
     {
-      image: "/lovable-uploads/dd0a5d15-b2e9-43af-babb-ce1fc7b4e20e.png",
+      image: "/lovable-uploads/a0dc24d3-568a-4cbd-8b70-a6df3582aff9.png",
       title: "Fase 1: Identificación de Oportunidades",
       description: "Análisis del negocio para identificar áreas de mejora y oportunidades de innovación específicas que generen valor real."
     },
     {
-      image: "/lovable-uploads/31c02687-e8f1-41c7-9c48-1c75c325ccc2.png", 
+      image: "/lovable-uploads/708c9416-685c-4a6b-8379-e92825600030.png", 
       title: "Fase 2: Desarrollo de Proyectos",
       description: "Diseño y planificación de proyectos de innovación personalizados, con metodologías ágiles y equipos multidisciplinares."
     },
     {
-      image: "/lovable-uploads/be633210-362d-43e6-8e78-e8c16155a0ac.png",
+      image: "/lovable-uploads/f3ee74ab-d475-4adf-912a-07fc4c15e707.png",
       title: "Fase 3: Implementación y Seguimiento",
       description: "Puesta en marcha de los proyectos con acompañamiento continuo, medición de resultados y optimización."
-    },
-    {
-      image: "/lovable-uploads/6f489470-b140-4756-b1bf-12622dfad003.png",
-      title: "Fase 4: Inteligencia Artificial",
-      description: "Integración de soluciones de IA para optimizar procesos y crear nuevas oportunidades de negocio."
     }
   ];
   
@@ -344,7 +338,7 @@ export default function Index() {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/booking">¿Quiere celebrar un evento corporativo?</Link>
+                <Link to="/booking">¿Quiere organizar un congreso de Innovación?</Link>
               </Button>
             </div>
           </div>
