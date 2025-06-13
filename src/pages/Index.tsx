@@ -221,7 +221,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Corporate Events Booking Section - Moved here */}
+        {/* Corporate Events Booking Section - with button moved */}
         <section className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -261,6 +261,13 @@ export default function Index() {
                     Networking con el ecosistema de innovación canario
                   </li>
                 </ul>
+                
+                {/* Moved button here - right after the text content */}
+                <div className="mb-6 sm:mb-8">
+                  <Button asChild size="lg" className="btn-primary">
+                    <Link to="/eventos-corporativos">¿Quieres celebrar un evento de Innovación?</Link>
+                  </Button>
+                </div>
               </div>
               
               <div className="order-1 lg:order-2">
@@ -383,17 +390,6 @@ export default function Index() {
               <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
                 {t.home.cta.description}
               </p>
-            </div>
-          </div>
-        </section>
-        
-        {/* Congress Organization CTA - Now at the very end */}
-        <section className="relative section bg-muted/30">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <Button asChild size="lg" className="btn-primary">
-                <Link to="/eventos-corporativos">¿Quieres celebrar un evento de Innovación?</Link>
-              </Button>
             </div>
           </div>
         </section>
