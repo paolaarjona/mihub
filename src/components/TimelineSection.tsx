@@ -1,5 +1,5 @@
 
-import { Calendar, Users, Lightbulb, Zap } from "lucide-react";
+import { Calendar, Users, Lightbulb, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Carousel,
@@ -94,9 +94,24 @@ export default function TimelineSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            
+            {/* Flechas personalizadas con mejor visibilidad */}
+            <CarouselPrevious className="flex md:flex -left-4 md:-left-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+              <ChevronLeft className="h-5 w-5" />
+            </CarouselPrevious>
+            <CarouselNext className="flex md:flex -right-4 md:-right-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+              <ChevronRight className="h-5 w-5" />
+            </CarouselNext>
           </Carousel>
+          
+          {/* Indicador de dirección para móviles */}
+          <div className="flex md:hidden justify-center mt-4 text-xs text-muted-foreground">
+            <span className="flex items-center">
+              <ChevronLeft className="h-3 w-3 mr-1" />
+              Desliza para ver más
+              <ChevronRight className="h-3 w-3 ml-1" />
+            </span>
+          </div>
         </div>
       </div>
     </section>
