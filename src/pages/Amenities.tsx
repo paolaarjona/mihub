@@ -9,7 +9,6 @@ export default function Amenities() {
   const { t } = useLanguage();
   
   useEffect(() => {
-    // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
   
@@ -31,16 +30,16 @@ export default function Amenities() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background">
-          <div className="container relative z-10 pt-20">
+        <section className="relative section bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background">
+          <div className="container relative z-10 pt-16 sm:pt-20">
             <div className="text-center max-w-3xl mx-auto">
-              <span className="text-sm text-primary font-medium uppercase tracking-wider">
+              <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
                 MareSereno
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-2 mb-4 sm:mb-6">
                 {t.amenitiesPage.title}
               </h1>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-sm sm:text-base">
                 {t.amenitiesPage.subtitle}
               </p>
             </div>
@@ -48,16 +47,16 @@ export default function Amenities() {
           
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
-            <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-primary/50 blur-3xl" />
-            <div className="absolute bottom-10 right-40 w-48 h-48 rounded-full bg-sea-light blur-3xl" />
+            <div className="absolute top-10 right-10 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 rounded-full bg-primary/50 blur-3xl" />
+            <div className="absolute bottom-10 right-20 sm:right-40 w-24 sm:w-36 md:w-48 h-24 sm:h-36 md:h-48 rounded-full bg-sea-light blur-3xl" />
           </div>
         </section>
         
         {/* Description Section */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 {t.amenitiesPage.description}
               </p>
             </div>
@@ -70,29 +69,29 @@ export default function Amenities() {
           const isEven = categoryIndex % 2 === 0;
           
           return (
-            <section key={category} className={`py-16 ${isEven ? 'bg-card' : ''}`}>
+            <section key={category} className={`py-12 sm:py-16 ${isEven ? 'bg-card' : ''}`}>
               <div className="container">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                  <h2 className="text-3xl font-bold mb-4">
+                <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
                     {categoryData.title}
                   </h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm sm:text-base">
                     {categoryData.description}
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                   {categoryData.items.map((item, index) => (
                     <div 
                       key={index} 
-                      className="glass-card p-6 rounded-xl flex flex-col items-center text-center animate-fade-in"
+                      className="glass-card rounded-xl flex flex-col items-center text-center animate-fade-in"
                       style={{ animationDelay: `${(index + 1) * 100}ms` }}
                     >
-                      <div className="mb-4 p-3 rounded-full bg-primary/10 text-primary">
+                      <div className="mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-primary/10 text-primary">
                         {getIcon(category, index)}
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
                     </div>
                   ))}
                 </div>
@@ -102,18 +101,18 @@ export default function Amenities() {
         })}
         
         {/* Gallery Section */}
-        <section className="py-16">
+        <section className="py-12 sm:py-16">
           <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl font-bold mb-4">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
                 {t.gallery.title}
               </h2>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-sm sm:text-base">
                 {t.gallery.subtitle}
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
               {Array.from({ length: 8 }).map((_, index) => (
                 <div 
                   key={index} 

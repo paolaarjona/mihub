@@ -24,8 +24,8 @@ export default function HeroSection() {
   const contentY = scrollY * 0.2;
   
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background image with parallax - Nueva imagen futurista */}
+    <section className="relative h-screen min-h-[600px] overflow-hidden">
+      {/* Background image with parallax */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -40,79 +40,79 @@ export default function HeroSection() {
       
       {/* Content */}
       <div
-        className="relative h-full flex flex-col justify-center items-center text-center px-4"
+        className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6"
         style={{ transform: `translateY(${contentY}px)` }}
       >
         <div className="max-w-4xl animate-fade-in">
           {/* Logo de miHUB */}
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <img 
               src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png"
               alt="miHUB Logo"
-              className="mx-auto h-24 md:h-32 w-auto filter brightness-0 invert"
+              className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 w-auto filter brightness-0 invert"
             />
           </div>
           
-          <span className="inline-block text-white/90 text-lg mb-4 tracking-wide border-b border-white/30 pb-2">
+          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">
             miHUB
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Turismo sostenible y desarrollo digital de las empresas canarias
           </h1>
-          <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
             Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones innovadoras que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
           {/* Líneas de actuación */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Lightbulb className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-sm">Innovación</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
+              <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-xs sm:text-sm">Innovación</h3>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Building2 className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-sm">Transformación Empresarial</h3>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
+              <Building2 className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-xs sm:text-sm">Transformación Empresarial</h3>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Leaf className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-sm">Sostenibilidad</h3>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
+              <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-xs sm:text-sm">Sostenibilidad</h3>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Brain className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold text-sm">Inteligencia Artificial</h3>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
+              <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-xs sm:text-sm">Inteligencia Artificial</h3>
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" variant="heroSolid" className="min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <Button asChild size="lg" variant="heroSolid" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
               <Link to="/booking">{t.hero.bookStay}</Link>
             </Button>
-            <Button asChild variant="hero" size="lg" className="min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px]">
+            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
               <Link to="/apartments">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
           
-          <p className="text-white/90 mt-6 font-medium">
+          <p className="text-white/90 mt-4 sm:mt-6 font-medium text-sm sm:text-base">
             miHUB no es solo un Hub. Es un socio estratégico para la transformación del ecosistema empresarial canario.
           </p>
         </div>
       </div>
       
       {/* Scroll down indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <a 
           href="#welcome" 
           className="flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity"
         >
-          <span className="text-sm mb-2">{t.hero.scrollDown}</span>
-          <ChevronDown className="h-6 w-6" />
+          <span className="text-xs sm:text-sm mb-2">{t.hero.scrollDown}</span>
+          <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6" />
         </a>
       </div>
       
       {/* Animated wave */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
+      <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 overflow-hidden">
         <svg 
-          className="absolute bottom-0 w-full h-24 fill-white dark:fill-background"
+          className="absolute bottom-0 w-full h-16 sm:h-24 fill-white dark:fill-background"
           preserveAspectRatio="none"
           viewBox="0 0 1440 74"
           xmlns="http://www.w3.org/2000/svg"
