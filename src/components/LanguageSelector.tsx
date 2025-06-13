@@ -10,13 +10,15 @@ import {
 import { Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-type Language = {
-  code: string;
+type Language = 'en' | 'it' | 'es';
+
+type LanguageOption = {
+  code: Language;
   name: string;
   flag: string;
 };
 
-const languages: Language[] = [
+const languages: LanguageOption[] = [
   { code: "en", name: "English", flag: "🇬🇧" },
   { code: "it", name: "Italiano", flag: "🇮🇹" },
 ];
@@ -31,7 +33,7 @@ export default function LanguageSelector() {
   }, []);
 
   const handleLanguageChange = (value: string) => {
-    setLanguage(value);
+    setLanguage(value as Language);
   };
 
   if (!mounted) {

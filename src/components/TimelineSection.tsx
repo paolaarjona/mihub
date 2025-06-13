@@ -41,13 +41,13 @@ export default function TimelineSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
           <span className="text-sm text-primary font-medium uppercase tracking-wider">
-            {t.home.timeline?.subtitle || "Nuestra Historia"}
+            Nuestra Historia
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-            {t.home.timeline?.title || "7 años transformando Canarias"}
+            7 años transformando Canarias
           </h2>
           <p className="text-muted-foreground">
-            {t.home.timeline?.description || "Desde 2018, hemos evolucionado hasta convertirnos en el centro de referencia para la innovación empresarial."}
+            Desde 2018, hemos evolucionado hasta convertirnos en el centro de referencia para la innovación empresarial.
           </p>
         </div>
         

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Brain, Target, Cog } from "lucide-react";
+import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -45,31 +45,32 @@ export default function HeroSection() {
       >
         <div className="max-w-4xl animate-fade-in">
           <span className="inline-block text-white/90 text-lg mb-4 tracking-wide border-b border-white/30 pb-2">
-            {t.hero.subtitle}
+            miHUB
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            {t.hero.title}
+            Turismo sostenible y desarrollo digital de las empresas canarias
           </h1>
           <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
-            {t.hero.description}
+            Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones innovadoras que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
-          {/* Metodología en 3 fases */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+          {/* Líneas de actuación */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Lightbulb className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-sm">Innovación</h3>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Building2 className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-sm">Transformación Empresarial</h3>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Leaf className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold text-sm">Sostenibilidad</h3>
+            </div>
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
               <Brain className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold mb-1">Fase 1</h3>
-              <p className="text-white/80 text-sm">Generación de conocimiento para el equipo directivo</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Target className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold mb-1">Fase 2</h3>
-              <p className="text-white/80 text-sm">Identificación de casos de uso y definición de estrategia</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
-              <Cog className="h-8 w-8 text-white mb-2 mx-auto" />
-              <h3 className="text-white font-semibold mb-1">Fase 3</h3>
-              <p className="text-white/80 text-sm">Creación de una Oficina de IA y puesta en marcha</p>
+              <h3 className="text-white font-semibold text-sm">Inteligencia Artificial</h3>
             </div>
           </div>
           
