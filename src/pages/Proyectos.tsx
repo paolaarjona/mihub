@@ -4,11 +4,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Lightbulb, Cog, Users } from "lucide-react";
+import { ArrowRight, Target, Lightbulb, Cog, Users, Leaf } from "lucide-react";
 
 const proyectos = [
   {
     id: "1",
+    title: "Turismo Sostenible",
+    description: "Desarrollo de plataforma integral para promocionar el turismo responsable y sostenible en las Islas Canarias.",
+    sector: "Turismo",
+    duration: "8 meses",
+    icon: <Leaf className="h-8 w-8 text-primary" />,
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+  },
+  {
+    id: "2",
     title: "Transformación Digital Hotelera",
     description: "Implementación de sistema de IA para optimización de reservas y experiencia del huésped.",
     sector: "Turismo",
@@ -17,7 +26,7 @@ const proyectos = [
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop"
   },
   {
-    id: "2", 
+    id: "3", 
     title: "Oficina de Innovación Retail",
     description: "Creación de laboratorio de innovación para cadena de retail con foco en experiencia del cliente.",
     sector: "Retail",
@@ -26,7 +35,7 @@ const proyectos = [
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
   },
   {
-    id: "3",
+    id: "4",
     title: "Automatización Industrial",
     description: "Proyecto de Industry 4.0 con implementación de IoT y análisis predictivo.",
     sector: "Industrial",
@@ -35,7 +44,7 @@ const proyectos = [
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
   },
   {
-    id: "4",
+    id: "5",
     title: "Ecosistema Fintech",
     description: "Desarrollo de plataforma colaborativa para startups fintech en Canarias.",
     sector: "Fintech",
