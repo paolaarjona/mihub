@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -54,7 +55,10 @@ export default function Navbar() {
                 className={cn(
                   "font-medium transition-colors hover:text-primary text-sm xl:text-base",
                   "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full",
-                  scrolled ? "text-foreground" : "text-white"
+                  "active:text-white",
+                  scrolled 
+                    ? "text-blue-600 dark:text-foreground" 
+                    : "text-white"
                 )}
               >
                 {link.name}
@@ -114,7 +118,7 @@ export default function Navbar() {
                   <li key={link.name}>
                     <Link 
                       to={link.path} 
-                      className="block text-lg font-medium transition-colors hover:text-primary py-2" 
+                      className="block text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}
