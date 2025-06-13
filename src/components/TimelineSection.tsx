@@ -1,6 +1,13 @@
 
 import { Calendar, Users, Lightbulb, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function TimelineSection() {
   const { t } = useLanguage();
@@ -51,47 +58,45 @@ export default function TimelineSection() {
           </p>
         </div>
         
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-primary via-primary to-transparent hidden md:block"></div>
-          
-          <div className="space-y-12">
-            {timelineEvents.map((event, index) => (
-              <div 
-                key={index}
-                className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} animate-fade-in`}
-                style={{ animationDelay: `${(index + 1) * 200}ms` }}
-              >
-                {/* Content */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="glass-card p-6 rounded-xl">
-                    <div className="flex items-center mb-4">
-                      <div className="p-3 rounded-full bg-primary/10 text-primary mr-4">
-                        {event.icon}
+        <div className="relative max-w-6xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {timelineEvents.map((event, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <div className="glass-card rounded-xl p-6 h-full animate-fade-in" style={{ animationDelay: `${(index + 1) * 200}ms` }}>
+                      {/* Image */}
+                      <div className="aspect-video rounded-lg overflow-hidden shadow-lg mb-6">
+                        <img 
+                          src={event.image}
+                          alt={event.title}
+                          className="w-full h-full object-cover transition-transform hover:scale-105"
+                        />
                       </div>
-                      <span className="text-2xl font-bold text-primary">{event.year}</span>
+                      
+                      {/* Content */}
+                      <div className="flex items-center mb-4">
+                        <div className="p-3 rounded-full bg-primary/10 text-primary mr-4 flex-shrink-0">
+                          {event.icon}
+                        </div>
+                        <span className="text-2xl font-bold text-primary">{event.year}</span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3">{event.title}</h3>
+                      <p className="text-muted-foreground">{event.description}</p>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{event.title}</h3>
-                    <p className="text-muted-foreground">{event.description}</p>
                   </div>
-                </div>
-                
-                {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
-                
-                {/* Image */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'} mt-4 md:mt-0`}>
-                  <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-full object-cover transition-transform hover:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </div>
     </section>

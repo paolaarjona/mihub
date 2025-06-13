@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,13 +12,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Programas de miHUB
+// Programas de miHUB - sin precios
 const featuredPrograms: ApartmentProps[] = [
   {
     id: "1",
     name: "Programa CEO & Directivos",
     description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
-    price: 15000,
+    price: 0,
     capacity: 8,
     size: 6,
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
@@ -30,7 +29,7 @@ const featuredPrograms: ApartmentProps[] = [
     id: "2",
     name: "Workshop Adopción de IA",
     description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
-    price: 1200,
+    price: 0,
     capacity: 12,
     size: 1,
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
@@ -41,7 +40,7 @@ const featuredPrograms: ApartmentProps[] = [
     id: "3",
     name: "Oficina de IA - Implementación",
     description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
-    price: 25000,
+    price: 0,
     capacity: 4,
     size: 6,
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
