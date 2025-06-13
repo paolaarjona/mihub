@@ -215,29 +215,45 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Booking Form Section */}
+        {/* Corporate Events Booking Section */}
         <section className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="animate-fade-in order-2 lg:order-1">
                 <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
-                  {t.home.booking.subtitle}
+                  Eventos Corporativos
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
-                  {t.home.booking.title}
+                  Organiza tu Evento de Innovación
                 </h2>
                 <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
-                  {t.home.booking.description}
+                  Contrata nuestros servicios para organizar eventos corporativos únicos. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
                 </p>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-                  {t.home.booking.benefits.map((item, index) => (
-                    <li key={index} className="flex items-center text-sm sm:text-base">
-                      <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
-                        <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
-                      </div>
-                      {item}
-                    </li>
-                  ))}
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Eventos personalizados de innovación
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Facilitadores expertos en transformación digital
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Instalaciones equipadas con tecnología avanzada
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Networking con el ecosistema de innovación canario
+                  </li>
                 </ul>
               </div>
               
@@ -339,7 +355,7 @@ export default function Index() {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/eventos-corporativos">Quieres celebrar un evento de Innovación</Link>
+                <Link to="/eventos-corporativos">¿Quieres celebrar un evento de Innovación?</Link>
               </Button>
             </div>
           </div>
