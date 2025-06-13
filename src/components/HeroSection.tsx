@@ -49,12 +49,7 @@ export default function HeroSection() {
             <img 
               src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png"
               alt="miHUB Logo"
-              className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 w-auto brightness-0 invert"
-              onError={(e) => {
-                console.log('Error loading logo:', e);
-                e.currentTarget.style.display = 'none';
-              }}
-              onLoad={() => console.log('Logo loaded successfully')}
+              className="mx-auto h-16 sm:h-20 md:h-24 lg:h-32 w-auto filter brightness-0 invert"
             />
           </div>
           
@@ -90,7 +85,7 @@ export default function HeroSection() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <Button asChild size="lg" variant="heroSolid" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
-              <Link to="/booking">¿Estás interesado en organizar un evento en nuestro ecosistema?</Link>
+              <Link to="/booking">{t.hero.bookStay}</Link>
             </Button>
             <Button asChild variant="hero" size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
               <Link to="/apartments">{t.hero.exploreApartments}</Link>
