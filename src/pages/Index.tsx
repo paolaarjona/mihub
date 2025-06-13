@@ -56,22 +56,22 @@ export default function Index() {
     window.scrollTo(0, 0);
   }, []);
   
-  // Metodología en 3 fases
+  // Metodología en 3 fases - orientada a implementar proyectos de innovación
   const methodology = [
     {
       icon: <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />,
-      title: "Fase 1: Generación de Conocimiento",
-      description: "Formación especializada para el equipo directivo en IA y transformación digital, creando la base necesaria para liderar el cambio."
+      title: "Fase 1: Identificación de Oportunidades",
+      description: "Análisis del negocio para identificar áreas de mejora y oportunidades de innovación específicas que generen valor real."
     },
     {
-      icon: <Target className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />,
-      title: "Fase 2: Estrategia y Casos de Uso", 
-      description: "Identificación de oportunidades específicas, análisis de retos empresariales y definición del plan de acción personalizado."
+      icon: <Target className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />, 
+      title: "Fase 2: Desarrollo de Proyectos",
+      description: "Diseño y planificación de proyectos de innovación personalizados, con metodologías ágiles y equipos multidisciplinares."
     },
     {
       icon: <Cog className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />,
-      title: "Fase 3: Oficina de IA",
-      description: "Creación e implementación de la oficina interna de IA, con proyectos piloto y estructura organizativa definida."
+      title: "Fase 3: Implementación y Seguimiento",
+      description: "Puesta en marcha de los proyectos con acompañamiento continuo, medición de resultados y optimización."
     }
   ];
   
@@ -179,10 +179,10 @@ export default function Index() {
                 Nuestra Metodología
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4">
-                Un viaje en 3 fases hacia la IA
+                Un viaje en 3 fases a la Innovación
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base">
-                Guiamos a cada organización a través de nuestro proceso probado de transformación digital.
+                Guiamos a cada organización a través de nuestro proceso probado de implementación de proyectos de innovación.
               </p>
             </div>
             
