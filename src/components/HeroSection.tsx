@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
@@ -99,12 +100,12 @@ export default function HeroSection() {
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <a 
           href="#welcome" 
-          className="flex flex-col items-center opacity-70 hover:opacity-100 transition-opacity"
+          className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
         >
-          <span className="text-xs sm:text-sm mb-2">{t.hero.scrollDown}</span>
-          <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6" />
+          <ChevronDown className="h-6 w-6 sm:h-8 sm:w-8" />
         </a>
       </div>
     </section>
   );
 }
+
