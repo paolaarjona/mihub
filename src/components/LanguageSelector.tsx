@@ -10,7 +10,7 @@ import {
 import { Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-type Language = 'en' | 'it' | 'es';
+type Language = 'en' | 'es';
 
 type LanguageOption = {
   code: Language;
@@ -19,8 +19,8 @@ type LanguageOption = {
 };
 
 const languages: LanguageOption[] = [
-  { code: "en", name: "English", flag: "🇬🇧" },
-  { code: "it", name: "Italiano", flag: "🇮🇹" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "en", name: "Inglés", flag: "🇬🇧" },
 ];
 
 export default function LanguageSelector() {
@@ -48,7 +48,7 @@ export default function LanguageSelector() {
           aria-label="Select Language"
         >
           <div className="flex items-center space-x-2">
-            <Globe className="h-4 w-4" />
+            <Globe className="h-4 w-4 text-white" />
             <SelectValue placeholder="Select language" />
           </div>
         </SelectTrigger>

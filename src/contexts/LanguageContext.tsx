@@ -1,10 +1,9 @@
 
 import React, { createContext, useContext, useState } from 'react';
 import { en } from '@/locales/en';
-import { it } from '@/locales/it';
 import { es } from '@/locales/es';
 
-type Language = 'en' | 'it' | 'es';
+type Language = 'en' | 'es';
 
 interface LanguageContextType {
   language: Language;
@@ -15,9 +14,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('es'); // Cambiado a español por defecto
+  const [language, setLanguage] = useState<Language>('es');
   
-  const translations = { en, it, es };
+  const translations = { en, es };
   
   const value = {
     language,
