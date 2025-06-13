@@ -1,5 +1,12 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function PartnersSection() {
   const { t } = useLanguage();
@@ -62,25 +69,35 @@ export default function PartnersSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {partners.map((partner, index) => (
-            <div 
-              key={index}
-              className="group glass-card p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300"
-              style={{ animationDelay: `${(index + 1) * 100}ms` }}
-            >
-              <div className="w-full h-16 mb-4 flex items-center justify-center">
-                <img 
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-w-full max-h-full object-contain filter group-hover:scale-105 transition-transform"
-                  style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(203deg) brightness(104%) contrast(97%)' }}
-                />
-              </div>
-              <h3 className="font-semibold mb-2 text-sm">{partner.name}</h3>
-              <p className="text-xs text-muted-foreground">{partner.description}</p>
-            </div>
-          ))}
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {partners.map((partner, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="group glass-card p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="w-full h-16 mb-4 flex items-center justify-center">
+                      <img 
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="max-w-full max-h-full object-contain filter group-hover:scale-105 transition-transform"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(203deg) brightness(104%) contrast(97%)' }}
+                      />
+                    </div>
+                    <h3 className="font-semibold mb-2 text-sm">{partner.name}</h3>
+                    <p className="text-xs text-muted-foreground">{partner.description}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
         
         <div className="text-center mt-12">
