@@ -11,76 +11,75 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Sample apartments data (will use translations from context)
+// Servicios corporativos data - sin precios y con imágenes corporativas
 const allApartments: ApartmentProps[] = [
   {
     id: "1",
-    name: "Deluxe Sea View Suite",
-    description: "Luxurious suite with panoramic sea views, modern amenities, and a private balcony.",
-    price: 180,
-    capacity: 2,
-    size: 45,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-    location: "Beachfront",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Balcony"]
+    name: "Programa CEO & Directivos",
+    description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
+    price: 0,
+    capacity: 8,
+    size: 6,
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    location: "Presencial",
+    features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
   {
     id: "2",
-    name: "Premium Family Apartment",
-    description: "Spacious apartment ideal for families, with full kitchen and stunning coastal views.",
-    price: 250,
-    capacity: 4,
-    size: 75,
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
-    location: "Second row",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Washing Machine"]
+    name: "Workshop Adopción de IA",
+    description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
+    price: 0,
+    capacity: 12,
+    size: 1,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    location: "Híbrido",
+    features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
   {
     id: "3",
-    name: "Executive Beach Studio",
-    description: "Elegant studio with direct beach access, modern design, and premium finishes.",
-    price: 150,
-    capacity: 2,
-    size: 35,
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop",
-    location: "Beachfront",
-    features: ["Wi-Fi", "Kitchenette", "Bathroom", "Air Conditioning", "TV"]
+    name: "Oficina de IA - Implementación",
+    description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
+    price: 0,
+    capacity: 4,
+    size: 6,
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
+    location: "Personalizado",
+    features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
   {
     id: "4",
-    name: "Luxury Penthouse Suite",
-    description: "Exclusive top-floor suite with expansive terrace and panoramic sea views.",
-    price: 350,
-    capacity: 4,
-    size: 90,
-    image: "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=800&h=600&fit=crop",
-    location: "Beachfront",
-    features: ["Wi-Fi", "Full Kitchen", "2 Bathrooms", "Air Conditioning", "TV", "Terrace", "Jacuzzi"]
+    name: "Consultoría Estratégica en IA",
+    description: "Asesoramiento estratégico para la transformación digital y adopción de inteligencia artificial.",
+    price: 0,
+    capacity: 6,
+    size: 3,
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop",
+    location: "Personalizado",
+    features: ["Análisis estratégico", "Roadmap personalizado", "Acompañamiento", "Formación ejecutiva", "Seguimiento trimestral"]
   },
   {
     id: "5",
-    name: "Classic Double Room",
-    description: "Comfortable hotel room with modern amenities and partial sea views.",
-    price: 120,
-    capacity: 2,
-    size: 28,
-    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=600&fit=crop",
-    location: "Hotel building",
-    features: ["Wi-Fi", "Bathroom", "Air Conditioning", "TV", "Mini Fridge"]
+    name: "Laboratorio de Innovación",
+    description: "Espacio de trabajo colaborativo para desarrollo de prototipos y pruebas de concepto.",
+    price: 0,
+    capacity: 15,
+    size: 12,
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
+    location: "miHUB",
+    features: ["Equipamiento avanzado", "Mentores expertos", "Acceso 24/7", "Herramientas digitales", "Networking"]
   },
   {
     id: "6",
-    name: "Garden View Apartment",
-    description: "Peaceful apartment surrounded by lush gardens, just a short walk from the beach.",
-    price: 160,
-    capacity: 3,
-    size: 55,
-    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&h=600&fit=crop",
-    location: "Garden area",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Terrace"]
+    name: "Think Tank Sectorial",
+    description: "Sesiones de trabajo colaborativo con expertos del sector para resolver desafíos específicos.",
+    price: 0,
+    capacity: 10,
+    size: 4,
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+    location: "Híbrido",
+    features: ["Expertos sectoriales", "Metodología colaborativa", "Soluciones prácticas", "Networking especializado", "Documentación completa"]
   },
 ];
 
@@ -89,14 +88,13 @@ export default function Apartments() {
   const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
   const [capacityFilter, setCapacityFilter] = useState<string>("all");
   const [locationFilter, setLocationFilter] = useState<string>("all");
-  const [priceRange, setPriceRange] = useState<number[]>([100, 350]);
   
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
   
-  // Apply filters
+  // Apply filters (sin filtro de precio)
   useEffect(() => {
     let result = allApartments;
     
@@ -111,11 +109,8 @@ export default function Apartments() {
       result = result.filter(apt => apt.location === locationFilter);
     }
     
-    // Filter by price range
-    result = result.filter(apt => apt.price >= priceRange[0] && apt.price <= priceRange[1]);
-    
     setFilteredApartments(result);
-  }, [capacityFilter, locationFilter, priceRange]);
+  }, [capacityFilter, locationFilter]);
   
   // Get unique locations for filter
   const locations = ["all", ...new Set(allApartments.map(apt => apt.location))];
@@ -130,10 +125,10 @@ export default function Apartments() {
           <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                {t.apartments.title}
+                Nuestros Servicios
               </h1>
               <p className="text-muted-foreground text-lg mb-6">
-                {t.apartments.subtitle}
+                Programas y servicios especializados para la transformación empresarial
               </p>
             </div>
           </div>
@@ -145,25 +140,25 @@ export default function Apartments() {
           </div>
         </section>
         
-        {/* Filter Section */}
+        {/* Filter Section - Sin filtro de precio */}
         <section className="py-8 border-b">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in">
               {/* Capacity Filter */}
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.guests}
+                  Número de Participantes
                 </label>
                 <Select value={capacityFilter} onValueChange={setCapacityFilter}>
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder={t.apartments.filters.guests} />
+                    <SelectValue placeholder="Participantes" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">{t.apartments.filters.anyGuests}</SelectItem>
-                    <SelectItem value="1">{t.apartments.filters.onePlus}</SelectItem>
-                    <SelectItem value="2">{t.apartments.filters.twoPlus}</SelectItem>
-                    <SelectItem value="3">{t.apartments.filters.threePlus}</SelectItem>
-                    <SelectItem value="4">{t.apartments.filters.fourPlus}</SelectItem>
+                    <SelectItem value="all">Cualquier cantidad</SelectItem>
+                    <SelectItem value="1">1+ participantes</SelectItem>
+                    <SelectItem value="4">4+ participantes</SelectItem>
+                    <SelectItem value="8">8+ participantes</SelectItem>
+                    <SelectItem value="12">12+ participantes</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -171,80 +166,62 @@ export default function Apartments() {
               {/* Location Filter */}
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.location}
+                  Modalidad
                 </label>
                 <Select value={locationFilter} onValueChange={setLocationFilter}>
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder={t.apartments.filters.location} />
+                    <SelectValue placeholder="Modalidad" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">{t.apartments.filters.allLocations}</SelectItem>
+                    <SelectItem value="all">Todas las modalidades</SelectItem>
                     {locations.filter(loc => loc !== "all").map(location => (
                       <SelectItem key={location} value={location}>{location}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
-              
-              {/* Price Range Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  {t.apartments.filters.priceRange}: ${priceRange[0]} - ${priceRange[1]}
-                </label>
-                <Slider
-                  defaultValue={[100, 350]}
-                  min={100}
-                  max={350}
-                  step={10}
-                  value={priceRange}
-                  onValueChange={setPriceRange}
-                  className="my-4"
-                />
-              </div>
             </div>
             
             <div className="flex justify-between items-center mt-6 animate-fade-in [animation-delay:200ms]">
               <p className="text-muted-foreground">
-                {t.apartments.filters.showing} {filteredApartments.length} {t.apartments.filters.of} {allApartments.length} {t.apartments.filters.accommodations}
+                Mostrando {filteredApartments.length} de {allApartments.length} servicios
               </p>
               <Button 
                 variant="outline" 
                 onClick={() => {
                   setCapacityFilter("all");
                   setLocationFilter("all");
-                  setPriceRange([100, 350]);
                 }}
               >
-                {t.apartments.filters.resetFilters}
+                Limpiar filtros
               </Button>
             </div>
           </div>
         </section>
         
-        {/* Apartments Grid */}
+        {/* Services Grid */}
         <section className="section">
           <div className="container">
             {filteredApartments.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredApartments.map((apartment, index) => (
                   <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                    <ApartmentCard apartment={apartment} />
+                    <ApartmentCard apartment={apartment} hidePrice={true} />
                   </div>
                 ))}
               </div>
             ) : (
               <div className="text-center py-12 animate-fade-in">
-                <h3 className="text-xl font-semibold mb-2">{t.apartments.filters.noMatch}</h3>
-                <p className="text-muted-foreground mb-6">{t.apartments.filters.adjustFilters}</p>
+                <h3 className="text-xl font-semibold mb-2">No se encontraron servicios</h3>
+                <p className="text-muted-foreground mb-6">Ajusta los filtros para ver más opciones</p>
                 <Button 
                   variant="outline" 
                   onClick={() => {
                     setCapacityFilter("all");
                     setLocationFilter("all");
-                    setPriceRange([100, 350]);
                   }}
                 >
-                  {t.apartments.filters.resetFilters}
+                  Limpiar filtros
                 </Button>
               </div>
             )}
