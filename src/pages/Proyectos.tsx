@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,7 +26,7 @@ const proyectos = [
   },
   {
     id: "3", 
-    title: "Oficina de Innovación Retail",
+    title: "Digital Island",
     description: "Creación de laboratorio de innovación para cadena de retail con foco en experiencia del cliente.",
     sector: "Retail",
     duration: "12 meses",
@@ -36,7 +35,7 @@ const proyectos = [
   },
   {
     id: "4",
-    title: "Automatización Industrial",
+    title: "Oficinas IA",
     description: "Proyecto de Industry 4.0 con implementación de IoT y análisis predictivo.",
     sector: "Industrial",
     duration: "9 meses",
@@ -45,7 +44,7 @@ const proyectos = [
   },
   {
     id: "5",
-    title: "Ecosistema Fintech",
+    title: "Detección de Retos",
     description: "Desarrollo de plataforma colaborativa para startups fintech en Canarias.",
     sector: "Fintech",
     duration: "18 meses",
