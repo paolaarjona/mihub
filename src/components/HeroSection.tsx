@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
@@ -82,16 +83,13 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <Button asChild size="lg" variant="heroSolid" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
-              <Link to="/booking">{t.hero.bookStay}</Link>
-            </Button>
-            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base">
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white">
               <Link to="/apartments">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
           
-          <p className="text-white/90 mt-4 sm:mt-6 font-medium text-sm sm:text-base">
+          <p className="text-white/90 font-medium text-sm sm:text-base">
             miHUB no es solo un Hub. Es un socio estratégico para la transformación del ecosistema empresarial canario.
           </p>
         </div>
