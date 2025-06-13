@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -316,7 +315,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* CTA Section - Sin efecto de ola */}
+        {/* CTA Section */}
         <section className="relative section bg-primary/5">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
@@ -326,6 +325,14 @@ export default function Index() {
               <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
                 {t.home.cta.description}
               </p>
+            </div>
+          </div>
+        </section>
+        
+        {/* Congress Organization CTA - New section at the very end */}
+        <section className="relative section bg-muted/30">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
                 <Link to="/booking">¿Quiere organizar un congreso de Innovación?</Link>
               </Button>
