@@ -69,20 +69,21 @@ export default function PartnersSection() {
           </p>
         </div>
         
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-7xl mx-auto">
           <Carousel
             opts={{
               align: "start",
               loop: true,
               slidesToScroll: 1,
+              containScroll: "trimSnaps",
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4">
               {partners.map((partner, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                  <div className="group glass-card p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="w-full h-16 mb-4 flex items-center justify-center">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="w-full h-12 md:h-16 mb-3 md:mb-4 flex items-center justify-center">
                       <img 
                         src={partner.logo}
                         alt={partner.name}
@@ -90,14 +91,14 @@ export default function PartnersSection() {
                         style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(203deg) brightness(104%) contrast(97%)' }}
                       />
                     </div>
-                    <h3 className="font-semibold mb-2 text-sm">{partner.name}</h3>
-                    <p className="text-xs text-muted-foreground">{partner.description}</p>
+                    <h3 className="font-semibold mb-2 text-xs md:text-sm">{partner.name}</h3>
+                    <p className="text-xs text-muted-foreground hidden md:block">{partner.description}</p>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex -left-12" />
-            <CarouselNext className="hidden sm:flex -right-12" />
+            <CarouselPrevious className="hidden md:flex -left-12 lg:-left-16" />
+            <CarouselNext className="hidden md:flex -right-12 lg:-right-16" />
           </Carousel>
         </div>
         
