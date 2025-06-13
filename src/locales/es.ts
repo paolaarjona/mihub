@@ -1,4 +1,3 @@
-
 export const es = {
   nav: {
     home: "Inicio",
@@ -72,6 +71,33 @@ export const es = {
         description: "Creación e implementación de la oficina interna de IA y puesta en marcha de proyectos."
       }
     },
+    timeline: {
+      subtitle: "Nuestra Historia",
+      title: "7 años transformando Canarias",
+      description: "Desde 2018, hemos evolucionado hasta convertirnos en el centro de referencia para la innovación empresarial.",
+      events: [
+        {
+          year: "2018-2020",
+          title: "Lanzamiento de miHUB",
+          description: "Creación del espacio físico y establecimiento de las bases del ecosistema de innovación."
+        },
+        {
+          year: "2021",
+          title: "Evento de Inauguración",
+          description: "Gran inauguración con CEOs de Air Europa, Mahou, Telefónica y otras empresas líderes."
+        },
+        {
+          year: "2022-2024",
+          title: "Consolidación",
+          description: "Laboratorios de innovación, formaciones y eventos sectoriales con más de 3000 asistentes."
+        },
+        {
+          year: "2025",
+          title: "Nueva Etapa: IA",
+          description: "Foco en Inteligencia Artificial con nuevos socios, equipo directivo y metodología propia."
+        }
+      ]
+    },
     booking: {
       subtitle: "Únete a la Transformación",
       title: "Solicita información sobre nuestros programas",
@@ -119,33 +145,6 @@ export const es = {
       title: "¿Tu empresa está lista para liderar el cambio?",
       description: "Nosotros estamos listos para acompañarte en esta transformación hacia la adopción de Inteligencia Artificial.",
       bookNow: "Quiero unirme a miHUB"
-    },
-    timeline: {
-      subtitle: "Nuestra Historia",
-      title: "7 años transformando Canarias",
-      description: "Desde 2018, hemos evolucionado hasta convertirnos en el centro de referencia para la innovación empresarial.",
-      events: [
-        {
-          year: "2018-2020",
-          title: "Lanzamiento de miHUB",
-          description: "Creación del espacio físico y establecimiento de las bases del ecosistema de innovación."
-        },
-        {
-          year: "2021",
-          title: "Evento de Inauguración",
-          description: "Gran inauguración con CEOs de Air Europa, Mahou, Telefónica y otras empresas líderes."
-        },
-        {
-          year: "2022-2024",
-          title: "Consolidación",
-          description: "Laboratorios de innovación, formaciones y eventos sectoriales con más de 3000 asistentes."
-        },
-        {
-          year: "2025",
-          title: "Nueva Etapa: IA",
-          description: "Foco en Inteligencia Artificial con nuevos socios, equipo directivo y metodología propia."
-        }
-      ]
     }
   },
   apartments: {
