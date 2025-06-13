@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -222,7 +221,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Corporate Events Booking Section - Moved before Featured Programs */}
+        {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
         <section className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
