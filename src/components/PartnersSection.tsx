@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function PartnersSection() {
   const { t } = useLanguage();
@@ -97,9 +98,24 @@ export default function PartnersSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 lg:-left-16" />
-            <CarouselNext className="hidden md:flex -right-12 lg:-right-16" />
+            
+            {/* Flechas direccionales con mejor visibilidad */}
+            <CarouselPrevious className="flex md:flex -left-4 md:-left-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+              <ChevronLeft className="h-5 w-5" />
+            </CarouselPrevious>
+            <CarouselNext className="flex md:flex -right-4 md:-right-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+              <ChevronRight className="h-5 w-5" />
+            </CarouselNext>
           </Carousel>
+          
+          {/* Indicador de dirección para móviles */}
+          <div className="flex md:hidden justify-center mt-4 text-xs text-muted-foreground">
+            <span className="flex items-center">
+              <ChevronLeft className="h-3 w-3 mr-1" />
+              Desliza para ver más partners
+              <ChevronRight className="h-3 w-3 ml-1" />
+            </span>
+          </div>
         </div>
         
         <div className="text-center mt-12">

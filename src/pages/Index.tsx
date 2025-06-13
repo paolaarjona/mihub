@@ -9,8 +9,15 @@ import TimelineSection from "@/components/TimelineSection";
 import PartnersSection from "@/components/PartnersSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap } from "lucide-react";
+import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Programas de miHUB - sin precios
@@ -264,7 +271,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Featured Programs */}
+        {/* Featured Programs - Now with Carousel */}
         <section className="section">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 animate-fade-in">
@@ -279,12 +286,43 @@ export default function Index() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {featuredPrograms.map((program, index) => (
-                <div key={program.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <ApartmentCard apartment={program} hidePrice={true} />
-                </div>
-              ))}
+            <div className="relative max-w-7xl mx-auto">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  slidesToScroll: 1,
+                  containScroll: false,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {featuredPrograms.map((program, index) => (
+                    <CarouselItem key={program.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                      <div className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                        <ApartmentCard apartment={program} hidePrice={true} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                
+                {/* Flechas direccionales con mejor visibilidad */}
+                <CarouselPrevious className="flex md:flex -left-4 md:-left-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+                  <ChevronLeft className="h-5 w-5" />
+                </CarouselPrevious>
+                <CarouselNext className="flex md:flex -right-4 md:-right-12 bg-white/90 hover:bg-white shadow-lg border-primary/20 text-primary hover:text-primary">
+                  <ChevronRight className="h-5 w-5" />
+                </CarouselNext>
+              </Carousel>
+              
+              {/* Indicador de dirección para móviles */}
+              <div className="flex md:hidden justify-center mt-4 text-xs text-muted-foreground">
+                <span className="flex items-center">
+                  <ChevronLeft className="h-3 w-3 mr-1" />
+                  Desliza para ver más programas
+                  <ChevronRight className="h-3 w-3 ml-1" />
+                </span>
+              </div>
             </div>
             
             <div className="text-center mt-8 sm:mt-12">
