@@ -69,17 +69,18 @@ export default function PartnersSection() {
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative max-w-6xl mx-auto">
           <Carousel
             opts={{
               align: "start",
               loop: true,
+              slidesToScroll: 1,
             }}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-4">
               {partners.map((partner, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
                   <div className="group glass-card p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
                     <div className="w-full h-16 mb-4 flex items-center justify-center">
                       <img 
@@ -95,8 +96,8 @@ export default function PartnersSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="hidden sm:flex -left-12" />
+            <CarouselNext className="hidden sm:flex -right-12" />
           </Carousel>
         </div>
         
