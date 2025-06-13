@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -15,7 +14,7 @@ export default function Navbar() {
   
   const navLinks = [
     { name: t.nav.home, path: "/" },
-    { name: t.nav.apartments, path: "/apartments" },
+    { name: t.nav.apartments, path: "/servicios" },
     { name: "Proyectos", path: "/proyectos" },
     { name: "Eventos Corporativos", path: "/eventos-corporativos" },
     { name: t.nav.amenities, path: "/amenities" },
