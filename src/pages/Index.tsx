@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -338,7 +339,7 @@ export default function Index() {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/booking">¿Quiere organizar un congreso de Innovación?</Link>
+                <Link to="/eventos-corporativos">Quieres celebrar un evento de Innovación</Link>
               </Button>
             </div>
           </div>
