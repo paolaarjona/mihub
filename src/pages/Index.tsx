@@ -59,17 +59,17 @@ export default function Index() {
   // Metodología en 3 fases - orientada a implementar proyectos de innovación
   const methodology = [
     {
-      icon: <Brain className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />,
+      image: "/lovable-uploads/a0dc24d3-568a-4cbd-8b70-a6df3582aff9.png",
       title: "Fase 1: Identificación de Oportunidades",
       description: "Análisis del negocio para identificar áreas de mejora y oportunidades de innovación específicas que generen valor real."
     },
     {
-      icon: <Target className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />, 
+      image: "/lovable-uploads/708c9416-685c-4a6b-8379-e92825600030.png", 
       title: "Fase 2: Desarrollo de Proyectos",
       description: "Diseño y planificación de proyectos de innovación personalizados, con metodologías ágiles y equipos multidisciplinares."
     },
     {
-      icon: <Cog className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />,
+      image: "/lovable-uploads/f3ee74ab-d475-4adf-912a-07fc4c15e707.png",
       title: "Fase 3: Implementación y Seguimiento",
       description: "Puesta en marcha de los proyectos con acompañamiento continuo, medición de resultados y optimización."
     }
@@ -193,8 +193,12 @@ export default function Index() {
                   className="glass-card rounded-xl animate-fade-in text-center"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
-                  <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-full bg-primary/10 inline-flex">
-                    {phase.icon}
+                  <div className="mb-4 sm:mb-6 inline-flex">
+                    <img 
+                      src={phase.image}
+                      alt={phase.title}
+                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover rounded-lg"
+                    />
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">{phase.title}</h3>
                   <p className="text-muted-foreground text-sm sm:text-base">{phase.description}</p>
