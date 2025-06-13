@@ -20,7 +20,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   
   const value = {
     language,
-    setLanguage: (lang: Language) => setLanguage(lang),
+    setLanguage,
     t: translations[language]
   };
   

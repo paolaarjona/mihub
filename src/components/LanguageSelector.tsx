@@ -20,19 +20,19 @@ type LanguageOption = {
 
 const languages: LanguageOption[] = [
   { code: "es", name: "Español", flag: "🇪🇸" },
-  { code: "en", name: "Inglés", flag: "🇬🇧" },
+  { code: "en", name: "English", flag: "🇬🇧" },
 ];
 
 export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
-  // This effect is to ensure hydration doesn't cause issues
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const handleLanguageChange = (value: string) => {
+    console.log('Changing language to:', value);
     setLanguage(value as Language);
   };
 
@@ -40,24 +40,28 @@ export default function LanguageSelector() {
     return null;
   }
 
+  const currentLanguage = languages.find(lang => lang.code === language);
+
   return (
     <div className="flex items-center">
       <Select value={language} onValueChange={handleLanguageChange}>
         <SelectTrigger 
-          className="w-[80px] h-10 border-none bg-transparent focus:ring-0" 
+          className="w-[120px] h-10 border-none bg-transparent focus:ring-0" 
           aria-label="Select Language"
         >
           <div className="flex items-center space-x-2">
             <Globe className="h-4 w-4 text-white" />
-            <SelectValue placeholder="Select language" />
+            <span className="text-white text-sm">
+              {currentLanguage?.flag} {currentLanguage?.name}
+            </span>
           </div>
         </SelectTrigger>
         <SelectContent align="start" className="w-[160px]">
-          {languages.map((language) => (
-            <SelectItem key={language.code} value={language.code} className="cursor-pointer">
+          {languages.map((lang) => (
+            <SelectItem key={lang.code} value={lang.code} className="cursor-pointer">
               <div className="flex items-center space-x-2">
-                <span>{language.flag}</span>
-                <span>{language.name}</span>
+                <span>{lang.flag}</span>
+                <span>{lang.name}</span>
               </div>
             </SelectItem>
           ))}

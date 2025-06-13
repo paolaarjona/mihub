@@ -1,241 +1,285 @@
 export const en = {
   nav: {
     home: "Home",
-    apartments: "Apartments",
-    amenities: "Amenities",
+    apartments: "Services",
+    amenities: "Methodology",
     gallery: "Gallery",
     contact: "Contact",
-    bookNow: "Book Now"
+    bookNow: "Join miHUB"
   },
   hero: {
-    subtitle: "BEACHFRONT LUXURY ACCOMMODATION",
-    title: "Experience Seaside Tranquility",
-    description: "Discover our exclusive collection of luxury beachfront apartments and hotel rooms, offering unparalleled comfort and breathtaking sea views.",
-    bookStay: "Book Your Stay",
-    exploreApartments: "Explore Apartments",
-    scrollDown: "Scroll Down"
+    subtitle: "BUSINESS INNOVATION CENTER",
+    title: "We transform innovation into confidence",
+    description: "We accompany Canarian companies towards the real adoption of Artificial Intelligence. With our own methodology, we guide each organization on a 3-phase journey towards digital transformation.",
+    bookStay: "Join miHUB",
+    exploreApartments: "Discover our Services",
+    scrollDown: "Discover more"
   },
   footer: {
-    description: "Luxurious beachfront apartments and hotel rooms with stunning sea views, offering the perfect blend of comfort and elegance for your dream vacation.",
+    description: "miHUB is the innovation center of Grupo Martínez Abolafio, strategic partner for the transformation of the Canarian business ecosystem through the adoption of Artificial Intelligence.",
     quickLinks: "Quick Links",
     contact: "Contact",
     newsletter: "Newsletter",
-    newsletterDesc: "Subscribe to our newsletter for special deals and updates.",
+    newsletterDesc: "Subscribe to receive the latest news in innovation and AI.",
     yourEmail: "Your email address",
     subscribe: "Subscribe",
     allRights: "All rights reserved."
   },
   bookingForm: {
-    title: "Book Your Stay",
-    checkIn: "Check-in Date",
-    checkOut: "Check-out Date",
-    adults: "Adults",
-    children: "Children",
-    adult: "Adult",
-    child: "Child",
+    title: "Join miHUB",
+    checkIn: "Start Date",
+    checkOut: "End Date",
+    adults: "Participants",
+    children: "Companies",
+    adult: "Participant",
+    child: "Company",
     selectDate: "Select date",
     checkAvailability: "Check Availability",
-    bookingConfirmed: "Booking Confirmed!"
+    bookingConfirmed: "Request Sent!"
   },
   testimonials: {
-    title: "What Our Guests Say",
-    description: "Discover why our guests keep coming back to MareSereno for their seaside getaways."
+    title: "What our Partners say",
+    description: "Discover why leading companies trust miHUB for their digital transformation and AI innovation."
   },
   notFound: {
     title: "Page Not Found",
-    description: "We couldn't find the page you were looking for. Perhaps you took a wrong turn in paradise?",
+    description: "We couldn't find the page you were looking for. Perhaps you took a wrong turn in innovation?",
     returnHome: "Return Home"
   },
   home: {
     welcome: {
-      subtitle: "Welcome to MareSereno",
-      title: "Luxury Seaside Accommodations",
-      description1: "Nestled on the pristine Mediterranean coastline, MareSereno offers an exquisite collection of luxury apartments and hotel rooms. Our beachfront accommodations combine elegant design with modern comfort, creating the perfect setting for an unforgettable seaside getaway.",
-      description2: "Whether you're seeking a romantic escape, a family vacation, or a peaceful retreat, our diverse range of accommodations caters to every preference and need. Each space is thoughtfully designed to provide panoramic sea views and direct beach access.",
-      learnMore: "Learn More"
+      subtitle: "Grupo Martínez Abolafio",
+      title: "miHUB 3.0: The future of business innovation",
+      description1: "Grupo Martínez Abolafio is a reference industrial group in the Canary Islands, with more than 50 years of history, with a strong presence in tourism, transport, services and real estate sectors.",
+      description2: "miHUB is their bet for the future: a business innovation ecosystem focused on the adoption of transformative technologies such as Artificial Intelligence.",
+      learnMore: "Learn more"
+    },
+    methodology: {
+      subtitle: "Our Methodology",
+      title: "A 3-phase journey to AI",
+      description: "We guide each organization through our proven digital transformation process.",
+      phase1: {
+        title: "Knowledge Generation",
+        description: "Specialized training for management teams in AI and digital transformation."
+      },
+      phase2: {
+        title: "Strategy and Use Cases",
+        description: "Identification of specific opportunities and definition of adoption strategy."
+      },
+      phase3: {
+        title: "AI Office",
+        description: "Creation and implementation of the internal AI office and project launch."
+      }
+    },
+    timeline: {
+      subtitle: "Our History",
+      title: "7 years transforming the Canaries",
+      description: "Since 2018, we have evolved to become the reference center for business innovation.",
+      events: [
+        {
+          year: "2018-2020",
+          title: "miHUB Launch",
+          description: "Creation of the physical space and establishment of the innovation ecosystem foundations."
+        },
+        {
+          year: "2021",
+          title: "Inauguration Event",
+          description: "Grand opening with CEOs from Air Europa, Mahou, Telefónica and other leading companies."
+        },
+        {
+          year: "2022-2024",
+          title: "Consolidation",
+          description: "Innovation labs, training and sector events with more than 3000 attendees."
+        },
+        {
+          year: "2025",
+          title: "New Stage: AI",
+          description: "Focus on Artificial Intelligence with new partners, management team and own methodology."
+        }
+      ]
     },
     booking: {
-      subtitle: "Book Your Stay",
-      title: "Reserve Your Perfect Getaway",
-      description: "Take the first step towards your dream vacation by checking availability and securing your preferred dates. Our simple booking process ensures a seamless experience from reservation to arrival.",
-      benefits: ["Instant confirmation", "Best rate guarantee", "Flexible cancellation options", "Secure payment"]
+      subtitle: "Join the Transformation",
+      title: "Request information about our programs",
+      description: "Take the first step towards your company's digital transformation. Our team will contact you to design the program that best suits your needs.",
+      benefits: ["Preferential access to programs", "Proven methodology", "Personalized support", "Partner ecosystem"]
     },
     featuredApartments: {
-      subtitle: "Our Accommodations",
-      title: "Featured Apartments",
-      description: "Discover our most popular accommodation options, each offering a perfect blend of comfort, style, and breathtaking sea views.",
-      viewAll: "View All Apartments"
+      subtitle: "Our Services",
+      title: "Transformation Programs",
+      description: "Discover our specialized programs designed to accelerate AI adoption in your organization.",
+      viewAll: "View All Services"
     },
     amenities: {
-      subtitle: "Hotel Amenities",
-      title: "Experience The Best",
-      description: "Enjoy our premium facilities and services designed to make your stay exceptional.",
+      subtitle: "Why miHUB?",
+      title: "Competitive Advantages",
+      description: "Our innovation ecosystem offers the best conditions for business transformation.",
       features: {
         beachfront: {
-          title: "Beachfront Location",
-          description: "Direct access to pristine beaches with crystal clear waters."
+          title: "Own Methodology",
+          description: "Validated 3-phase transformation process specific for Canarian companies."
         },
         pools: {
-          title: "Swimming Pools",
-          description: "Relax by our infinity pools with stunning sea views."
+          title: "Partner Ecosystem",
+          description: "Network of strategic collaborators: Oracle, Santander, Telefónica, Air Europa and more."
         },
         restaurant: {
-          title: "Gourmet Restaurant",
-          description: "Enjoy exquisite local and international cuisine."
+          title: "Specialized Training",
+          description: "Training programs designed for professionals and management teams."
         },
         wifi: {
-          title: "High-Speed Wi-Fi",
-          description: "Stay connected with complimentary high-speed internet."
+          title: "Innovation Labs",
+          description: "Equipped spaces for project development and proof of concept testing."
         },
         bar: {
-          title: "Beach Bar & Café",
-          description: "Refreshing drinks and snacks served right on the beach."
+          title: "Think Tanks",
+          description: "Collaborative work sessions with sector and academic experts."
         },
         location: {
-          title: "Prime Location",
-          description: "Close to local attractions, shops, and restaurants."
+          title: "50 years of experience",
+          description: "Backed by Grupo Martínez Abolafio, industrial leader in the Canaries."
         }
       }
     },
     cta: {
-      title: "Ready for Your Dream Vacation?",
-      description: "Book your stay today and experience the perfect blend of luxury, comfort, and stunning sea views.",
-      bookNow: "Book Now"
+      title: "Is your company ready to lead the change?",
+      description: "We are ready to accompany you in this transformation towards the adoption of Artificial Intelligence.",
+      bookNow: "I want to join miHUB"
     }
   },
   apartments: {
-    title: "Our Apartments & Rooms",
-    subtitle: "Discover our selection of premium accommodations, ranging from cozy studios to luxurious penthouses.",
+    title: "Our Services",
+    subtitle: "Discover our complete range of digital transformation and AI adoption programs.",
     filters: {
-      guests: "Guests",
-      anyGuests: "Any number of guests",
-      onePlus: "1+ guests",
-      twoPlus: "2+ guests",
-      threePlus: "3+ guests",
-      fourPlus: "4+ guests",
-      location: "Location",
-      allLocations: "All locations",
-      priceRange: "Price Range",
+      guests: "Participants",
+      anyGuests: "Any number",
+      onePlus: "1+ participants",
+      twoPlus: "2+ participants",
+      threePlus: "3+ participants",
+      fourPlus: "4+ participants",
+      location: "Modality",
+      allLocations: "All modalities",
+      priceRange: "Duration",
       showing: "Showing",
       of: "of",
-      accommodations: "accommodations",
+      accommodations: "services",
       resetFilters: "Reset Filters",
-      noMatch: "No apartments match your filters",
-      adjustFilters: "Try adjusting your filter criteria to see more options.",
+      noMatch: "No services match your filters",
+      adjustFilters: "Try adjusting the filter criteria to see more options.",
       viewDetails: "View Details",
       features: "features",
       more: "more"
     }
   },
   gallery: {
-    title: "Photo Gallery",
-    subtitle: "Explore our seaside paradise through captivating imagery.",
+    title: "Innovation Gallery",
+    subtitle: "Explore our workspaces, events and moments of business transformation.",
     filters: {
       all: "All",
-      exterior: "Exterior",
-      rooms: "Rooms",
-      amenities: "Amenities"
+      exterior: "Facilities",
+      rooms: "Workshops",
+      amenities: "Events"
     }
   },
   booking: {
-    title: "Book Your Stay",
-    subtitle: "Complete your reservation in a few simple steps.",
+    title: "Join miHUB",
+    subtitle: "Complete your application in a few steps.",
     steps: {
-      chooseRoom: "Choose Room",
-      guestDetails: "Guest Details",
+      chooseRoom: "Choose Program",
+      guestDetails: "Company Details",
       confirmation: "Confirmation"
     },
     dates: {
-      selectDates: "Select Dates and Guests",
-      checkIn: "Check-in Date",
-      checkOut: "Check-out Date",
-      adults: "Adults",
-      children: "Children",
-      adult: "Adult",
-      child: "Child",
+      selectDates: "Select Dates and Participants",
+      checkIn: "Start date",
+      checkOut: "End date",
+      adults: "Participants",
+      children: "Additional companies",
+      adult: "Participant",
+      child: "Company",
       selectDate: "Select date"
     },
     accommodationSelect: {
-      title: "Select Your Accommodation",
-      guests: "Guests",
+      title: "Select your Program",
+      guests: "Participants",
       selected: "Selected",
       select: "Select",
       continue: "Continue"
     },
     guestInfo: {
-      title: "Guest Information",
-      firstName: "First Name",
-      lastName: "Last Name",
+      title: "Company Information",
+      firstName: "Name",
+      lastName: "Surname",
       email: "Email",
       phone: "Phone",
       address: "Address",
       city: "City",
-      zipCode: "Zip Code",
+      zipCode: "Postal Code",
       country: "Country",
-      specialRequests: "Special Requests",
-      specialRequestsPlaceholder: "Any special requests or notes for your stay"
+      specialRequests: "Specific Needs",
+      specialRequestsPlaceholder: "Tell us about your company's specific challenges"
     },
     payment: {
-      title: "Payment Information",
-      creditCard: "Credit Card",
-      payAtProperty: "Pay at Property",
-      nameOnCard: "Name on Card",
-      cardNumber: "Card Number",
-      cardNumberPlaceholder: "0000 0000 0000 0000",
-      expiryDate: "Expiry Date",
-      expiryDatePlaceholder: "MM/YY",
-      cvc: "CVC",
-      cvcPlaceholder: "123",
-      payAtPropertyInfo: "You will be required to provide a valid credit card upon arrival for security purposes, but payment will be collected during your stay at the property."
+      title: "Contact Information",
+      creditCard: "Preferred Contact",
+      payAtProperty: "Follow-up Call",
+      nameOnCard: "Contact Person",
+      cardNumber: "Phone Number",
+      cardNumberPlaceholder: "+34 000 000 000",
+      expiryDate: "Corporate Email",
+      expiryDatePlaceholder: "company@email.com",
+      cvc: "Position",
+      cvcPlaceholder: "CEO, CTO, etc.",
+      payAtPropertyInfo: "Our team will contact you to schedule an initial consultation and design the most suitable program."
     },
     summary: {
-      title: "Booking Summary",
-      checkIn: "Check-in",
-      checkOut: "Check-out",
-      guests: "Guests",
-      night: "night",
-      nights: "nights",
-      cleaningFee: "Cleaning fee",
-      serviceFee: "Service fee",
-      total: "Total"
+      title: "Application Summary",
+      checkIn: "Start",
+      checkOut: "End",
+      guests: "Participants",
+      night: "session",
+      nights: "sessions",
+      cleaningFee: "Initial consultation",
+      serviceFee: "Follow-up",
+      total: "Estimated investment"
     },
     confirmation: {
-      title: "Review Booking Details",
-      accommodationDetails: "Accommodation Details",
-      guestDetails: "Guest Details",
-      name: "Name",
+      title: "Review Application Details",
+      accommodationDetails: "Program Details",
+      guestDetails: "Company Data",
+      name: "Contact",
       email: "Email",
       phone: "Phone",
-      address: "Address", 
+      address: "Address",
       city: "City",
       country: "Country",
-      specialRequests: "Special Requests",
-      paymentMethod: "Payment Method",
-      creditCard: "Credit Card",
-      priceSummary: "Price Summary",
-      termsAgree: "I agree to the",
+      specialRequests: "Specific Needs",
+      paymentMethod: "Contact Method",
+      creditCard: "Email and Phone",
+      priceSummary: "Program Summary",
+      termsAgree: "I accept the",
       termsLink: "Terms and Conditions",
       privacyLink: "Privacy Policy",
-      cancellationInfo: "I understand that my booking is subject to the property's cancellation policy.",
+      cancellationInfo: "I understand that this application is subject to evaluation and confirmation by the miHUB team.",
       back: "Back",
-      confirmBooking: "Confirm Booking",
-      success: "Booking Confirmed!",
-      emailSent: "Your reservation has been successfully confirmed. A confirmation email has been sent to",
-      bookingReference: "Booking Reference",
-      returnToHome: "Return to Homepage"
+      confirmBooking: "Send Application",
+      success: "Application Sent!",
+      emailSent: "Your application has been sent successfully. A confirmation email has been sent to",
+      bookingReference: "Application Reference",
+      returnToHome: "Return Home"
     }
   },
   contact: {
-    title: "Contact Us",
-    subtitle: "We're here to help make your stay unforgettable. Reach out with any questions or special requests.",
+    title: "Contact miHUB",
+    subtitle: "We're here to help you transform your company. Contact us for any questions about innovation and AI adoption.",
     getInTouch: "Get In Touch",
     address: "Address",
     phone: "Phone",
     email: "Email",
-    receptionHours: "Reception Hours",
-    checkInTime: "Check-in: After 3:00 PM",
-    checkOutTime: "Check-out: Before 11:00 AM",
-    sendMessage: "Send Us a Message",
+    receptionHours: "Business Hours",
+    checkInTime: "Monday to Friday: 9:00 - 18:00",
+    checkOutTime: "Saturdays: 9:00 - 14:00",
+    sendMessage: "Send us a Message",
     fullName: "Full Name",
     phoneNumber: "Phone Number",
     subject: "Subject",
@@ -243,152 +287,152 @@ export const en = {
     howCanWeHelp: "How can we help you?",
     send: "Send Message",
     messageSent: "Message Sent!",
-    thankYou: "Thank you for reaching out. We'll respond to your message as soon as possible.",
+    thankYou: "Thank you for contacting us. We will respond to your message as soon as possible.",
     faq: "Frequently Asked Questions",
-    faqSubtitle: "Find quick answers to commonly asked questions about our accommodations and services.",
+    faqSubtitle: "Find quick answers to the most common questions about our programs and services.",
     questions: {
       checkInOut: {
-        question: "What are your check-in and check-out times?",
-        answer: "Check-in is from 3:00 PM onwards, and check-out is until 11:00 AM. Early check-in or late check-out may be arranged based on availability."
+        question: "What is the duration of the programs?",
+        answer: "Our programs vary from one-day workshops to semester-long programs. The duration is adapted to the specific needs of each company."
       },
       parking: {
-        question: "Is parking available at the property?",
-        answer: "Yes, we offer complimentary parking for all guests. Valet parking service is also available for an additional fee."
+        question: "Do you offer face-to-face and online services?",
+        answer: "Yes, we offer face-to-face modalities in our facilities, online and hybrid, adapting to each client's preferences."
       },
       pets: {
-        question: "Are pets allowed in the apartments?",
-        answer: "We welcome pets in designated pet-friendly apartments. Please inform us in advance if you plan to bring a pet, as additional charges may apply."
+        question: "What does Partner membership include?",
+        answer: "Partners have preferential access to all programs, special discounts, fast-track services and participation in exclusive events for €15,000/year."
       },
       breakfast: {
-        question: "Is breakfast included in the room rate?",
-        answer: "Breakfast is included in select room packages. You can check the inclusion during the booking process or add it to your reservation at any time."
+        question: "Do the programs include certifications?",
+        answer: "Yes, we offer technological certifications with our partners like Oracle, as well as participation certificates in all our programs."
       },
       transfers: {
-        question: "Do you offer airport transfers?",
-        answer: "Yes, we offer airport transfers for an additional fee. Please contact our concierge at least 48 hours before your arrival to arrange transportation."
+        question: "Do you offer personalized consulting?",
+        answer: "Absolutely. Our AI adoption service includes completely personalized consulting from the exploration phase to implementation."
       },
       amenities: {
-        question: "What amenities are available at the property?",
-        answer: "Our property features swimming pools, a spa, restaurants, a beach bar, fitness center, and direct beach access. All apartments include Wi-Fi, air conditioning, and modern appliances."
+        question: "What type of companies are ideal for miHUB?",
+        answer: "We work with companies of all sizes that seek to innovate and adopt AI. From startups to large corporations, especially in the Canaries."
       }
     }
   },
   apartmentDescriptions: {
     "1": {
-      name: "Deluxe Sea View Suite",
-      description: "Luxurious suite with panoramic sea views, modern amenities, and a private balcony."
+      name: "CEO & Management Program",
+      description: "Semester program specialized for management teams, focused on leadership in the AI era."
     },
     "2": {
-      name: "Premium Family Apartment",
-      description: "Spacious apartment ideal for families, with full kitchen and stunning coastal views."
+      name: "AI Adoption Workshop",
+      description: "Intensive one-day session to identify immediate AI opportunities in your company."
     },
     "3": {
-      name: "Executive Beach Studio",
-      description: "Elegant studio with direct beach access, modern design, and premium finishes."
+      name: "Innovation Laboratory",
+      description: "Collaborative space for developing proof of concepts and innovation projects."
     },
     "4": {
-      name: "Luxury Penthouse Suite",
-      description: "Exclusive top-floor suite with expansive terrace and panoramic sea views."
+      name: "AI Office - Implementation",
+      description: "Complete 6-month program to create and implement your company's internal AI office."
     },
     "5": {
-      name: "Classic Double Room",
-      description: "Comfortable hotel room with modern amenities and partial sea views."
+      name: "Oracle Certification",
+      description: "Technological certification programs in partnership with Oracle and other industry leaders."
     },
     "6": {
-      name: "Garden View Apartment",
-      description: "Peaceful apartment surrounded by lush gardens, just a short walk from the beach."
+      name: "Sector Think Tank",
+      description: "Collaborative work sessions with sector experts to address specific challenges."
     }
   },
   amenitiesPage: {
-    title: "Our Amenities",
-    subtitle: "Discover the luxury amenities and services that make your stay unforgettable.",
-    description: "At MareSereno, we are dedicated to providing a comprehensive and luxurious stay experience. From our beachfront services to wellness facilities, every detail has been curated to ensure maximum comfort and pleasure.",
+    title: "Our Methodology",
+    subtitle: "Discover the process that transforms companies through the adoption of Artificial Intelligence.",
+    description: "At miHUB, we have developed a unique methodology that guides Canarian companies on their journey towards successful adoption of Artificial Intelligence, combining training, strategy and implementation.",
     categories: {
       wellness: {
-        title: "Wellness & Relaxation",
-        description: "Treat yourself with our range of wellness services designed to rejuvenate body and mind.",
+        title: "Training and Mindset",
+        description: "We develop the necessary skills to lead digital transformation in your organization.",
         items: [
           {
-            title: "Luxury Spa",
-            description: "Our spa offers a full range of treatments, from traditional therapies to the most modern beauty treatments."
+            title: "CEO Programs",
+            description: "Specialized semester training for management teams in digital leadership and AI strategy."
           },
           {
-            title: "Fitness Center",
-            description: "Maintain your fitness routine with our state-of-the-art gym featuring panoramic sea views."
+            title: "Technological Certifications",
+            description: "Certification programs in partnership with Oracle and other technological leaders in the sector."
           },
           {
-            title: "Infinity Pool",
-            description: "Immerse yourself in our infinity pool while admiring the endless horizon of the sea."
+            title: "Intensive Workshops",
+            description: "High-impact one-day sessions for rapid identification of AI opportunities."
           },
           {
-            title: "Beach Yoga",
-            description: "Join our morning yoga sessions on the beach for a revitalizing awakening."
+            title: "Digital Mindset",
+            description: "Cultural transformation necessary to successfully adopt new technologies."
           }
         ]
       },
       dining: {
-        title: "Dining",
-        description: "Discover the best of local and international cuisine at our restaurants and bars.",
+        title: "Collaborative Innovation",
+        description: "We create spaces and methodologies for co-creation and development of innovative solutions.",
         items: [
           {
-            title: "Gourmet Restaurant",
-            description: "Savor fine dishes prepared by our chefs with fresh local ingredients."
+            title: "Innovation Laboratories",
+            description: "Spaces equipped for project development and proof of concept with advanced technology."
           },
           {
-            title: "Beach Bar",
-            description: "Enjoy refreshing cocktails and light snacks with your feet in the sand."
+            title: "Corporate Co-creation",
+            description: "Collaborative projects with large corporations to solve specific business challenges."
           },
           {
-            title: "Lounge Bar",
-            description: "Relax with a selection of fine wines and spirits in an elegant atmosphere."
+            title: "Think Tanks",
+            description: "Collaborative work sessions with sector and academic experts."
           },
           {
-            title: "Room Service",
-            description: "Enjoy gourmet meals in the privacy of your apartment, available 24 hours a day."
+            title: "Rapid Prototyping",
+            description: "Agile methodologies to validate ideas and concepts in record time."
           }
         ]
       },
       services: {
-        title: "Extra Services",
-        description: "Take advantage of our additional services for a hassle-free stay.",
+        title: "AI Adoption",
+        description: "Our structured 3-phase process for successful implementation of Artificial Intelligence.",
         items: [
           {
-            title: "24/7 Concierge",
-            description: "Our concierge team is available at any time to assist you with any request."
+            title: "Phase 1: Exploration",
+            description: "Analysis of the current business model and definition of the specific AI vision for your company."
           },
           {
-            title: "Airport Transfers",
-            description: "Travel comfortably to and from the airport with our private transfer service."
+            title: "Phase 2: Strategy",
+            description: "Identification of priority use cases, specific challenges and elaboration of the action plan."
           },
           {
-            title: "Car Rental",
-            description: "Explore the area with our fleet of premium vehicles available for rent."
+            title: "Phase 3: Implementation",
+            description: "Creation of the internal AI Office and launch of the first projects."
           },
           {
-            title: "Guided Excursions",
-            description: "Discover local attractions with our personalized expert-guided tours."
+            title: "Continuous Support",
+            description: "Monitoring and optimization throughout the digital transformation process."
           }
         ]
       },
       entertainment: {
-        title: "Entertainment",
-        description: "Enjoy a variety of recreational activities designed for all tastes.",
+        title: "Ecosystem and Networking",
+        description: "Access to a network of contacts, events and resources that enhance business growth.",
         items: [
           {
-            title: "Water Sports",
-            description: "Try a wide range of water sports, from paddleboarding to jet skiing."
+            title: "Partner Network",
+            description: "Direct connection with leading companies like Santander, Oracle, Telefónica and Air Europa."
           },
           {
-            title: "Kids Play Area",
-            description: "Little ones can have fun in our safe and supervised play area."
+            title: "Sector Events",
+            description: "Round tables, conferences and networking events specific by business sector."
           },
           {
-            title: "Themed Evenings",
-            description: "Join our weekly themed evenings with live music and entertainment."
+            title: "Reference Reports",
+            description: "Exclusive access to market studies and trends in innovation and technology adoption."
           },
           {
-            title: "Library & Game Room",
-            description: "Relax with a good book or enjoy board games in our common room."
+            title: "Innovators Community",
+            description: "Exchange space between entrepreneurs, businesspeople and experts in digital transformation."
           }
         ]
       }
