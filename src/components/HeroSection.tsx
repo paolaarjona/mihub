@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Brain, Target, Cog } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -25,34 +25,54 @@ export default function HeroSection() {
   
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background image with parallax */}
+      {/* Background image with parallax - Cambiar por imagen de innovación/AI */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1615571022219-eb45cf7faa9d?q=80&w=1920&auto=format&fit=crop')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1920&auto=format&fit=crop')",
           transform: `translateY(${backgroundY}px)`,
           backgroundPosition: `center ${50 + scrollY * 0.05}%`
         }}
       />
       
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
       
       {/* Content */}
       <div
         className="relative h-full flex flex-col justify-center items-center text-center px-4"
         style={{ transform: `translateY(${contentY}px)` }}
       >
-        <div className="max-w-3xl animate-fade-in">
+        <div className="max-w-4xl animate-fade-in">
           <span className="inline-block text-white/90 text-lg mb-4 tracking-wide border-b border-white/30 pb-2">
             {t.hero.subtitle}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             {t.hero.title}
           </h1>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
             {t.hero.description}
           </p>
+          
+          {/* Metodología en 3 fases */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Brain className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold mb-1">Fase 1</h3>
+              <p className="text-white/80 text-sm">Generación de conocimiento para el equipo directivo</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Target className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold mb-1">Fase 2</h3>
+              <p className="text-white/80 text-sm">Identificación de casos de uso y definición de estrategia</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+              <Cog className="h-8 w-8 text-white mb-2 mx-auto" />
+              <h3 className="text-white font-semibold mb-1">Fase 3</h3>
+              <p className="text-white/80 text-sm">Creación de una Oficina de IA y puesta en marcha</p>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" variant="heroSolid" className="min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px]">
               <Link to="/booking">{t.hero.bookStay}</Link>
@@ -61,6 +81,10 @@ export default function HeroSection() {
               <Link to="/apartments">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
+          
+          <p className="text-white/90 mt-6 font-medium">
+            miHUB no es solo un Hub. Es un socio estratégico para la transformación del ecosistema empresarial canario.
+          </p>
         </div>
       </div>
       

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -6,7 +7,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 interface Testimonial {
   id: number;
   name: string;
-  location: string;
+  position: string;
+  company: string;
   avatar: string;
   content: string;
   rating: number;
@@ -15,27 +17,30 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sophia Martinez",
-    location: "New York, USA",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
-    content: "My family and I had the most wonderful stay at MareSereno. The apartment was immaculate, with breathtaking sea views. The staff went above and beyond to make our vacation special.",
+    name: "Carlos Muñoz",
+    position: "CEO",
+    company: "Air Europa",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces",
+    content: "miHUB ha sido fundamental en nuestra transformación digital. Su metodología nos permitió identificar casos de uso específicos de IA que han revolucionado nuestras operaciones aeroportuarias.",
     rating: 5
   },
   {
     id: 2,
-    name: "Marco Rossi",
-    location: "Rome, Italy",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=faces",
-    content: "Absolutely perfect location, steps away from the beach. The apartment had everything we needed and more. The modern amenities combined with the traditional coastal charm created a truly magical experience.",
+    name: "María González",
+    position: "Directora de Innovación",
+    company: "Oracle España",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
+    content: "La alianza con miHUB nos ha permitido acelerar la adopción de tecnología cloud e IA en las empresas canarias. Su enfoque práctico y personalizado marca la diferencia.",
     rating: 5
   },
   {
     id: 3,
-    name: "Emma Johnson",
-    location: "London, UK",
-    avatar: "https://images.unsplash.com/photo-1569913486515-b74bf7751574?w=150&h=150&fit=crop&crop=faces",
-    content: "We spent a wonderful week at this beachfront paradise. The sunrise views from our terrace were worth the trip alone. Exceptionally clean and beautifully designed spaces.",
-    rating: 4
+    name: "Antonio Hernández",
+    position: "Director General",
+    company: "Grupo Martínez Abolafio",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces",
+    content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región.",
+    rating: 5
   },
 ];
 
@@ -115,7 +120,8 @@ export default function TestimonialsSection() {
                       ))}
                     </div>
                     <h4 className="text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground text-center md:text-left">{testimonial.location}</p>
+                    <p className="text-sm text-primary font-medium text-center md:text-left">{testimonial.position}</p>
+                    <p className="text-sm text-muted-foreground text-center md:text-left">{testimonial.company}</p>
                   </div>
                   
                   <div className="flex-1 flex items-center">
@@ -135,7 +141,7 @@ export default function TestimonialsSection() {
               disabled={isAnimating}
             >
               <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Previous testimonial</span>
+              <span className="sr-only">Testimonio anterior</span>
             </button>
             
             <div className="flex space-x-2">
@@ -153,7 +159,7 @@ export default function TestimonialsSection() {
                       ? "bg-primary w-6" 
                       : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                   }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`Ir al testimonio ${index + 1}`}
                 />
               ))}
             </div>
@@ -164,7 +170,7 @@ export default function TestimonialsSection() {
               disabled={isAnimating}
             >
               <ChevronRight className="h-5 w-5" />
-              <span className="sr-only">Next testimonial</span>
+              <span className="sr-only">Siguiente testimonio</span>
             </button>
           </div>
         </div>

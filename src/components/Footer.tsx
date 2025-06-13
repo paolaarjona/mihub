@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -12,22 +12,22 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
-            <h4 className="text-xl font-bold mb-4">MareSereno</h4>
+            <h4 className="text-xl font-bold mb-4">miHUB 3.0</h4>
             <p className="text-muted-foreground mb-4">
               {t.footer.description}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Facebook size={20} />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram size={20} />
-                <span className="sr-only">Instagram</span>
+                <Linkedin size={20} />
+                <span className="sr-only">LinkedIn</span>
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram size={20} />
+                <span className="sr-only">Instagram</span>
               </a>
             </div>
           </div>
@@ -61,18 +61,18 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
                 <span className="text-muted-foreground">
-                  123 Seaside Boulevard<br />
-                  Costa Bella, 12345<br />
-                  Italy
+                  Zona Franca de Gran Canaria<br />
+                  Edificio miHUB<br />
+                  Las Palmas de Gran Canaria, España
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">+39 123 4567 890</span>
+                <span className="text-muted-foreground">+34 928 123 456</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">info@maresereno.com</span>
+                <span className="text-muted-foreground">info@mihub.es</span>
               </li>
             </ul>
           </div>
@@ -99,8 +99,13 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} MareSereno. {t.footer.allRights}</p>
+        <div className="border-t border-border pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
+          <p>&copy; {currentYear} miHUB 3.0 - Grupo Martínez Abolafio. {t.footer.allRights}</p>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <a href="#" className="hover:text-primary transition-colors">Política de Privacidad</a>
+            <a href="#" className="hover:text-primary transition-colors">Términos de Uso</a>
+            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+          </div>
         </div>
       </div>
     </footer>

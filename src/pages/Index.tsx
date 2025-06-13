@@ -1,49 +1,52 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import TimelineSection from "@/components/TimelineSection";
+import PartnersSection from "@/components/PartnersSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wifi, Utensils, Waves, LifeBuoy, MapPin, Coffee } from "lucide-react";
+import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Sample apartments data
-const featuredApartments: ApartmentProps[] = [
+// Programas de miHUB
+const featuredPrograms: ApartmentProps[] = [
   {
     id: "1",
-    name: "Deluxe Sea View Suite",
-    description: "Luxurious suite with panoramic sea views, modern amenities, and a private balcony.",
-    price: 180,
-    capacity: 2,
-    size: 45,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
-    location: "Beachfront",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Balcony"]
+    name: "Programa CEO & Directivos",
+    description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
+    price: 15000,
+    capacity: 8,
+    size: 6,
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    location: "Presencial",
+    features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
   {
     id: "2",
-    name: "Premium Family Apartment",
-    description: "Spacious apartment ideal for families, with full kitchen and stunning coastal views.",
-    price: 250,
-    capacity: 4,
-    size: 75,
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
-    location: "Second row",
-    features: ["Wi-Fi", "Kitchen", "Bathroom", "Air Conditioning", "TV", "Washing Machine"]
+    name: "Workshop Adopción de IA",
+    description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
+    price: 1200,
+    capacity: 12,
+    size: 1,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    location: "Híbrido",
+    features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
   {
     id: "3",
-    name: "Executive Beach Studio",
-    description: "Elegant studio with direct beach access, modern design, and premium finishes.",
-    price: 150,
-    capacity: 2,
-    size: 35,
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&h=600&fit=crop",
-    location: "Beachfront",
-    features: ["Wi-Fi", "Kitchenette", "Bathroom", "Air Conditioning", "TV"]
+    name: "Oficina de IA - Implementación",
+    description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
+    price: 25000,
+    capacity: 4,
+    size: 6,
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
+    location: "Personalizado",
+    features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   }
 ];
 
@@ -55,37 +58,56 @@ export default function Index() {
     window.scrollTo(0, 0);
   }, []);
   
-  // Feature items
-  const features = [
+  // Metodología en 3 fases
+  const methodology = [
     {
-      icon: <Waves className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.beachfront.title,
-      description: t.home.amenities.features.beachfront.description
+      icon: <Brain className="h-8 w-8 text-primary" />,
+      title: "Fase 1: Generación de Conocimiento",
+      description: "Formación especializada para el equipo directivo en IA y transformación digital, creando la base necesaria para liderar el cambio."
     },
     {
-      icon: <LifeBuoy className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.pools.title,
-      description: t.home.amenities.features.pools.description
+      icon: <Target className="h-8 w-8 text-primary" />,
+      title: "Fase 2: Estrategia y Casos de Uso", 
+      description: "Identificación de oportunidades específicas, análisis de retos empresariales y definición del plan de acción personalizado."
     },
     {
-      icon: <Utensils className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.restaurant.title,
-      description: t.home.amenities.features.restaurant.description
+      icon: <Cog className="h-8 w-8 text-primary" />,
+      title: "Fase 3: Oficina de IA",
+      description: "Creación e implementación de la oficina interna de IA, con proyectos piloto y estructura organizativa definida."
+    }
+  ];
+  
+  // Ventajas competitivas
+  const advantages = [
+    {
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
+      title: "Metodología Propia",
+      description: "Proceso validado de transformación en 3 fases específico para empresas canarias."
     },
     {
-      icon: <Wifi className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.wifi.title,
-      description: t.home.amenities.features.wifi.description
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: "Ecosistema de Partners",
+      description: "Red de colaboradores estratégicos: Oracle, Santander, Telefónica, Air Europa y más."
     },
     {
-      icon: <Coffee className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.bar.title,
-      description: t.home.amenities.features.bar.description
+      icon: <Brain className="h-8 w-8 text-primary" />,
+      title: "Formación Especializada",
+      description: "Programas de capacitación diseñados para profesionales y equipos directivos."
     },
     {
-      icon: <MapPin className="h-8 w-8 text-primary" />,
-      title: t.home.amenities.features.location.title,
-      description: t.home.amenities.features.location.description
+      icon: <Cog className="h-8 w-8 text-primary" />,
+      title: "Laboratorios de Innovación",
+      description: "Espacios equipados para desarrollo de proyectos y pruebas de concepto."
+    },
+    {
+      icon: <Target className="h-8 w-8 text-primary" />,
+      title: "Think Tanks",
+      description: "Sesiones de trabajo colaborativo con expertos del sector y la academia."
+    },
+    {
+      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: "50 años de experiencia",
+      description: "Respaldo del Grupo Martínez Abolafio, líder industrial en Canarias."
     }
   ];
   
@@ -97,7 +119,7 @@ export default function Index() {
         {/* Hero Section */}
         <HeroSection />
         
-        {/* Welcome Section */}
+        {/* Welcome Section - Quiénes Somos */}
         <section id="welcome" className="section">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -115,7 +137,7 @@ export default function Index() {
                   {t.home.welcome.description2}
                 </p>
                 <Button asChild className="btn-primary">
-                  <Link to="/about">
+                  <Link to="/contact">
                     {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -124,22 +146,22 @@ export default function Index() {
               <div className="relative animate-fade-in [animation-delay:300ms]">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&h=600&fit=crop"
-                    alt="Seaside view" 
+                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop"
+                    alt="Equipo colaborativo trabajando en innovación" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1545579133-99bb5ab189bd?w=400&h=300&fit=crop"
-                    alt="Luxury apartment interior" 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
+                    alt="Workspace de innovación tecnológica" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=400&h=300&fit=crop"
-                    alt="Pool view" 
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
+                    alt="Desarrollo de soluciones IA" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -148,8 +170,50 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Booking Form Section */}
+        {/* Timeline Section - Nuestra Historia */}
+        <TimelineSection />
+        
+        {/* Metodología Section */}
         <section className="relative py-20 bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background overflow-hidden">
+          <div className="container relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
+              <span className="text-sm text-primary font-medium uppercase tracking-wider">
+                Nuestra Metodología
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+                Un viaje en 3 fases hacia la IA
+              </h2>
+              <p className="text-muted-foreground">
+                Guiamos a cada organización a través de nuestro proceso probado de transformación digital.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {methodology.map((phase, index) => (
+                <div 
+                  key={index} 
+                  className="glass-card p-8 rounded-xl animate-fade-in text-center"
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                >
+                  <div className="mb-6 p-4 rounded-full bg-primary/10 inline-flex">
+                    {phase.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">{phase.title}</h3>
+                  <p className="text-muted-foreground">{phase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
+            <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-primary/50 blur-3xl" />
+            <div className="absolute bottom-10 right-40 w-48 h-48 rounded-full bg-sea-light blur-3xl" />
+          </div>
+        </section>
+        
+        {/* Booking Form Section */}
+        <section className="relative py-20 bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
@@ -177,15 +241,9 @@ export default function Index() {
               <BookingForm />
             </div>
           </div>
-          
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
-            <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-primary/50 blur-3xl" />
-            <div className="absolute bottom-10 right-40 w-48 h-48 rounded-full bg-sea-light blur-3xl" />
-          </div>
         </section>
         
-        {/* Featured Apartments */}
+        {/* Featured Programs */}
         <section className="section">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
@@ -201,9 +259,9 @@ export default function Index() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredApartments.map((apartment, index) => (
-                <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <ApartmentCard apartment={apartment} />
+              {featuredPrograms.map((program, index) => (
+                <div key={program.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                  <ApartmentCard apartment={program} />
                 </div>
               ))}
             </div>
@@ -218,26 +276,29 @@ export default function Index() {
           </div>
         </section>
         
+        {/* Partners Section */}
+        <PartnersSection />
+        
         {/* Testimonials Section */}
         <TestimonialsSection />
         
-        {/* Features Section */}
+        {/* Features Section - ¿Por qué miHUB? */}
         <section className="section bg-card">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <span className="text-sm text-primary font-medium uppercase tracking-wider">
-                {t.home.amenities.subtitle}
+                ¿Por qué miHUB?
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-                {t.home.amenities.title}
+                Ventajas Competitivas
               </h2>
               <p className="text-muted-foreground">
-                {t.home.amenities.description}
+                Nuestro ecosistema de innovación ofrece las mejores condiciones para la transformación empresarial.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {advantages.map((feature, index) => (
                 <div 
                   key={index} 
                   className="glass-card p-6 rounded-xl animate-fade-in flex flex-col items-center text-center"
