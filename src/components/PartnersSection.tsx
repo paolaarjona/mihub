@@ -75,7 +75,7 @@ export default function PartnersSection() {
               align: "start",
               loop: true,
               slidesToScroll: 1,
-              containScroll: "trimSnaps",
+              containScroll: false,
             }}
             className="w-full"
           >
