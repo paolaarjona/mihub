@@ -266,7 +266,7 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {featuredPrograms.map((program, index) => (
                 <div key={program.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <ApartmentCard apartment={program} />
+                  <ApartmentCard apartment={program} hidePrice={true} />
                 </div>
               ))}
             </div>
