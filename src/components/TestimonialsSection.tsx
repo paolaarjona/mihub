@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -19,7 +20,7 @@ const testimonials: Testimonial[] = [
     name: "Jesús Nuño de La Rosa",
     position: "CEO",
     company: "Air Europa",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces",
+    avatar: "/lovable-uploads/96694bb1-6e0a-4352-b4b7-aa34f984dce8.png",
     content: "miHUB ha sido fundamental en nuestra transformación digital. Su metodología nos permitió identificar casos de uso específicos de IA que han revolucionado nuestras operaciones aeroportuarias.",
     rating: 5
   },
