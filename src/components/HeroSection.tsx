@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
@@ -86,7 +85,7 @@ export default function HeroSection() {
           
           <div className="flex justify-center mb-8 sm:mb-12">
             <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white">
-              <Link to="/apartments">{t.hero.exploreApartments}</Link>
+              <Link to="/servicios">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
           
@@ -108,4 +107,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
