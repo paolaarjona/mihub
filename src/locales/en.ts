@@ -46,6 +46,74 @@ export const en = {
     description: "We couldn't find the page you were looking for. Perhaps you took a wrong turn in innovation?",
     returnHome: "Return Home"
   },
+  corporateEvents: {
+    subtitle: "Corporate Events",
+    title: "Connecting Brilliant Minds",
+    description: "We organize world-class events that drive innovation and create valuable connections in the Canarian business ecosystem.",
+    upcomingEvents: {
+      title: "Upcoming Events",
+      description: "Join us at these transformative events."
+    },
+    events: {
+      congress: {
+        title: "Canary Islands Innovation Congress 2024",
+        description: "Annual event that brings together leading business leaders and innovation experts.",
+        date: "November 15-16, 2024",
+        location: "Las Palmas de Gran Canaria",
+        type: "Congress"
+      },
+      workshop: {
+        title: "Workshop: AI for Executives",
+        description: "Intensive workshop on practical implementation of AI in business strategy.",
+        date: "Monthly",
+        location: "Hybrid",
+        type: "Workshop"
+      },
+      hackathon: {
+        title: "Sustainable Tourism Hackathon",
+        description: "48-hour competition to develop innovative solutions in sustainable tourism.",
+        date: "December 20-22, 2024",
+        location: "Tenerife",
+        type: "Hackathon"
+      },
+      roundtable: {
+        title: "Round Table: Future of Work",
+        description: "Debate on the impact of AI and automation on the Canarian labor market.",
+        date: "Quarterly",
+        location: "Rotating",
+        type: "Round Table"
+      }
+    },
+    moreInfo: "More Information",
+    ourServices: {
+      title: "Our Services",
+      description: "We offer comprehensive solutions for innovation corporate events."
+    },
+    services: {
+      organization: {
+        title: "Complete Organization",
+        description: "From conceptualization to execution, we handle all aspects of the event."
+      },
+      experts: {
+        title: "Expert Network",
+        description: "Access to our extensive network of speakers and international innovation experts."
+      },
+      venues: {
+        title: "Exclusive Venues",
+        description: "Unique and technologically equipped spaces in strategic locations."
+      },
+      experiences: {
+        title: "Memorable Experiences",
+        description: "Events that generate real value and lasting connections for participants."
+      }
+    },
+    cta: {
+      title: "Want to organize an event?",
+      description: "We create unique experiences that connect people, ideas and opportunities.",
+      requestProposal: "Request Proposal",
+      contactTeam: "Contact Team"
+    }
+  },
   home: {
     welcome: {
       subtitle: "Grupo Martínez Abolafio",

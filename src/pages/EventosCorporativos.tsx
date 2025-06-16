@@ -5,77 +5,80 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin, Trophy } from "lucide-react";
-
-const eventos = [
-  {
-    id: "1",
-    title: "Congreso de Innovación Canarias 2024",
-    description: "Evento anual que reúne a los principales líderes empresariales y expertos en innovación.",
-    fecha: "15-16 Noviembre 2024",
-    ubicacion: "Las Palmas de Gran Canaria",
-    asistentes: "200+",
-    tipo: "Congreso",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop"
-  },
-  {
-    id: "2",
-    title: "Workshop: IA para Directivos",
-    description: "Taller intensivo sobre implementación práctica de IA en la estrategia empresarial.",
-    fecha: "Mensual",
-    ubicacion: "Híbrido",
-    asistentes: "25",
-    tipo: "Workshop",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
-  },
-  {
-    id: "3",
-    title: "Hackathon Turismo Sostenible",
-    description: "Competición de 48 horas para desarrollar soluciones innovadoras en turismo sostenible.",
-    fecha: "20-22 Diciembre 2024",
-    ubicacion: "Tenerife",
-    asistentes: "100+",
-    tipo: "Hackathon",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
-  },
-  {
-    id: "4",
-    title: "Mesa Redonda: Futuro del Trabajo",
-    description: "Debate sobre el impacto de la IA y automatización en el mercado laboral canario.",
-    fecha: "Trimestral",
-    ubicacion: "Rotativo",
-    asistentes: "50",
-    tipo: "Mesa Redonda",
-    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop"
-  }
-];
-
-const servicios = [
-  {
-    icon: <Calendar className="h-8 w-8 text-primary" />,
-    title: "Organización Completa",
-    description: "Desde la conceptualización hasta la ejecución, nos encargamos de todos los aspectos del evento."
-  },
-  {
-    icon: <Users className="h-8 w-8 text-primary" />,
-    title: "Red de Expertos",
-    description: "Acceso a nuestra amplia red de ponentes y expertos internacionales en innovación."
-  },
-  {
-    icon: <MapPin className="h-8 w-8 text-primary" />,
-    title: "Venues Exclusivos",
-    description: "Espacios únicos y tecnológicamente equipados en ubicaciones estratégicas."
-  },
-  {
-    icon: <Trophy className="h-8 w-8 text-primary" />,
-    title: "Experiencias Memorables",
-    description: "Eventos que generan valor real y conexiones duraderas para los participantes."
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function EventosCorporativos() {
+  const { t } = useLanguage();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const eventos = [
+    {
+      id: "1",
+      title: t.corporateEvents.events.congress.title,
+      description: t.corporateEvents.events.congress.description,
+      fecha: t.corporateEvents.events.congress.date,
+      ubicacion: t.corporateEvents.events.congress.location,
+      asistentes: "200+",
+      tipo: t.corporateEvents.events.congress.type,
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop"
+    },
+    {
+      id: "2",
+      title: t.corporateEvents.events.workshop.title,
+      description: t.corporateEvents.events.workshop.description,
+      fecha: t.corporateEvents.events.workshop.date,
+      ubicacion: t.corporateEvents.events.workshop.location,
+      asistentes: "25",
+      tipo: t.corporateEvents.events.workshop.type,
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
+    },
+    {
+      id: "3",
+      title: t.corporateEvents.events.hackathon.title,
+      description: t.corporateEvents.events.hackathon.description,
+      fecha: t.corporateEvents.events.hackathon.date,
+      ubicacion: t.corporateEvents.events.hackathon.location,
+      asistentes: "100+",
+      tipo: t.corporateEvents.events.hackathon.type,
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
+    },
+    {
+      id: "4",
+      title: t.corporateEvents.events.roundtable.title,
+      description: t.corporateEvents.events.roundtable.description,
+      fecha: t.corporateEvents.events.roundtable.date,
+      ubicacion: t.corporateEvents.events.roundtable.location,
+      asistentes: "50",
+      tipo: t.corporateEvents.events.roundtable.type,
+      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop"
+    }
+  ];
+
+  const servicios = [
+    {
+      icon: <Calendar className="h-8 w-8 text-primary" />,
+      title: t.corporateEvents.services.organization.title,
+      description: t.corporateEvents.services.organization.description
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: t.corporateEvents.services.experts.title,
+      description: t.corporateEvents.services.experts.description
+    },
+    {
+      icon: <MapPin className="h-8 w-8 text-primary" />,
+      title: t.corporateEvents.services.venues.title,
+      description: t.corporateEvents.services.venues.description
+    },
+    {
+      icon: <Trophy className="h-8 w-8 text-primary" />,
+      title: t.corporateEvents.services.experiences.title,
+      description: t.corporateEvents.services.experiences.description
+    }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -87,14 +90,13 @@ export default function EventosCorporativos() {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <span className="text-sm text-primary font-medium uppercase tracking-wider">
-                Eventos Corporativos
+                {t.corporateEvents.subtitle}
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-6">
-                Conectamos Mentes Brillantes
+                {t.corporateEvents.title}
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Organizamos eventos de clase mundial que impulsan la innovación y 
-                crean conexiones valiosas en el ecosistema empresarial canario.
+                {t.corporateEvents.description}
               </p>
             </div>
           </div>
@@ -105,10 +107,10 @@ export default function EventosCorporativos() {
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                Próximos Eventos
+                {t.corporateEvents.upcomingEvents.title}
               </h2>
               <p className="text-muted-foreground">
-                Únete a nosotros en estos eventos transformadores.
+                {t.corporateEvents.upcomingEvents.description}
               </p>
             </div>
             
@@ -151,7 +153,7 @@ export default function EventosCorporativos() {
                     </div>
                     
                     <Button className="w-full btn-primary">
-                      Más Información <ArrowRight className="ml-2 h-4 w-4" />
+                      {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -165,10 +167,10 @@ export default function EventosCorporativos() {
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                Nuestros Servicios
+                {t.corporateEvents.ourServices.title}
               </h2>
               <p className="text-muted-foreground">
-                Ofrecemos soluciones integrales para eventos corporativos de innovación.
+                {t.corporateEvents.ourServices.description}
               </p>
             </div>
             
@@ -195,20 +197,20 @@ export default function EventosCorporativos() {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-                ¿Quieres organizar un evento?
+                {t.corporateEvents.cta.title}
               </h2>
               <p className="text-muted-foreground mb-8 text-lg">
-                Creamos experiencias únicas que conectan personas, ideas y oportunidades.
+                {t.corporateEvents.cta.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="btn-primary">
                   <Link to="/#eventos-corporativos">
-                    Solicitar Propuesta <ArrowRight className="ml-2 h-4 w-4" />
+                    {t.corporateEvents.cta.requestProposal} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link to="/contact">
-                    Contactar Equipo
+                    {t.corporateEvents.cta.contactTeam}
                   </Link>
                 </Button>
               </div>
