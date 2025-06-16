@@ -34,7 +34,7 @@ export default function PartnersSection() {
     },
     {
       name: "Telefónica",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Telefonica_logo.svg/2560px-Telefonica_logo.svg.png",
+      logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
       description: "Alianza en telecomunicaciones y transformación digital."
     },
     {
