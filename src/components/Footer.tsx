@@ -61,14 +61,15 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
                 <span className="text-muted-foreground">
-                  Zona Franca de Gran Canaria<br />
-                  Edificio miHUB<br />
-                  Las Palmas de Gran Canaria, España
+                  Marina de Lanzarote<br />
+                  Edificio miHUB 3.0<br />
+                  35500 Arrecife, Lanzarote<br />
+                  Islas Canarias, España
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">+34 928 123 456</span>
+                <span className="text-muted-foreground">+34 928 456 789</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-primary" />
