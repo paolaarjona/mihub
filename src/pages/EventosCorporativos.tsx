@@ -202,7 +202,7 @@ export default function EventosCorporativos() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="btn-primary">
-                  <Link to="/booking">
+                  <Link to="/#eventos-corporativos">
                     Solicitar Propuesta <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

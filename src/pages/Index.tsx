@@ -233,7 +233,7 @@ export default function Index() {
         </section>
         
         {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
-        <section className="relative section bg-muted/30 overflow-hidden">
+        <section id="eventos-corporativos" className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
             <div className="animate-fade-in">
               <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
