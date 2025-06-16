@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -77,17 +78,17 @@ export default function Index() {
   // Metodología en 3 fases - orientada a implementar proyectos de innovación
   const methodology = [
     {
-      image: "/lovable-uploads/697b14f6-ed23-4d3e-a567-27731c9803f9.png",
+      image: "/lovable-uploads/2664fe00-ee18-44e7-9f27-fc98890ca4ca.png",
       title: "Fase 1: Identificación de Oportunidades",
       description: "Análisis del negocio para identificar áreas de mejora y oportunidades de innovación específicas que generen valor real."
     },
     {
-      image: "/lovable-uploads/a882bbf0-6856-4443-95ff-d19c77050d1e.png", 
+      image: "/lovable-uploads/c9fe5c4c-cc22-496f-b047-6b772dd6252e.png", 
       title: "Fase 2: Desarrollo de Proyectos",
       description: "Diseño y planificación de proyectos de innovación personalizados, con metodologías ágiles y equipos multidisciplinares."
     },
     {
-      image: "/lovable-uploads/7c707cdf-d115-45ea-9f94-8c1b0aab5249.png",
+      image: "/lovable-uploads/b30dc2b6-a7e7-45c2-b152-6863801121b4.png",
       title: "Fase 3: Implementación y Seguimiento",
       description: "Puesta en marcha de los proyectos con acompañamiento continuo, medición de resultados y optimización."
     }
