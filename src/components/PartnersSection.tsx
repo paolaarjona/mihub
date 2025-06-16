@@ -29,7 +29,7 @@ export default function PartnersSection() {
     },
     {
       name: "Air Europa",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_Europa_Logo.svg/2560px-Air_Europa_Logo.svg.png",
+      logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
       description: "Innovación en el sector del transporte aéreo y turismo."
     },
     {
