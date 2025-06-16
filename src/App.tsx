@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Amenities from "./pages/Amenities";
 import Proyectos from "./pages/Proyectos";
+import EnviarProyecto from "./pages/EnviarProyecto";
 import EventosCorporativos from "./pages/EventosCorporativos";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -29,6 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/servicios" element={<Apartments />} />
             <Route path="/proyectos" element={<Proyectos />} />
+            <Route path="/enviar-proyecto" element={<EnviarProyecto />} />
             <Route path="/eventos-corporativos" element={<EventosCorporativos />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/gallery" element={<Gallery />} />

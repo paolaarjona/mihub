@@ -154,8 +154,8 @@ export default function Proyectos() {
                 Trabajamos contigo para convertir tu idea en un proyecto de innovación exitoso.
               </p>
               <Button asChild size="lg" className="btn-primary">
-                <Link to="/contact">
-                  Hablemos de tu proyecto <ArrowRight className="ml-2 h-4 w-4" />
+                <Link to="/enviar-proyecto">
+                  Háblanos de tu proyecto <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
