@@ -24,7 +24,7 @@ export default function PartnersSection() {
     },
     {
       name: "Mahou San Miguel",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Mahou_San_Miguel_logo.svg/2560px-Mahou_San_Miguel_logo.svg.png",
+      logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
       description: "Colaboración en proyectos de innovación en el sector alimentario."
     },
     {
