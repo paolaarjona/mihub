@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Servicios corporativos data - sin precios y con imágenes corporativas
+// Servicios corporativos data - programas de formación con tiempo de ejecución
 const allApartments: ApartmentProps[] = [
   {
     id: "1",
@@ -21,7 +20,7 @@ const allApartments: ApartmentProps[] = [
     description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
     price: 0,
     capacity: 8,
-    size: 6,
+    size: 0.5, // 1/2 día
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
     location: "Presencial",
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
@@ -32,7 +31,7 @@ const allApartments: ApartmentProps[] = [
     description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
     price: 0,
     capacity: 12,
-    size: 1,
+    size: 1, // 1 día completo
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
     location: "Híbrido",
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
@@ -43,7 +42,7 @@ const allApartments: ApartmentProps[] = [
     description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
     price: 0,
     capacity: 4,
-    size: 6,
+    size: 8, // 8 semanas
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
     location: "Personalizado",
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
@@ -81,6 +80,17 @@ const allApartments: ApartmentProps[] = [
     location: "Híbrido",
     features: ["Expertos sectoriales", "Metodología colaborativa", "Soluciones prácticas", "Networking especializado", "Documentación completa"]
   },
+  {
+    id: "7",
+    name: "Detección de Retos",
+    description: "Sesión de medio día para identificar los principales retos y oportunidades de tu organización.",
+    price: 0,
+    capacity: 6,
+    size: 0.5, // 1/2 día
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    location: "Presencial",
+    features: ["Análisis de retos", "Identificación de oportunidades", "Roadmap inicial", "Metodología ágil", "Informe de resultados"]
+  }
 ];
 
 export default function Apartments() {
@@ -206,7 +216,7 @@ export default function Apartments() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredApartments.map((apartment, index) => (
                   <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                    <ApartmentCard apartment={apartment} hidePrice={true} />
+                    <ApartmentCard apartment={apartment} hidePrice={true} showDuration={true} />
                   </div>
                 ))}
               </div>

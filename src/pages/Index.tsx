@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Programas de miHUB - sin precios
+// Programas de miHUB - programas de formación con tiempo de ejecución
 const featuredPrograms: ApartmentProps[] = [
   {
     id: "1",
@@ -27,7 +27,7 @@ const featuredPrograms: ApartmentProps[] = [
     description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
     price: 0,
     capacity: 8,
-    size: 6,
+    size: 0.5, // 1/2 día
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
     location: "Presencial",
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
@@ -38,7 +38,7 @@ const featuredPrograms: ApartmentProps[] = [
     description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
     price: 0,
     capacity: 12,
-    size: 1,
+    size: 1, // 1 día completo
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
     location: "Híbrido",
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
@@ -49,10 +49,21 @@ const featuredPrograms: ApartmentProps[] = [
     description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
     price: 0,
     capacity: 4,
-    size: 6,
+    size: 8, // 8 semanas
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
     location: "Personalizado",
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
+  },
+  {
+    id: "4",
+    name: "Detección de Retos",
+    description: "Sesión de medio día para identificar los principales retos y oportunidades de tu organización.",
+    price: 0,
+    capacity: 6,
+    size: 0.5, // 1/2 día
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    location: "Presencial",
+    features: ["Análisis de retos", "Identificación de oportunidades", "Roadmap inicial", "Metodología ágil", "Informe de resultados"]
   }
 ];
 
@@ -306,7 +317,7 @@ export default function Index() {
                   {featuredPrograms.map((program, index) => (
                     <CarouselItem key={program.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                       <div className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                        <ApartmentCard apartment={program} hidePrice={true} />
+                        <ApartmentCard apartment={program} hidePrice={true} showDuration={true} />
                       </div>
                     </CarouselItem>
                   ))}
