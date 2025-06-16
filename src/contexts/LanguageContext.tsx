@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { en } from '@/locales/en';
 import { es } from '@/locales/es';
 
@@ -18,9 +18,22 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   
   const translations = { en, es };
   
+  // Save language preference to localStorage
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') as Language;
+    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+  
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
+  
   const value = {
     language,
-    setLanguage,
+    setLanguage: handleSetLanguage,
     t: translations[language]
   };
   

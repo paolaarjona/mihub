@@ -100,29 +100,29 @@ export default function Apartments() {
       
       <main className="flex-1 pt-20">
         {/* Header Section */}
-        <section className="relative py-20 bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background overflow-hidden">
-          <div className="container relative z-10">
+        <section className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background overflow-hidden">
+          <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Nuestros Servicios
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
+                {t.apartments.title}
               </h1>
-              <p className="text-muted-foreground text-lg mb-6">
-                Programas y servicios especializados para la transformación empresarial
+              <p className="text-muted-foreground text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">
+                {t.apartments.subtitle}
               </p>
             </div>
           </div>
           
           {/* Decorative elements */}
           <div className="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-10">
-            <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full bg-primary/50 blur-3xl" />
-            <div className="absolute top-10 right-40 w-48 h-48 rounded-full bg-sea-light blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 rounded-full bg-primary/50 blur-3xl" />
+            <div className="absolute top-10 right-20 sm:right-40 w-24 sm:w-36 md:w-48 h-24 sm:h-36 md:h-48 rounded-full bg-sea-light blur-3xl" />
           </div>
         </section>
         
         {/* Services Grid */}
-        <section className="section">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="section py-12 sm:py-16 lg:py-20">
+          <div className="container px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {allApartments.map((apartment, index) => (
                 <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
                   <ApartmentCard apartment={apartment} hidePrice={true} showDuration={true} />

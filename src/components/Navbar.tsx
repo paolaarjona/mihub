@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -34,12 +35,28 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Close mobile menu when window is resized to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
       scrolled || !isHomePage
-        ? "bg-white/90 dark:bg-card/90 backdrop-blur-lg py-2 md:py-3 shadow-md" 
+        ? "bg-white/95 dark:bg-card/95 backdrop-blur-lg py-2 md:py-3 shadow-md" 
         : "bg-transparent py-3 md:py-5"
     )}>
       <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
@@ -47,8 +64,8 @@ export default function Navbar() {
           <LanguageSelector />
         </div>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex space-x-6 xl:space-x-8">
+        {/* Desktop Navigation - Hidden on mobile and tablet */}
+        <ul className="hidden lg:flex space-x-4 xl:space-x-6">
           {navLinks.map(link => (
             <li key={link.name} className="relative">
               <Link 
@@ -70,19 +87,22 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Desktop Theme Toggle - Hidden on mobile */}
         <div className="hidden lg:flex items-center space-x-2">
           <ThemeToggle />
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="lg:hidden flex items-center space-x-2">
-          <ThemeToggle />
+        {/* Mobile Navigation - Visible only on mobile and tablet */}
+        <div className="lg:hidden flex items-center space-x-1 sm:space-x-2">
+          <div className="hidden sm:block">
+            <ThemeToggle />
+          </div>
           <Button 
             variant="ghost" 
             size="icon" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
             className={cn(
-              "rounded-full h-10 w-10",
+              "rounded-full h-8 w-8 sm:h-10 sm:w-10",
               !isHomePage
                 ? "text-gray-700 dark:text-foreground hover:bg-accent"
                 : scrolled 
@@ -90,38 +110,40 @@ export default function Navbar() {
                   : "text-white hover:text-white hover:bg-white/10"
             )}
           >
-            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileMenuOpen ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
           </Button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div className={cn(
         "fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden transition-opacity duration-300",
         mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       )}>
         <div className={cn(
-          "fixed inset-y-0 right-0 w-full max-w-xs bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out",
+          "fixed inset-y-0 right-0 w-full max-w-xs bg-card/95 backdrop-blur-sm shadow-xl p-4 sm:p-6 transition-transform duration-300 ease-in-out border-l",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
           <div className="flex flex-col h-full">
-            <div className="flex justify-between items-center mb-8">
-              <LanguageSelector />
+            <div className="flex justify-between items-center mb-6 sm:mb-8">
+              <div className="sm:hidden">
+                <ThemeToggle />
+              </div>
               <Button 
                 variant="ghost" 
                 size="icon" 
                 onClick={() => setMobileMenuOpen(false)} 
-                className="rounded-full h-10 w-10"
+                className="rounded-full h-8 w-8 sm:h-10 sm:w-10"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               {navLinks.map(link => (
                 <li key={link.name}>
                   <Link 
                     to={link.path} 
-                    className="block text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
+                    className="block text-base sm:text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.name}
