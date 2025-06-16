@@ -15,15 +15,15 @@ export default function TimelineSection() {
   const timelineEvents = [
     {
       year: "2018-2020",
-      title: "Lanzamiento de miHUB",
-      description: "Creación del espacio físico y establecimiento de las bases del ecosistema de innovación.",
+      title: "Construcción de miHUB",
+      description: "Desarrollo e implementación del espacio físico de miHUB, estableciendo las bases del ecosistema de innovación.",
       icon: <Lightbulb className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/cd7c6c89-4d65-4c73-9e73-a0148dcec9e5.png"
     },
     {
-      year: "2021",
+      year: "2022",
       title: "Evento de Inauguración",
-      description: "Gran inauguración con CEOs de Air Europa, Mahou, Telefónica y otras empresas líderes.",
+      description: "Gran inauguración con CEOs de Air Europa, Mahou, Telefónica y otras empresas líderes del sector.",
       icon: <Users className="h-6 w-6" />,
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop"
     },
