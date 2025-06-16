@@ -1,16 +1,8 @@
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Servicios corporativos data - programas de formación con tiempo de ejecución
@@ -96,35 +88,11 @@ const allApartments: ApartmentProps[] = [
 
 export default function Apartments() {
   const { t } = useLanguage();
-  const [filteredApartments, setFilteredApartments] = useState<ApartmentProps[]>(allApartments);
-  const [capacityFilter, setCapacityFilter] = useState<string>("all");
-  const [locationFilter, setLocationFilter] = useState<string>("all");
   
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  
-  // Apply filters (sin filtro de precio)
-  useEffect(() => {
-    let result = allApartments;
-    
-    // Filter by capacity
-    if (capacityFilter !== "all") {
-      const capacity = parseInt(capacityFilter);
-      result = result.filter(apt => apt.capacity >= capacity);
-    }
-    
-    // Filter by location
-    if (locationFilter !== "all") {
-      result = result.filter(apt => apt.location === locationFilter);
-    }
-    
-    setFilteredApartments(result);
-  }, [capacityFilter, locationFilter]);
-  
-  // Get unique locations for filter
-  const locations = ["all", ...new Set(allApartments.map(apt => apt.location))];
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -151,91 +119,16 @@ export default function Apartments() {
           </div>
         </section>
         
-        {/* Filter Section - Sin filtro de precio */}
-        <section className="py-8 border-b">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in">
-              {/* Capacity Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Número de Participantes
-                </label>
-                <Select value={capacityFilter} onValueChange={setCapacityFilter}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Participantes" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Cualquier cantidad</SelectItem>
-                    <SelectItem value="1">1+ participantes</SelectItem>
-                    <SelectItem value="4">4+ participantes</SelectItem>
-                    <SelectItem value="8">8+ participantes</SelectItem>
-                    <SelectItem value="12">12+ participantes</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              {/* Location Filter */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Modalidad
-                </label>
-                <Select value={locationFilter} onValueChange={setLocationFilter}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Modalidad" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">Todas las modalidades</SelectItem>
-                    {locations.filter(loc => loc !== "all").map(location => (
-                      <SelectItem key={location} value={location}>{location}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            
-            <div className="flex justify-between items-center mt-6 animate-fade-in [animation-delay:200ms]">
-              <p className="text-muted-foreground">
-                Mostrando {filteredApartments.length} de {allApartments.length} servicios
-              </p>
-              <Button 
-                variant="outline" 
-                onClick={() => {
-                  setCapacityFilter("all");
-                  setLocationFilter("all");
-                }}
-              >
-                Limpiar filtros
-              </Button>
-            </div>
-          </div>
-        </section>
-        
         {/* Services Grid */}
         <section className="section">
           <div className="container">
-            {filteredApartments.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredApartments.map((apartment, index) => (
-                  <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                    <ApartmentCard apartment={apartment} hidePrice={true} showDuration={true} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12 animate-fade-in">
-                <h3 className="text-xl font-semibold mb-2">No se encontraron servicios</h3>
-                <p className="text-muted-foreground mb-6">Ajusta los filtros para ver más opciones</p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => {
-                    setCapacityFilter("all");
-                    setLocationFilter("all");
-                  }}
-                >
-                  Limpiar filtros
-                </Button>
-              </div>
-            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allApartments.map((apartment, index) => (
+                <div key={apartment.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+                  <ApartmentCard apartment={apartment} hidePrice={true} showDuration={true} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>
