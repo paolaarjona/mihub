@@ -117,10 +117,10 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay - Now outside the header for better positioning */}
+      {/* Mobile Menu Overlay - Fixed positioning with high z-index for all pages */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden">
-          <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-card/95 backdrop-blur-sm shadow-xl p-4 sm:p-6 border-l">
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm lg:hidden">
+          <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-white dark:bg-card shadow-xl p-4 sm:p-6 border-l">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center mb-6 sm:mb-8">
                 <div className="sm:hidden">
@@ -140,7 +140,7 @@ export default function Navbar() {
                   <li key={link.name}>
                     <Link 
                       to={link.path} 
-                      className="block text-base sm:text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
+                      className="block text-base sm:text-lg font-medium transition-colors hover:text-primary py-2 text-gray-900 dark:text-foreground" 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}
