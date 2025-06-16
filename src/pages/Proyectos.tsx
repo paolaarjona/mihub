@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Lightbulb, Cog, Users, Leaf } from "lucide-react";
+import ProjectDetailsDialog from "@/components/ProjectDetailsDialog";
 
 const proyectos = [
   {
@@ -13,7 +15,8 @@ const proyectos = [
     sector: "Turismo",
     duration: "8 meses",
     icon: <Leaf className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop"
+    image: "/lovable-uploads/2d8419bb-0d47-4752-a640-3e75fc002558.png",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "2",
@@ -22,7 +25,8 @@ const proyectos = [
     sector: "Turismo",
     duration: "6 meses",
     icon: <Target className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop"
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "3", 
@@ -31,7 +35,8 @@ const proyectos = [
     sector: "Retail",
     duration: "12 meses",
     icon: <Lightbulb className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "4",
@@ -40,7 +45,8 @@ const proyectos = [
     sector: "Industrial",
     duration: "9 meses",
     icon: <Cog className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop"
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "5",
@@ -49,14 +55,28 @@ const proyectos = [
     sector: "Fintech",
     duration: "18 meses",
     icon: <Users className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   }
 ];
 
 export default function Proyectos() {
+  const [selectedProject, setSelectedProject] = useState<typeof proyectos[0] | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleViewDetails = (project: typeof proyectos[0]) => {
+    setSelectedProject(project);
+    setIsDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -110,7 +130,11 @@ export default function Proyectos() {
                     </div>
                     <h3 className="text-xl font-semibold mb-3">{proyecto.title}</h3>
                     <p className="text-muted-foreground mb-4">{proyecto.description}</p>
-                    <Button variant="outline" className="w-full">
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => handleViewDetails(proyecto)}
+                    >
                       Ver Detalles <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
@@ -141,6 +165,13 @@ export default function Proyectos() {
       </main>
       
       <Footer />
+
+      {/* Project Details Dialog */}
+      <ProjectDetailsDialog 
+        project={selectedProject}
+        isOpen={isDialogOpen}
+        onClose={handleCloseDialog}
+      />
     </div>
   );
 }
