@@ -35,7 +35,7 @@ export default function TimelineSection() {
     },
     {
       year: "2025",
-      title: "Nueva Etapa: IA",
+      title: "Profesionalización",
       description: "Foco en Inteligencia Artificial con nuevos socios, equipo directivo y metodología propia.",
       icon: <Zap className="h-6 w-6" />,
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
