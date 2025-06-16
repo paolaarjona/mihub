@@ -30,7 +30,7 @@ const proyectos = [
   {
     id: "3", 
     title: "Digital Island",
-    description: "Creación de laboratorio de innovación para cadena de retail con foco en experiencia del cliente.",
+    description: "Viajes de formación corporativa en innovación e IA para compañías.",
     sector: "Empresas y Emprendedores",
     duration: "12 meses",
     icon: <Lightbulb className="h-8 w-8 text-primary" />,
@@ -50,7 +50,7 @@ const proyectos = [
   {
     id: "5",
     title: "Detección de Retos",
-    description: "Desarrollo de plataforma colaborativa para startups fintech en Canarias.",
+    description: "Programa de detección de retos de innovación y casos de uso IA.",
     sector: "Ayuntamientos y Empresas",
     duration: "18 meses",
     icon: <Users className="h-8 w-8 text-primary" />,
