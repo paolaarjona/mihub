@@ -117,10 +117,10 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay - Fixed positioning with high z-index for all pages */}
+      {/* Mobile Menu Overlay - Pantalla completa en móviles */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm lg:hidden">
-          <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-white dark:bg-card shadow-xl p-4 sm:p-6 border-l">
+        <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden">
+          <div className="fixed inset-0 bg-white dark:bg-card p-4 sm:p-6 lg:hidden">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center mb-6 sm:mb-8">
                 <div className="sm:hidden">
@@ -130,17 +130,17 @@ export default function Navbar() {
                   variant="ghost" 
                   size="icon" 
                   onClick={() => setMobileMenuOpen(false)} 
-                  className="rounded-full h-8 w-8 sm:h-10 sm:w-10"
+                  className="rounded-full h-8 w-8 sm:h-10 sm:w-10 ml-auto"
                 >
                   <X className="h-4 w-4 sm:h-5 sm:w-5" />
                 </Button>
               </div>
-              <ul className="space-y-3 sm:space-y-4">
+              <ul className="space-y-4 sm:space-y-6 flex-1">
                 {navLinks.map(link => (
                   <li key={link.name}>
                     <Link 
                       to={link.path} 
-                      className="block text-base sm:text-lg font-medium transition-colors hover:text-primary py-2 text-gray-900 dark:text-foreground" 
+                      className="block text-lg sm:text-xl font-medium transition-colors hover:text-primary py-3 text-gray-900 dark:text-foreground border-b border-gray-200 dark:border-gray-700" 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}
