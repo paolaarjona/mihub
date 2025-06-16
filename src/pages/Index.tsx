@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,7 +28,7 @@ const featuredPrograms: ApartmentProps[] = [
     price: 0,
     capacity: 8,
     size: 0.5, // 1/2 día
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/5b5c64b9-3a51-426e-bd2f-5f0e23f02874.png",
     location: "Presencial",
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
@@ -40,7 +39,7 @@ const featuredPrograms: ApartmentProps[] = [
     price: 0,
     capacity: 12,
     size: 1, // 1 día completo
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/e393983a-92e2-4bfe-bc08-b4ae09d9c5d6.png",
     location: "Híbrido",
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
@@ -51,7 +50,7 @@ const featuredPrograms: ApartmentProps[] = [
     price: 0,
     capacity: 4,
     size: 8, // 8 semanas
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/c466127a-cb17-4b0a-acef-1ae82b555993.png",
     location: "Personalizado",
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
@@ -242,10 +241,10 @@ export default function Index() {
                   Eventos Corporativos
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
-                  Organiza tu Evento de Innovación
+                  Contrata nuestros servicios
                 </h2>
                 <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
-                  Contrata nuestros servicios para organizar eventos corporativos únicos. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
+                  Organiza tu evento de innovación personalizado. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
                 </p>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   <li className="flex items-center text-sm sm:text-base">
@@ -277,7 +276,7 @@ export default function Index() {
                 {/* Button right after the text content */}
                 <div className="mb-6 sm:mb-8">
                   <Button asChild size="lg" className="btn-primary">
-                    <Link to="/eventos-corporativos">¿Quieres celebrar un evento de Innovación?</Link>
+                    <Link to="/eventos-corporativos">Solicitar evento corporativo</Link>
                   </Button>
                 </div>
               </div>

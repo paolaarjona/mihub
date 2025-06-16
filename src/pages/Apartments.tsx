@@ -14,7 +14,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 8,
     size: 0.5, // 1/2 día
-    image: "/lovable-uploads/697b14f6-ed23-4d3e-a567-27731c9803f9.png",
+    image: "/lovable-uploads/5b5c64b9-3a51-426e-bd2f-5f0e23f02874.png",
     location: "Presencial",
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
@@ -25,7 +25,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 12,
     size: 1, // 1 día completo
-    image: "/lovable-uploads/a882bbf0-6856-4443-95ff-d19c77050d1e.png",
+    image: "/lovable-uploads/e393983a-92e2-4bfe-bc08-b4ae09d9c5d6.png",
     location: "Híbrido",
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
@@ -36,7 +36,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 4,
     size: 8, // 8 semanas
-    image: "/lovable-uploads/7c707cdf-d115-45ea-9f94-8c1b0aab5249.png",
+    image: "/lovable-uploads/c466127a-cb17-4b0a-acef-1ae82b555993.png",
     location: "Personalizado",
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
