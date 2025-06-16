@@ -41,6 +41,16 @@ export default function PartnersSection() {
       name: "Globant",
       logo: "/lovable-uploads/78f2945d-377d-46ec-9f04-8aff5636cebb.png",
       description: "Partner tecnológico en desarrollo de software y AI."
+    },
+    {
+      name: "Valhalla",
+      logo: "/lovable-uploads/aec601af-67f9-4486-a881-be419cc2ce38.png",
+      description: "Colaboración estratégica en transformación digital e innovación empresarial."
+    },
+    {
+      name: "SPEL",
+      logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
+      description: "Partner estratégico en desarrollo tecnológico y soluciones digitales."
     }
   ];
   
