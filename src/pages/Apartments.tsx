@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,7 +22,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 8,
     size: 0.5, // 1/2 día
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/697b14f6-ed23-4d3e-a567-27731c9803f9.png",
     location: "Presencial",
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
@@ -32,7 +33,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 12,
     size: 1, // 1 día completo
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/a882bbf0-6856-4443-95ff-d19c77050d1e.png",
     location: "Híbrido",
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
@@ -43,7 +44,7 @@ const allApartments: ApartmentProps[] = [
     price: 0,
     capacity: 4,
     size: 8, // 8 semanas
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/7c707cdf-d115-45ea-9f94-8c1b0aab5249.png",
     location: "Personalizado",
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
