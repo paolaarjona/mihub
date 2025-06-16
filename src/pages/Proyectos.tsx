@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -25,24 +24,24 @@ const proyectos = [
     sector: "Turismo",
     duration: "6 meses",
     icon: <Target className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/c8efb453-1a7d-43ee-b27f-4fe21a896ea4.png",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "3", 
     title: "Digital Island",
     description: "Creación de laboratorio de innovación para cadena de retail con foco en experiencia del cliente.",
-    sector: "Retail",
+    sector: "Empresas y Emprendedores",
     duration: "12 meses",
     icon: <Lightbulb className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/45e716e4-635c-49f9-9440-14d33ccfe483.png",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
     id: "4",
     title: "Oficinas IA",
     description: "Proyecto de Industry 4.0 con implementación de IoT y análisis predictivo.",
-    sector: "Industrial",
+    sector: "Empresas e Instituciones",
     duration: "9 meses",
     icon: <Cog className="h-8 w-8 text-primary" />,
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
@@ -52,7 +51,7 @@ const proyectos = [
     id: "5",
     title: "Detección de Retos",
     description: "Desarrollo de plataforma colaborativa para startups fintech en Canarias.",
-    sector: "Fintech",
+    sector: "Ayuntamientos y Empresas",
     duration: "18 meses",
     icon: <Users className="h-8 w-8 text-primary" />,
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
