@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
@@ -10,8 +10,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  const isHomePage = location.pathname === "/";
   
   const navLinks = [
     { name: t.nav.home, path: "/" },
@@ -37,7 +40,7 @@ export default function Navbar() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled 
+      scrolled || !isHomePage
         ? "bg-white/90 dark:bg-card/90 backdrop-blur-lg py-2 md:py-3 shadow-md" 
         : "bg-transparent py-3 md:py-5"
     )}>
@@ -56,9 +59,11 @@ export default function Navbar() {
                   "font-medium transition-colors hover:text-primary text-sm xl:text-base",
                   "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full",
                   "active:text-white",
-                  scrolled 
-                    ? "text-blue-600 dark:text-foreground" 
-                    : "text-white"
+                  !isHomePage
+                    ? "text-gray-700 dark:text-foreground" 
+                    : scrolled 
+                      ? "text-blue-600 dark:text-foreground" 
+                      : "text-white"
                 )}
               >
                 {link.name}
@@ -83,7 +88,11 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
             className={cn(
               "rounded-full h-10 w-10",
-              scrolled ? "text-foreground hover:bg-accent" : "text-white hover:text-white hover:bg-white/10"
+              !isHomePage
+                ? "text-gray-700 dark:text-foreground hover:bg-accent"
+                : scrolled 
+                  ? "text-foreground hover:bg-accent" 
+                  : "text-white hover:text-white hover:bg-white/10"
             )}
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
