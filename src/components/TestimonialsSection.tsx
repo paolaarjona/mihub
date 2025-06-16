@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,7 +18,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Carlos Muñoz",
+    name: "Jesús Nuño de La Rosa",
     position: "CEO",
     company: "Air Europa",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces",
@@ -26,18 +27,18 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "María González",
+    name: "Pedro Llamas",
     position: "Directora de Innovación",
     company: "Oracle España",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
+    avatar: "/lovable-uploads/bd6bff0d-741d-42ee-a5f3-3000b863087d.png",
     content: "La alianza con miHUB nos ha permitido acelerar la adopción de tecnología cloud e IA en las empresas canarias. Su enfoque práctico y personalizado marca la diferencia.",
     rating: 5
   },
   {
     id: 3,
-    name: "Antonio Hernández",
-    position: "Director General",
-    company: "Grupo Martínez Abolafio",
+    name: "José Valle",
+    position: "Presidente",
+    company: "Cámara de Comercio de Lanzarote y la Graciosa",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces",
     content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región.",
     rating: 5
@@ -178,3 +179,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
