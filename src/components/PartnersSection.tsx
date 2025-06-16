@@ -1,4 +1,3 @@
-
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Carousel,
@@ -39,19 +38,9 @@ export default function PartnersSection() {
       description: "Alianza en telecomunicaciones y transformación digital."
     },
     {
-      name: "El Corte Inglés",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/El_Corte_Ingl%C3%A9s_logo.svg/2560px-El_Corte_Ingl%C3%A9s_logo.svg.png",
-      description: "Innovación en retail y experiencia de cliente."
-    },
-    {
       name: "Globant",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Globant_logo.svg/2560px-Globant_logo.svg.png",
       description: "Partner tecnológico en desarrollo de software y AI."
-    },
-    {
-      name: "WOW",
-      logo: "https://via.placeholder.com/200x80/1E88E5/FFFFFF?text=WOW",
-      description: "Colaboración en proyectos de innovación tecnológica."
     }
   ];
   
