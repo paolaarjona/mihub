@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -39,7 +37,7 @@ const testimonials: Testimonial[] = [
     name: "José Valle",
     position: "Presidente",
     company: "Cámara de Comercio de Lanzarote y la Graciosa",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces",
+    avatar: "/lovable-uploads/687804ba-6877-4c9b-b371-e40685b2fb87.png",
     content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región.",
     rating: 5
   },
@@ -179,4 +177,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
