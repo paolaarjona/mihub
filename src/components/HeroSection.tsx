@@ -44,12 +44,12 @@ export default function HeroSection() {
         style={{ transform: `translateY(${contentY}px)` }}
       >
         <div className="max-w-4xl animate-fade-in">
-          {/* Logo de miHUB - 20% más grande */}
+          {/* Logo de miHUB - 40% más grande que el anterior */}
           <div className="mb-6 sm:mb-8">
             <img 
               src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png"
               alt="miHUB Logo"
-              className="mx-auto h-20 sm:h-24 md:h-28 lg:h-40 w-auto filter brightness-0 invert"
+              className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert"
             />
           </div>
           
