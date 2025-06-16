@@ -60,7 +60,7 @@ export default function HeroSection() {
             Turismo sostenible y desarrollo digital de las empresas canarias
           </h1>
           <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
-            Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones innovadoras que conectan el turismo responsable con las nuevas tecnologías.
+            Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones y proyectos innovadores que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
           {/* Líneas de actuación */}
