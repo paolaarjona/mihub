@@ -1,4 +1,3 @@
-
 import { Calendar, Users, Lightbulb, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
@@ -32,7 +31,7 @@ export default function TimelineSection() {
       title: "Consolidación",
       description: "Laboratorios de innovación, formaciones y eventos sectoriales con más de 3000 asistentes.",
       icon: <Calendar className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/42a648f5-29cb-44d1-a727-c647080bc537.png"
     },
     {
       year: "2025",
