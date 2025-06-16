@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Carousel,
@@ -87,8 +88,7 @@ export default function PartnersSection() {
                       <img 
                         src={partner.logo}
                         alt={partner.name}
-                        className="max-w-full max-h-full object-contain filter group-hover:scale-105 transition-transform"
-                        style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(203deg) brightness(104%) contrast(97%)' }}
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform"
                       />
                     </div>
                     <h3 className="font-semibold mb-2 text-xs md:text-sm">{partner.name}</h3>
