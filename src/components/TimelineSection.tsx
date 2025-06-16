@@ -24,7 +24,7 @@ export default function TimelineSection() {
       title: "Evento de Inauguración",
       description: "Gran inauguración con CEOs de Air Europa, Mahou, Telefónica y otras empresas líderes del sector.",
       icon: <Users className="h-6 w-6" />,
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=300&fit=crop"
+      image: "/lovable-uploads/85efec9f-981d-4c89-bbce-c686a98b3331.png"
     },
     {
       year: "2022-2024",
