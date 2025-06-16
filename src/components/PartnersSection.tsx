@@ -1,3 +1,4 @@
+
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Carousel,
@@ -39,7 +40,7 @@ export default function PartnersSection() {
     },
     {
       name: "Globant",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Globant_logo.svg/2560px-Globant_logo.svg.png",
+      logo: "/lovable-uploads/4476364e-39ef-4c2e-9a79-80c2f553dcc2.png",
       description: "Partner tecnológico en desarrollo de software y AI."
     }
   ];
