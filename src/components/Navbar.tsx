@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -21,7 +20,6 @@ export default function Navbar() {
     { name: t.nav.apartments, path: "/servicios" },
     { name: "Proyectos", path: "/proyectos" },
     { name: "Eventos Corporativos", path: "/eventos-corporativos" },
-    { name: t.nav.amenities, path: "/amenities" },
     { name: t.nav.gallery, path: "/gallery" },
     { name: t.nav.contact, path: "/contact" }
   ];
