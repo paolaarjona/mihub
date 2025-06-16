@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     position: "Presidente",
     company: "Cámara de Comercio de Lanzarote y la Graciosa",
     avatar: "/lovable-uploads/687804ba-6877-4c9b-b371-e40685b2fb87.png",
-    content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región.",
+    content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región. miHUB representa un puente de crecimiento para los Empresarios de Canarias.",
     rating: 5
   },
 ];
