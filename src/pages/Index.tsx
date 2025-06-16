@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -235,8 +236,8 @@ export default function Index() {
         {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
         <section className="relative section bg-muted/30 overflow-hidden">
           <div className="container relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="animate-fade-in order-2 lg:order-1">
+            <div className="animate-fade-in">
+              <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
                 <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
                   Eventos Corporativos
                 </span>
@@ -246,7 +247,7 @@ export default function Index() {
                 <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   Organiza tu evento de innovación personalizado. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
                 </p>
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-left max-w-2xl mx-auto">
                   <li className="flex items-center text-sm sm:text-base">
                     <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
                       <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
@@ -273,15 +274,16 @@ export default function Index() {
                   </li>
                 </ul>
                 
-                {/* Button right after the text content */}
-                <div className="mb-6 sm:mb-8">
+                {/* Button now appears first, before the form */}
+                <div className="mb-8 sm:mb-12">
                   <Button asChild size="lg" className="btn-primary">
                     <Link to="/eventos-corporativos">Solicitar evento corporativo</Link>
                   </Button>
                 </div>
               </div>
               
-              <div className="order-1 lg:order-2">
+              {/* Form now appears after the button */}
+              <div className="max-w-2xl mx-auto">
                 <BookingForm />
               </div>
             </div>
