@@ -2,7 +2,7 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Users, Maximize2 } from "lucide-react";
+import { MapPin, Users, Clock } from "lucide-react";
 
 export interface ApartmentProps {
   id: string;
@@ -19,9 +19,17 @@ export interface ApartmentProps {
 interface ApartmentCardProps {
   apartment: ApartmentProps;
   hidePrice?: boolean;
+  showDuration?: boolean;
 }
 
-export default function ApartmentCard({ apartment, hidePrice = false }: ApartmentCardProps) {
+export default function ApartmentCard({ apartment, hidePrice = false, showDuration = false }: ApartmentCardProps) {
+  const getDurationText = (size: number) => {
+    if (size < 1) return `${size * 2} días`;
+    if (size === 1) return "1 día";
+    if (size <= 8) return `${size} semanas`;
+    return `${size} semanas`;
+  };
+
   return (
     <Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 bg-card border border-border">
       <CardHeader className="p-0">
@@ -64,10 +72,12 @@ export default function ApartmentCard({ apartment, hidePrice = false }: Apartmen
             <Users className="h-4 w-4" />
             <span>{apartment.capacity} Participantes</span>
           </div>
-          <div className="flex items-center gap-1">
-            <Maximize2 className="h-4 w-4" />
-            <span>{apartment.size} m²</span>
-          </div>
+          {showDuration && (
+            <div className="flex items-center gap-1">
+              <Clock className="h-4 w-4" />
+              <span>{getDurationText(apartment.size)}</span>
+            </div>
+          )}
         </div>
         
         <div className="flex flex-wrap gap-2">
