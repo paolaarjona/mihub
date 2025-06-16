@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -62,7 +61,7 @@ const featuredPrograms: ApartmentProps[] = [
     price: 0,
     capacity: 6,
     size: 0.5, // 1/2 día
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    image: "/lovable-uploads/0330ec35-bffc-43bc-8054-a3be8d9d93d1.png",
     location: "Presencial",
     features: ["Análisis de retos", "Identificación de oportunidades", "Roadmap inicial", "Metodología ágil", "Informe de resultados"]
   }
