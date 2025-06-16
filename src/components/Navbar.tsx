@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -73,9 +74,6 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center space-x-2">
           <ThemeToggle />
-          <Button asChild className="btn-primary text-sm xl:text-base px-4 xl:px-6">
-            <Link to="/booking">{t.nav.bookNow}</Link>
-          </Button>
         </div>
 
         {/* Mobile Navigation */}
@@ -108,39 +106,31 @@ export default function Navbar() {
           "fixed inset-y-0 right-0 w-full max-w-xs bg-card shadow-xl p-6 transition-transform duration-300 ease-in-out",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}>
-          <div className="flex flex-col h-full justify-between">
-            <div>
-              <div className="flex justify-between items-center mb-8">
-                <LanguageSelector />
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="rounded-full h-10 w-10"
-                >
-                  <X className="h-5 w-5" />
-                </Button>
-              </div>
-              <ul className="space-y-4">
-                {navLinks.map(link => (
-                  <li key={link.name}>
-                    <Link 
-                      to={link.path} 
-                      className="block text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          <div className="flex flex-col h-full">
+            <div className="flex justify-between items-center mb-8">
+              <LanguageSelector />
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => setMobileMenuOpen(false)} 
+                className="rounded-full h-10 w-10"
+              >
+                <X className="h-5 w-5" />
+              </Button>
             </div>
-            
-            <Button asChild className="w-full btn-primary mt-6">
-              <Link to="/booking" onClick={() => setMobileMenuOpen(false)}>
-                {t.nav.bookNow}
-              </Link>
-            </Button>
+            <ul className="space-y-4">
+              {navLinks.map(link => (
+                <li key={link.name}>
+                  <Link 
+                    to={link.path} 
+                    className="block text-lg font-medium transition-colors hover:text-primary py-2 active:text-white" 
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
