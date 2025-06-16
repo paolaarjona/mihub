@@ -21,9 +21,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useToast } from "@/hooks/use-toast";
 
 export default function BookingForm() {
   const { t } = useLanguage();
+  const { toast } = useToast();
   const [eventDate, setEventDate] = useState<Date>();
   const [eventType, setEventType] = useState("");
   const [duration, setDuration] = useState("");
@@ -33,28 +35,114 @@ export default function BookingForm() {
   const [contactPhone, setContactPhone] = useState("");
   const [company, setCompany] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
+  const [webhookUrl, setWebhookUrl] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmailData = async (formData: any) => {
+    if (!webhookUrl) {
+      // Si no hay webhook configurado, usamos un endpoint predeterminado o mostramos error
+      toast({
+        title: "Configuración requerida",
+        description: "Por favor, configura tu webhook de Zapier para enviar emails",
+        variant: "destructive",
+      });
+      return false;
+    }
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          to_email: "salvadormedinachao@gmail.com",
+          subject: `Nueva solicitud de evento corporativo - ${formData.company}`,
+          event_date: formData.eventDate,
+          event_type: formData.eventType,
+          duration: formData.duration,
+          participants: formData.participants,
+          contact_name: formData.contactName,
+          contact_email: formData.contactEmail,
+          contact_phone: formData.contactPhone,
+          company: formData.company,
+          additional_info: formData.additionalInfo,
+          timestamp: new Date().toISOString(),
+          triggered_from: window.location.origin,
+        }),
+      });
+
+      return true;
+    } catch (error) {
+      console.error("Error sending email:", error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send the event booking data to a server
-    console.log("Event booking submitted:", { 
-      eventDate, 
-      eventType, 
-      duration, 
-      participants,
+    
+    // Validación básica
+    if (!contactName || !contactEmail || !contactPhone || !company || !eventType || !duration) {
+      toast({
+        title: "Campos requeridos",
+        description: "Por favor, completa todos los campos marcados con *",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    
+    const formData = {
+      eventDate: eventDate ? format(eventDate, "PPP") : "No especificada",
+      eventType,
+      duration,
+      participants: participants || "No especificado",
       contactName,
       contactEmail,
       contactPhone,
       company,
-      additionalInfo
-    });
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
+      additionalInfo: additionalInfo || "Ninguna"
+    };
+
+    console.log("Event booking submitted:", formData);
+
+    try {
+      await sendEmailData(formData);
+      
+      setSubmitted(true);
+      toast({
+        title: "Solicitud enviada",
+        description: "Tu solicitud ha sido enviada correctamente. Te contactaremos pronto.",
+      });
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        // Reset all form fields
+        setEventDate(undefined);
+        setEventType("");
+        setDuration("");
+        setParticipants("");
+        setContactName("");
+        setContactEmail("");
+        setContactPhone("");
+        setCompany("");
+        setAdditionalInfo("");
+      }, 3000);
+      
+    } catch (error) {
+      toast({
+        title: "Error al enviar",
+        description: "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -65,6 +153,21 @@ export default function BookingForm() {
       <h3 className="text-2xl font-bold text-center mb-6">Solicitar Evento Corporativo</h3>
       
       <div className="space-y-4">
+        {/* Webhook Configuration */}
+        <div className="space-y-2 p-4 bg-muted/30 rounded-lg">
+          <Label htmlFor="webhook-url">Webhook de Zapier (Opcional)</Label>
+          <Input
+            id="webhook-url"
+            value={webhookUrl}
+            onChange={(e) => setWebhookUrl(e.target.value)}
+            placeholder="https://hooks.zapier.com/hooks/catch/..."
+            type="url"
+          />
+          <p className="text-xs text-muted-foreground">
+            Configura tu webhook de Zapier para recibir las solicitudes por email automáticamente.
+          </p>
+        </div>
+
         {/* Contact Information */}
         <div className="space-y-4">
           <h4 className="text-lg font-semibold">Datos de Contacto</h4>
@@ -226,8 +329,13 @@ export default function BookingForm() {
         </div>
       </div>
       
-      <Button type="submit" className="w-full btn-primary relative">
-        {submitted ? (
+      <Button type="submit" className="w-full btn-primary relative" disabled={isLoading}>
+        {isLoading ? (
+          <>
+            <Clock className="mr-2 h-4 w-4 animate-spin" />
+            Enviando...
+          </>
+        ) : submitted ? (
           <>
             <Check className="mr-2 h-4 w-4" />
             Solicitud Enviada
