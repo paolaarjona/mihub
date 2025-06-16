@@ -28,114 +28,108 @@ export default function ProjectDetailsDialog({ project, isOpen, onClose }: Proje
     switch (projectId) {
       case "1":
         return {
-          overview: "Proyecto pionero para el desarrollo de una plataforma integral que promueve el turismo responsable y sostenible en las Islas Canarias, integrando tecnologías avanzadas para la gestión eficiente de recursos turísticos.",
+          overview: "Desarrollamos una plataforma digital integral que conecta a turistas responsables con experiencias sostenibles en las Islas Canarias. El sistema incluye certificación de sostenibilidad, monitoreo de impacto ambiental en tiempo real y herramientas de gestión para empresas turísticas locales que quieren reducir su huella ecológica.",
           objectives: [
-            "Desarrollar plataforma digital para turismo sostenible",
-            "Implementar sistemas de monitoreo ambiental",
-            "Crear red de colaboración entre stakeholders",
-            "Establecer métricas de sostenibilidad",
-            "Promover experiencias turísticas responsables"
+            "Crear marketplace de turismo sostenible certificado",
+            "Implementar sistema de medición de impacto ambiental",
+            "Desarrollar app móvil para turistas conscientes",
+            "Establecer red de partners turísticos sostenibles",
+            "Integrar pagos y reservas con criterios de sostenibilidad"
           ],
-          methodology: "Metodología ágil con enfoque en sostenibilidad, utilizando tecnologías de vanguardia, análisis de datos ambientales y colaboración estrecha con instituciones locales.",
-          target: "Sector turístico canario, instituciones públicas, empresas de turismo sostenible y organizaciones ambientales.",
+          target: "Turistas responsables, empresas turísticas locales, alojamientos rurales, operadores de experiencias sostenibles y autoridades de turismo de Canarias.",
           benefits: [
-            "Plataforma tecnológica completa",
-            "Reducción del impacto ambiental",
-            "Mayor competitividad turística",
-            "Red de colaboración establecida",
-            "Certificación de sostenibilidad"
+            "Plataforma web y móvil completamente funcional",
+            "Red de 50+ empresas turísticas certificadas",
+            "Sistema de métricas ambientales automatizado",
+            "Aumento del 40% en reservas sostenibles",
+            "Reducción documentada del impacto ambiental"
           ],
-          features: ["Sostenibilidad", "Turismo Digital", "Plataforma Web", "Monitoreo Ambiental", "Red Colaborativa"]
+          features: ["Certificación Verde", "Reservas Sostenibles", "Impacto Ambiental", "App Móvil", "Dashboard Analytics"]
         };
       case "2":
         return {
-          overview: "Implementación de un sistema integral de inteligencia artificial para la optimización de reservas hoteleras y la mejora significativa de la experiencia del huésped.",
+          overview: "Implementamos un sistema de inteligencia artificial avanzado que revoluciona la gestión hotelera mediante predicción de demanda, personalización automática de servicios y optimización dinámica de precios. El sistema aprende de los patrones de comportamiento de los huéspedes para ofrecer experiencias completamente personalizadas.",
           objectives: [
-            "Optimizar procesos de reservas con IA",
-            "Personalizar experiencia del huésped",
-            "Implementar analytics predictivo",
-            "Automatizar servicios hoteleros",
-            "Mejorar rentabilidad operacional"
+            "Desarrollar motor de IA para predicción de ocupación",
+            "Crear sistema de personalización automática de servicios",
+            "Implementar chatbot inteligente multiidioma",
+            "Optimizar revenue management con machine learning",
+            "Integrar IoT para servicios automáticos en habitaciones"
           ],
-          methodology: "Desarrollo iterativo con implementación de machine learning, análisis de datos de huéspedes y integración de sistemas hoteleros existentes.",
-          target: "Cadenas hoteleras, hoteles independientes, gestores de propiedades turísticas y empresas de hospitalidad.",
+          target: "Cadenas hoteleras de 4-5 estrellas, hoteles boutique, resorts de lujo y grupos hoteleros que buscan diferenciación tecnológica.",
           benefits: [
-            "Sistema IA completamente integrado",
-            "Aumento en satisfacción del cliente",
-            "Optimización de ingresos",
-            "Automatización de procesos",
-            "Dashboard analítico avanzado"
+            "Sistema IA completamente integrado con PMS existente",
+            "Incremento del 25% en satisfacción del cliente",
+            "Optimización del 18% en ingresos por habitación",
+            "Reducción del 30% en tiempo de check-in/out",
+            "Dashboard predictivo para gestión estratégica"
           ],
-          features: ["Inteligencia Artificial", "Optimización", "Analytics", "Automatización", "Hospitalidad"]
+          features: ["Predicción IA", "Personalización", "Chatbot", "Revenue Management", "IoT Habitaciones"]
         };
       case "3":
         return {
-          overview: "Creación de un laboratorio de innovación digital especializado para cadenas de retail, enfocado en revolucionar la experiencia del cliente a través de tecnologías emergentes.",
+          overview: "Creamos un programa intensivo de formación empresarial que combina viajes a las Islas Canarias con workshops prácticos sobre innovación digital e inteligencia artificial. Los participantes viven experiencias inmersivas mientras aprenden a implementar tecnologías disruptivas en sus empresas a través de casos reales y mentorías especializadas.",
           objectives: [
-            "Establecer laboratorio de innovación retail",
-            "Desarrollar experiencias de cliente inmersivas",
-            "Implementar tecnologías emergentes",
-            "Crear prototipos de soluciones retail",
-            "Formar equipo especializado en retail tech"
+            "Diseñar curriculum de formación IA empresarial",
+            "Crear experiencias de aprendizaje inmersivo",
+            "Establecer red de mentores expertos en IA",
+            "Desarrollar casos de estudio reales canarios",
+            "Implementar programa de seguimiento post-formación"
           ],
-          methodology: "Metodología de design thinking aplicada al retail, prototipado rápido, testing con usuarios reales y iteración continua de soluciones.",
-          target: "Cadenas de retail, centros comerciales, empresas de e-commerce y startups de retail technology.",
+          target: "Directivos de empresas medianas y grandes, emprendedores en fase de escalamiento, equipos de innovación corporativa y consultores de transformación digital.",
           benefits: [
-            "Laboratorio completamente equipado",
-            "Portfolio de soluciones innovadoras",
-            "Equipo formado en retail tech",
-            "Prototipos funcionales",
-            "Metodologías de innovación implantadas"
+            "Programa formativo completo de 5 días",
+            "Red de contactos especializados en IA",
+            "Casos de uso implementables inmediatamente",
+            "Certificación en innovación empresarial",
+            "Seguimiento y mentorías durante 6 meses"
           ],
-          features: ["Laboratorio Digital", "Retail Tech", "Experiencia Cliente", "Prototipado", "Innovación"]
+          features: ["Formación Inmersiva", "Casos Reales", "Networking", "Mentorías", "Certificación"]
         };
       case "4":
         return {
-          overview: "Proyecto Industry 4.0 que integra Internet of Things (IoT) y análisis predictivo para la transformación digital completa de oficinas corporativas hacia espacios inteligentes.",
+          overview: "Transformamos oficinas tradicionales en espacios inteligentes mediante la implementación de una red IoT completa que monitoriza y optimiza automáticamente la climatización, iluminación, ocupación y recursos. El sistema incluye análisis predictivo para mantenimiento y gestión eficiente de espacios de trabajo colaborativo.",
           objectives: [
-            "Implementar ecosistema IoT integral",
-            "Desarrollar análisis predictivo avanzado",
-            "Crear oficinas inteligentes y eficientes",
-            "Optimizar uso de recursos corporativos",
-            "Establecer cultura de innovación tecnológica"
+            "Instalar red IoT integral en oficinas corporativas",
+            "Desarrollar sistema de gestión inteligente de espacios",
+            "Implementar análisis predictivo para mantenimiento",
+            "Crear dashboard de control centralizado",
+            "Optimizar consumo energético automáticamente"
           ],
-          methodology: "Implementación por fases con tecnologías IoT, desarrollo de algoritmos predictivos, integración de sistemas y formación del equipo interno.",
-          target: "Empresas corporativas, oficinas centrales, coworkings premium y organizaciones que buscan transformación digital.",
+          target: "Corporaciones con oficinas centrales, empresas de coworking premium, estudios de arquitectura innovadores y organizaciones comprometidas con la sostenibilidad.",
           benefits: [
-            "Oficinas completamente inteligentes",
-            "Reducción de costos operativos",
-            "Análisis predictivo operativo",
-            "Mejora en productividad",
-            "Infraestructura IoT escalable"
+            "Oficinas completamente automatizadas e inteligentes",
+            "Reducción del 35% en costos energéticos",
+            "Sistema predictivo de mantenimiento operativo",
+            "Mejora del 20% en productividad de empleados",
+            "ROI documentado en menos de 18 meses"
           ],
-          features: ["Industry 4.0", "IoT", "Análisis Predictivo", "Oficinas Inteligentes", "Optimización"]
+          features: ["IoT Avanzado", "Espacios Inteligentes", "Predictivo", "Eficiencia Energética", "Control Centralizado"]
         };
       case "5":
         return {
-          overview: "Desarrollo de una plataforma colaborativa especializada para startups fintech en Canarias, facilitando el networking, financiación y crecimiento del ecosistema financiero tecnológico.",
+          overview: "Desarrollamos una metodología sistemática para identificar y priorizar retos de innovación específicos en ayuntamientos y empresas canarias. Utilizamos workshops colaborativos, análisis de datos y técnicas de design thinking para detectar oportunidades reales donde la inteligencia artificial puede generar impacto measurable y sostenible.",
           objectives: [
-            "Crear plataforma colaborativa fintech",
-            "Facilitar networking entre startups",
-            "Conectar con inversores y mentores",
-            "Proporcionar recursos especializados",
-            "Fomentar crecimiento del ecosistema fintech"
+            "Crear metodología de detección de retos innovación",
+            "Facilitar workshops de ideación colaborativa",
+            "Desarrollar banco de casos de uso IA validados",
+            "Establecer criterios de priorización de proyectos",
+            "Formar equipos internos en detección de oportunidades"
           ],
-          methodology: "Desarrollo colaborativo con stakeholders del ecosistema fintech, metodologías de community building y tecnologías de networking avanzadas.",
-          target: "Startups fintech, inversores, instituciones financieras, reguladores y profesionales del sector financiero tecnológico.",
+          target: "Ayuntamientos canarios, empresas públicas, corporaciones locales, instituciones educativas y organizaciones que buscan innovar con propósito social.",
           benefits: [
-            "Plataforma colaborativa activa",
-            "Red de contactos especializada",
-            "Acceso a financiación",
-            "Recursos y herramientas fintech",
-            "Comunidad fintech consolidada"
+            "Metodología probada de detección de retos",
+            "Portfolio de 100+ casos de uso IA validados",
+            "Equipos formados en innovación sistemática",
+            "Roadmap de proyectos priorizados y viables",
+            "Red colaborativa activa entre organizaciones"
           ],
-          features: ["Fintech", "Plataforma Colaborativa", "Networking", "Startups", "Ecosistema Digital"]
+          features: ["Metodología Propia", "Design Thinking", "Casos Validados", "Priorización", "Formación Equipos"]
         };
       default:
         return {
           overview: project.description,
           objectives: ["Información detallada próximamente"],
-          methodology: "Metodología personalizada según necesidades del cliente.",
           target: "Profesionales y empresas del sector.",
           benefits: ["Consultar con nuestro equipo"],
           features: ["Innovación", "Tecnología", "Transformación Digital"]
@@ -206,13 +200,13 @@ export default function ProjectDetailsDialog({ project, isOpen, onClose }: Proje
 
           {/* Overview */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Descripción General</h3>
+            <h3 className="text-xl font-semibold mb-3">Descripción del Proyecto</h3>
             <p className="text-muted-foreground leading-relaxed">{details.overview}</p>
           </div>
 
           {/* Objectives */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Objetivos</h3>
+            <h3 className="text-xl font-semibold mb-3">Objetivos Alcanzados</h3>
             <ul className="space-y-2">
               {details.objectives.map((objective, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -223,12 +217,6 @@ export default function ProjectDetailsDialog({ project, isOpen, onClose }: Proje
             </ul>
           </div>
 
-          {/* Methodology */}
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Metodología</h3>
-            <p className="text-muted-foreground leading-relaxed">{details.methodology}</p>
-          </div>
-
           {/* Target Audience */}
           <div>
             <h3 className="text-xl font-semibold mb-3">Dirigido a</h3>
@@ -237,7 +225,7 @@ export default function ProjectDetailsDialog({ project, isOpen, onClose }: Proje
 
           {/* Benefits */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Resultados Alcanzados</h3>
+            <h3 className="text-xl font-semibold mb-3">Resultados Obtenidos</h3>
             <ul className="space-y-2">
               {details.benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -250,7 +238,7 @@ export default function ProjectDetailsDialog({ project, isOpen, onClose }: Proje
 
           {/* Features */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Tecnologías y Enfoques</h3>
+            <h3 className="text-xl font-semibold mb-3">Tecnologías y Enfoques Clave</h3>
             <div className="flex flex-wrap gap-2">
               {details.features.map((feature, index) => (
                 <Badge key={index} variant="secondary">
