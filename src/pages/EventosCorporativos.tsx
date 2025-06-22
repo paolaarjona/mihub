@@ -1,12 +1,13 @@
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Calendar, MapPin, Trophy } from "lucide-react";
+import { ArrowRight, Users, Calendar, MapPin, Trophy, Grid, CalendarDays } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import EventDetailsDialog from "@/components/EventDetailsDialog";
+import CorporateEventsCalendar from "@/components/CorporateEventsCalendar";
 
 export default function EventosCorporativos() {
   const { t } = useLanguage();
@@ -103,7 +104,7 @@ export default function EventosCorporativos() {
           </div>
         </section>
 
-        {/* Próximos Eventos */}
+        {/* Próximos Eventos con Tabs */}
         <section className="section">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
@@ -115,53 +116,72 @@ export default function EventosCorporativos() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {eventos.map((evento, index) => (
-                <div 
-                  key={evento.id}
-                  className="glass-card rounded-2xl overflow-hidden animate-fade-in"
-                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                >
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={evento.image}
-                      alt={evento.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                        {evento.tipo}
-                      </span>
+            <Tabs defaultValue="grid" className="w-full">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
+                <TabsTrigger value="grid" className="flex items-center gap-2">
+                  <Grid className="h-4 w-4" />
+                  {t.corporateEvents.view?.grid || "Vista de Lista"}
+                </TabsTrigger>
+                <TabsTrigger value="calendar" className="flex items-center gap-2">
+                  <CalendarDays className="h-4 w-4" />
+                  {t.corporateEvents.view?.calendar || "Vista de Calendario"}
+                </TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="grid" className="mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {eventos.map((evento, index) => (
+                    <div 
+                      key={evento.id}
+                      className="glass-card rounded-2xl overflow-hidden animate-fade-in"
+                      style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                    >
+                      <div className="aspect-video relative overflow-hidden">
+                        <img 
+                          src={evento.image}
+                          alt={evento.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute top-4 left-4">
+                          <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                            {evento.tipo}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-semibold mb-3">{evento.title}</h3>
+                        <p className="text-muted-foreground mb-4">{evento.description}</p>
+                        
+                        <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground mb-4">
+                          <div>
+                            <Calendar className="h-4 w-4 mb-1" />
+                            <p>{evento.fecha}</p>
+                          </div>
+                          <div>
+                            <MapPin className="h-4 w-4 mb-1" />
+                            <p>{evento.ubicacion}</p>
+                          </div>
+                          <div>
+                            <Users className="h-4 w-4 mb-1" />
+                            <p>{evento.asistentes}</p>
+                          </div>
+                        </div>
+                        
+                        <EventDetailsDialog evento={evento}>
+                          <Button className="w-full btn-primary">
+                            {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </EventDetailsDialog>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-3">{evento.title}</h3>
-                    <p className="text-muted-foreground mb-4">{evento.description}</p>
-                    
-                    <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground mb-4">
-                      <div>
-                        <Calendar className="h-4 w-4 mb-1" />
-                        <p>{evento.fecha}</p>
-                      </div>
-                      <div>
-                        <MapPin className="h-4 w-4 mb-1" />
-                        <p>{evento.ubicacion}</p>
-                      </div>
-                      <div>
-                        <Users className="h-4 w-4 mb-1" />
-                        <p>{evento.asistentes}</p>
-                      </div>
-                    </div>
-                    
-                    <EventDetailsDialog evento={evento}>
-                      <Button className="w-full btn-primary">
-                        {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </EventDetailsDialog>
-                  </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </TabsContent>
+              
+              <TabsContent value="calendar" className="mt-8">
+                <CorporateEventsCalendar />
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 

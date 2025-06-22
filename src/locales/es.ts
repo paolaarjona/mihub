@@ -47,12 +47,23 @@ export const es = {
     returnHome: "Volver al Inicio"
   },
   corporateEvents: {
-    subtitle: "Eventos Empresariales",
-    title: "Eventos Corporativos de Alta Calidad",
-    description: "Organizamos eventos corporativos excepcionales que inspiran, educan y conectan a profesionales de diversos sectores.",
+    title: "Eventos Corporativos",
+    subtitle: "Experiencias profesionales",
+    description: "Conecta, aprende y crece con nuestros eventos corporativos diseñados para impulsar tu carrera y expandir tu red profesional.",
     upcomingEvents: {
       title: "Próximos Eventos",
-      description: "Descubre nuestros eventos corporativos programados para los próximos meses."
+      description: "Descubre las oportunidades de networking y aprendizaje que tenemos preparadas para ti."
+    },
+    view: {
+      grid: "Vista de Lista",
+      calendar: "Vista de Calendario"
+    },
+    calendar: {
+      title: "Calendario de Eventos",
+      instruction: "Haz clic en una fecha para ver los eventos del día",
+      eventsFor: "Eventos para",
+      selectDate: "Selecciona una fecha",
+      noEvents: "No hay eventos programados para esta fecha"
     },
     events: {
       congress: {

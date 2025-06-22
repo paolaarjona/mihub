@@ -47,12 +47,23 @@ export const en = {
     returnHome: "Return Home"
   },
   corporateEvents: {
-    subtitle: "Business Events",
-    title: "High-Quality Corporate Events",
-    description: "We organize exceptional corporate events that inspire, educate, and connect professionals from various sectors.",
+    title: "Corporate Events",
+    subtitle: "Professional experiences",
+    description: "Connect, learn and grow with our corporate events designed to boost your career and expand your professional network.",
     upcomingEvents: {
       title: "Upcoming Events",
-      description: "Discover our corporate events scheduled for the coming months."
+      description: "Discover the networking and learning opportunities we have prepared for you."
+    },
+    view: {
+      grid: "List View",
+      calendar: "Calendar View"
+    },
+    calendar: {
+      title: "Events Calendar",
+      instruction: "Click on a date to see the day's events",
+      eventsFor: "Events for",
+      selectDate: "Select a date",
+      noEvents: "No events scheduled for this date"
     },
     events: {
       congress: {
