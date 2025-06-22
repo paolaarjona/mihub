@@ -47,72 +47,116 @@ export const en = {
     returnHome: "Return Home"
   },
   corporateEvents: {
-    subtitle: "Corporate Events",
-    title: "Connecting Brilliant Minds",
-    description: "We organize world-class events that drive innovation and create valuable connections in the Canarian business ecosystem.",
+    subtitle: "Business Events",
+    title: "High-Quality Corporate Events",
+    description: "We organize exceptional corporate events that inspire, educate, and connect professionals from various sectors.",
     upcomingEvents: {
       title: "Upcoming Events",
-      description: "Join us at these transformative events."
+      description: "Discover our corporate events scheduled for the coming months."
     },
     events: {
       congress: {
-        title: "Canary Islands Innovation Congress 2024",
-        description: "Annual event that brings together leading business leaders and innovation experts.",
-        date: "November 15-16, 2024",
-        location: "Las Palmas de Gran Canaria",
+        title: "Technology Innovation Congress",
+        description: "An event that brings together technology leaders to discuss the latest trends in innovation.",
+        date: "March 15-17, 2024",
+        location: "Convention Center",
         type: "Congress"
       },
       workshop: {
-        title: "Workshop: AI for Executives",
-        description: "Intensive workshop on practical implementation of AI in business strategy.",
-        date: "Monthly",
-        location: "Hybrid",
+        title: "Executive Leadership Workshop",
+        description: "Leadership skills development for high-level executives and managers.",
+        date: "March 22, 2024",
+        location: "Corporate Hotel",
         type: "Workshop"
       },
       hackathon: {
-        title: "Sustainable Tourism Hackathon",
-        description: "48-hour competition to develop innovative solutions in sustainable tourism.",
-        date: "December 20-22, 2024",
-        location: "Tenerife",
+        title: "Sustainability Hackathon",
+        description: "48 hours of innovation to create sustainable technological solutions.",
+        date: "April 5-7, 2024",
+        location: "Innovation Center",
         type: "Hackathon"
       },
       roundtable: {
-        title: "Round Table: Future of Work",
-        description: "Debate on the impact of AI and automation on the Canarian labor market.",
-        date: "Quarterly",
-        location: "Rotating",
-        type: "Round Table"
+        title: "Roundtable: Future of Work",
+        description: "Discussion about labor trends and the future of remote work.",
+        date: "April 12, 2024",
+        location: "Conference Room",
+        type: "Roundtable"
       }
     },
-    moreInfo: "More Information",
-    ourServices: {
-      title: "Our Services",
-      description: "We offer comprehensive solutions for innovation corporate events."
+    eventDetails: {
+      date: "Date",
+      location: "Location",
+      attendees: "Attendees",
+      price: "Price",
+      about: "About the Event",
+      duration: "Duration",
+      instructor: "Instructor/Moderator",
+      requirements: "Requirements",
+      includes: "Includes",
+      register: "Register Now",
+      congress: {
+        price: "€350",
+        duration: "3 full days",
+        instructor: "Panel of international experts",
+        requirements: "Professional experience in technology or related fields",
+        includes: "Congress materials, coffee breaks, lunch, participation certificate",
+        longDescription: "This congress will bring together leading technology leaders in the sector to explore the most innovative trends. Over three intensive days, participants will have access to keynote speeches, practical workshops, and networking opportunities with high-level professionals."
+      },
+      workshop: {
+        price: "€150",
+        duration: "8 hours (1 day)",
+        instructor: "Dr. María González - Certified Executive Coach",
+        requirements: "Minimum 3 years of experience in leadership positions",
+        includes: "Teaching materials, lunch, coffee break, certificate",
+        longDescription: "An intensive workshop designed to develop the leadership competencies necessary in today's business environment. Participants will learn advanced techniques for team management, effective communication, and strategic decision-making."
+      },
+      hackathon: {
+        price: "Free",
+        duration: "48 continuous hours",
+        instructor: "Mentors specialized in green technology",
+        requirements: "Basic knowledge of programming or design",
+        includes: "Meals, drinks, workspace, prizes for winners",
+        longDescription: "A 48-hour innovation marathon where multidisciplinary teams will compete to create technological solutions that address environmental challenges. Participants will have access to expert mentors and cutting-edge technological resources."
+      },
+      roundtable: {
+        price: "€75",
+        duration: "4 hours",
+        instructor: "Moderated by Ana Martín - HR Expert",
+        requirements: "Professionals interested in the future of work",
+        includes: "Coffee break, reading material, networking",
+        longDescription: "An interactive discussion session that explores the transformations of the post-pandemic work world. Participants will analyze trends, challenges, and opportunities of remote and hybrid work, along with strategies to adapt to these changes."
+      }
     },
     services: {
       organization: {
-        title: "Complete Organization",
-        description: "From conceptualization to execution, we handle all aspects of the event."
+        title: "Comprehensive Organization",
+        description: "We manage all aspects of your event from planning to execution."
       },
       experts: {
-        title: "Expert Network",
-        description: "Access to our extensive network of speakers and international innovation experts."
+        title: "Expert Speakers",
+        description: "We connect your event with the best professionals and industry leaders."
       },
       venues: {
-        title: "Exclusive Venues",
-        description: "Unique and technologically equipped spaces in strategic locations."
+        title: "Premium Venues",
+        description: "We select the best locations and spaces for your corporate event."
       },
       experiences: {
         title: "Memorable Experiences",
-        description: "Events that generate real value and lasting connections for participants."
+        description: "We create unique events that leave a lasting impression on your guests."
       }
     },
+    ourServices: {
+      title: "Our Services",
+      description: "We offer a complete range of services to make your corporate event a resounding success."
+    },
     cta: {
-      title: "Want to organize an event?",
-      description: "We create unique experiences that connect people, ideas and opportunities.",
+      title: "Want to Organize an Event?",
+      description: "Contact us to create a customized corporate event that exceeds your expectations.",
       requestProposal: "Request Proposal",
       contactTeam: "Contact Team"
-    }
+    },
+    moreInfo: "More Information"
   },
   home: {
     welcome: {

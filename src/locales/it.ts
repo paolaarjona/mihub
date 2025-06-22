@@ -393,5 +393,117 @@ export const it = {
       name: "Appartamento Vista Giardino",
       description: "Appartamento tranquillo circondato da rigogliosi giardini, a breve distanza dalla spiaggia."
     }
+  },
+  corporateEvents: {
+    subtitle: "Eventi Aziendali",
+    title: "Eventi Corporativi di Alta Qualità",
+    description: "Organizziamo eventi corporativi eccezionali che ispirano, educano e connettono professionisti di vari settori.",
+    upcomingEvents: {
+      title: "Prossimi Eventi",
+      description: "Scopri i nostri eventi corporativi programmati per i prossimi mesi."
+    },
+    events: {
+      congress: {
+        title: "Congresso di Innovazione Tecnologica",
+        description: "Un evento che riunisce leader tecnologici per discutere le ultime tendenze nell'innovazione.",
+        date: "15-17 Marzo 2024",
+        location: "Centro Congressi",
+        type: "Congresso"
+      },
+      workshop: {
+        title: "Workshop di Leadership Esecutiva",
+        description: "Sviluppo di competenze di leadership per dirigenti e manager di alto livello.",
+        date: "22 Marzo 2024",
+        location: "Hotel Aziendale",
+        type: "Workshop"
+      },
+      hackathon: {
+        title: "Hackathon di Sostenibilità",
+        description: "48 ore di innovazione per creare soluzioni tecnologiche sostenibili.",
+        date: "5-7 Aprile 2024",
+        location: "Centro di Innovazione",
+        type: "Hackathon"
+      },
+      roundtable: {
+        title: "Tavola Rotonda: Futuro del Lavoro",
+        description: "Discussione sulle tendenze lavorative e il futuro del lavoro remoto.",
+        date: "12 Aprile 2024",
+        location: "Sala Conferenze",
+        type: "Tavola Rotonda"
+      }
+    },
+    eventDetails: {
+      date: "Data",
+      location: "Ubicazione",
+      attendees: "Partecipanti",
+      price: "Prezzo",
+      about: "Riguardo all'Evento",
+      duration: "Durata",
+      instructor: "Istruttore/Moderatore",
+      requirements: "Requisiti",
+      includes: "Include",
+      register: "Registrati Ora",
+      congress: {
+        price: "€350",
+        duration: "3 giorni completi",
+        instructor: "Panel di esperti internazionali",
+        requirements: "Esperienza professionale in tecnologia o campi correlati",
+        includes: "Materiali del congresso, coffee break, pranzo, certificato di partecipazione",
+        longDescription: "Questo congresso riunirà i principali leader tecnologici del settore per esplorare le tendenze più innovative. Durante tre giorni intensivi, i partecipanti avranno accesso a conferenze magistrali, workshop pratici e opportunità di networking con professionisti di alto livello."
+      },
+      workshop: {
+        price: "€150",
+        duration: "8 ore (1 giorno)",
+        instructor: "Dr.ssa María González - Coach Esecutiva Certificata",
+        requirements: "Esperienza minima di 3 anni in posizioni di leadership",
+        includes: "Materiale didattico, pranzo, coffee break, certificato",
+        longDescription: "Un workshop intensivo progettato per sviluppare le competenze di leadership necessarie nell'ambiente aziendale attuale. I partecipanti impareranno tecniche avanzate di gestione del team, comunicazione efficace e presa di decisioni strategiche."
+      },
+      hackathon: {
+        price: "Gratuito",
+        duration: "48 ore continue",
+        instructor: "Mentori specializzati in tecnologia verde",
+        requirements: "Conoscenze di base di programmazione o design",
+        includes: "Pasti, bevande, spazio di lavoro, premi per i vincitori",
+        longDescription: "Una maratona di innovazione di 48 ore dove team multidisciplinari competeranno per creare soluzioni tecnologiche che affrontano sfide ambientali. I partecipanti avranno accesso a mentori esperti e risorse tecnologiche all'avanguardia."
+      },
+      roundtable: {
+        price: "€75",
+        duration: "4 ore",
+        instructor: "Moderato da Ana Martín - Esperta HR",
+        requirements: "Professionisti interessati al futuro del lavoro",
+        includes: "Coffee break, materiale di lettura, networking",
+        longDescription: "Una sessione di discussione interattiva che esplora le trasformazioni del mondo del lavoro post-pandemia. I partecipanti analizzeranno tendenze, sfide e opportunità del lavoro remoto e ibrido, insieme a strategie per adattarsi a questi cambiamenti."
+      }
+    },
+    services: {
+      organization: {
+        title: "Organizzazione Integrale",
+        description: "Gestiamo tutti gli aspetti del tuo evento dalla pianificazione all'esecuzione."
+      },
+      experts: {
+        title: "Relatori Esperti",
+        description: "Colleghiamo il tuo evento con i migliori professionisti e leader del settore."
+      },
+      venues: {
+        title: "Spazi Premium",
+        description: "Selezioniamo le migliori ubicazioni e spazi per il tuo evento corporativo."
+      },
+      experiences: {
+        title: "Esperienze Memorabili",
+        description: "Creiamo eventi unici che lasciano un'impressione duratura sui tuoi ospiti."
+      }
+    },
+    ourServices: {
+      title: "I Nostri Servizi",
+      description: "Offriamo una gamma completa di servizi per rendere il tuo evento corporativo un successo clamoroso."
+    },
+    cta: {
+      title: "Vuoi Organizzare un Evento?",
+      description: "Contattaci per creare un evento corporativo personalizzato che superi le tue aspettative.",
+      requestProposal: "Richiedi Proposta",
+      contactTeam: "Contatta il Team"
+    },
+    moreInfo: "Maggiori Informazioni"
   }
 };

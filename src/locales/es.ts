@@ -47,72 +47,116 @@ export const es = {
     returnHome: "Volver al Inicio"
   },
   corporateEvents: {
-    subtitle: "Eventos Corporativos",
-    title: "Conectamos Mentes Brillantes",
-    description: "Organizamos eventos de clase mundial que impulsan la innovación y crean conexiones valiosas en el ecosistema empresarial canario.",
+    subtitle: "Eventos Empresariales",
+    title: "Eventos Corporativos de Alta Calidad",
+    description: "Organizamos eventos corporativos excepcionales que inspiran, educan y conectan a profesionales de diversos sectores.",
     upcomingEvents: {
       title: "Próximos Eventos",
-      description: "Únete a nosotros en estos eventos transformadores."
+      description: "Descubre nuestros eventos corporativos programados para los próximos meses."
     },
     events: {
       congress: {
-        title: "Congreso de Innovación Canarias 2024",
-        description: "Evento anual que reúne a los principales líderes empresariales y expertos en innovación.",
-        date: "15-16 Noviembre 2024",
-        location: "Las Palmas de Gran Canaria",
+        title: "Congreso de Innovación Tecnológica",
+        description: "Un evento que reúne a líderes tecnológicos para discutir las últimas tendencias en innovación.",
+        date: "15-17 Marzo 2024",
+        location: "Centro de Convenciones",
         type: "Congreso"
       },
       workshop: {
-        title: "Workshop: IA para Directivos",
-        description: "Taller intensivo sobre implementación práctica de IA en la estrategia empresarial.",
-        date: "Mensual",
-        location: "Híbrido",
-        type: "Workshop"
+        title: "Taller de Liderazgo Ejecutivo",
+        description: "Desarrollo de habilidades de liderazgo para ejecutivos y gerentes de alto nivel.",
+        date: "22 Marzo 2024",
+        location: "Hotel Corporativo",
+        type: "Taller"
       },
       hackathon: {
-        title: "Hackathon Turismo Sostenible",
-        description: "Competición de 48 horas para desarrollar soluciones innovadoras en turismo sostenible.",
-        date: "20-22 Diciembre 2024",
-        location: "Tenerife",
+        title: "Hackathon de Sostenibilidad",
+        description: "48 horas de innovación para crear soluciones tecnológicas sostenibles.",
+        date: "5-7 Abril 2024",
+        location: "Centro de Innovación",
         type: "Hackathon"
       },
       roundtable: {
         title: "Mesa Redonda: Futuro del Trabajo",
-        description: "Debate sobre el impacto de la IA y automatización en el mercado laboral canario.",
-        date: "Trimestral",
-        location: "Rotativo",
+        description: "Discusión sobre las tendencias laborales y el futuro del trabajo remoto.",
+        date: "12 Abril 2024",
+        location: "Sala de Conferencias",
         type: "Mesa Redonda"
       }
     },
-    moreInfo: "Más Información",
-    ourServices: {
-      title: "Nuestros Servicios",
-      description: "Ofrecemos soluciones integrales para eventos corporativos de innovación."
+    eventDetails: {
+      date: "Fecha",
+      location: "Ubicación",
+      attendees: "Asistentes",
+      price: "Precio",
+      about: "Acerca del Evento",
+      duration: "Duración",
+      instructor: "Instructor/Moderador",
+      requirements: "Requisitos",
+      includes: "Incluye",
+      register: "Inscribirse Ahora",
+      congress: {
+        price: "€350",
+        duration: "3 días completos",
+        instructor: "Panel de expertos internacionales",
+        requirements: "Experiencia profesional en tecnología o áreas relacionadas",
+        includes: "Material del congreso, coffee breaks, almuerzo, certificado de participación",
+        longDescription: "Este congreso reunirá a los principales líderes tecnológicos del sector para explorar las tendencias más innovadoras. Durante tres días intensivos, los participantes tendrán acceso a conferencias magistrales, talleres prácticos y oportunidades de networking con profesionales de alto nivel."
+      },
+      workshop: {
+        price: "€150",
+        duration: "8 horas (1 día)",
+        instructor: "Dr. María González - Coach Ejecutiva Certificada",
+        requirements: "Experiencia mínima de 3 años en posiciones de liderazgo",
+        includes: "Material didáctico, almuerzo, coffee break, certificado",
+        longDescription: "Un taller intensivo diseñado para desarrollar las competencias de liderazgo necesarias en el entorno empresarial actual. Los participantes aprenderán técnicas avanzadas de gestión de equipos, comunicación efectiva y toma de decisiones estratégicas."
+      },
+      hackathon: {
+        price: "Gratuito",
+        duration: "48 horas continuas",
+        instructor: "Mentores especializados en tecnología verde",
+        requirements: "Conocimientos básicos de programación o diseño",
+        includes: "Comidas, bebidas, espacio de trabajo, premios para ganadores",
+        longDescription: "Una maratón de innovación de 48 horas donde equipos multidisciplinarios competirán para crear soluciones tecnológicas que aborden desafíos ambientales. Los participantes tendrán acceso a mentores expertos y recursos tecnológicos de última generación."
+      },
+      roundtable: {
+        price: "€75",
+        duration: "4 horas",
+        instructor: "Moderado por Ana Martín - Experta en RRHH",
+        requirements: "Profesionales interesados en el futuro laboral",
+        includes: "Coffee break, material de lectura, networking",
+        longDescription: "Una sesión de discusión interactiva que explora las transformaciones del mundo laboral post-pandemia. Los participantes analizarán tendencias, desafíos y oportunidades del trabajo remoto e híbrido, junto con estrategias para adaptarse a estos cambios."
+      }
     },
     services: {
       organization: {
-        title: "Organización Completa",
-        description: "Desde la conceptualización hasta la ejecución, nos encargamos de todos los aspectos del evento."
+        title: "Organización Integral",
+        description: "Gestionamos todos los aspectos de tu evento desde la planificación hasta la ejecución."
       },
       experts: {
-        title: "Red de Expertos",
-        description: "Acceso a nuestra amplia red de ponentes y expertos internacionales en innovación."
+        title: "Ponentes Expertos",
+        description: "Conectamos tu evento con los mejores profesionales y líderes de la industria."
       },
       venues: {
-        title: "Venues Exclusivos",
-        description: "Espacios únicos y tecnológicamente equipados en ubicaciones estratégicas."
+        title: "Espacios Premium",
+        description: "Seleccionamos las mejores ubicaciones y espacios para tu evento corporativo."
       },
       experiences: {
         title: "Experiencias Memorables",
-        description: "Eventos que generan valor real y conexiones duraderas para los participantes."
+        description: "Creamos eventos únicos que dejan una impresión duradera en tus invitados."
       }
     },
+    ourServices: {
+      title: "Nuestros Servicios",
+      description: "Ofrecemos una gama completa de servicios para hacer de tu evento corporativo un éxito rotundo."
+    },
     cta: {
-      title: "¿Quieres organizar un evento?",
-      description: "Creamos experiencias únicas que conectan personas, ideas y oportunidades.",
+      title: "¿Quieres Organizar un Evento?",
+      description: "Contáctanos para crear un evento corporativo personalizado que supere tus expectativas.",
       requestProposal: "Solicitar Propuesta",
       contactTeam: "Contactar Equipo"
-    }
+    },
+    moreInfo: "Más Información"
   },
   home: {
     welcome: {

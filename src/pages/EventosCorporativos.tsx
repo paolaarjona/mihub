@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Calendar, MapPin, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import EventDetailsDialog from "@/components/EventDetailsDialog";
 
 export default function EventosCorporativos() {
   const { t } = useLanguage();
@@ -152,9 +153,11 @@ export default function EventosCorporativos() {
                       </div>
                     </div>
                     
-                    <Button className="w-full btn-primary">
-                      {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <EventDetailsDialog evento={evento}>
+                      <Button className="w-full btn-primary">
+                        {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </EventDetailsDialog>
                   </div>
                 </div>
               ))}
