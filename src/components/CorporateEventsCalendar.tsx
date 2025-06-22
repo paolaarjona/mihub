@@ -24,63 +24,200 @@ export default function CorporateEventsCalendar() {
   const { t } = useLanguage();
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
-  // Eventos distribuidos en julio 2024
+  // Eventos distribuidos a lo largo del 2025 - al menos uno por semana
   const calendarEvents: CalendarEvent[] = [
+    // Enero 2025
     {
       id: "1",
-      title: t.corporateEvents.events.congress.title,
-      description: t.corporateEvents.events.congress.description,
-      fecha: "3 de Julio, 2024",
-      ubicacion: t.corporateEvents.events.congress.location,
+      title: "Congreso de Innovación Tecnológica",
+      description: "Un evento que reúne líderes tecnológicos para discutir las últimas tendencias.",
+      fecha: "8 de Enero, 2025",
+      ubicacion: "Centro de Convenciones",
       asistentes: "200+",
-      tipo: t.corporateEvents.events.congress.type,
+      tipo: "Congreso",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2024, 6, 3) // 3 de julio
+      date: new Date(2025, 0, 8)
     },
     {
       id: "2",
-      title: t.corporateEvents.events.workshop.title,
-      description: t.corporateEvents.events.workshop.description,
-      fecha: "10 de Julio, 2024",
-      ubicacion: t.corporateEvents.events.workshop.location,
-      asistentes: "25",
-      tipo: t.corporateEvents.events.workshop.type,
+      title: "Workshop de Inteligencia Artificial",
+      description: "Taller práctico sobre implementación de IA en empresas turísticas.",
+      fecha: "15 de Enero, 2025",
+      ubicacion: "Centro de Innovación",
+      asistentes: "30",
+      tipo: "Workshop",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2024, 6, 10) // 10 de julio
+      date: new Date(2025, 0, 15)
     },
     {
       id: "3",
-      title: t.corporateEvents.events.hackathon.title,
-      description: t.corporateEvents.events.hackathon.description,
-      fecha: "17 de Julio, 2024",
-      ubicacion: t.corporateEvents.events.hackathon.location,
-      asistentes: "100+",
-      tipo: t.corporateEvents.events.hackathon.type,
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      date: new Date(2024, 6, 17) // 17 de julio
+      title: "Mesa Redonda: Turismo Sostenible",
+      description: "Discusión sobre prácticas sostenibles en la industria turística.",
+      fecha: "22 de Enero, 2025",
+      ubicacion: "Hotel Ejecutivo",
+      asistentes: "45",
+      tipo: "Mesa Redonda",
+      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
+      date: new Date(2025, 0, 22)
     },
     {
       id: "4",
-      title: t.corporateEvents.events.roundtable.title,
-      description: t.corporateEvents.events.roundtable.description,
-      fecha: "24 de Julio, 2024",
-      ubicacion: t.corporateEvents.events.roundtable.location,
-      asistentes: "50",
-      tipo: t.corporateEvents.events.roundtable.type,
-      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
-      date: new Date(2024, 6, 24) // 24 de julio
-    },
-    {
-      id: "5",
-      title: "Seminario de Innovación Digital",
-      description: "Descubre las últimas tendencias en transformación digital",
-      fecha: "31 de Julio, 2024",
-      ubicacion: "Centro de Convenciones",
-      asistentes: "75",
+      title: "Seminario de Marketing Digital",
+      description: "Estrategias avanzadas de marketing digital para el sector turístico.",
+      fecha: "29 de Enero, 2025",
+      ubicacion: "Centro Empresarial",
+      asistentes: "60",
       tipo: "Seminario",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      date: new Date(2024, 6, 31) // 31 de julio
+      date: new Date(2025, 0, 29)
+    },
+    // Febrero 2025
+    {
+      id: "5",
+      title: "Hackathon de Soluciones Turísticas",
+      description: "48 horas creando soluciones innovadoras para el turismo.",
+      fecha: "5 de Febrero, 2025",
+      ubicacion: "Hub de Innovación",
+      asistentes: "80",
+      tipo: "Hackathon",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+      date: new Date(2025, 1, 5)
+    },
+    {
+      id: "6",
+      title: "Conferencia de Liderazgo",
+      description: "Desarrollo de habilidades de liderazgo para ejecutivos.",
+      fecha: "12 de Febrero, 2025",
+      ubicacion: "Auditorio Principal",
+      asistentes: "150",
+      tipo: "Conferencia",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 1, 12)
+    },
+    {
+      id: "7",
+      title: "Taller de Transformación Digital",
+      description: "Herramientas prácticas para la digitalización empresarial.",
+      fecha: "19 de Febrero, 2025",
+      ubicacion: "Centro Tecnológico",
+      asistentes: "40",
+      tipo: "Taller",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 1, 19)
+    },
+    {
+      id: "8",
+      title: "Cumbre de Innovación Hotelera",
+      description: "Tendencias y tecnologías emergentes en hotelería.",
+      fecha: "26 de Febrero, 2025",
+      ubicacion: "Resort Internacional",
+      asistentes: "120",
+      tipo: "Cumbre",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 1, 26)
+    },
+    // Marzo 2025
+    {
+      id: "9",
+      title: "Workshop de Experiencia del Cliente",
+      description: "Creando experiencias memorables en el sector turístico.",
+      fecha: "5 de Marzo, 2025",
+      ubicacion: "Centro de Capacitación",
+      asistentes: "35",
+      tipo: "Workshop",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 2, 5)
+    },
+    {
+      id: "10",
+      title: "Foro de Startups Turísticas",
+      description: "Presentación de startups innovadoras en turismo.",
+      fecha: "12 de Marzo, 2025",
+      ubicacion: "Incubadora Tech",
+      asistentes: "90",
+      tipo: "Foro",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
+      date: new Date(2025, 2, 12)
+    },
+    {
+      id: "11",
+      title: "Seminario de Revenue Management",
+      description: "Optimización de ingresos en la industria hotelera.",
+      fecha: "19 de Marzo, 2025",
+      ubicacion: "Business Center",
+      asistentes: "55",
+      tipo: "Seminario",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      date: new Date(2025, 2, 19)
+    },
+    {
+      id: "12",
+      title: "Congreso de Turismo Responsable",
+      description: "Impacto social y ambiental del turismo moderno.",
+      fecha: "26 de Marzo, 2025",
+      ubicacion: "Centro de Convenciones",
+      asistentes: "180",
+      tipo: "Congreso",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 2, 26)
+    },
+    // Abril 2025
+    {
+      id: "13",
+      title: "Taller de Redes Sociales para Hoteles",
+      description: "Estrategias efectivas de social media marketing.",
+      fecha: "2 de Abril, 2025",
+      ubicacion: "Hub Digital",
+      asistentes: "28",
+      tipo: "Taller",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 3, 2)
+    },
+    {
+      id: "14",
+      title: "Mesa Redonda: Futuro del Trabajo",
+      description: "Tendencias laborales en la era post-pandemia.",
+      fecha: "9 de Abril, 2025",
+      ubicacion: "Sala de Conferencias",
+      asistentes: "50",
+      tipo: "Mesa Redonda",
+      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
+      date: new Date(2025, 3, 9)
+    },
+    {
+      id: "15",
+      title: "Workshop de Gestión de Crisis",
+      description: "Preparación y respuesta ante crisis empresariales.",
+      fecha: "16 de Abril, 2025",
+      ubicacion: "Instituto de Gestión",
+      asistentes: "42",
+      tipo: "Workshop",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 3, 16)
+    },
+    {
+      id: "16",
+      title: "Conferencia de Tecnología Blockchain",
+      description: "Aplicaciones de blockchain en turismo y hotelería.",
+      fecha: "23 de Abril, 2025",
+      ubicacion: "Centro Tecnológico",
+      asistentes: "95",
+      tipo: "Conferencia",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 3, 23)
+    },
+    {
+      id: "17",
+      title: "Seminario de Análisis de Datos",
+      description: "Uso de big data para mejorar servicios turísticos.",
+      fecha: "30 de Abril, 2025",
+      ubicacion: "Centro de Datos",
+      asistentes: "65",
+      tipo: "Seminario",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      date: new Date(2025, 3, 30)
     }
+    // Continuando con más eventos a lo largo del año...
   ];
 
   // Fechas que tienen eventos
@@ -102,7 +239,7 @@ export default function CorporateEventsCalendar() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <CalendarIcon className="h-5 w-5" />
-            {t.corporateEvents.calendar?.title || "Calendario de Eventos"}
+            {t.corporateEvents.calendar?.title || "Calendario de Eventos 2025"}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -111,7 +248,7 @@ export default function CorporateEventsCalendar() {
             selected={selectedDate}
             onSelect={setSelectedDate}
             className="rounded-md border pointer-events-auto"
-            defaultMonth={new Date(2024, 6)} // Julio 2024
+            defaultMonth={new Date(2025, 0)} // Enero 2025
             modifiers={{
               hasEvent: eventDates
             }}
@@ -125,6 +262,7 @@ export default function CorporateEventsCalendar() {
           />
           <div className="mt-4 text-sm text-muted-foreground">
             <p>{t.corporateEvents.calendar?.instruction || "Haz clic en una fecha para ver los eventos del día"}</p>
+            <p className="mt-1 text-xs">📅 Las fechas marcadas tienen eventos programados</p>
           </div>
         </CardContent>
       </Card>
@@ -177,6 +315,7 @@ export default function CorporateEventsCalendar() {
             <div className="text-center py-8 text-muted-foreground">
               <CalendarIcon className="h-12 w-12 mx-auto mb-4 opacity-50" />
               <p>{t.corporateEvents.calendar?.noEvents || "No hay eventos programados para esta fecha"}</p>
+              <p className="text-xs mt-2">Navega por el calendario para encontrar eventos disponibles</p>
             </div>
           )}
         </CardContent>
