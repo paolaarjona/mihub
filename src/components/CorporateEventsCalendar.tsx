@@ -22,202 +22,291 @@ interface CalendarEvent {
 
 export default function CorporateEventsCalendar() {
   const { t } = useLanguage();
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date(2025, 6, 1)); // Julio 2025
 
-  // Eventos distribuidos a lo largo del 2025 - al menos uno por semana
+  // Eventos distribuidos a lo largo del 2025 empezando desde julio - al menos uno por semana
   const calendarEvents: CalendarEvent[] = [
-    // Enero 2025
+    // Julio 2025
     {
       id: "1",
       title: "Congreso de Innovación Tecnológica",
       description: "Un evento que reúne líderes tecnológicos para discutir las últimas tendencias.",
-      fecha: "8 de Enero, 2025",
+      fecha: "2 de Julio, 2025",
       ubicacion: "Centro de Convenciones",
       asistentes: "200+",
       tipo: "Congreso",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2025, 0, 8)
+      date: new Date(2025, 6, 2)
     },
     {
       id: "2",
       title: "Workshop de Inteligencia Artificial",
       description: "Taller práctico sobre implementación de IA en empresas turísticas.",
-      fecha: "15 de Enero, 2025",
+      fecha: "9 de Julio, 2025",
       ubicacion: "Centro de Innovación",
       asistentes: "30",
       tipo: "Workshop",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2025, 0, 15)
+      date: new Date(2025, 6, 9)
     },
     {
       id: "3",
       title: "Mesa Redonda: Turismo Sostenible",
       description: "Discusión sobre prácticas sostenibles en la industria turística.",
-      fecha: "22 de Enero, 2025",
+      fecha: "16 de Julio, 2025",
       ubicacion: "Hotel Ejecutivo",
       asistentes: "45",
       tipo: "Mesa Redonda",
       image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
-      date: new Date(2025, 0, 22)
+      date: new Date(2025, 6, 16)
     },
     {
       id: "4",
       title: "Seminario de Marketing Digital",
       description: "Estrategias avanzadas de marketing digital para el sector turístico.",
-      fecha: "29 de Enero, 2025",
+      fecha: "23 de Julio, 2025",
       ubicacion: "Centro Empresarial",
       asistentes: "60",
       tipo: "Seminario",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      date: new Date(2025, 0, 29)
+      date: new Date(2025, 6, 23)
     },
-    // Febrero 2025
     {
       id: "5",
       title: "Hackathon de Soluciones Turísticas",
       description: "48 horas creando soluciones innovadoras para el turismo.",
-      fecha: "5 de Febrero, 2025",
+      fecha: "30 de Julio, 2025",
       ubicacion: "Hub de Innovación",
       asistentes: "80",
       tipo: "Hackathon",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      date: new Date(2025, 1, 5)
+      date: new Date(2025, 6, 30)
     },
+    // Agosto 2025
     {
       id: "6",
       title: "Conferencia de Liderazgo",
       description: "Desarrollo de habilidades de liderazgo para ejecutivos.",
-      fecha: "12 de Febrero, 2025",
+      fecha: "6 de Agosto, 2025",
       ubicacion: "Auditorio Principal",
       asistentes: "150",
       tipo: "Conferencia",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2025, 1, 12)
+      date: new Date(2025, 7, 6)
     },
     {
       id: "7",
       title: "Taller de Transformación Digital",
       description: "Herramientas prácticas para la digitalización empresarial.",
-      fecha: "19 de Febrero, 2025",
+      fecha: "13 de Agosto, 2025",
       ubicacion: "Centro Tecnológico",
       asistentes: "40",
       tipo: "Taller",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2025, 1, 19)
+      date: new Date(2025, 7, 13)
     },
     {
       id: "8",
       title: "Cumbre de Innovación Hotelera",
       description: "Tendencias y tecnologías emergentes en hotelería.",
-      fecha: "26 de Febrero, 2025",
+      fecha: "20 de Agosto, 2025",
       ubicacion: "Resort Internacional",
       asistentes: "120",
       tipo: "Cumbre",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2025, 1, 26)
+      date: new Date(2025, 7, 20)
     },
-    // Marzo 2025
     {
       id: "9",
       title: "Workshop de Experiencia del Cliente",
       description: "Creando experiencias memorables en el sector turístico.",
-      fecha: "5 de Marzo, 2025",
+      fecha: "27 de Agosto, 2025",
       ubicacion: "Centro de Capacitación",
       asistentes: "35",
       tipo: "Workshop",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2025, 2, 5)
+      date: new Date(2025, 7, 27)
     },
+    // Septiembre 2025
     {
       id: "10",
       title: "Foro de Startups Turísticas",
       description: "Presentación de startups innovadoras en turismo.",
-      fecha: "12 de Marzo, 2025",
+      fecha: "3 de Septiembre, 2025",
       ubicacion: "Incubadora Tech",
       asistentes: "90",
       tipo: "Foro",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      date: new Date(2025, 2, 12)
+      date: new Date(2025, 8, 3)
     },
     {
       id: "11",
       title: "Seminario de Revenue Management",
       description: "Optimización de ingresos en la industria hotelera.",
-      fecha: "19 de Marzo, 2025",
+      fecha: "10 de Septiembre, 2025",
       ubicacion: "Business Center",
       asistentes: "55",
       tipo: "Seminario",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      date: new Date(2025, 2, 19)
+      date: new Date(2025, 8, 10)
     },
     {
       id: "12",
       title: "Congreso de Turismo Responsable",
       description: "Impacto social y ambiental del turismo moderno.",
-      fecha: "26 de Marzo, 2025",
+      fecha: "17 de Septiembre, 2025",
       ubicacion: "Centro de Convenciones",
       asistentes: "180",
       tipo: "Congreso",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2025, 2, 26)
+      date: new Date(2025, 8, 17)
     },
-    // Abril 2025
     {
       id: "13",
       title: "Taller de Redes Sociales para Hoteles",
       description: "Estrategias efectivas de social media marketing.",
-      fecha: "2 de Abril, 2025",
+      fecha: "24 de Septiembre, 2025",
       ubicacion: "Hub Digital",
       asistentes: "28",
       tipo: "Taller",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2025, 3, 2)
+      date: new Date(2025, 8, 24)
     },
+    // Octubre 2025
     {
       id: "14",
       title: "Mesa Redonda: Futuro del Trabajo",
       description: "Tendencias laborales en la era post-pandemia.",
-      fecha: "9 de Abril, 2025",
+      fecha: "1 de Octubre, 2025",
       ubicacion: "Sala de Conferencias",
       asistentes: "50",
       tipo: "Mesa Redonda",
       image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
-      date: new Date(2025, 3, 9)
+      date: new Date(2025, 9, 1)
     },
     {
       id: "15",
       title: "Workshop de Gestión de Crisis",
       description: "Preparación y respuesta ante crisis empresariales.",
-      fecha: "16 de Abril, 2025",
+      fecha: "8 de Octubre, 2025",
       ubicacion: "Instituto de Gestión",
       asistentes: "42",
       tipo: "Workshop",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      date: new Date(2025, 3, 16)
+      date: new Date(2025, 9, 8)
     },
     {
       id: "16",
       title: "Conferencia de Tecnología Blockchain",
       description: "Aplicaciones de blockchain en turismo y hotelería.",
-      fecha: "23 de Abril, 2025",
+      fecha: "15 de Octubre, 2025",
       ubicacion: "Centro Tecnológico",
       asistentes: "95",
       tipo: "Conferencia",
       image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
-      date: new Date(2025, 3, 23)
+      date: new Date(2025, 9, 15)
     },
     {
       id: "17",
       title: "Seminario de Análisis de Datos",
       description: "Uso de big data para mejorar servicios turísticos.",
-      fecha: "30 de Abril, 2025",
+      fecha: "22 de Octubre, 2025",
       ubicacion: "Centro de Datos",
       asistentes: "65",
       tipo: "Seminario",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
-      date: new Date(2025, 3, 30)
+      date: new Date(2025, 9, 22)
+    },
+    {
+      id: "18",
+      title: "Festival de Innovación Turística",
+      description: "Celebrando las mejores innovaciones del sector.",
+      fecha: "29 de Octubre, 2025",
+      ubicacion: "Plaza de Eventos",
+      asistentes: "300+",
+      tipo: "Festival",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 9, 29)
+    },
+    // Noviembre 2025
+    {
+      id: "19",
+      title: "Workshop de Marketing de Contenidos",
+      description: "Creación de contenido atractivo para redes sociales.",
+      fecha: "5 de Noviembre, 2025",
+      ubicacion: "Estudio Creativo",
+      asistentes: "32",
+      tipo: "Workshop",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 10, 5)
+    },
+    {
+      id: "20",
+      title: "Cumbre de Sostenibilidad",
+      description: "Prácticas ecológicas en la industria del turismo.",
+      fecha: "12 de Noviembre, 2025",
+      ubicacion: "Centro Ecológico",
+      asistentes: "150",
+      tipo: "Cumbre",
+      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
+      date: new Date(2025, 10, 12)
+    },
+    {
+      id: "21",
+      title: "Seminario de E-commerce Turístico",
+      description: "Estrategias de venta online para el sector turismo.",
+      fecha: "19 de Noviembre, 2025",
+      ubicacion: "Centro Digital",
+      asistentes: "75",
+      tipo: "Seminario",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      date: new Date(2025, 10, 19)
+    },
+    {
+      id: "22",
+      title: "Mesa Redonda: Tendencias 2026",
+      description: "Predicciones y tendencias para el próximo año.",
+      fecha: "26 de Noviembre, 2025",
+      ubicacion: "Auditorio Central",
+      asistentes: "85",
+      tipo: "Mesa Redonda",
+      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop",
+      date: new Date(2025, 10, 26)
+    },
+    // Diciembre 2025
+    {
+      id: "23",
+      title: "Workshop de Planificación Estratégica",
+      description: "Planificación para el éxito empresarial en 2026.",
+      fecha: "3 de Diciembre, 2025",
+      ubicacion: "Centro de Negocios",
+      asistentes: "45",
+      tipo: "Workshop",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 11, 3)
+    },
+    {
+      id: "24",
+      title: "Conferencia de Cierre de Año",
+      description: "Reflexiones y logros del año 2025 en turismo.",
+      fecha: "10 de Diciembre, 2025",
+      ubicacion: "Gran Salón",
+      asistentes: "250+",
+      tipo: "Conferencia",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop",
+      date: new Date(2025, 11, 10)
+    },
+    {
+      id: "25",
+      title: "Taller de Networking Navideño",
+      description: "Evento de networking para cerrar el año.",
+      fecha: "17 de Diciembre, 2025",
+      ubicacion: "Club Empresarial",
+      asistentes: "120",
+      tipo: "Taller",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+      date: new Date(2025, 11, 17)
     }
-    // Continuando con más eventos a lo largo del año...
   ];
 
   // Fechas que tienen eventos
@@ -248,7 +337,7 @@ export default function CorporateEventsCalendar() {
             selected={selectedDate}
             onSelect={setSelectedDate}
             className="rounded-md border pointer-events-auto"
-            defaultMonth={new Date(2025, 0)} // Enero 2025
+            defaultMonth={new Date(2025, 6)} // Julio 2025
             modifiers={{
               hasEvent: eventDates
             }}
