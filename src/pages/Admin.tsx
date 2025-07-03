@@ -229,7 +229,7 @@ const Admin = () => {
       />
 
       {/* Admin Styles */}
-      <style jsx>{`
+      <style>{`
         .admin-edit-mode .relative:hover {
           outline: 2px dashed #fbbf24;
           background-color: rgba(251, 191, 36, 0.05);
