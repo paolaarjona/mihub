@@ -16,6 +16,7 @@ import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
+import AdminAccessButton from "./components/AdminAccessButton";
 
 // Create a react-query client
 const queryClient = new QueryClient();
@@ -41,6 +42,7 @@ const App = () => (
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <AdminAccessButton />
           </BrowserRouter>
         </AuthProvider>
       </LanguageProvider>
