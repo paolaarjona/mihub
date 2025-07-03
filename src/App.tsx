@@ -11,8 +11,11 @@ import Contact from "./pages/Contact";
 import Proyectos from "./pages/Proyectos";
 import EnviarProyecto from "./pages/EnviarProyecto";
 import EventosCorporativos from "./pages/EventosCorporativos";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { AuthProvider } from "./contexts/AuthContext";
 
 // Create a react-query client
 const queryClient = new QueryClient();
@@ -21,21 +24,25 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/servicios" element={<Apartments />} />
-            <Route path="/proyectos" element={<Proyectos />} />
-            <Route path="/enviar-proyecto" element={<EnviarProyecto />} />
-            <Route path="/eventos-corporativos" element={<EventosCorporativos />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <AuthProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/servicios" element={<Apartments />} />
+              <Route path="/proyectos" element={<Proyectos />} />
+              <Route path="/enviar-proyecto" element={<EnviarProyecto />} />
+              <Route path="/eventos-corporativos" element={<EventosCorporativos />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/admin" element={<Admin />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
       </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
