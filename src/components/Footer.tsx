@@ -42,6 +42,7 @@ export default function Footer() {
                 { name: "Eventos Corporativos", path: "/eventos-corporativos" },
                 { name: t.nav.gallery, path: "/gallery" },
                 { name: t.nav.contact, path: "/contact" },
+                { name: "Panel Admin", path: "/admin" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
