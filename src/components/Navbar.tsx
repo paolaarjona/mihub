@@ -54,33 +54,24 @@ export default function Navbar() {
   
   return (
     <>
-      <header className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled || !isHomePage
-          ? "bg-white/95 dark:bg-card/95 backdrop-blur-lg py-2 md:py-3 shadow-md" 
-          : "bg-transparent py-3 md:py-5"
-      )}>
-        <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <LanguageSelector />
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-card shadow-sm border-b border-gray-100 dark:border-gray-800">
+        <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center py-4">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center">
+              <div className="text-2xl font-bold text-primary">
+                MIHUB
+              </div>
+            </Link>
           </div>
 
-          {/* Desktop Navigation - Hidden on mobile and tablet */}
-          <ul className="hidden lg:flex space-x-4 xl:space-x-6">
+          {/* Desktop Navigation */}
+          <ul className="hidden lg:flex items-center space-x-8">
             {navLinks.map(link => (
-              <li key={link.name} className="relative">
+              <li key={link.name}>
                 <Link 
                   to={link.path} 
-                  className={cn(
-                    "font-medium transition-colors hover:text-primary text-sm xl:text-base",
-                    "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full",
-                    "active:text-white",
-                    !isHomePage
-                      ? "text-gray-700 dark:text-foreground" 
-                      : scrolled 
-                        ? "text-blue-600 dark:text-foreground" 
-                        : "text-white"
-                  )}
+                  className="text-gray-700 dark:text-foreground font-medium hover:text-primary transition-colors text-sm uppercase tracking-wide"
                 >
                   {link.name}
                 </Link>
@@ -88,59 +79,61 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop Theme Toggle - Hidden on mobile */}
-          <div className="hidden lg:flex items-center space-x-2">
-            <ThemeToggle />
-          </div>
-
-          {/* Mobile Navigation - Visible only on mobile and tablet */}
-          <div className="lg:hidden flex items-center space-x-1 sm:space-x-2">
-            <div className="hidden sm:block">
+          {/* Right section with controls */}
+          <div className="flex items-center space-x-2">
+            <div className="hidden lg:flex items-center space-x-2">
+              <LanguageSelector />
               <ThemeToggle />
             </div>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className={cn(
-                "rounded-full h-8 w-8 sm:h-10 sm:w-10",
-                !isHomePage
-                  ? "text-gray-700 dark:text-foreground hover:bg-accent"
-                  : scrolled 
-                    ? "text-foreground hover:bg-accent" 
-                    : "text-white hover:text-white hover:bg-white/10"
-              )}
-            >
-              {mobileMenuOpen ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
-            </Button>
+
+            {/* Mobile Navigation - Visible only on mobile and tablet */}
+            <div className="lg:hidden flex items-center space-x-2">
+              <LanguageSelector />
+              <div className="hidden sm:block">
+                <ThemeToggle />
+              </div>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+                className="rounded-full h-8 w-8 sm:h-10 sm:w-10 text-gray-700 dark:text-foreground hover:bg-accent"
+              >
+                {mobileMenuOpen ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
+              </Button>
+            </div>
           </div>
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay - Pantalla completa en móviles */}
+      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden">
           <div className="fixed inset-0 bg-white dark:bg-card p-4 sm:p-6 lg:hidden">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center mb-6 sm:mb-8">
-                <div className="sm:hidden">
-                  <ThemeToggle />
+                <div className="text-xl font-bold text-primary">
+                  MIHUB
                 </div>
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
-                  onClick={() => setMobileMenuOpen(false)} 
-                  className="rounded-full h-8 w-8 sm:h-10 sm:w-10 ml-auto"
-                >
-                  <X className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Button>
+                <div className="flex items-center space-x-2">
+                  <div className="sm:hidden">
+                    <ThemeToggle />
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    onClick={() => setMobileMenuOpen(false)} 
+                    className="rounded-full h-8 w-8 sm:h-10 sm:w-10"
+                  >
+                    <X className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </Button>
+                </div>
               </div>
               <ul className="space-y-4 sm:space-y-6 flex-1">
                 {navLinks.map(link => (
                   <li key={link.name}>
                     <Link 
                       to={link.path} 
-                      className="block text-lg sm:text-xl font-medium transition-colors hover:text-primary py-3 text-gray-900 dark:text-foreground border-b border-gray-200 dark:border-gray-700" 
+                      className="block text-lg sm:text-xl font-medium transition-colors hover:text-primary py-3 text-gray-900 dark:text-foreground border-b border-gray-200 dark:border-gray-700 uppercase tracking-wide" 
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {link.name}
