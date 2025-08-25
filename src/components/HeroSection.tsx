@@ -1,56 +1,44 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
-
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
-  
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   // Calculate parallax effect
   const backgroundY = scrollY * 0.5;
   const contentY = scrollY * 0.2;
-  
-  return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden">
+  return <section className="relative h-screen min-h-[600px] overflow-hidden">
       {/* Background image with parallax */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/lovable-uploads/d10959a5-8a10-43d3-b29c-d5d78fedf564.png')",
-          transform: `translateY(${backgroundY}px)`,
-          backgroundPosition: `center ${50 + scrollY * 0.05}%`
-        }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center" style={{
+      backgroundImage: "url('/lovable-uploads/d10959a5-8a10-43d3-b29c-d5d78fedf564.png')",
+      transform: `translateY(${backgroundY}px)`,
+      backgroundPosition: `center ${50 + scrollY * 0.05}%`
+    }} />
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
       
       {/* Content */}
-      <div
-        className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6"
-        style={{ transform: `translateY(${contentY}px)` }}
-      >
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
+      transform: `translateY(${contentY}px)`
+    }}>
         <div className="max-w-4xl animate-fade-in">
           {/* Logo de miHUB - 40% más grande que el anterior */}
           <div className="mb-6 sm:mb-8">
-            <img 
-              src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png"
-              alt="miHUB Logo"
-              className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert"
-            />
+            <img src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png" alt="miHUB Logo" className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert" />
           </div>
           
           <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">
@@ -59,7 +47,7 @@ export default function HeroSection() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Turismo sostenible y desarrollo digital de las empresas canarias
           </h1>
-          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed sm:text-base">
             Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones y proyectos innovadores que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
@@ -97,13 +85,9 @@ export default function HeroSection() {
       
       {/* Scroll down indicator */}
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-        <a 
-          href="#welcome" 
-          className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
-        >
+        <a href="#welcome" className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
           <ChevronDown className="h-6 w-6 sm:h-8 sm:w-8" />
         </a>
       </div>
-    </section>
-  );
+    </section>;
 }
