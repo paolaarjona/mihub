@@ -59,9 +59,11 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
-                MIHUB
-              </div>
+              <img 
+                src="/lovable-uploads/8c9fa48a-6ac2-4067-b2a7-ba2d9f0cb897.png" 
+                alt="MIHUB Logo" 
+                className="h-8 w-auto"
+              />
             </Link>
           </div>
 
@@ -111,9 +113,11 @@ export default function Navbar() {
           <div className="fixed inset-0 bg-white dark:bg-card p-4 sm:p-6 lg:hidden">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center mb-6 sm:mb-8">
-                <div className="text-xl font-bold text-primary">
-                  MIHUB
-                </div>
+                <img 
+                  src="/lovable-uploads/8c9fa48a-6ac2-4067-b2a7-ba2d9f0cb897.png" 
+                  alt="MIHUB Logo" 
+                  className="h-6 w-auto"
+                />
                 <div className="flex items-center space-x-2">
                   <div className="sm:hidden">
                     <ThemeToggle />
