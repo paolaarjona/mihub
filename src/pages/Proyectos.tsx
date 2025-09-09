@@ -5,69 +5,51 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Lightbulb, Cog, Users, Leaf } from "lucide-react";
 import ProjectDetailsDialog from "@/components/ProjectDetailsDialog";
+import { useProyectos, type Proyecto } from "@/hooks/useProyectos";
 
-const proyectos = [
-  {
-    id: "1",
-    title: "Turismo Sostenible",
-    description: "Desarrollo de plataforma integral para promocionar el turismo responsable y sostenible en las Islas Canarias.",
-    sector: "Turismo",
-    duration: "8 meses",
-    icon: <Leaf className="h-8 w-8 text-primary" />,
-    image: "/lovable-uploads/2d8419bb-0d47-4752-a640-3e75fc002558.png",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  {
-    id: "2",
-    title: "Transformación Digital Hotelera",
-    description: "Implementación de sistema de IA para optimización de reservas y experiencia del huésped.",
-    sector: "Turismo",
-    duration: "6 meses",
-    icon: <Target className="h-8 w-8 text-primary" />,
-    image: "/lovable-uploads/c8efb453-1a7d-43ee-b27f-4fe21a896ea4.png",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  {
-    id: "3", 
-    title: "Digital Island",
-    description: "Viajes de formación corporativa en innovación e IA para compañías.",
-    sector: "Empresas y Emprendedores",
-    duration: "12 meses",
-    icon: <Lightbulb className="h-8 w-8 text-primary" />,
-    image: "/lovable-uploads/45e716e4-635c-49f9-9440-14d33ccfe483.png",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  {
-    id: "4",
-    title: "Oficinas IA",
-    description: "Proyecto de Industry 4.0 con implementación de IoT y análisis predictivo.",
-    sector: "Empresas e Instituciones",
-    duration: "9 meses",
-    icon: <Cog className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  },
-  {
-    id: "5",
-    title: "Detección de Retos",
-    description: "Programa de detección de retos de innovación y casos de uso IA.",
-    sector: "Ayuntamientos y Empresas",
-    duration: "18 meses",
-    icon: <Users className="h-8 w-8 text-primary" />,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+// Helper function to get icon component by name
+const getIconComponent = (iconName: string) => {
+  const iconProps = "h-8 w-8 text-primary";
+  switch (iconName) {
+    case 'Leaf':
+      return <Leaf className={iconProps} />;
+    case 'Target':
+      return <Target className={iconProps} />;
+    case 'Lightbulb':
+      return <Lightbulb className={iconProps} />;
+    case 'Cog':
+      return <Cog className={iconProps} />;
+    case 'Users':
+      return <Users className={iconProps} />;
+    default:
+      return <Lightbulb className={iconProps} />;
   }
-];
+};
+
+// Transform Supabase data to component format
+const transformProyecto = (proyecto: Proyecto) => ({
+  id: proyecto.id,
+  title: proyecto.title,
+  description: proyecto.description,
+  sector: proyecto.sector,
+  duration: proyecto.duration,
+  icon: getIconComponent(proyecto.icon_name),
+  image: proyecto.image_url,
+  videoUrl: proyecto.video_url
+});
 
 export default function Proyectos() {
-  const [selectedProject, setSelectedProject] = useState<typeof proyectos[0] | null>(null);
+  const { proyectos: proyectosData, loading, error } = useProyectos();
+  const [selectedProject, setSelectedProject] = useState<ReturnType<typeof transformProyecto> | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleViewDetails = (project: typeof proyectos[0]) => {
+  const proyectos = proyectosData.map(transformProyecto);
+
+  const handleViewDetails = (project: ReturnType<typeof transformProyecto>) => {
     setSelectedProject(project);
     setIsDialogOpen(true);
   };
@@ -76,6 +58,33 @@ export default function Proyectos() {
     setIsDialogOpen(false);
     setSelectedProject(null);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <p className="text-red-500 mb-4">Error al cargar proyectos: {error}</p>
+            <Button onClick={() => window.location.reload()}>Reintentar</Button>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col">

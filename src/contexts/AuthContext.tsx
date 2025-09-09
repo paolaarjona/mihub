@@ -32,25 +32,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const { toast } = useToast();
 
   const checkUserRole = async (userId: string) => {
-    try {
-      const { data, error } = await supabase
-        .from('user_roles')
-        .select('role')
-        .eq('user_id', userId)
-        .eq('role', 'admin')
-        .single();
-      
-      if (error) {
-        console.log('User is not admin:', error);
-        setIsAdmin(false);
-        return;
-      }
-      
-      setIsAdmin(data?.role === 'admin');
-    } catch (error) {
-      console.error('Error checking user role:', error);
-      setIsAdmin(false);
-    }
+    // TODO: Implement proper admin role checking when needed
+    setIsAdmin(false);
   };
 
   useEffect(() => {

@@ -5,93 +5,40 @@ import Footer from "@/components/Footer";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useGaleria, type GaleriaItem } from "@/hooks/useGaleria";
 
-// Corporate gallery images with uploaded photos
-const galleryImages = [
-  {
-    id: 1,
-    src: "/lovable-uploads/78ba6e55-dae9-4003-989f-3363db5e1bb4.png",
-    alt: "Sesión de trabajo corporativa",
-    category: "corporate",
-    overlayText: "Sesión Ejecutiva",
-    overlayNumber: "01"
-  },
-  {
-    id: 2,
-    src: "/lovable-uploads/e816b84d-8bb4-4dcb-8ff8-1890007f2f2b.png",
-    alt: "Sala de conferencias con presentación",
-    category: "facilities",
-    overlayText: "Sala de Conferencias",
-    overlayNumber: "02"
-  },
-  {
-    id: 3,
-    src: "/lovable-uploads/9e9bb5ec-b534-4e38-8ae7-bf268f3dea96.png",
-    alt: "Turquois X Summit - Evento corporativo",
-    category: "corporate",
-    overlayText: "Summit Empresarial",
-    overlayNumber: "03"
-  },
-  {
-    id: 4,
-    src: "/lovable-uploads/6d1adf25-13a7-4f4a-9996-d84df66a855b.png",
-    alt: "Auditorio moderno con vista al mar",
-    category: "facilities",
-    overlayText: "Auditorio Premium",
-    overlayNumber: "04"
-  },
-  {
-    id: 5,
-    src: "/lovable-uploads/d8c267f0-576c-4b67-9305-04e5d526a4c5.png",
-    alt: "Evento grupal corporativo",
-    category: "corporate",
-    overlayText: "Networking",
-    overlayNumber: "05"
-  },
-  {
-    id: 6,
-    src: "/lovable-uploads/96e92929-3d87-421c-a905-c13f5a2e0cab.png",
-    alt: "Pasillo de oficinas modernas",
-    category: "facilities",
-    overlayText: "Instalaciones",
-    overlayNumber: "06"
-  },
-  {
-    id: 7,
-    src: "/lovable-uploads/41801f83-3b09-46f0-a8f4-bae721727b3e.png",
-    alt: "Presentación corporativa",
-    category: "corporate",
-    overlayText: "Presentación",
-    overlayNumber: "07"
-  },
-  {
-    id: 8,
-    src: "/lovable-uploads/c0eab749-1a46-4cc9-83f1-b732d1b187e2.png",
-    alt: "Audiencia en evento corporativo",
-    category: "corporate",
-    overlayText: "Conferencia",
-    overlayNumber: "08"
-  },
-  {
-    id: 9,
-    src: "/lovable-uploads/e8baac2f-b5bc-476e-b86b-52cf82e5f6a5.png",
-    alt: "Auditorio MI HUB",
-    category: "facilities",
-    overlayText: "MI HUB",
-    overlayNumber: "09"
-  },
-];
+// Transform Supabase data to component format
+const transformGaleriaItem = (item: GaleriaItem) => ({
+  id: parseInt(item.overlay_number),
+  src: item.src_url,
+  alt: item.alt_text,
+  category: item.category,
+  overlayText: item.overlay_text,
+  overlayNumber: item.overlay_number
+});
 
 export default function Gallery() {
   const { t } = useLanguage();
+  const { galeria: galeriaData, loading, error } = useGaleria();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [filteredImages, setFilteredImages] = useState(galleryImages);
+  const [filteredImages, setFilteredImages] = useState<ReturnType<typeof transformGaleriaItem>[]>([]);
   const [activeFilter, setActiveFilter] = useState("all");
+  
+  const galleryImages = galeriaData.map(transformGaleriaItem);
   
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
+  
+  useEffect(() => {
+    // Update filtered images when gallery data changes
+    if (activeFilter === "all") {
+      setFilteredImages(galleryImages);
+    } else {
+      setFilteredImages(galleryImages.filter(img => img.category === activeFilter));
+    }
+  }, [galleryImages, activeFilter]);
   
   // Filter gallery images by category
   const filterGallery = (category: string) => {
@@ -137,6 +84,32 @@ export default function Gallery() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [selectedImage, filteredImages]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <p className="text-red-500 mb-4">Error al cargar galería: {error}</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
   
   return (
     <div className="min-h-screen flex flex-col">

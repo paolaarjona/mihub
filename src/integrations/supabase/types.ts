@@ -14,7 +14,117 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      eventos_corporativos: {
+        Row: {
+          asistentes: string
+          created_at: string | null
+          description: string
+          fecha: string
+          id: string
+          image_url: string
+          tipo: string
+          title: string
+          ubicacion: string
+          updated_at: string | null
+        }
+        Insert: {
+          asistentes: string
+          created_at?: string | null
+          description: string
+          fecha: string
+          id?: string
+          image_url: string
+          tipo: string
+          title: string
+          ubicacion: string
+          updated_at?: string | null
+        }
+        Update: {
+          asistentes?: string
+          created_at?: string | null
+          description?: string
+          fecha?: string
+          id?: string
+          image_url?: string
+          tipo?: string
+          title?: string
+          ubicacion?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      galeria: {
+        Row: {
+          alt_text: string
+          category: string
+          created_at: string | null
+          id: string
+          overlay_number: string
+          overlay_text: string
+          src_url: string
+          updated_at: string | null
+        }
+        Insert: {
+          alt_text: string
+          category: string
+          created_at?: string | null
+          id?: string
+          overlay_number: string
+          overlay_text: string
+          src_url: string
+          updated_at?: string | null
+        }
+        Update: {
+          alt_text?: string
+          category?: string
+          created_at?: string | null
+          id?: string
+          overlay_number?: string
+          overlay_text?: string
+          src_url?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      proyectos: {
+        Row: {
+          created_at: string | null
+          description: string
+          duration: string
+          icon_name: string
+          id: string
+          image_url: string
+          sector: string
+          title: string
+          updated_at: string | null
+          video_url: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          description: string
+          duration: string
+          icon_name: string
+          id?: string
+          image_url: string
+          sector: string
+          title: string
+          updated_at?: string | null
+          video_url?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          description?: string
+          duration?: string
+          icon_name?: string
+          id?: string
+          image_url?: string
+          sector?: string
+          title?: string
+          updated_at?: string | null
+          video_url?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

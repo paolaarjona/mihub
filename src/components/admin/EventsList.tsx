@@ -7,10 +7,10 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Edit, Trash2, Calendar, MapPin, Users } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import EditEventDialog from './EditEventDialog';
+// import EditEventDialog from './EditEventDialog';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components/ui/alert-dialog';
 
-type Event = Tables<'eventos'>;
+type Event = Tables<'eventos_corporativos'>;
 
 interface EventsListProps {
   onEventUpdated: () => void;
@@ -19,13 +19,16 @@ interface EventsListProps {
 const EventsList = ({ onEventUpdated }: EventsListProps) => {
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [editingEvent, setEditingEvent] = useState<Event | null>(null);
   const { toast } = useToast();
 
   const fetchEvents = async () => {
     try {
+      setLoading(true);
+      setError(null);
       const { data, error } = await supabase
-        .from('eventos')
+        .from('eventos_corporativos')
         .select('*')
         .order('created_at', { ascending: false });
 
@@ -33,6 +36,7 @@ const EventsList = ({ onEventUpdated }: EventsListProps) => {
       setEvents(data || []);
     } catch (error) {
       console.error('Error fetching events:', error);
+      setError(error instanceof Error ? error.message : 'Error desconocido');
       toast({
         title: 'Error',
         description: 'No se pudieron cargar los eventos',
@@ -49,10 +53,10 @@ const EventsList = ({ onEventUpdated }: EventsListProps) => {
 
   const handleDeleteEvent = async (eventId: string) => {
     try {
-      const { error } = await supabase
-        .from('eventos')
-        .delete()
-        .eq('id', eventId);
+    const { error } = await supabase
+      .from('eventos_corporativos')
+      .delete()
+      .eq('id', eventId);
 
       if (error) throw error;
 
@@ -115,16 +119,23 @@ const EventsList = ({ onEventUpdated }: EventsListProps) => {
 
   return (
     <div className="space-y-4">
+      {loading && <div className="text-center py-4">Cargando eventos...</div>}
+      {error && <div className="text-red-500 text-center py-4">Error: {error}</div>}
+      {events.length === 0 && !loading && !error && (
+        <div className="text-center py-8 text-muted-foreground">
+          No hay eventos disponibles
+        </div>
+      )}
       {events.map((event) => (
         <Card key={event.id}>
           <CardHeader>
             <div className="flex justify-between items-start">
               <div className="flex-1">
-                <CardTitle className="text-lg mb-2">{event.titulo}</CardTitle>
+                <CardTitle className="text-lg mb-2">{event.title}</CardTitle>
                 <div className="flex flex-wrap gap-2 mb-3">
                   <Badge variant="secondary">{event.tipo}</Badge>
-                  <Badge variant={event.estado === 'abierto' ? 'default' : 'destructive'}>
-                    {event.estado === 'abierto' ? 'Abierto' : 'Cerrado'}
+                  <Badge variant="default">
+                    Activo
                   </Badge>
                 </div>
               </div>
@@ -168,47 +179,31 @@ const EventsList = ({ onEventUpdated }: EventsListProps) => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                {event.lugar}
+                {event.ubicacion}
               </div>
-              {event.capacidad && (
+              {event.asistentes && (
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Users className="h-4 w-4" />
-                  {event.capacidad} asistentes
+                  {event.asistentes} asistentes
                 </div>
               )}
             </div>
-            {event.descripcion && (
+            {event.description && (
               <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                {event.descripcion}
+                {event.description}
               </p>
-            )}
-            {event.fechas_adicionales && event.fechas_adicionales.length > 0 && (
-              <div className="mb-4">
-                <p className="text-sm font-medium mb-2">Fechas adicionales:</p>
-                <div className="flex flex-wrap gap-2">
-                  {event.fechas_adicionales.map((fecha, index) => (
-                    <Badge key={index} variant="outline">
-                      {formatDate(fecha)}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
             )}
           </CardContent>
         </Card>
       ))}
 
       {editingEvent && (
-        <EditEventDialog
-          event={editingEvent}
-          open={!!editingEvent}
-          onOpenChange={() => setEditingEvent(null)}
-          onEventUpdated={() => {
-            fetchEvents();
-            onEventUpdated();
-            setEditingEvent(null);
-          }}
-        />
+        <div className="p-4 border rounded-lg bg-muted/50">
+          <p className="text-muted-foreground">Edición de eventos temporalmente deshabilitada</p>
+          <Button onClick={() => setEditingEvent(null)} variant="outline" size="sm" className="mt-2">
+            Cerrar
+          </Button>
+        </div>
       )}
     </div>
   );
