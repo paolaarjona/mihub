@@ -170,16 +170,13 @@ const SobreMiHub = () => {
                     </p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-8 mb-8">
-                    <div className="aspect-video bg-white rounded-lg shadow-inner flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <MapPin className="w-8 h-8 text-primary" />
-                        </div>
-                        <p className="text-muted-foreground">
-                          Plano arquitectónico disponible próximamente
-                        </p>
-                      </div>
+                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-4 mb-8">
+                    <div className="bg-white rounded-lg shadow-inner overflow-hidden">
+                      <img 
+                        src="/lovable-uploads/plano-mihub.jpg" 
+                        alt="Plano arquitectónico de miHUB 3.0 mostrando la distribución de Sala 0, Sala 1, Sala 2, Sala 3 y Terraza"
+                        className="w-full h-auto"
+                      />
                     </div>
                   </div>
 
