@@ -12,9 +12,18 @@ const SobreMiHub = () => {
 
   const rooms = [
     {
+      id: "sala0",
+      name: "Sala 0",
+      capacity: "12 personas",
+      size: "20 m²",
+      features: ["Proyector HD", "Mesa de reuniones compacta", "Sistema de audio", "WiFi de alta velocidad"],
+      image: "/lovable-uploads/41801f83-3b09-46f0-a8f4-bae721727b3e.png",
+      description: "Espacio íntimo perfecto para reuniones pequeñas y sesiones de trabajo."
+    },
+    {
       id: "sala1",
       name: "Sala 1",
-      capacity: "8-12 personas",
+      capacity: "18 personas",
       size: "25 m²",
       features: ["Proyector 4K", "Pizarra interactiva", "Sistema de audio profesional", "WiFi de alta velocidad"],
       image: "/lovable-uploads/41801f83-3b09-46f0-a8f4-bae721727b3e.png",
@@ -23,7 +32,7 @@ const SobreMiHub = () => {
     {
       id: "sala2", 
       name: "Sala 2",
-      capacity: "15-20 personas",
+      capacity: "55 personas",
       size: "40 m²",
       features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
       image: "/lovable-uploads/42a648f5-29cb-44d1-a727-c647080bc537.png",
@@ -32,7 +41,7 @@ const SobreMiHub = () => {
     {
       id: "sala3",
       name: "Sala 3", 
-      capacity: "25-30 personas",
+      capacity: "36 personas",
       size: "60 m²",
       features: ["Sistema multimedia completo", "Escenario elevado", "Sonido surround", "Cámaras profesionales"],
       image: "/lovable-uploads/45e716e4-635c-49f9-9440-14d33ccfe483.png",
@@ -41,7 +50,7 @@ const SobreMiHub = () => {
     {
       id: "terraza",
       name: "Terraza", 
-      capacity: "40-50 personas",
+      capacity: "120 personas",
       size: "80 m²",
       features: ["Vista panorámica", "Zona de networking", "Catering disponible", "Ambiente al aire libre"],
       image: "/lovable-uploads/terraza-nueva.jpeg",
@@ -84,13 +93,13 @@ const SobreMiHub = () => {
               </Card>
               <Card className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-primary">4</CardTitle>
+                  <CardTitle className="text-3xl font-bold text-primary">5</CardTitle>
                   <CardDescription>Espacios disponibles</CardDescription>
                 </CardHeader>
               </Card>
               <Card className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-primary">50+</CardTitle>
+                  <CardTitle className="text-3xl font-bold text-primary">241</CardTitle>
                   <CardDescription>Capacidad máxima</CardDescription>
                 </CardHeader>
               </Card>
@@ -178,6 +187,10 @@ const SobreMiHub = () => {
                     <div>
                       <h4 className="font-semibold mb-3">Distribución del Espacio</h4>
                       <ul className="space-y-2 text-sm">
+                        <li className="flex justify-between">
+                          <span>Sala 0 (Reuniones pequeñas)</span>
+                          <span className="text-muted-foreground">20 m²</span>
+                        </li>
                         <li className="flex justify-between">
                           <span>Sala 1 (Reuniones)</span>
                           <span className="text-muted-foreground">25 m²</span>
