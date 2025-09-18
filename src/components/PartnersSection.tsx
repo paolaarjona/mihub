@@ -44,7 +44,7 @@ export default function PartnersSection() {
     },
     {
       name: "Valhalla",
-      logo: "/lovable-uploads/aec601af-67f9-4486-a881-be419cc2ce38.png",
+      logo: "/lovable-uploads/valhalla-logo-new.png",
       description: "Colaboración estratégica en transformación digital e innovación empresarial."
     },
     {

@@ -106,9 +106,19 @@ const CreateEventDialog = ({ open, onOpenChange, onEventCreated }: CreateEventDi
         estado: formData.estado as any,
       };
 
+      const eventDataForDB = {
+        title: formData.titulo,
+        tipo: formData.tipo,
+        description: formData.descripcion || '',
+        fecha: formData.fecha,
+        ubicacion: formData.lugar,
+        asistentes: formData.capacidad || '0',
+        image_url: imageUrl || '',
+      };
+
       const { error } = await supabase
-        .from('eventos')
-        .insert([eventData]);
+        .from('eventos_corporativos')
+        .insert([eventDataForDB]);
 
       if (error) throw error;
 

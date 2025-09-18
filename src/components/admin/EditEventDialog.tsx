@@ -17,7 +17,7 @@ const eventTypes = [
   'Mesa Redonda', 'Conferencia', 'Hackathon', 'Cumbre', 'Foro', 'Festival'
 ];
 
-type Event = Tables<'eventos'>;
+type Event = Tables<'eventos_corporativos'>;
 
 interface EditEventDialogProps {
   event: Event;
@@ -45,15 +45,15 @@ const EditEventDialog = ({ event, open, onOpenChange, onEventUpdated }: EditEven
   useEffect(() => {
     if (event) {
       setFormData({
-        titulo: event.titulo,
+        titulo: event.title,
         tipo: event.tipo,
-        descripcion: event.descripcion || '',
+        descripcion: event.description || '',
         fecha: event.fecha,
-        lugar: event.lugar,
-        capacidad: event.capacidad?.toString() || '',
-        estado: event.estado,
+        lugar: event.ubicacion,
+        capacidad: event.asistentes || '',
+        estado: 'abierto',
       });
-      setAdditionalDates(event.fechas_adicionales || []);
+      setAdditionalDates([]);
     }
   }, [event]);
 
@@ -103,7 +103,7 @@ const EditEventDialog = ({ event, open, onOpenChange, onEventUpdated }: EditEven
     setUploading(true);
 
     try {
-      let imageUrl = event.imagen_url;
+      let imageUrl = event.image_url;
       if (imageFile) {
         const newImageUrl = await uploadImage();
         if (newImageUrl) {
@@ -111,21 +111,19 @@ const EditEventDialog = ({ event, open, onOpenChange, onEventUpdated }: EditEven
         }
       }
 
-      const eventData = {
-        titulo: formData.titulo,
-        tipo: formData.tipo as any,
-        descripcion: formData.descripcion || null,
+      const eventDataForDB = {
+        title: formData.titulo,
+        tipo: formData.tipo,
+        description: formData.descripcion || '',
         fecha: formData.fecha,
-        fechas_adicionales: additionalDates.length > 0 ? additionalDates : null,
-        lugar: formData.lugar,
-        capacidad: formData.capacidad ? parseInt(formData.capacidad) : null,
-        imagen_url: imageUrl,
-        estado: formData.estado as any,
+        ubicacion: formData.lugar,
+        asistentes: formData.capacidad || '',
+        image_url: imageUrl || '',
       };
 
       const { error } = await supabase
-        .from('eventos')
-        .update(eventData)
+        .from('eventos_corporativos')
+        .update(eventDataForDB)
         .eq('id', event.id);
 
       if (error) throw error;
@@ -285,9 +283,9 @@ const EditEventDialog = ({ event, open, onOpenChange, onEventUpdated }: EditEven
               accept="image/*"
               onChange={(e) => setImageFile(e.target.files?.[0] || null)}
             />
-            {event.imagen_url && (
+            {event.image_url && (
               <p className="text-sm text-muted-foreground">
-                Imagen actual: <a href={event.imagen_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver imagen</a>
+                Imagen actual: <a href={event.image_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver imagen</a>
               </p>
             )}
           </div>
