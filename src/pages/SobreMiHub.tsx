@@ -180,65 +180,46 @@ const SobreMiHub = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 gap-6">
                     <div>
-                      <h4 className="font-semibold mb-3">Distribución del Espacio</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li className="flex justify-between">
-                          <span>Sala 0 (Reuniones pequeñas)</span>
-                          <span className="text-muted-foreground">20 m²</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Sala 1 (Reuniones)</span>
-                          <span className="text-muted-foreground">25 m²</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Sala 2 (Formación)</span>
-                          <span className="text-muted-foreground">40 m²</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Sala 3 (Conferencias)</span>
-                          <span className="text-muted-foreground">60 m²</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Terraza</span>
-                          <span className="text-muted-foreground">80 m²</span>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold mb-3">Ubicación Privilegiada</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                            <MapPin className="w-4 h-4 text-primary" />
+                      <h4 className="font-semibold mb-4 text-center">Ubicación Privilegiada</h4>
+                      <div className="space-y-4">
+                        {/* Primera fila - 3 iconos */}
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="flex flex-col items-center text-center space-y-2">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <MapPin className="w-6 h-6 text-primary" />
+                            </div>
+                            <span className="text-sm">Marina de Lanzarote</span>
                           </div>
-                          <span className="text-sm">Marina de Lanzarote</span>
+                          <div className="flex flex-col items-center text-center space-y-2">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <Eye className="w-6 h-6 text-primary" />
+                            </div>
+                            <span className="text-sm">Vistas al puerto deportivo</span>
+                          </div>
+                          <div className="flex flex-col items-center text-center space-y-2">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <Navigation className="w-6 h-6 text-primary" />
+                            </div>
+                            <span className="text-sm">Acceso directo desde el puerto</span>
+                          </div>
                         </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                            <Eye className="w-4 h-4 text-primary" />
+                        
+                        {/* Segunda fila - 2 iconos */}
+                        <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                          <div className="flex flex-col items-center text-center space-y-2">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <ShoppingBag className="w-6 h-6 text-primary" />
+                            </div>
+                            <span className="text-sm">Zona comercial y gastronómica</span>
                           </div>
-                          <span className="text-sm">Vistas al puerto deportivo</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                            <Navigation className="w-4 h-4 text-primary" />
+                          <div className="flex flex-col items-center text-center space-y-2">
+                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                              <Car className="w-6 h-6 text-primary" />
+                            </div>
+                            <span className="text-sm">Parking disponible</span>
                           </div>
-                          <span className="text-sm">Acceso directo desde el puerto</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                            <ShoppingBag className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm">Zona comercial y gastronómica</span>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                            <Car className="w-4 h-4 text-primary" />
-                          </div>
-                          <span className="text-sm">Parking disponible</span>
                         </div>
                       </div>
                     </div>
