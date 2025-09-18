@@ -30,7 +30,16 @@ export default function Footer() {
                 />
                 <span className="sr-only">X (formerly Twitter)</span>
               </a>
-              <a href="https://www.instagram.com/marinainnovahub/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.instagram.com/marinainnovahub/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-primary transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open('https://www.instagram.com/marinainnovahub/', '_blank', 'noopener,noreferrer');
+                }}
+              >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
