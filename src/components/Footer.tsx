@@ -25,8 +25,7 @@ export default function Footer() {
                 <img 
                   src="/lovable-uploads/x-logo-new.png" 
                   alt="X" 
-                  className="w-5 h-5 object-contain" 
-                  style={{ filter: 'brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%)' }}
+                  className="w-5 h-5 object-contain opacity-60 hover:opacity-100 transition-opacity" 
                 />
                 <span className="sr-only">X (formerly Twitter)</span>
               </a>
