@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Proyectos from "./pages/Proyectos";
 import EnviarProyecto from "./pages/EnviarProyecto";
 import EventosCorporativos from "./pages/EventosCorporativos";
+import SobreMiHub from "./pages/SobreMiHub";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -35,6 +36,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/servicios" element={<Apartments />} />
+              <Route path="/sobre-mihub" element={<SobreMiHub />} />
               <Route path="/proyectos" element={<Proyectos />} />
               <Route path="/enviar-proyecto" element={<EnviarProyecto />} />
               <Route path="/eventos-corporativos" element={<EventosCorporativos />} />

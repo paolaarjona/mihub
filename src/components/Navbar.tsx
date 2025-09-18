@@ -19,6 +19,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.home, path: "/" },
     { name: t.nav.apartments, path: "/servicios" },
+    { name: "Sobre miHUB", path: "/sobre-mihub" },
     { name: "Proyectos", path: "/proyectos" },
     { name: "Eventos Corporativos", path: "/eventos-corporativos" },
     { name: t.nav.gallery, path: "/gallery" },
