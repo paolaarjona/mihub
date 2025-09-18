@@ -44,7 +44,7 @@ const SobreMiHub = () => {
       capacity: "40-50 personas",
       size: "80 m²",
       features: ["Vista panorámica", "Zona de networking", "Catering disponible", "Ambiente al aire libre"],
-      image: "/lovable-uploads/4476364e-39ef-4c2e-9a79-80c2f553dcc2.png",
+      image: "/lovable-uploads/terraza-nueva.jpeg",
       description: "Espacio único con vistas al puerto deportivo para eventos especiales y networking."
     }
   ];
