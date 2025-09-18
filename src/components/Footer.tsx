@@ -120,7 +120,7 @@ export default function Footer() {
             <a href="/privacy-policy" className="hover:text-primary transition-colors">Política de Privacidad</a>
             <a href="/quality-environment-policy" className="hover:text-primary transition-colors">Política de Calidad y Medio Ambiente</a>
             <a href="/legal-notice" className="hover:text-primary transition-colors">Aviso Legal</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+            <a href="/cookie-policy" className="hover:text-primary transition-colors">Cookies</a>
           </div>
         </div>
       </div>

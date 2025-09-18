@@ -16,6 +16,7 @@ import Admin from "./pages/Admin";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import QualityEnvironmentPolicy from "./pages/QualityEnvironmentPolicy";
 import LegalNotice from "./pages/LegalNotice";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/quality-environment-policy" element={<QualityEnvironmentPolicy />} />
               <Route path="/legal-notice" element={<LegalNotice />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
