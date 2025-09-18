@@ -108,7 +108,7 @@ export default function Footer() {
         <div className="border-t border-border pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
           <p>&copy; {currentYear} miHUB 3.0 - Grupo Martínez Abolafio. {t.footer.allRights}</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition-colors">Política de Privacidad</a>
+            <a href="/privacy-policy" className="hover:text-primary transition-colors">Política de Privacidad</a>
             <a href="#" className="hover:text-primary transition-colors">Términos de Uso</a>
             <a href="#" className="hover:text-primary transition-colors">Cookies</a>
           </div>
