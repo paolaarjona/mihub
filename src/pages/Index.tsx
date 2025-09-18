@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import TimelineSection from "@/components/TimelineSection";
+
 import PartnersSection from "@/components/PartnersSection";
 import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
@@ -135,59 +135,6 @@ export default function Index() {
         {/* Hero Section */}
         <HeroSection />
         
-        {/* Welcome Section - Quiénes Somos */}
-        <section id="welcome" className="section">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="animate-fade-in [animation-delay:100ms] order-2 lg:order-1">
-                <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
-                  {t.home.welcome.subtitle}
-                </span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
-                  {t.home.welcome.title}
-                </h2>
-                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
-                  {t.home.welcome.description1}
-                </p>
-                <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
-                  {t.home.welcome.description2}
-                </p>
-                <Button asChild className="btn-primary">
-                  <Link to="/contact">
-                    {t.home.welcome.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              
-              <div className="relative animate-fade-in [animation-delay:300ms] order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop"
-                    alt="Equipo colaborativo trabajando en innovación" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop"
-                    alt="Workspace de innovación tecnológica" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
-                    alt="Desarrollo de soluciones IA" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Timeline Section - Nuestra Historia */}
-        <TimelineSection />
         
         {/* Metodología Section */}
         <section className="relative section bg-gradient-to-r from-sea-light to-white dark:from-sea-dark dark:to-background overflow-hidden">
