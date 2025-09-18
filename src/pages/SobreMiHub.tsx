@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Users, Camera, Wifi, Coffee, Car } from "lucide-react";
+import { MapPin, Users, Camera, Wifi, Coffee, Car, Eye, Navigation, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -209,12 +209,38 @@ const SobreMiHub = () => {
                     
                     <div>
                       <h4 className="font-semibold mb-3">Ubicación Privilegiada</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Marina de Lanzarote</li>
-                        <li>• Vistas al puerto deportivo</li>
-                        <li>• Acceso directo desde el puerto</li>
-                        <li>• Zona comercial y gastronómica</li>
-                      </ul>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <MapPin className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm">Marina de Lanzarote</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <Eye className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm">Vistas al puerto deportivo</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <Navigation className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm">Acceso directo desde el puerto</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <ShoppingBag className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm">Zona comercial y gastronómica</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                            <Car className="w-4 h-4 text-primary" />
+                          </div>
+                          <span className="text-sm">Parking disponible</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Card>
