@@ -45,7 +45,7 @@ export default function HeroSection() {
             Un proyecto de Grupo Martínez
           </span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Bienvenidos a Marina Innova Hub<br />
+            Marina Innova Hub<br />
             El primer centro de innovación turística en Canarias
           </h1>
           <p className="text-base text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed sm:text-base">
