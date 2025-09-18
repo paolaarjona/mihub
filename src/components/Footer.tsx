@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, X, Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a href="https://x.com/marinainnovahub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <X size={20} />
+                <img src="/lovable-uploads/x-logo.png" alt="X" className="w-5 h-5" />
                 <span className="sr-only">X (formerly Twitter)</span>
               </a>
               <a href="https://www.instagram.com/marinainnovahub/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
