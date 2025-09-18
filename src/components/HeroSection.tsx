@@ -77,10 +77,6 @@ export default function HeroSection() {
               <Link to="/servicios">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
-          
-          <p className="text-white/90 font-medium text-sm sm:text-base">
-            miHUB no es solo un Hub. Es un socio estratégico para la transformación del ecosistema empresarial canario.
-          </p>
         </div>
       </div>
       
