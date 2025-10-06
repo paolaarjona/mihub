@@ -6,67 +6,12 @@ import BookingForm from "@/components/BookingForm";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 import PartnersSection from "@/components/PartnersSection";
-import ApartmentCard, { ApartmentProps } from "@/components/ApartmentCard";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap, ChevronLeft, ChevronRight, Camera, Wifi } from "lucide-react";
+import { ArrowRight, Brain, Target, Cog, Users, Lightbulb, Zap, Camera, Wifi } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Badge } from "@/components/ui/badge";
 
-// Programas de miHUB - programas de formación con tiempo de ejecución
-const featuredPrograms: ApartmentProps[] = [
-  {
-    id: "1",
-    name: "Programa CEO & Directivos",
-    description: "Programa semestral especializado para equipos directivos, enfocado en liderazgo en la era de la IA.",
-    price: 0,
-    capacity: 8,
-    size: 0.5, // 1/2 día
-    image: "/lovable-uploads/5b5c64b9-3a51-426e-bd2f-5f0e23f02874.png",
-    location: "Presencial",
-    features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
-  },
-  {
-    id: "2",
-    name: "Workshop Adopción de IA",
-    description: "Sesión intensiva de un día para identificar oportunidades inmediatas de IA en tu empresa.",
-    price: 0,
-    capacity: 12,
-    size: 1, // 1 día completo
-    image: "/lovable-uploads/e393983a-92e2-4bfe-bc08-b4ae09d9c5d6.png",
-    location: "Híbrido",
-    features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
-  },
-  {
-    id: "3",
-    name: "Oficina de IA - Implementación",
-    description: "Programa completo de 6 meses para crear e implementar la oficina interna de IA de tu empresa.",
-    price: 0,
-    capacity: 4,
-    size: 8, // 8 semanas
-    image: "/lovable-uploads/c466127a-cb17-4b0a-acef-1ae82b555993.png",
-    location: "Personalizado",
-    features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
-  },
-  {
-    id: "4",
-    name: "Detección de Retos",
-    description: "Sesión de medio día para identificar los principales retos y oportunidades de tu organización.",
-    price: 0,
-    capacity: 6,
-    size: 0.5, // 1/2 día
-    image: "/lovable-uploads/0330ec35-bffc-43bc-8054-a3be8d9d93d1.png",
-    location: "Presencial",
-    features: ["Análisis de retos", "Identificación de oportunidades", "Roadmap inicial", "Metodología ágil", "Informe de resultados"]
-  }
-];
 
 export default function Index() {
   const { t } = useLanguage();
