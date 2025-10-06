@@ -54,6 +54,30 @@ const servicios = [
   }
 ];
 
+// Proyectos Ad Hoc con Administraciones e Instituciones
+const proyectosAdHoc = [
+  { id: 1, name: "Turismo 360" },
+  { id: 2, name: "ETI-DTI" },
+  { id: 3, name: "3D Visit & Preserve" },
+  { id: 4, name: "Digitour- Twin" },
+  { id: 5, name: "ETICNOVA360" },
+  { id: 6, name: "HealthShare" },
+  { id: 7, name: "HO2" },
+  { id: 8, name: "Economía azul PLOCAN" }
+];
+
+// Portfolio de Proyectos con Empresas
+const portfolioEmpresas = [
+  { id: 1, name: "Bodegas" },
+  { id: 2, name: "Cabildo 3.0" },
+  { id: 3, name: "Digital Island" },
+  { id: 4, name: "Digital Innovation Center con universidades" },
+  { id: 5, name: "Smart Island" },
+  { id: 6, name: "Oficinas de Adopción de la IA" },
+  { id: 7, name: "Detección de retos en Administración Pública" },
+  { id: 8, name: "Detección de retos en Empresa privada" }
+];
+
 export default function Proyectos() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -139,8 +163,54 @@ export default function Proyectos() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Proyectos Section */}
         <section className="section bg-muted/30">
+          <div className="container">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                Nuestros Proyectos
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Colaboramos con administraciones públicas y empresas privadas en proyectos de innovación y transformación digital.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Proyectos Ad Hoc con Administraciones */}
+              <div className="glass-card rounded-2xl p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/20 dark:to-blue-900/20 border-2 border-blue-200 dark:border-blue-800">
+                <h3 className="text-xl font-bold mb-6 text-blue-900 dark:text-blue-100">
+                  Proyectos Ad Hoc Administraciones e Instituciones
+                </h3>
+                <ul className="space-y-3">
+                  {proyectosAdHoc.map((proyecto) => (
+                    <li key={proyecto.id} className="flex items-start">
+                      <span className="text-blue-600 dark:text-blue-400 font-semibold mr-3">{proyecto.id}.</span>
+                      <span className="text-gray-700 dark:text-gray-300">{proyecto.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Portfolio de Proyectos con Empresas */}
+              <div className="glass-card rounded-2xl p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/20 dark:to-green-900/20 border-2 border-green-200 dark:border-green-800">
+                <h3 className="text-xl font-bold mb-6 text-green-900 dark:text-green-100">
+                  Portfolio de Proyectos con Empresas
+                </h3>
+                <ul className="space-y-3">
+                  {portfolioEmpresas.map((proyecto) => (
+                    <li key={proyecto.id} className="flex items-start">
+                      <span className="text-green-600 dark:text-green-400 font-semibold mr-3">{proyecto.id}.</span>
+                      <span className="text-gray-700 dark:text-gray-300">{proyecto.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
