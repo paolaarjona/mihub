@@ -41,9 +41,7 @@ export default function HeroSection() {
             <img src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png" alt="miHUB Logo" className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert" />
           </div>
           
-          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">
-            Un proyecto de Grupo Martínez
-          </span>
+          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Un proyecto de la Fundación Grupo Martínez Abolafio</span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Marina Innova Hub<br />
             El primer centro de innovación turística en Canarias
