@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, GraduationCap, Building2, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import ProyectoDetailsDialog, { ProyectoDetails } from "@/components/ProyectoDetailsDialog";
 
 // Servicios/Programas de miHUB
 const servicios = [
@@ -55,33 +56,241 @@ const servicios = [
 ];
 
 // Proyectos Ad Hoc con Administraciones e Instituciones
-const proyectosAdHoc = [
-  { id: 1, name: "Turismo 360" },
-  { id: 2, name: "ETI-DTI" },
-  { id: 3, name: "3D Visit & Preserve" },
-  { id: 4, name: "Digitour- Twin" },
-  { id: 5, name: "ETICNOVA360" },
-  { id: 6, name: "HealthShare" },
-  { id: 7, name: "HO2" },
-  { id: 8, name: "Economía azul PLOCAN" }
+const proyectosAdHocData: ProyectoDetails[] = [
+  {
+    id: 1,
+    name: "Turismo 360",
+    codigo: "LI01_TURISMO360",
+    descripcion: "Proyecto adjudicado que busca transformar la actitud y huella de los turistas en Lanzarote, promoviendo turismo ético y responsable mediante comunicación innovadora, gamificación y participación local. Incluye siete pilotos en servicios turísticos.",
+    objetivos: [
+      "Estrategia de comunicación innovadora",
+      "Cambios reales en comportamiento turístico",
+      "Implementación de gamificación",
+      "Participación activa de la comunidad local"
+    ],
+    entidadLider: "CARSA",
+    estado: "Adjudicado",
+    duracion: "Junio 2025 – Octubre 2025 (4 meses)",
+    palabrasClave: ["Sostenibilidad", "Innovación", "Transformación digital", "IA"]
+  },
+  {
+    id: 2,
+    name: "ETI-DTI",
+    codigo: "ETI-DTI",
+    descripcion: "Proyecto de transformación digital enfocado en la innovación tecnológica.",
+    objetivos: ["Implementación de soluciones tecnológicas avanzadas"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Transformación digital"]
+  },
+  {
+    id: 3,
+    name: "3D Visit & Preserve",
+    codigo: "3D_VISIT_PRESERVE",
+    descripcion: "Iniciativa para preservación y visitas virtuales mediante tecnología 3D.",
+    objetivos: ["Digitalización de patrimonio", "Experiencias virtuales inmersivas"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Transformación digital"]
+  },
+  {
+    id: 4,
+    name: "Digitour-Twin",
+    codigo: "DIGITOUR_TWIN",
+    descripcion: "Proyecto de gemelo digital para el sector turístico.",
+    objetivos: ["Crear réplicas digitales de espacios turísticos"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Transformación digital"]
+  },
+  {
+    id: 5,
+    name: "ETICNOVA360",
+    codigo: "ETICNOVA360",
+    descripcion: "Programa integral de innovación ética y tecnológica.",
+    objetivos: ["Promover innovación responsable"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad"]
+  },
+  {
+    id: 6,
+    name: "HealthShare",
+    codigo: "HEALTHSHARE",
+    descripcion: "Plataforma de compartición de datos de salud.",
+    objetivos: ["Facilitar intercambio seguro de información sanitaria"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Transformación digital"]
+  },
+  {
+    id: 7,
+    name: "HO2",
+    codigo: "HO2",
+    descripcion: "Proyecto de innovación en gestión hotelera.",
+    objetivos: ["Optimizar procesos hoteleros mediante tecnología"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Transformación digital"]
+  },
+  {
+    id: 8,
+    name: "Economía azul PLOCAN",
+    codigo: "PLOCAN",
+    descripcion: "Iniciativa de economía azul en colaboración con PLOCAN.",
+    objetivos: ["Promover sostenibilidad marina y economía azul"],
+    estado: "En desarrollo",
+    duracion: "Por definir",
+    palabrasClave: ["Sostenibilidad", "Innovación"]
+  }
 ];
 
 // Portfolio de Proyectos con Empresas
-const portfolioEmpresas = [
-  { id: 1, name: "Bodegas" },
-  { id: 2, name: "Cabildo 3.0" },
-  { id: 3, name: "Digital Island" },
-  { id: 4, name: "Digital Innovation Center con universidades" },
-  { id: 5, name: "Smart Island" },
-  { id: 6, name: "Oficinas de Adopción de la IA" },
-  { id: 7, name: "Detección de retos en Administración Pública" },
-  { id: 8, name: "Detección de retos en Empresa privada" }
+const portfolioEmpresasData: ProyectoDetails[] = [
+  {
+    id: 1,
+    name: "Bodegas",
+    codigo: "LI01_BODEGAS",
+    descripcion: "Programa de Open Innovation para convertir las Bodegas de Lanzarote en referente internacional en innovación vitivinícola.",
+    objetivos: [
+      "Resolver retos del ecosistema vitivinícola",
+      "Formar profesionales especializados",
+      "Atraer talento al sector",
+      "Activar ecosistema emprendedor",
+      "Potenciar posicionamiento digital"
+    ],
+    importe: "196.300 €",
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 2,
+    name: "Cabildo 3.0",
+    codigo: "LI02_CABILDO 3.0",
+    descripcion: "Programa integral para construir cultura de innovación institucional en el Cabildo.",
+    objetivos: [
+      "Impulsar cultura de innovación en funcionarios",
+      "Detectar necesidades organizativas",
+      "Empoderar equipos técnicos",
+      "Posicionar al Cabildo como administración colaborativa y ágil"
+    ],
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 3,
+    name: "Digital Island",
+    codigo: "LI03_DIGITAL ISLAND",
+    descripcion: "Programa experiencial para decisores corporativos, mostrando Lanzarote como laboratorio vivo de innovación y sostenibilidad.",
+    objetivos: [
+      "Posicionar Lanzarote como destino corporativo inteligente",
+      "Activar relaciones estratégicas",
+      "Mostrar valor del territorio"
+    ],
+    estado: "Portfolio",
+    importe: "35.000–50.000 €",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 4,
+    name: "Digital Innovation Center",
+    codigo: "LI04_DIGITAL INNOVATION CENTER",
+    descripcion: "Creación de centro de innovación digital con universidades, ofreciendo formación avanzada en IA, sostenibilidad y liderazgo.",
+    objetivos: [
+      "Atraer formación de alto nivel",
+      "Puente academia-empresa",
+      "Posicionar miHUB como centro de referencia"
+    ],
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 5,
+    name: "Smart Island",
+    codigo: "LI05_SMART ISLAND",
+    descripcion: "Colaboración público-privada para rediseñar modelo de isla inteligente en Lanzarote, con infraestructura de datos turísticos.",
+    objetivos: [
+      "Estrategia avanzada de datos abiertos",
+      "Gobernanza público-privada",
+      "Posicionamiento internacional de Lanzarote"
+    ],
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 6,
+    name: "Oficinas de Adopción de la IA",
+    codigo: "LI06_OFICINAS ADOPCIÓN IA",
+    descripcion: "Oficina estructurada para adopción y aceleración de IA en empresas y administraciones.",
+    objetivos: [
+      "Acelerar adopción estratégica de IA",
+      "Formación especializada",
+      "Implementación de pilotos",
+      "Desarrollo de narrativa interna",
+      "Crear modelo replicable"
+    ],
+    importe: "80.000 €",
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 7,
+    name: "Detección de retos en Administración Pública",
+    codigo: "LI07_DETECCIÓN RETOS AP",
+    descripcion: "Programa integral para identificar retos en administraciones públicas y activar soluciones con pilotos.",
+    objetivos: [
+      "Detectar retos organizativos",
+      "Involucrar personal técnico",
+      "Priorizar oportunidades",
+      "Diseñar pilotos",
+      "Generar casos de éxito replicables"
+    ],
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  },
+  {
+    id: 8,
+    name: "Detección de retos en Empresa privada",
+    codigo: "LI08_DETECCIÓN RETOS EMPRESA PRIVADA",
+    descripcion: "Programa para identificar bloqueos y oportunidades estratégicas en empresas privadas, con pilotos de soluciones de alto impacto.",
+    objetivos: [
+      "Identificar frenos internos",
+      "Visibilizar oportunidades",
+      "Activar pilotos",
+      "Alinear equipos",
+      "Posicionar miHUB como partner de innovación"
+    ],
+    importe: "40.000 €",
+    estado: "Portfolio",
+    duracion: "Por definir",
+    palabrasClave: ["Innovación", "Sostenibilidad", "Transformación digital", "IA"]
+  }
 ];
 
 export default function Proyectos() {
+  const [selectedProyecto, setSelectedProyecto] = useState<ProyectoDetails | null>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleProyectoClick = (proyecto: ProyectoDetails) => {
+    setSelectedProyecto(proyecto);
+    setIsDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    setSelectedProyecto(null);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -182,10 +391,15 @@ export default function Proyectos() {
                   Proyectos Ad Hoc Administraciones e Instituciones
                 </h3>
                 <ul className="space-y-3">
-                  {proyectosAdHoc.map((proyecto) => (
+                  {proyectosAdHocData.map((proyecto) => (
                     <li key={proyecto.id} className="flex items-start">
                       <span className="text-blue-600 dark:text-blue-400 font-semibold mr-3">{proyecto.id}.</span>
-                      <span className="text-gray-700 dark:text-gray-300">{proyecto.name}</span>
+                      <button
+                        onClick={() => handleProyectoClick(proyecto)}
+                        className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:underline text-left transition-colors"
+                      >
+                        {proyecto.name}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -197,10 +411,15 @@ export default function Proyectos() {
                   Portfolio de Proyectos con Empresas
                 </h3>
                 <ul className="space-y-3">
-                  {portfolioEmpresas.map((proyecto) => (
+                  {portfolioEmpresasData.map((proyecto) => (
                     <li key={proyecto.id} className="flex items-start">
                       <span className="text-green-600 dark:text-green-400 font-semibold mr-3">{proyecto.id}.</span>
-                      <span className="text-gray-700 dark:text-gray-300">{proyecto.name}</span>
+                      <button
+                        onClick={() => handleProyectoClick(proyecto)}
+                        className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:underline text-left transition-colors"
+                      >
+                        {proyecto.name}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -230,6 +449,13 @@ export default function Proyectos() {
       </main>
       
       <Footer />
+
+      {/* Proyecto Details Dialog */}
+      <ProyectoDetailsDialog 
+        proyecto={selectedProyecto}
+        isOpen={isDialogOpen}
+        onClose={handleCloseDialog}
+      />
     </div>
   );
 }
