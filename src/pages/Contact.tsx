@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Send, Check } from "lucide-react";
@@ -10,12 +11,17 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const location = useLocation();
+  const proyectoInfo = location.state as { proyecto?: string; codigo?: string } | null;
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
-    message: ""
+    subject: proyectoInfo?.proyecto ? `Información sobre proyecto: ${proyectoInfo.proyecto}` : "",
+    message: proyectoInfo?.proyecto 
+      ? `Hola, me gustaría recibir más información sobre el proyecto "${proyectoInfo.proyecto}"${proyectoInfo.codigo ? ` (${proyectoInfo.codigo})` : ''}.\n\n` 
+      : ""
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);

@@ -7,6 +7,9 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export interface ProyectoDetails {
   id: string | number;
@@ -29,7 +32,14 @@ interface ProyectoDetailsDialogProps {
 }
 
 export default function ProyectoDetailsDialog({ proyecto, isOpen, onClose }: ProyectoDetailsDialogProps) {
+  const navigate = useNavigate();
+  
   if (!proyecto) return null;
+
+  const handleRequestInfo = () => {
+    onClose();
+    navigate('/contact', { state: { proyecto: proyecto.name, codigo: proyecto.codigo } });
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -117,6 +127,20 @@ export default function ProyectoDetailsDialog({ proyecto, isOpen, onClose }: Pro
                 </Badge>
               ))}
             </div>
+          </div>
+
+          <Separator />
+
+          {/* Botón de solicitar información */}
+          <div className="flex justify-center pt-2">
+            <Button 
+              onClick={handleRequestInfo}
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Solicitar más información
+            </Button>
           </div>
         </div>
       </DialogContent>
