@@ -188,72 +188,6 @@ export default function Index() {
         {/* Timeline Section - Historia de miHUB */}
         <TimelineSection />
         
-        {/* Metodología Section */}
-        
-        
-        {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
-        <section id="eventos-corporativos" className="relative section bg-muted/30 overflow-hidden">
-          <div className="container relative z-10">
-            <div className="animate-fade-in">
-              <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
-                <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
-                  Eventos Corporativos
-                </span>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
-                  Contrata nuestros servicios
-                </h2>
-                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
-                  Organiza tu evento de innovación personalizado. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
-                </p>
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-left max-w-2xl mx-auto">
-                  <li className="flex items-center text-sm sm:text-base">
-                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
-                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
-                    </div>
-                    Eventos personalizados de innovación
-                  </li>
-                  <li className="flex items-center text-sm sm:text-base">
-                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
-                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
-                    </div>
-                    Facilitadores expertos en transformación digital
-                  </li>
-                  <li className="flex items-center text-sm sm:text-base">
-                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
-                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
-                    </div>
-                    Instalaciones equipadas con tecnología avanzada
-                  </li>
-                  <li className="flex items-center text-sm sm:text-base">
-                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
-                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
-                    </div>
-                    Networking con el ecosistema de innovación canario
-                  </li>
-                </ul>
-                
-                {/* Button now appears first, before the form */}
-                <div className="mb-8 sm:mb-12">
-                  <Button asChild size="lg" className="btn-primary">
-                    <Link to="/eventos-corporativos">Solicitar evento corporativo</Link>
-                  </Button>
-                </div>
-              </div>
-              
-              {/* Form now appears after the button */}
-              <div className="max-w-2xl mx-auto">
-                <BookingForm />
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Partners Section */}
-        <PartnersSection />
-        
-        {/* Testimonials Section */}
-        <TestimonialsSection />
-        
         {/* Nuestras Instalaciones - Tabs con salas, plano y servicios */}
         <section className="section bg-background">
           <div className="container">
@@ -427,6 +361,72 @@ export default function Index() {
             </Tabs>
           </div>
         </section>
+        
+        {/* Metodología Section */}
+        
+        
+        {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
+        <section id="eventos-corporativos" className="relative section bg-muted/30 overflow-hidden">
+          <div className="container relative z-10">
+            <div className="animate-fade-in">
+              <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
+                <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
+                  Eventos Corporativos
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
+                  Contrata nuestros servicios
+                </h2>
+                <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
+                  Organiza tu evento de innovación personalizado. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
+                </p>
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-left max-w-2xl mx-auto">
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Eventos personalizados de innovación
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Facilitadores expertos en transformación digital
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Instalaciones equipadas con tecnología avanzada
+                  </li>
+                  <li className="flex items-center text-sm sm:text-base">
+                    <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
+                      <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
+                    </div>
+                    Networking con el ecosistema de innovación canario
+                  </li>
+                </ul>
+                
+                {/* Button now appears first, before the form */}
+                <div className="mb-8 sm:mb-12">
+                  <Button asChild size="lg" className="btn-primary">
+                    <Link to="/eventos-corporativos">Solicitar evento corporativo</Link>
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Form now appears after the button */}
+              <div className="max-w-2xl mx-auto">
+                <BookingForm />
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Partners Section */}
+        <PartnersSection />
+        
+        {/* Testimonials Section */}
+        <TestimonialsSection />
         
         {/* Features Section - ¿Por qué miHUB? */}
         <section className="section bg-card">
