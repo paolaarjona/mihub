@@ -32,7 +32,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
       
       {/* Content */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
       transform: `translateY(${contentY}px)`
     }}>
         <div className="max-w-4xl animate-fade-in">
@@ -79,7 +79,7 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll down indicator */}
-      <div className="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute z-10 bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <a href="#welcome" className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
           <ChevronDown className="h-6 w-6 sm:h-8 sm:w-8" />
         </a>
