@@ -5,65 +5,86 @@
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
-    --foreground: 210 40% 10%;
-
+    /* miHub Brand Colors - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 210 40% 10%;
-
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 10%;
-
-    --primary: 210 100% 40%;
+    --popover-foreground: 0 0% 0%;
+    
+    /* Primary: miHub Blue #365BA5 */
+    --primary: 220 51% 43%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 40% 10%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 30% 40%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 210 40% 10%;
-
-    --destructive: 0 85% 60%;
+    
+    /* Secondary: miHub Yellow/Gold #DAAC21 */
+    --secondary: 44 76% 49%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    /* Accent: miHub Yellow */
+    --accent: 44 76% 49%;
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 100% 64%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 40%;
-
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 51% 43%;
     --radius: 0.5rem;
+    
+    /* miHub Secondary Colors */
+    --mihub-s1: 214 29% 65%; /* #8AA1BF - Observatorio Incibe */
+    --mihub-s2: 0 100% 64%; /* #FF4545 - Oficina innovación y sostenibilidad */
+    --mihub-s3: 42 100% 62%; /* #FFCC3E - Think tank smart island */
+    --mihub-s4: 299 45% 70%; /* #D092D3 - Oficina canaria innovación audiovisual */
+    --mihub-s5: 95 55% 68%; /* #A7DD85 - Hub de Innovación */
+    --mihub-s6: 196 79% 76%; /* #94D5F3 - Plataforma oceánica canarias */
+    --mihub-s7: 137 20% 52%; /* #73997F - Universidad tecnológica */
+    --mihub-s8: 206 11% 84%; /* #C4CCD2 - Oficina innovación salud */
   }
-
+  
   .dark {
-    --background: 210 30% 12%;
-    --foreground: 210 20% 98%;
-
-    --card: 210 30% 15%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 210 30% 15%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 210 100% 50%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 30% 20%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 210 30% 20%;
-    --muted-foreground: 210 20% 60%;
-
-    --accent: 210 30% 20%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 210 30% 25%;
-    --input: 210 30% 25%;
-    --ring: 210 100% 60%;
+    /* miHub Brand Colors - Dark Mode */
+    --background: 220 51% 8%;
+    --foreground: 0 0% 100%;
+    --card: 220 51% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 51% 12%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Primary: miHub Blue (lighter in dark mode) */
+    --primary: 220 51% 55%;
+    --primary-foreground: 0 0% 0%;
+    
+    /* Secondary: miHub Yellow/Gold */
+    --secondary: 44 76% 49%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 220 40% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    /* Accent: miHub Yellow */
+    --accent: 44 76% 49%;
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 100% 64%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 40% 25%;
+    --input: 220 40% 25%;
+    --ring: 44 76% 49%;
+    
+    /* miHub Secondary Colors (same in dark mode) */
+    --mihub-s1: 214 29% 65%;
+    --mihub-s2: 0 100% 64%;
+    --mihub-s3: 42 100% 62%;
+    --mihub-s4: 299 45% 70%;
+    --mihub-s5: 95 55% 68%;
+    --mihub-s6: 196 79% 76%;
+    --mihub-s7: 137 20% 52%;
+    --mihub-s8: 206 11% 84%;
   }
 }
 
@@ -78,12 +99,13 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
   }
   
   /* Prevenir overflow horizontal en toda la aplicación */

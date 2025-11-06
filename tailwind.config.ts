@@ -53,16 +53,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sea: {
-					light: '#E0F2F7',
-					DEFAULT: '#1E88E5',
-					dark: '#0D47A1'
-				},
-				sand: {
-					light: '#F5F5DC',
-					DEFAULT: '#E6D2B5',
-					dark: '#D2B48C'
+				// miHub Brand Secondary Colors
+				mihub: {
+					s1: 'hsl(var(--mihub-s1))',
+					s2: 'hsl(var(--mihub-s2))',
+					s3: 'hsl(var(--mihub-s3))',
+					s4: 'hsl(var(--mihub-s4))',
+					s5: 'hsl(var(--mihub-s5))',
+					s6: 'hsl(var(--mihub-s6))',
+					s7: 'hsl(var(--mihub-s7))',
+					s8: 'hsl(var(--mihub-s8))',
 				}
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'system-ui', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
