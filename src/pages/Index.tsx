@@ -13,6 +13,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TimelineSection from "@/components/TimelineSection";
+import DecorativeShapes from "@/components/DecorativeShapes";
+
 export default function Index() {
   const {
     t
@@ -130,7 +132,8 @@ export default function Index() {
         <HeroSection />
         
         {/* About miHUB Summary */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background relative overflow-hidden">
+          <DecorativeShapes variant="top-right" />
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
@@ -189,7 +192,8 @@ export default function Index() {
         <TimelineSection />
         
         {/* Nuestras Instalaciones - Tabs con salas, plano y servicios */}
-        <section className="section bg-background">
+        <section className="section bg-background relative overflow-hidden">
+          <DecorativeShapes variant="bottom-left" />
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 animate-fade-in">
               <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
@@ -367,6 +371,7 @@ export default function Index() {
         
         {/* Corporate Events Booking Section - Now positioned before Featured Programs */}
         <section id="eventos-corporativos" className="relative section bg-muted/30 overflow-hidden">
+          <DecorativeShapes variant="top-left" />
           <div className="container relative z-10">
             <div className="animate-fade-in">
               <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
@@ -429,8 +434,9 @@ export default function Index() {
         <TestimonialsSection />
         
         {/* Features Section - ¿Por qué miHUB? */}
-        <section className="section bg-card">
-          <div className="container">
+        <section className="section bg-card relative overflow-hidden">
+          <DecorativeShapes variant="bottom-right" />
+          <div className="container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 animate-fade-in">
               <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
                 ¿Por qué miHUB?
@@ -458,8 +464,9 @@ export default function Index() {
         </section>
         
         {/* CTA Section */}
-        <section className="relative section bg-primary/5">
-          <div className="container">
+        <section className="relative section bg-primary/5 overflow-hidden">
+          <DecorativeShapes variant="center" />
+          <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                 {t.home.cta.title}
