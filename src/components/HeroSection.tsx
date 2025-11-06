@@ -20,19 +20,19 @@ export default function HeroSection() {
   // Calculate parallax effect
   const backgroundY = scrollY * 0.5;
   const contentY = scrollY * 0.2;
-  return <section className="relative h-screen min-h-[600px] overflow-hidden">
+  return <section className="relative h-screen min-h-[600px] overflow-hidden z-10">
       {/* Background image with parallax */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{
+      <div className="absolute inset-0 bg-cover bg-center z-0" style={{
       backgroundImage: "url('/lovable-uploads/d10959a5-8a10-43d3-b29c-d5d78fedf564.png')",
       transform: `translateY(${backgroundY}px)`,
       backgroundPosition: `center ${50 + scrollY * 0.05}%`
     }} />
       
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70 z-[1]" />
       
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
+      <div className="relative z-[2] h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
       transform: `translateY(${contentY}px)`
     }}>
         <div className="max-w-4xl animate-fade-in">
@@ -70,8 +70,8 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="flex justify-center mb-8 sm:mb-12 relative z-20">
-            <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white">
+          <div className="flex justify-center mb-8 sm:mb-12">
+            <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
               <Link to="/servicios">{t.hero.exploreApartments}</Link>
             </Button>
           </div>
@@ -79,7 +79,7 @@ export default function HeroSection() {
       </div>
       
       {/* Scroll down indicator */}
-      <div className="absolute z-10 bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <div className="absolute z-[3] bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
         <a href="#welcome" className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
           <ChevronDown className="h-6 w-6 sm:h-8 sm:w-8" />
         </a>
