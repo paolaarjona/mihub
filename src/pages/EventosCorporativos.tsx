@@ -8,6 +8,7 @@ import { ArrowRight, Users, Calendar, MapPin, Trophy, Grid, CalendarDays } from 
 import { useLanguage } from "@/contexts/LanguageContext";
 import EventDetailsDialog from "@/components/EventDetailsDialog";
 import CorporateEventsCalendar from "@/components/CorporateEventsCalendar";
+import DecorativeShapes from "@/components/DecorativeShapes";
 
 export default function EventosCorporativos() {
   const { t } = useLanguage();
@@ -88,7 +89,8 @@ export default function EventosCorporativos() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative section bg-gradient-to-r from-primary/10 to-sea-light/20 pt-24 md:pt-32">
+        <section className="relative section bg-gradient-to-r from-primary/10 to-sea-light/20 pt-24 md:pt-32 overflow-hidden">
+          <DecorativeShapes variant="top-right" />
           <div className="container">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
               <span className="text-sm text-primary font-medium uppercase tracking-wider">
@@ -105,7 +107,8 @@ export default function EventosCorporativos() {
         </section>
 
         {/* Próximos Eventos con Tabs */}
-        <section className="section">
+        <section className="section relative overflow-hidden">
+          <DecorativeShapes variant="bottom-left" />
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
@@ -186,7 +189,8 @@ export default function EventosCorporativos() {
         </section>
 
         {/* Servicios */}
-        <section className="section bg-muted/30">
+        <section className="section bg-muted/30 relative overflow-hidden">
+          <DecorativeShapes variant="top-left" />
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
@@ -216,7 +220,8 @@ export default function EventosCorporativos() {
         </section>
 
         {/* CTA Section */}
-        <section className="section">
+        <section className="section relative overflow-hidden">
+          <DecorativeShapes variant="center" />
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
