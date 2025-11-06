@@ -11,7 +11,7 @@ export default function DecorativeShapes({ variant = 'top-right', className = ''
     switch (variant) {
       case 'top-right':
         return (
-          <svg className={`absolute ${className}`} width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '-10%', right: '-5%', opacity: 0.6, pointerEvents: 'none' }}>
+          <svg className={`absolute ${className}`} width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '-10%', right: '-5%', opacity: 0.4, pointerEvents: 'none', zIndex: -10 }}>
             {/* Círculo azul claro (mihub-s6) */}
             <circle cx="450" cy="80" r="60" stroke="hsl(var(--mihub-s6))" strokeWidth="8" fill="none" className="animate-float" style={{ animationDelay: '0s' }} />
             
@@ -26,7 +26,7 @@ export default function DecorativeShapes({ variant = 'top-right', className = ''
       
       case 'bottom-left':
         return (
-          <svg className={`absolute ${className}`} width="500" height="350" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ bottom: '-5%', left: '-3%', opacity: 0.6, pointerEvents: 'none' }}>
+          <svg className={`absolute ${className}`} width="500" height="350" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ bottom: '-5%', left: '-3%', opacity: 0.4, pointerEvents: 'none', zIndex: -10 }}>
             {/* Rectángulo redondeado morado (mihub-s4) */}
             <path d="M 40 200 L 140 200 Q 160 200 160 220 L 160 280 Q 160 300 140 300 L 40 300 Q 20 300 20 280 L 20 220 Q 20 200 40 200 Z" 
                   stroke="hsl(var(--mihub-s4))" strokeWidth="8" fill="none" className="animate-float" style={{ animationDelay: '0.3s' }} />
@@ -41,7 +41,7 @@ export default function DecorativeShapes({ variant = 'top-right', className = ''
       
       case 'center':
         return (
-          <svg className={`absolute ${className}`} width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.4, pointerEvents: 'none' }}>
+          <svg className={`absolute ${className}`} width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.3, pointerEvents: 'none', zIndex: -10 }}>
             {/* Círculo grande azul claro (mihub-s1) */}
             <circle cx="400" cy="150" r="100" stroke="hsl(var(--mihub-s1))" strokeWidth="6" fill="none" className="animate-float" style={{ animationDelay: '0s' }} />
             
@@ -57,7 +57,7 @@ export default function DecorativeShapes({ variant = 'top-right', className = ''
       
       case 'top-left':
         return (
-          <svg className={`absolute ${className}`} width="400" height="350" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '-8%', left: '-2%', opacity: 0.5, pointerEvents: 'none' }}>
+          <svg className={`absolute ${className}`} width="400" height="350" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ top: '-8%', left: '-2%', opacity: 0.35, pointerEvents: 'none', zIndex: -10 }}>
             {/* Rectángulo azul primario */}
             <path d="M 40 40 L 150 40 Q 170 40 170 60 L 170 120 Q 170 140 150 140 L 40 140 Q 20 140 20 120 L 20 60 Q 20 40 40 40 Z" 
                   stroke="hsl(var(--primary))" strokeWidth="8" fill="none" className="animate-float" style={{ animationDelay: '0.2s' }} />
@@ -72,7 +72,7 @@ export default function DecorativeShapes({ variant = 'top-right', className = ''
       
       case 'bottom-right':
         return (
-          <svg className={`absolute ${className}`} width="550" height="400" viewBox="0 0 550 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ bottom: '-8%', right: '-3%', opacity: 0.5, pointerEvents: 'none' }}>
+          <svg className={`absolute ${className}`} width="550" height="400" viewBox="0 0 550 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ bottom: '-8%', right: '-3%', opacity: 0.35, pointerEvents: 'none', zIndex: -10 }}>
             {/* Círculo grande verde */}
             <circle cx="400" cy="280" r="80" stroke="hsl(var(--mihub-s5))" strokeWidth="8" fill="none" className="animate-float" style={{ animationDelay: '0.3s' }} />
             
