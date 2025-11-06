@@ -55,9 +55,9 @@
     --popover: 220 51% 12%;
     --popover-foreground: 0 0% 100%;
     
-    /* Primary: miHub Blue (lighter in dark mode) */
-    --primary: 220 51% 55%;
-    --primary-foreground: 0 0% 0%;
+    /* Primary: miHub Blue #365BA5 */
+    --primary: 220 51% 43%;
+    --primary-foreground: 0 0% 100%;
     
     /* Secondary: miHub Yellow/Gold */
     --secondary: 44 76% 49%;
