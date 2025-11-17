@@ -14,7 +14,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TimelineSection from "@/components/TimelineSection";
 import DecorativeShapes from "@/components/DecorativeShapes";
-
 export default function Index() {
   const {
     t
@@ -414,14 +413,14 @@ export default function Index() {
                 {/* Button now appears first, before the form */}
                 <div className="mb-8 sm:mb-12">
                   <Button asChild size="lg" className="btn-primary">
-                    <Link to="/eventos-corporativos">Solicitar evento corporativo</Link>
+                    <Link to="/eventos-corporativos">Contacta con nosotros        </Link>
                   </Button>
                 </div>
               </div>
               
               {/* Form now appears after the button */}
               <div className="max-w-2xl mx-auto">
-                <BookingForm />
+                
               </div>
             </div>
           </div>
