@@ -43,7 +43,8 @@ export default function HeroSection() {
           
           <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Un proyecto de la Fundación Grupo Martínez Abolafio</span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Marina Innova Hub<br />
+            MiHub
+El primer centro de innovación turística en Canarias<br />
             El primer centro de innovación turística en Canarias
           </h1>
           <p className="text-base text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed sm:text-base">
