@@ -43,8 +43,10 @@ export default function HeroSection() {
           
           <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Un proyecto de la Fundación Grupo Martínez Abolafio</span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            MiHub 
-El primer centro de innovación turística en Canarias
+            MiHub  El primer centro de innovación turística en Canarias
+
+
+
 
 
 
