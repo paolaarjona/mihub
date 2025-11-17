@@ -16,7 +16,7 @@ export const en = {
     scrollDown: "Discover more"
   },
   footer: {
-    description: "miHUB is the innovation center of Grupo Martínez Abolafio, strategic partner for the transformation of the Canarian business ecosystem through the adoption of Artificial Intelligence.",
+    description: "miHUB is the innovation and transformation hub of Grupo Martínez Abolafio, created to boost the competitiveness of Canarian companies through innovation, sustainability, and artificial intelligence.",
     quickLinks: "Quick Links",
     contact: "Contact",
     newsletter: "Newsletter",

@@ -16,7 +16,7 @@ export const it = {
     scrollDown: "Scorri Giù"
   },
   footer: {
-    description: "Appartamenti di lusso sul mare e camere d'albergo con splendide viste sul mare, che offrono il perfetto connubio di comfort ed eleganza per la tua vacanza da sogno.",
+    description: "miHUB è l'hub di innovazione e trasformazione del Gruppo Martínez Abolafio, creato per promuovere la competitività delle imprese canarie attraverso innovazione, sostenibilità e intelligenza artificiale.",
     quickLinks: "Link Rapidi",
     contact: "Contatti",
     newsletter: "Newsletter",
