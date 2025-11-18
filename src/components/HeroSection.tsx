@@ -78,6 +78,9 @@ export default function HeroSection() {
 
 
 
+
+
+
           <br />
             El primer centro de innovación turística en Canarias
           </h1>
