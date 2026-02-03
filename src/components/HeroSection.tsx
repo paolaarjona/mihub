@@ -21,11 +21,15 @@ export default function HeroSection() {
   const backgroundY = scrollY * 0.5;
   const contentY = scrollY * 0.2;
   return <section className="relative h-screen min-h-[600px] overflow-hidden z-10">
-      {/* Dark background */}
-      <div className="absolute inset-0 bg-slate-900 z-0" />
+      {/* Background image with parallax */}
+      <div className="absolute inset-0 bg-cover bg-center z-0" style={{
+      backgroundImage: "url('/lovable-uploads/d10959a5-8a10-43d3-b29c-d5d78fedf564.png')",
+      transform: `translateY(${backgroundY}px)`,
+      backgroundPosition: `center ${50 + scrollY * 0.05}%`
+    }} />
       
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/70 z-[1]" />
       
       {/* Content */}
       <div className="relative z-[2] h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
