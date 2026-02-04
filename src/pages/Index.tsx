@@ -138,14 +138,10 @@ export default function Index() {
               <div className="mb-8">
                 <Badge variant="outline" className="mb-4">Una iniciativa de Grupo Martínez Abolafio</Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  ¿Qué es <span className="text-primary">miHUB</span>?
+                  ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  miHUB es el primer centro de innovación turística de Canarias, un ecosistema empresarial 
-                  diseñado para impulsar la transformación digital y sostenible del sector turístico canario.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Respaldado por <strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHUB es el primer centro de innovación turística de Canarias, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.</p>
+                <p className="text-muted-foreground leading-relaxed">Respaldado por Grupo Martínez Abolafio, con más de 50 años de experiencia en el sector turístico y empresarial canario, MiHUB conecta empresas, startups, instituciones y profesionales para crear soluciones innovadoras que posicionen a Canarias como referente en turismo inteligente y sostenible.<strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
                   en el sector turístico y empresarial canario, miHUB conecta empresas, startups, 
                   instituciones y profesionales para crear soluciones innovadoras que posicionen 
                   a Canarias como referente en turismo inteligente y sostenible.
