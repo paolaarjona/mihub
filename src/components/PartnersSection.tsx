@@ -1,61 +1,44 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
 export default function PartnersSection() {
-  const { t } = useLanguage();
-  
-  const partners = [
-    {
-      name: "Santander",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
-      description: "Socio estratégico en innovación financiera y transformación digital."
-    },
-    {
-      name: "Oracle",
-      logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
-      description: "Partner tecnológico para certificaciones y soluciones cloud empresariales."
-    },
-    {
-      name: "Mahou San Miguel",
-      logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
-      description: "Colaboración en proyectos de innovación en el sector alimentario."
-    },
-    {
-      name: "Air Europa",
-      logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
-      description: "Innovación en el sector del transporte aéreo y turismo."
-    },
-    {
-      name: "Telefónica",
-      logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
-      description: "Alianza en telecomunicaciones y transformación digital."
-    },
-    {
-      name: "Globant",
-      logo: "/lovable-uploads/78f2945d-377d-46ec-9f04-8aff5636cebb.png",
-      description: "Partner tecnológico en desarrollo de software y AI."
-    },
-    {
-      name: "Valhalla",
-      logo: "/lovable-uploads/valhalla-logo-new.png",
-      description: "Colaboración estratégica en transformación digital e innovación empresarial."
-    },
-    {
-      name: "SPEL",
-      logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
-      description: "Partner estratégico en desarrollo tecnológico y soluciones digitales."
-    }
-  ];
-  
-  return (
-    <section className="section bg-muted/30">
+  const {
+    t
+  } = useLanguage();
+  const partners = [{
+    name: "Santander",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
+    description: "Socio estratégico en innovación financiera y transformación digital."
+  }, {
+    name: "Oracle",
+    logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
+    description: "Partner tecnológico para certificaciones y soluciones cloud empresariales."
+  }, {
+    name: "Mahou San Miguel",
+    logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
+    description: "Colaboración en proyectos de innovación en el sector alimentario."
+  }, {
+    name: "Air Europa",
+    logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
+    description: "Innovación en el sector del transporte aéreo y turismo."
+  }, {
+    name: "Telefónica",
+    logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
+    description: "Alianza en telecomunicaciones y transformación digital."
+  }, {
+    name: "Globant",
+    logo: "/lovable-uploads/78f2945d-377d-46ec-9f04-8aff5636cebb.png",
+    description: "Partner tecnológico en desarrollo de software y AI."
+  }, {
+    name: "Valhalla",
+    logo: "/lovable-uploads/valhalla-logo-new.png",
+    description: "Colaboración estratégica en transformación digital e innovación empresarial."
+  }, {
+    name: "SPEL",
+    logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
+    description: "Partner estratégico en desarrollo tecnológico y soluciones digitales."
+  }];
+  return <section className="section bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
           <span className="text-sm text-primary font-medium uppercase tracking-wider">
@@ -70,31 +53,22 @@ export default function PartnersSection() {
         </div>
         
         <div className="relative max-w-7xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-              slidesToScroll: 1,
-              containScroll: false,
-            }}
-            className="w-full"
-          >
+          <Carousel opts={{
+          align: "start",
+          loop: true,
+          slidesToScroll: 1,
+          containScroll: false
+        }} className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
-              {partners.map((partner, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+              {partners.map((partner, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
                     <div className="w-full h-12 md:h-16 mb-3 md:mb-4 flex items-center justify-center">
-                      <img 
-                        src={partner.logo}
-                        alt={partner.name}
-                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform"
-                      />
+                      <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform" />
                     </div>
-                    <h3 className="font-semibold mb-2 text-xs md:text-sm">{partner.name}</h3>
+                    
                     <p className="text-xs text-muted-foreground hidden md:block">{partner.description}</p>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
             
             {/* Flechas direccionales con mejor visibilidad */}
@@ -125,6 +99,5 @@ export default function PartnersSection() {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
