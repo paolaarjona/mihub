@@ -16,7 +16,7 @@ export const it = {
     scrollDown: "Scorri Giù"
   },
   footer: {
-    description: "miHUB è l'hub di innovazione e trasformazione del Gruppo Martínez Abolafio, creato per promuovere la competitività delle imprese canarie attraverso innovazione, sostenibilità e intelligenza artificiale.",
+    description: "MiHub è l'hub di innovazione e trasformazione del Gruppo Martínez Abolafio, creato per promuovere la competitività delle imprese canarie attraverso innovazione, sostenibilità e intelligenza artificiale.",
     quickLinks: "Link Rapidi",
     contact: "Contatti",
     newsletter: "Newsletter",

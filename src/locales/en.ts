@@ -5,18 +5,18 @@ export const en = {
     amenities: "Methodology",
     gallery: "Gallery",
     contact: "Contact",
-    bookNow: "Join miHUB"
+    bookNow: "Join MiHub"
   },
   hero: {
     subtitle: "BUSINESS INNOVATION CENTER",
     title: "We transform innovation into confidence",
     description: "We accompany Canarian companies towards the real adoption of Artificial Intelligence. With our own methodology, we guide each organization on a 3-phase journey towards digital transformation.",
-    bookStay: "Join miHUB",
+    bookStay: "Join MiHub",
     exploreApartments: "Discover our Services",
     scrollDown: "Discover more"
   },
   footer: {
-    description: "miHUB is the innovation and transformation hub of Grupo Martínez Abolafio, created to boost the competitiveness of Canarian companies through innovation, sustainability, and artificial intelligence.",
+    description: "MiHub is the innovation and transformation hub of Grupo Martínez Abolafio, created to boost the competitiveness of Canarian companies through innovation, sustainability, and artificial intelligence.",
     quickLinks: "Quick Links",
     contact: "Contact",
     newsletter: "Newsletter",
@@ -26,7 +26,7 @@ export const en = {
     allRights: "All rights reserved."
   },
   bookingForm: {
-    title: "Join miHUB",
+    title: "Join MiHub",
     checkIn: "Start Date",
     checkOut: "End Date",
     adults: "Participants",
@@ -39,7 +39,7 @@ export const en = {
   },
   testimonials: {
     title: "What our Partners say",
-    description: "Discover why leading companies trust miHUB for their digital transformation and AI innovation."
+    description: "Discover why leading companies trust MiHub for their digital transformation and AI innovation."
   },
   notFound: {
     title: "Page Not Found",
@@ -172,9 +172,9 @@ export const en = {
   home: {
     welcome: {
       subtitle: "Grupo Martínez Abolafio",
-      title: "miHUB 3.0: The future of business innovation",
+      title: "MiHub 3.0: The future of business innovation",
       description1: "Grupo Martínez Abolafio is a reference industrial group in the Canary Islands, with more than 50 years of history, with a strong presence in tourism, transport, services and real estate sectors.",
-      description2: "miHUB is their bet for the future: a business innovation ecosystem focused on the adoption of transformative technologies such as Artificial Intelligence.",
+      description2: "MiHub is their bet for the future: a business innovation ecosystem focused on the adoption of transformative technologies such as Artificial Intelligence.",
       learnMore: "Learn more"
     },
     methodology: {
@@ -201,7 +201,7 @@ export const en = {
       events: [
         {
           year: "2018-2020",
-          title: "miHUB Launch",
+          title: "MiHub Launch",
           description: "Creation of the physical space and establishment of the innovation ecosystem foundations."
         },
         {
@@ -234,7 +234,7 @@ export const en = {
       viewAll: "View All Services"
     },
     amenities: {
-      subtitle: "Why miHUB?",
+      subtitle: "Why MiHub?",
       title: "Competitive Advantages",
       description: "Our innovation ecosystem offers the best conditions for business transformation.",
       features: {
@@ -267,7 +267,7 @@ export const en = {
     cta: {
       title: "Is your company ready to lead the change?",
       description: "We are ready to accompany you in this transformation towards the adoption of Artificial Intelligence.",
-      bookNow: "I want to join miHUB"
+      bookNow: "I want to join MiHub"
     }
   },
   apartments: {
@@ -305,7 +305,7 @@ export const en = {
     }
   },
   booking: {
-    title: "Join miHUB",
+    title: "Join MiHub",
     subtitle: "Complete your application in a few steps.",
     steps: {
       chooseRoom: "Choose Program",
@@ -383,7 +383,7 @@ export const en = {
       termsAgree: "I accept the",
       termsLink: "Terms and Conditions",
       privacyLink: "Privacy Policy",
-      cancellationInfo: "I understand that this application is subject to evaluation and confirmation by the miHUB team.",
+      cancellationInfo: "I understand that this application is subject to evaluation and confirmation by the MiHub team.",
       back: "Back",
       confirmBooking: "Send Application",
       success: "Application Sent!",
@@ -393,7 +393,7 @@ export const en = {
     }
   },
   contact: {
-    title: "Contact miHUB",
+    title: "Contact MiHub",
     subtitle: "We're here to help you transform your company. Contact us for any questions about innovation and AI adoption.",
     getInTouch: "Get In Touch",
     address: "Address",
@@ -435,7 +435,7 @@ export const en = {
         answer: "Absolutely. Our AI adoption service includes completely personalized consulting from the exploration phase to implementation."
       },
       amenities: {
-        question: "What type of companies are ideal for miHUB?",
+        question: "What type of companies are ideal for MiHub?",
         answer: "We work with companies of all sizes that seek to innovate and adopt AI. From startups to large corporations, especially in the Canaries."
       }
     }
@@ -469,7 +469,7 @@ export const en = {
   amenitiesPage: {
     title: "Our Methodology",
     subtitle: "Discover the process that transforms companies through the adoption of Artificial Intelligence.",
-    description: "At miHUB, we have developed a unique methodology that guides Canarian companies on their journey towards successful adoption of Artificial Intelligence, combining training, strategy and implementation.",
+    description: "At MiHub, we have developed a unique methodology that guides Canarian companies on their journey towards successful adoption of Artificial Intelligence, combining training, strategy and implementation.",
     categories: {
       wellness: {
         title: "Training and Mindset",

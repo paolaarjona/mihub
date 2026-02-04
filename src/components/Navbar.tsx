@@ -60,7 +60,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/8c9fa48a-6ac2-4067-b2a7-ba2d9f0cb897.png" 
-                alt="MIHUB Logo" 
+                alt="MiHub Logo" 
                 className="h-8 w-auto"
               />
             </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
               <div className="flex justify-between items-center mb-6 sm:mb-8">
                 <img 
                   src="/lovable-uploads/8c9fa48a-6ac2-4067-b2a7-ba2d9f0cb897.png" 
-                  alt="MIHUB Logo" 
+                  alt="MiHub Logo" 
                   className="h-6 w-auto"
                 />
                 <div className="flex items-center space-x-2">

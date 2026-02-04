@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
-            <h4 className="text-xl font-bold mb-4">miHUB 3.0</h4>
+            <h4 className="text-xl font-bold mb-4">MiHub 3.0</h4>
             <p className="text-muted-foreground mb-4">
               {t.footer.description}
             </p>
@@ -43,7 +43,7 @@ export default function Footer() {
               name: t.nav.apartments,
               path: "/servicios"
             }, {
-              name: "Sobre miHUB",
+              name: "Sobre MiHub",
               path: "/sobre-mihub"
             }, {
               name: "Proyectos",
@@ -93,7 +93,7 @@ export default function Footer() {
         
         <div className="border-t border-border pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-muted-foreground">
           <div className="text-center md:text-left">
-            <p>&copy; {currentYear} miHUB 3.0 - Grupo Martínez Abolafio.</p>
+            <p>&copy; {currentYear} MiHub 3.0 - Grupo Martínez Abolafio.</p>
             <p>Todos los derechos reservados.</p>
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
