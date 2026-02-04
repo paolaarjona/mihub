@@ -14,8 +14,8 @@ export default function TimelineSection() {
   const timelineEvents = [
     {
       year: "2018-2020",
-      title: "Construcción de miHUB",
-      description: "Desarrollo e implementación del espacio físico de miHUB, estableciendo las bases del ecosistema de innovación.",
+      title: "Construcción de MiHub",
+      description: "Desarrollo e implementación del espacio físico de MiHub, estableciendo las bases del ecosistema de innovación.",
       icon: <Lightbulb className="h-6 w-6" />,
       image: "/lovable-uploads/cd7c6c89-4d65-4c73-9e73-a0148dcec9e5.png"
     },

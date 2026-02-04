@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import ProyectoDetailsDialog, { ProyectoDetails } from "@/components/ProyectoDetailsDialog";
 import DecorativeShapes from "@/components/DecorativeShapes";
 
-// Servicios/Programas de miHUB
+// Servicios/Programas de MiHub
 const servicios = [
   {
     id: "1",
@@ -203,7 +203,7 @@ const portfolioEmpresasData: ProyectoDetails[] = [
     objetivos: [
       "Atraer formación de alto nivel",
       "Puente academia-empresa",
-      "Posicionar miHUB como centro de referencia"
+      "Posicionar MiHub como centro de referencia"
     ],
     estado: "Portfolio",
     duracion: "Por definir",
@@ -266,7 +266,7 @@ const portfolioEmpresasData: ProyectoDetails[] = [
       "Visibilizar oportunidades",
       "Activar pilotos",
       "Alinear equipos",
-      "Posicionar miHUB como partner de innovación"
+      "Posicionar MiHub como partner de innovación"
     ],
     importe: "40.000 €",
     estado: "Portfolio",

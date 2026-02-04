@@ -58,7 +58,7 @@ const allApartments: ApartmentProps[] = [
     capacity: 15,
     size: 12,
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
-    location: "miHUB",
+    location: "MiHub",
     features: ["Equipamiento avanzado", "Mentores expertos", "Acceso 24/7", "Herramientas digitales", "Networking"]
   },
   {
