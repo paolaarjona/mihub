@@ -172,7 +172,7 @@ export default function EnviarProyecto() {
                 Propuesta de Proyecto
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-6">
-                Comparte tu Proyecto con miHUB
+                Comparte tu Proyecto con MiHub
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 ¿Tienes una idea innovadora? Cuéntanos sobre tu proyecto y únete a nuestro ecosistema de soluciones tecnológicas.

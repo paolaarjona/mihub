@@ -99,7 +99,7 @@ export default function Contact() {
                       <h3 className="font-semibold mb-1">{t.contact.address}</h3>
                       <p className="text-muted-foreground">
                         Marina de Lanzarote<br />
-                        Edificio miHUB 3.0<br />
+                        Edificio MiHub 3.0<br />
                         35500 Arrecife, Lanzarote<br />
                         Islas Canarias, España
                       </p>
@@ -151,7 +151,7 @@ export default function Contact() {
                     style={{ border: 0 }} 
                     allowFullScreen 
                     loading="lazy"
-                    title="miHUB Location - Marina de Lanzarote"
+                    title="MiHub Location - Marina de Lanzarote"
                   />
                 </div>
               </div>

@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Air Europa",
     avatar: "/lovable-uploads/96694bb1-6e0a-4352-b4b7-aa34f984dce8.png",
-    content: "miHUB ha sido fundamental en nuestra transformación digital. Su metodología nos permitió identificar casos de uso específicos de IA que han revolucionado nuestras operaciones aeroportuarias.",
+    content: "MiHub ha sido fundamental en nuestra transformación digital. Su metodología nos permitió identificar casos de uso específicos de IA que han revolucionado nuestras operaciones aeroportuarias.",
     rating: 5
   },
   {
@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     position: "Directora de Innovación",
     company: "Oracle España",
     avatar: "/lovable-uploads/bd6bff0d-741d-42ee-a5f3-3000b863087d.png",
-    content: "La alianza con miHUB nos ha permitido acelerar la adopción de tecnología cloud e IA en las empresas canarias. Su enfoque práctico y personalizado marca la diferencia.",
+    content: "La alianza con MiHub nos ha permitido acelerar la adopción de tecnología cloud e IA en las empresas canarias. Su enfoque práctico y personalizado marca la diferencia.",
     rating: 5
   },
   {
@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     position: "Presidente",
     company: "Cámara de Comercio de Lanzarote y la Graciosa",
     avatar: "/lovable-uploads/687804ba-6877-4c9b-b371-e40685b2fb87.png",
-    content: "miHUB representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región. miHUB representa un puente de crecimiento para los Empresarios de Canarias.",
+    content: "MiHub representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región. MiHub representa un puente de crecimiento para los Empresarios de Canarias.",
     rating: 5
   },
 ];

@@ -1,4 +1,4 @@
-// Componente de formas geométricas decorativas según el manual de marca miHUB
+// Componente de formas geométricas decorativas según el manual de marca MiHub
 // Incluye rectángulos redondeados, círculos y líneas onduladas con colores secundarios
 
 interface DecorativeShapesProps {
