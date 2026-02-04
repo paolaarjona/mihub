@@ -22,7 +22,7 @@ export default function Index() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Salas de miHUB
+  // Salas de MiHub
   const rooms = [{
     id: "sala0",
     name: "Sala 0",
@@ -130,7 +130,7 @@ export default function Index() {
         {/* Hero Section */}
         <HeroSection />
         
-        {/* About miHUB Summary */}
+        {/* About MiHub Summary */}
         <section className="py-16 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
@@ -140,9 +140,9 @@ export default function Index() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHUB es el primer centro de innovación turística de Canarias, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.</p>
-                <p className="text-muted-foreground leading-relaxed">Respaldado por Grupo Martínez Abolafio, con más de 50 años de experiencia en el sector turístico y empresarial canario, MiHUB conecta empresas, startups, instituciones y profesionales para crear soluciones innovadoras que posicionen a Canarias como referente en turismo inteligente y sostenible.<strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
-                  en el sector turístico y empresarial canario, miHUB conecta empresas, startups, 
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHub es el primer centro de innovación turística de Canarias, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.</p>
+                <p className="text-muted-foreground leading-relaxed">Respaldado por Grupo Martínez Abolafio, con más de 50 años de experiencia en el sector turístico y empresarial canario, MiHub conecta empresas, startups, instituciones y profesionales para crear soluciones innovadoras que posicionen a Canarias como referente en turismo inteligente y sostenible.<strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
+                  en el sector turístico y empresarial canario, MiHub conecta empresas, startups, 
                   instituciones y profesionales para crear soluciones innovadoras que posicionen 
                   a Canarias como referente en turismo inteligente y sostenible.
                 </p>
@@ -183,7 +183,7 @@ export default function Index() {
           </div>
         </section>
         
-        {/* Timeline Section - Historia de miHUB */}
+        {/* Timeline Section - Historia de MiHub */}
         <TimelineSection />
         
         {/* Nuestras Instalaciones - Tabs con salas, plano y servicios */}
@@ -195,7 +195,7 @@ export default function Index() {
                 Nuestras Instalaciones
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4">
-                miHUB 3.0 - 205 m² en la Marina de Lanzarote
+                MiHub 3.0 - 205 m² en la Marina de Lanzarote
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base">
                 Un espacio único diseñado para inspirar la innovación y fomentar la colaboración empresarial.
@@ -248,7 +248,7 @@ export default function Index() {
               <TabsContent value="plano" className="mt-8">
                 <Card className="p-8">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold mb-4">Plano de miHUB 3.0</h3>
+                    <h3 className="text-2xl font-bold mb-4">Plano de MiHub 3.0</h3>
                     <p className="text-muted-foreground">
                       Distribución inteligente de 205 m² en la Marina de Lanzarote
                     </p>
@@ -256,7 +256,7 @@ export default function Index() {
                   
                   <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-4 mb-8">
                     <div className="bg-white rounded-lg shadow-inner overflow-hidden">
-                      <img src="/lovable-uploads/plano-mihub.jpg" alt="Plano arquitectónico de miHUB 3.0" className="w-full h-auto" />
+                      <img src="/lovable-uploads/plano-mihub.jpg" alt="Plano arquitectónico de MiHub 3.0" className="w-full h-auto" />
                     </div>
                   </div>
 

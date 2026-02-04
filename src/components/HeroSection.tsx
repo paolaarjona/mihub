@@ -38,7 +38,7 @@ export default function HeroSection() {
         <div className="max-w-4xl animate-fade-in">
           {/* Logo de miHUB - 40% más grande que el anterior */}
           <div className="mb-6 sm:mb-8">
-            <img src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png" alt="miHUB Logo" className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert" />
+            <img src="/lovable-uploads/ad78434e-4c01-4a38-bdc2-49ec020f6be1.png" alt="MiHub Logo" className="mx-auto h-28 sm:h-34 md:h-40 lg:h-56 w-auto filter brightness-0 invert" />
           </div>
           
           <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Un proyecto de Fundación Grupo Martínez Abolafio</span>

@@ -5,18 +5,18 @@ export const es = {
     amenities: "Metodología",
     gallery: "Galería",
     contact: "Contacto",
-    bookNow: "Únete a miHUB"
+    bookNow: "Únete a MiHub"
   },
   hero: {
     subtitle: "CENTRO DE INNOVACIÓN EMPRESARIAL",
     title: "Transformamos la innovación en confianza",
     description: "Acompañamos a las empresas canarias hacia la adopción real de la Inteligencia Artificial. Con una metodología propia, guiamos a cada organización en un viaje en 3 fases hacia la transformación digital.",
-    bookStay: "Únete a miHUB",
+    bookStay: "Únete a MiHub",
     exploreApartments: "Conoce nuestros Servicios",
     scrollDown: "Descubre más"
   },
   footer: {
-    description: "miHUB es el hub de innovación y transformación del Grupo Martínez Abolafio, creado para impulsar la competitividad de las empresas canarias mediante innovación, sostenibilidad e inteligencia artificial.",
+    description: "MiHub es el hub de innovación y transformación del Grupo Martínez Abolafio, creado para impulsar la competitividad de las empresas canarias mediante innovación, sostenibilidad e inteligencia artificial.",
     quickLinks: "Enlaces Rápidos",
     contact: "Contacto",
     newsletter: "Newsletter",
@@ -26,7 +26,7 @@ export const es = {
     allRights: "Todos los derechos reservados."
   },
   bookingForm: {
-    title: "Únete a miHUB",
+    title: "Únete a MiHub",
     checkIn: "Fecha de inicio",
     checkOut: "Fecha de finalización",
     adults: "Participantes",
@@ -39,7 +39,7 @@ export const es = {
   },
   testimonials: {
     title: "Lo que dicen nuestros Partners",
-    description: "Descubre por qué empresas líderes confían en miHUB para su transformación digital e innovación en IA."
+    description: "Descubre por qué empresas líderes confían en MiHub para su transformación digital e innovación en IA."
   },
   notFound: {
     title: "Página No Encontrada",
@@ -172,9 +172,9 @@ export const es = {
   home: {
     welcome: {
       subtitle: "Grupo Martínez Abolafio",
-      title: "miHUB 3.0: El futuro de la innovación empresarial",
+      title: "MiHub 3.0: El futuro de la innovación empresarial",
       description1: "Grupo Martínez Abolafio es un grupo industrial referente en Canarias, con más de 50 años de historia, con fuerte presencia en los sectores de turismo, transporte, servicios y real estate.",
-      description2: "miHUB es su apuesta por el futuro: un ecosistema de innovación empresarial con foco en la adopción de tecnologías transformadoras como la Inteligencia Artificial.",
+      description2: "MiHub es su apuesta por el futuro: un ecosistema de innovación empresarial con foco en la adopción de tecnologías transformadoras como la Inteligencia Artificial.",
       learnMore: "Conoce más"
     },
     methodology: {
@@ -201,7 +201,7 @@ export const es = {
       events: [
         {
           year: "2018-2020",
-          title: "Lanzamiento de miHUB",
+          title: "Lanzamiento de MiHub",
           description: "Creación del espacio físico y establecimiento de las bases del ecosistema de innovación."
         },
         {
@@ -234,7 +234,7 @@ export const es = {
       viewAll: "Ver Todos los Servicios"
     },
     amenities: {
-      subtitle: "¿Por qué miHUB?",
+      subtitle: "¿Por qué MiHub?",
       title: "Ventajas Competitivas",
       description: "Nuestro ecosistema de innovación ofrece las mejores condiciones para la transformación empresarial.",
       features: {
@@ -267,7 +267,7 @@ export const es = {
     cta: {
       title: "¿Tu empresa está lista para liderar el cambio?",
       description: "Nosotros estamos listos para acompañarte en esta transformación hacia la adopción de Inteligencia Artificial.",
-      bookNow: "Quiero unirme a miHUB"
+      bookNow: "Quiero unirme a MiHub"
     }
   },
   apartments: {
@@ -305,7 +305,7 @@ export const es = {
     }
   },
   booking: {
-    title: "Únete a miHUB",
+    title: "Únete a MiHub",
     subtitle: "Completa tu solicitud en unos pocos pasos.",
     steps: {
       chooseRoom: "Elegir Programa",
@@ -383,7 +383,7 @@ export const es = {
       termsAgree: "Acepto los",
       termsLink: "Términos y Condiciones",
       privacyLink: "Política de Privacidad",
-      cancellationInfo: "Entiendo que esta solicitud está sujeta a evaluación y confirmación por parte del equipo de miHUB.",
+      cancellationInfo: "Entiendo que esta solicitud está sujeta a evaluación y confirmación por parte del equipo de MiHub.",
       back: "Atrás",
       confirmBooking: "Enviar Solicitud",
       success: "¡Solicitud Enviada!",
@@ -393,7 +393,7 @@ export const es = {
     }
   },
   contact: {
-    title: "Contacta con miHUB",
+    title: "Contacta con MiHub",
     subtitle: "Estamos aquí para ayudarte a transformar tu empresa. Contacta con nosotros para cualquier consulta sobre innovación y adopción de IA.",
     getInTouch: "Ponte en Contacto",
     address: "Dirección",
@@ -435,7 +435,7 @@ export const es = {
         answer: "Absolutamente. Nuestro servicio de adopción de IA incluye consultoría completamente personalizada desde la fase de exploración hasta la implementación."
       },
       amenities: {
-        question: "¿Qué tipo de empresas son ideales para miHUB?",
+        question: "¿Qué tipo de empresas son ideales para MiHub?",
         answer: "Trabajamos con empresas de todos los tamaños que busquen innovar y adoptar IA. Desde startups hasta grandes corporaciones, especialmente en Canarias."
       }
     }
@@ -469,7 +469,7 @@ export const es = {
   amenitiesPage: {
     title: "Nuestra Metodología",
     subtitle: "Descubre el proceso que transforma empresas a través de la adopción de Inteligencia Artificial.",
-    description: "En miHUB, hemos desarrollado una metodología única que guía a las empresas canarias en su viaje hacia la adopción exitosa de la Inteligencia Artificial, combinando formación, estrategia e implementación.",
+    description: "En MiHub, hemos desarrollado una metodología única que guía a las empresas canarias en su viaje hacia la adopción exitosa de la Inteligencia Artificial, combinando formación, estrategia e implementación.",
     categories: {
       wellness: {
         title: "Formación y Mindset",
