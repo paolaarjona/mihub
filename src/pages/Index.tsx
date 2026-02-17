@@ -54,7 +54,7 @@ export default function Index() {
     size: "60 m²",
     features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
     image: "/lovable-uploads/sala3-new.jpg",
-    description: "El espacio principal para conferencias, lanzamientos y eventos corporativos."
+    description: "Ideal para formaciones, workshops y eventos de networking."
   }, {
     id: "terraza",
     name: "Terraza",
