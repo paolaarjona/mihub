@@ -25,7 +25,7 @@ export default function Index() {
   // Salas de MiHub
   const rooms = [{
     id: "sala0",
-    name: "Sala 0",
+    name: "Sala 1 + 2 + 3",
     capacity: "12 personas",
     size: "20 m²",
     features: ["Proyector HD", "Mesa de reuniones compacta", "Sistema de audio", "WiFi de alta velocidad"],
