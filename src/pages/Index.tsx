@@ -29,7 +29,7 @@ export default function Index() {
     capacity: "120 personas",
     size: "125 m²",
     features: ["Proyector HD", "Mesa de reuniones compacta", "Sistema de audio", "WiFi de alta velocidad"],
-    image: "/lovable-uploads/41801f83-3b09-46f0-a8f4-bae721727b3e.png",
+    image: "/lovable-uploads/sala123-new.jpg",
     description: "Espacio íntimo perfecto para reuniones pequeñas y sesiones de trabajo."
   }, {
     id: "sala1",
