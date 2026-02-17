@@ -37,7 +37,7 @@ export default function Index() {
     capacity: "18 personas",
     size: "25 m²",
     features: ["Proyector 4K", "Pizarra interactiva", "Sistema de audio profesional", "WiFi de alta velocidad"],
-    image: "/lovable-uploads/41801f83-3b09-46f0-a8f4-bae721727b3e.png",
+    image: "/lovable-uploads/sala1-new.png",
     description: "Perfecta para reuniones ejecutivas y presentaciones corporativas."
   }, {
     id: "sala2",
