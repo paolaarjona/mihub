@@ -28,9 +28,9 @@ export default function Index() {
     name: "Sala 1 + 2 + 3",
     capacity: "120 personas",
     size: "125 m²",
-    features: ["Proyector HD", "Mesa de reuniones compacta", "Sistema de audio", "WiFi de alta velocidad"],
+    features: ["Proyector 4K", "Pizarra interactiva", "Sistema de audio profesional", "WiFi de alta velocidad"],
     image: "/lovable-uploads/sala123-new.jpg",
-    description: "Espacio íntimo perfecto para reuniones pequeñas y sesiones de trabajo."
+    description: "El espacio más amplio y versátil, ideal para grandes conferencias, eventos corporativos y experiencias completas."
   }, {
     id: "sala1",
     name: "Sala 1",
