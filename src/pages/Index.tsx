@@ -52,7 +52,7 @@ export default function Index() {
     name: "Sala 3",
     capacity: "36 personas",
     size: "60 m²",
-    features: ["Sistema multimedia completo", "Escenario elevado", "Sonido surround", "Cámaras profesionales"],
+    features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
     image: "/lovable-uploads/sala3-new.jpg",
     description: "El espacio principal para conferencias, lanzamientos y eventos corporativos."
   }, {
