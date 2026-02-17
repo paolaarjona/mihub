@@ -61,7 +61,7 @@ export default function Index() {
     capacity: "120 personas",
     size: "80 m²",
     features: ["Vista panorámica", "Zona de networking", "Catering disponible", "Ambiente al aire libre"],
-    image: "/lovable-uploads/terraza-nueva.jpeg",
+    image: "/lovable-uploads/terraza-new.jpg",
     description: "Espacio único con vistas al puerto deportivo para eventos especiales y networking."
   }];
   const amenities = [{
