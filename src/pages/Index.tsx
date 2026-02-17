@@ -53,7 +53,7 @@ export default function Index() {
     capacity: "36 personas",
     size: "60 m²",
     features: ["Sistema multimedia completo", "Escenario elevado", "Sonido surround", "Cámaras profesionales"],
-    image: "/lovable-uploads/45e716e4-635c-49f9-9440-14d33ccfe483.png",
+    image: "/lovable-uploads/sala3-new.jpg",
     description: "El espacio principal para conferencias, lanzamientos y eventos corporativos."
   }, {
     id: "terraza",
