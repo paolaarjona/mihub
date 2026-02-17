@@ -45,7 +45,7 @@ export default function Index() {
     capacity: "55 personas",
     size: "40 m²",
     features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
-    image: "/lovable-uploads/42a648f5-29cb-44d1-a727-c647080bc537.png",
+    image: "/lovable-uploads/sala2-new.jpg",
     description: "Ideal para formaciones, workshops y eventos de networking."
   }, {
     id: "sala3",
