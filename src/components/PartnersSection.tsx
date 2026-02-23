@@ -40,19 +40,19 @@ export default function PartnersSection() {
       name: "Oracle",
       logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
       description: "Partner tecnológico para certificaciones y soluciones cloud empresariales.",
-      logoClass: "max-h-16 md:max-h-20"
+      logoClass: "max-h-24 md:max-h-28"
     },
     {
       name: "Mahou San Miguel",
       logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
       description: "Colaboración en proyectos de innovación en el sector alimentario.",
-      logoClass: "max-h-16 md:max-h-20"
+      logoClass: "max-h-24 md:max-h-28"
     },
     {
       name: "Air Europa",
       logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
       description: "Innovación en el sector del transporte aéreo y turismo.",
-      logoClass: "max-h-16 md:max-h-20"
+      logoClass: "max-h-24 md:max-h-28"
     },
     {
       name: "Telefónica",
