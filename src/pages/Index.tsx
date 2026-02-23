@@ -195,7 +195,7 @@ export default function Index() {
                 Nuestras Instalaciones
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4">
-                MiHub 3.0 - 205 m² en la Marina de Lanzarote
+                MiHub 3.0 - 1300 m² en la Marina de Lanzarote
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base">
                 Un espacio único diseñado para inspirar la innovación y fomentar la colaboración empresarial.
@@ -211,7 +211,7 @@ export default function Index() {
 
               <TabsContent value="salas" className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {rooms.map(room => <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  {rooms.map((room) => <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="aspect-video relative overflow-hidden">
                         <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
                         <div className="absolute top-4 left-4">
