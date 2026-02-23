@@ -14,6 +14,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TimelineSection from "@/components/TimelineSection";
 import DecorativeShapes from "@/components/DecorativeShapes";
+import SustainabilitySection from "@/components/SustainabilitySection";
 export default function Index() {
   const {
     t
@@ -198,6 +199,9 @@ export default function Index() {
             </div>
           </div>
         </section>
+        
+        {/* Sostenibilidad */}
+        <SustainabilitySection />
         
         {/* Timeline Section - Historia de MiHub */}
         <TimelineSection />
