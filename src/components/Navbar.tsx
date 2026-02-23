@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ThemeToggle from "./ThemeToggle";
-import LanguageSelector from "./LanguageSelector";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -82,17 +80,8 @@ export default function Navbar() {
 
           {/* Right section with controls */}
           <div className="flex items-center space-x-2">
-            <div className="hidden lg:flex items-center space-x-2">
-              <LanguageSelector />
-              <ThemeToggle />
-            </div>
-
             {/* Mobile Navigation - Visible only on mobile and tablet */}
             <div className="lg:hidden flex items-center space-x-2">
-              <LanguageSelector />
-              <div className="hidden sm:block">
-                <ThemeToggle />
-              </div>
               <Button 
                 variant="ghost" 
                 size="icon" 
@@ -111,16 +100,13 @@ export default function Navbar() {
         <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden">
           <div className="fixed inset-0 bg-white dark:bg-card p-4 sm:p-6 lg:hidden">
             <div className="flex flex-col h-full">
-              <div className="flex justify-between items-center mb-6 sm:mb-8">
+                <div className="flex justify-between items-center mb-6 sm:mb-8">
                 <img 
                   src="/lovable-uploads/8c9fa48a-6ac2-4067-b2a7-ba2d9f0cb897.png" 
                   alt="MiHub Logo" 
                   className="h-6 w-auto"
                 />
                 <div className="flex items-center space-x-2">
-                  <div className="sm:hidden">
-                    <ThemeToggle />
-                  </div>
                   <Button 
                     variant="ghost" 
                     size="icon" 
