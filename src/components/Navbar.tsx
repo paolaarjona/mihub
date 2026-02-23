@@ -15,11 +15,11 @@ export default function Navbar() {
   const isHomePage = location.pathname === "/";
   
   const navLinks = [
-    { name: t.nav.home, path: "/" },
+    { name: "Inicio", path: "/" },
     { name: "Servicios", path: "/proyectos" },
     { name: "Eventos Corporativos", path: "/eventos-corporativos" },
-    { name: t.nav.gallery, path: "/gallery" },
-    { name: t.nav.contact, path: "/contact" }
+    { name: "Galería", path: "/gallery" },
+    { name: "Contacto", path: "/contact" }
   ];
 
   useEffect(() => {
