@@ -25,6 +25,14 @@ export default function Index() {
   // Salas de MiHub
   const rooms = [{
     id: "sala0",
+    name: "Sala 0",
+    capacity: "14 personas",
+    size: "30 m²",
+    features: ["Pantalla SMART", "Sistema de videoconferencia", "Mesa de conferencias ejecutiva", "Iluminación natural"],
+    image: "/lovable-uploads/sala0-new.jpg",
+    description: "Sala de reuniones ejecutiva con vistas panorámicas, ideal para reuniones de dirección y encuentros estratégicos."
+  }, {
+    id: "sala123",
     name: "Sala 1 + 2 + 3",
     capacity: "120 personas",
     size: "125 m²",
