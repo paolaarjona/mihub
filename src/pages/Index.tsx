@@ -71,6 +71,14 @@ export default function Index() {
     features: ["Vista panorámica", "Zona de networking", "Catering disponible", "Ambiente al aire libre"],
     image: "/lovable-uploads/terraza-new.jpg",
     description: "Espacio único con vistas al puerto deportivo para eventos especiales y networking."
+  }, {
+    id: "oficinas",
+    name: "Oficinas",
+    capacity: "Coworking",
+    size: "50 m²",
+    features: ["Puestos de trabajo equipados", "Vistas panorámicas", "Zona lounge", "WiFi de alta velocidad"],
+    image: "/lovable-uploads/oficinas-new.jpg",
+    description: "Espacio de trabajo compartido con diseño inspirador, ideal para equipos creativos y profesionales."
   }];
   const amenities = [{
     icon: Wifi,
