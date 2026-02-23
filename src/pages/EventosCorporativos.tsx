@@ -151,15 +151,10 @@ export default function EventosCorporativos() {
               <p className="text-muted-foreground mb-8 text-lg">
                 {t.corporateEvents.cta.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Button asChild size="lg" className="btn-primary">
-                  <Link to="/#eventos-corporativos">
-                    {t.corporateEvents.cta.requestProposal} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
                   <Link to="/contact">
-                    {t.corporateEvents.cta.contactTeam}
+                    {t.corporateEvents.cta.contactTeam} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
