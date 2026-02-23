@@ -5,7 +5,23 @@ export default function PartnersSection() {
   const {
     t
   } = useLanguage();
-  const partners = [{
+  const partners = [
+    {
+      name: "Federación Turística de Lanzarote",
+      logo: "/lovable-uploads/ftl-logo.png",
+      description: "Representación y defensa de los intereses del sector turístico de Lanzarote."
+    },
+    {
+      name: "Fundación ONCE",
+      logo: "/lovable-uploads/fundacion-once-logo.png",
+      description: "Cooperación e integración social de personas con discapacidad."
+    },
+    {
+      name: "ULPGC",
+      logo: "/lovable-uploads/ulpgc-logo.png",
+      description: "Universidad de Las Palmas de Gran Canaria, referente en formación e investigación."
+    },
+    {
     name: "Santander",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
     description: "Socio estratégico en innovación financiera y transformación digital."
