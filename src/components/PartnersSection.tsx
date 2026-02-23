@@ -123,9 +123,9 @@ export default function PartnersSection() {
           <p className="text-muted-foreground mb-4">
             ¿Quieres formar parte de nuestro ecosistema de partners?
           </p>
-          <button className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Conviértete en Partner
-          </button>
+          </a>
         </div>
       </div>
     </section>;
