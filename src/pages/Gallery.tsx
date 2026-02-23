@@ -9,7 +9,7 @@ import { useGaleria, type GaleriaItem } from "@/hooks/useGaleria";
 
 // Transform Supabase data to component format
 const transformGaleriaItem = (item: GaleriaItem) => ({
-  id: parseInt(item.overlay_number),
+  id: item.id,
   src: item.src_url,
   alt: item.alt_text,
   category: item.category,
@@ -20,7 +20,7 @@ const transformGaleriaItem = (item: GaleriaItem) => ({
 export default function Gallery() {
   const { t } = useLanguage();
   const { galeria: galeriaData, loading, error } = useGaleria();
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [filteredImages, setFilteredImages] = useState<ReturnType<typeof transformGaleriaItem>[]>([]);
   const [activeFilter, setActiveFilter] = useState("all");
   
