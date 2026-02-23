@@ -27,7 +27,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     name: "Pedro Llamas",
-    position: "Directora de Innovación",
+    position: "Director de Innovación",
     company: "Oracle España",
     avatar: "/lovable-uploads/bd6bff0d-741d-42ee-a5f3-3000b863087d.png",
     content: "La alianza con MiHub nos ha permitido acelerar la adopción de tecnología cloud e IA en las empresas canarias. Su enfoque práctico y personalizado marca la diferencia.",
