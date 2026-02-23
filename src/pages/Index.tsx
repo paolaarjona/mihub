@@ -409,7 +409,7 @@ export default function Index() {
                 {/* Button now appears first, before the form */}
                 <div className="mb-8 sm:mb-12">
                   <Button asChild size="lg" className="btn-primary">
-                    <Link to="/eventos-corporativos">Contacta con nosotros        </Link>
+                    <Link to="/contact">Contacta con nosotros</Link>
                   </Button>
                 </div>
               </div>
