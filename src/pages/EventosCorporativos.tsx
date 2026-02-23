@@ -16,6 +16,8 @@ const eventPhotos = [
   { src: "/lovable-uploads/evento-6.jpeg", alt: "Evento corporativo - Presentación" },
   { src: "/lovable-uploads/evento-7.jpeg", alt: "Evento corporativo - LIUX" },
   { src: "/lovable-uploads/evento-8.jpeg", alt: "Evento corporativo - Photocall" },
+  { src: "/lovable-uploads/evento-9.jpeg", alt: "Evento corporativo - Foro Global Sur" },
+  { src: "/lovable-uploads/evento-10.jpeg", alt: "Evento corporativo - Realidad Virtual" },
 ];
 
 export default function EventosCorporativos() {
