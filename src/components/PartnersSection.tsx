@@ -9,47 +9,64 @@ export default function PartnersSection() {
     {
       name: "Federación Turística de Lanzarote",
       logo: "/lovable-uploads/ftl-logo.png",
-      description: "Representación y defensa de los intereses del sector turístico de Lanzarote."
+      description: "Representación y defensa de los intereses del sector turístico de Lanzarote.",
+      logoClass: ""
     },
     {
       name: "Fundación ONCE",
       logo: "/lovable-uploads/fundacion-once-logo.png",
-      description: "Cooperación e integración social de personas con discapacidad."
+      description: "Cooperación e integración social de personas con discapacidad.",
+      logoClass: ""
     },
     {
       name: "ULPGC",
       logo: "/lovable-uploads/ulpgc-logo.png",
-      description: "Universidad de Las Palmas de Gran Canaria, referente en formación e investigación."
+      description: "Universidad de Las Palmas de Gran Canaria, referente en formación e investigación.",
+      logoClass: ""
     },
     {
-    name: "Santander",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
-    description: "Socio estratégico en innovación financiera y transformación digital."
-  }, {
-    name: "Valhalla",
-    logo: "/lovable-uploads/valhalla-logo-new.png",
-    description: "Colaboración estratégica en transformación digital e innovación empresarial."
-  }, {
-    name: "Oracle",
-    logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
-    description: "Partner tecnológico para certificaciones y soluciones cloud empresariales."
-  }, {
-    name: "Mahou San Miguel",
-    logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
-    description: "Colaboración en proyectos de innovación en el sector alimentario."
-  }, {
-    name: "Air Europa",
-    logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
-    description: "Innovación en el sector del transporte aéreo y turismo."
-  }, {
-    name: "Telefónica",
-    logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
-    description: "Alianza en telecomunicaciones y transformación digital."
-  }, {
-    name: "SPEL",
-    logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
-    description: "Partner estratégico en desarrollo tecnológico y soluciones digitales."
-  }];
+      name: "Santander",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
+      description: "Socio estratégico en innovación financiera y transformación digital.",
+      logoClass: ""
+    },
+    {
+      name: "Valhalla",
+      logo: "/lovable-uploads/valhalla-logo-new.png",
+      description: "Colaboración estratégica en transformación digital e innovación empresarial.",
+      logoClass: ""
+    },
+    {
+      name: "Oracle",
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
+      description: "Partner tecnológico para certificaciones y soluciones cloud empresariales.",
+      logoClass: "max-h-16 md:max-h-20"
+    },
+    {
+      name: "Mahou San Miguel",
+      logo: "/lovable-uploads/276374da-0d59-475f-a367-31c4d70254ef.png",
+      description: "Colaboración en proyectos de innovación en el sector alimentario.",
+      logoClass: "max-h-16 md:max-h-20"
+    },
+    {
+      name: "Air Europa",
+      logo: "/lovable-uploads/0d3881b6-21dd-44b4-994d-4e5b3e95f167.png",
+      description: "Innovación en el sector del transporte aéreo y turismo.",
+      logoClass: "max-h-16 md:max-h-20"
+    },
+    {
+      name: "Telefónica",
+      logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
+      description: "Alianza en telecomunicaciones y transformación digital.",
+      logoClass: ""
+    },
+    {
+      name: "SPEL",
+      logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
+      description: "Partner estratégico en desarrollo tecnológico y soluciones digitales.",
+      logoClass: ""
+    }
+  ];
   return <section className="section bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
@@ -75,7 +92,7 @@ export default function PartnersSection() {
               {partners.map((partner, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
                     <div className="w-full h-16 md:h-20 mb-3 md:mb-4 flex items-center justify-center">
-                      <img src={partner.logo} alt={partner.name} className="max-h-12 md:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform" />
+                      <img src={partner.logo} alt={partner.name} className={`${partner.logoClass || "max-h-12 md:max-h-14"} w-auto object-contain group-hover:scale-105 transition-transform`} />
                     </div>
                     
                     <p className="text-xs text-muted-foreground hidden md:block">{partner.description}</p>
