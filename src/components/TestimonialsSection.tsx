@@ -17,15 +17,6 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Jesús Nuño de La Rosa",
-    position: "CEO",
-    company: "Air Europa",
-    avatar: "/lovable-uploads/96694bb1-6e0a-4352-b4b7-aa34f984dce8.png",
-    content: "MiHub ha sido fundamental en nuestra transformación digital. Su metodología nos permitió identificar casos de uso específicos de IA que han revolucionado nuestras operaciones aeroportuarias.",
-    rating: 5
-  },
-  {
-    id: 2,
     name: "Pedro Llamas",
     position: "Director de Innovación",
     company: "Oracle España",
