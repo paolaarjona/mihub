@@ -1,14 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Calendar, MapPin, Trophy, Grid, CalendarDays } from "lucide-react";
+import { ArrowRight, Users, Calendar, MapPin, Trophy } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import EventDetailsDialog from "@/components/EventDetailsDialog";
-import CorporateEventsCalendar from "@/components/CorporateEventsCalendar";
 import DecorativeShapes from "@/components/DecorativeShapes";
+
+const eventPhotos = [
+  { src: "/lovable-uploads/evento-1.jpeg", alt: "Evento corporativo - Conferencia" },
+  { src: "/lovable-uploads/evento-2.jpeg", alt: "Evento corporativo - Audiencia" },
+  { src: "/lovable-uploads/evento-3.jpeg", alt: "Evento corporativo - Ponente" },
+  { src: "/lovable-uploads/evento-4.jpeg", alt: "Evento corporativo - Marina Innova Hub" },
+  { src: "/lovable-uploads/evento-5.jpeg", alt: "Evento corporativo - Kenneth Gasque" },
+  { src: "/lovable-uploads/evento-6.jpeg", alt: "Evento corporativo - Presentación" },
+  { src: "/lovable-uploads/evento-7.jpeg", alt: "Evento corporativo - LIUX" },
+  { src: "/lovable-uploads/evento-8.jpeg", alt: "Evento corporativo - Photocall" },
+];
 
 export default function EventosCorporativos() {
   const { t } = useLanguage();
@@ -16,49 +24,6 @@ export default function EventosCorporativos() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const eventos = [
-    {
-      id: "1",
-      title: t.corporateEvents.events.congress.title,
-      description: t.corporateEvents.events.congress.description,
-      fecha: t.corporateEvents.events.congress.date,
-      ubicacion: t.corporateEvents.events.congress.location,
-      asistentes: "200+",
-      tipo: t.corporateEvents.events.congress.type,
-      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop"
-    },
-    {
-      id: "2",
-      title: t.corporateEvents.events.workshop.title,
-      description: t.corporateEvents.events.workshop.description,
-      fecha: t.corporateEvents.events.workshop.date,
-      ubicacion: t.corporateEvents.events.workshop.location,
-      asistentes: "25",
-      tipo: t.corporateEvents.events.workshop.type,
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
-    },
-    {
-      id: "3",
-      title: t.corporateEvents.events.hackathon.title,
-      description: t.corporateEvents.events.hackathon.description,
-      fecha: t.corporateEvents.events.hackathon.date,
-      ubicacion: t.corporateEvents.events.hackathon.location,
-      asistentes: "100+",
-      tipo: t.corporateEvents.events.hackathon.type,
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
-    },
-    {
-      id: "4",
-      title: t.corporateEvents.events.roundtable.title,
-      description: t.corporateEvents.events.roundtable.description,
-      fecha: t.corporateEvents.events.roundtable.date,
-      ubicacion: t.corporateEvents.events.roundtable.location,
-      asistentes: "50",
-      tipo: t.corporateEvents.events.roundtable.type,
-      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=600&fit=crop"
-    }
-  ];
 
   const servicios = [
     {
@@ -106,85 +71,39 @@ export default function EventosCorporativos() {
           </div>
         </section>
 
-        {/* Próximos Eventos con Tabs */}
+        {/* Galería de Eventos */}
         <section className="section relative overflow-hidden">
           <DecorativeShapes variant="bottom-left" />
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
-                {t.corporateEvents.upcomingEvents.title}
+                {"Nuestros Eventos" }
               </h2>
               <p className="text-muted-foreground">
-                {t.corporateEvents.upcomingEvents.description}
+                {"Momentos que reflejan la excelencia de nuestros eventos corporativos"}
               </p>
             </div>
             
-            <Tabs defaultValue="grid" className="w-full">
-              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-                <TabsTrigger value="grid" className="flex items-center gap-2">
-                  <Grid className="h-4 w-4" />
-                  {t.corporateEvents.view?.grid || "Vista de Lista"}
-                </TabsTrigger>
-                <TabsTrigger value="calendar" className="flex items-center gap-2">
-                  <CalendarDays className="h-4 w-4" />
-                  {t.corporateEvents.view?.calendar || "Vista de Calendario"}
-                </TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="grid" className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  {eventos.map((evento, index) => (
-                    <div 
-                      key={evento.id}
-                      className="glass-card rounded-2xl overflow-hidden animate-fade-in"
-                      style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                    >
-                      <div className="aspect-video relative overflow-hidden">
-                        <img 
-                          src={evento.image}
-                          alt={evento.title}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute top-4 left-4">
-                          <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                            {evento.tipo}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-semibold mb-3">{evento.title}</h3>
-                        <p className="text-muted-foreground mb-4">{evento.description}</p>
-                        
-                        <div className="grid grid-cols-3 gap-4 text-sm text-muted-foreground mb-4">
-                          <div>
-                            <Calendar className="h-4 w-4 mb-1" />
-                            <p>{evento.fecha}</p>
-                          </div>
-                          <div>
-                            <MapPin className="h-4 w-4 mb-1" />
-                            <p>{evento.ubicacion}</p>
-                          </div>
-                          <div>
-                            <Users className="h-4 w-4 mb-1" />
-                            <p>{evento.asistentes}</p>
-                          </div>
-                        </div>
-                        
-                        <EventDetailsDialog evento={evento}>
-                          <Button className="w-full btn-primary">
-                            {t.corporateEvents.moreInfo} <ArrowRight className="ml-2 h-4 w-4" />
-                          </Button>
-                        </EventDetailsDialog>
-                      </div>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {eventPhotos.map((photo, index) => (
+                <div 
+                  key={index}
+                  className={`relative overflow-hidden rounded-xl animate-fade-in group ${
+                    index === 0 || index === 5 ? "md:col-span-2 md:row-span-2" : ""
+                  }`}
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                >
+                  <div className={`${index === 0 || index === 5 ? "aspect-square" : "aspect-video"} overflow-hidden`}>
+                    <img 
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-              </TabsContent>
-              
-              <TabsContent value="calendar" className="mt-8">
-                <CorporateEventsCalendar />
-              </TabsContent>
-            </Tabs>
+              ))}
+            </div>
           </div>
         </section>
 
