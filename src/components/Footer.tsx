@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Mail, Phone, MapPin, Linkedin } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Footer() {
-  const {
-    t
-  } = useLanguage();
   const currentYear = new Date().getFullYear();
   return <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
@@ -12,7 +9,7 @@ export default function Footer() {
           <div className="animate-fade-in [animation-delay:100ms]">
             <h4 className="text-xl font-bold mb-4">MiHub 3.0</h4>
             <p className="text-muted-foreground mb-4">
-              {t.footer.description}
+              MiHub es el hub de innovación y transformación del Grupo Martínez Abolafio, creado para impulsar la competitividad de las empresas canarias a través de la innovación, la sostenibilidad y la inteligencia artificial.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/mihub-hubdeinnovacion/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
@@ -21,7 +18,7 @@ export default function Footer() {
               </a>
               <a href="https://x.com/marinainnovahub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <img src="/lovable-uploads/x-logo-new.png" alt="X" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity" />
-                <span className="sr-only">X (formerly Twitter)</span>
+                <span className="sr-only">X</span>
               </a>
               <a href="https://www.instagram.com/marinainnovahub/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
@@ -31,13 +28,13 @@ export default function Footer() {
           </div>
           
           <div className="animate-fade-in [animation-delay:200ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.quickLinks}</h4>
+            <h4 className="text-xl font-bold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               {[{
-              name: t.nav.home,
+              name: "Inicio",
               path: "/"
             }, {
-              name: t.nav.apartments,
+              name: "Servicios",
               path: "/servicios"
             }, {
               name: "Sobre MiHub",
@@ -49,10 +46,10 @@ export default function Footer() {
               name: "Eventos Corporativos",
               path: "/eventos-corporativos"
             }, {
-              name: t.nav.gallery,
+              name: "Galería",
               path: "/gallery"
             }, {
-              name: t.nav.contact,
+              name: "Contacto",
               path: "/contact"
             }].map(link => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
@@ -63,7 +60,7 @@ export default function Footer() {
           </div>
           
           <div className="animate-fade-in [animation-delay:300ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
+            <h4 className="text-xl font-bold mb-4">Contacto</h4>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />

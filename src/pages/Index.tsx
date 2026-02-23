@@ -464,10 +464,10 @@ export default function Index() {
           <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-                {t.home.cta.title}
+                ¿Está tu empresa preparada para liderar el cambio?
               </h2>
               <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base">
-                {t.home.cta.description}
+                Estamos listos para acompañarte en esta transformación hacia la adopción de la Inteligencia Artificial.
               </p>
             </div>
           </div>
