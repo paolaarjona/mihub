@@ -26,6 +26,10 @@ export default function PartnersSection() {
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
     description: "Socio estratégico en innovación financiera y transformación digital."
   }, {
+    name: "Valhalla",
+    logo: "/lovable-uploads/valhalla-logo-new.png",
+    description: "Colaboración estratégica en transformación digital e innovación empresarial."
+  }, {
     name: "Oracle",
     logo: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Logo.png",
     description: "Partner tecnológico para certificaciones y soluciones cloud empresariales."
@@ -41,14 +45,6 @@ export default function PartnersSection() {
     name: "Telefónica",
     logo: "/lovable-uploads/a549ccf7-4496-4af2-8a0d-93e434ace0d7.png",
     description: "Alianza en telecomunicaciones y transformación digital."
-  }, {
-    name: "Globant",
-    logo: "/lovable-uploads/78f2945d-377d-46ec-9f04-8aff5636cebb.png",
-    description: "Partner tecnológico en desarrollo de software y AI."
-  }, {
-    name: "Valhalla",
-    logo: "/lovable-uploads/valhalla-logo-new.png",
-    description: "Colaboración estratégica en transformación digital e innovación empresarial."
   }, {
     name: "SPEL",
     logo: "/lovable-uploads/07d30e79-34e0-42df-9fae-c32ea27121bf.png",
