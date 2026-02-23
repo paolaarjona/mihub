@@ -44,7 +44,7 @@ export default function Index() {
     name: "Sala 2",
     capacity: "55 personas",
     size: "40 m²",
-    features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
+    features: ["Pantalla SMART 90\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
     image: "/lovable-uploads/sala2-new.jpg",
     description: "Ideal para formaciones, workshops y eventos de networking."
   }, {
@@ -52,7 +52,7 @@ export default function Index() {
     name: "Sala 3",
     capacity: "36 personas",
     size: "60 m²",
-    features: ["Pantalla LED 65\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
+    features: ["Pantalla SMART 90\"", "Sistema de videoconferencia", "Mesa de conferencias", "Iluminación regulable"],
     image: "/lovable-uploads/sala3-new.jpg",
     description: "Ideal para formaciones, workshops y eventos de networking."
   }, {
