@@ -63,6 +63,7 @@ export default {
 					s6: 'hsl(var(--mihub-s6))',
 					s7: 'hsl(var(--mihub-s7))',
 					s8: 'hsl(var(--mihub-s8))',
+					green: 'hsl(var(--mihub-green))',
 				}
 			},
 			fontFamily: {
