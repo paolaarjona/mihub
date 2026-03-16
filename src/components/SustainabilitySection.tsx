@@ -4,44 +4,44 @@ import DecorativeShapes from "@/components/DecorativeShapes";
 
 export default function SustainabilitySection() {
   const pillars = [
-    {
-      icon: <Leaf className="h-8 w-8" />,
-      title: "Sostenibilidad",
-      description:
-        "Integramos prácticas sostenibles en cada proyecto, reduciendo la huella ambiental del sector turístico canario.",
-    },
-    {
-      icon: <Recycle className="h-8 w-8" />,
-      title: "Regeneración",
-      description:
-        "Impulsamos modelos regenerativos que devuelven más al territorio de lo que toman, fortaleciendo ecosistemas locales.",
-    },
-    {
-      icon: <Heart className="h-8 w-8" />,
-      title: "Turismo Ético y Responsable",
-      description:
-        "Promovemos un turismo que respeta las comunidades, la cultura y el patrimonio natural de Canarias.",
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Turismo 360°",
-      description:
-        "Visión integral que conecta sostenibilidad, tecnología, comunidad y experiencia para un turismo transformador.",
-    },
-    {
-      icon: <Target className="h-8 w-8" />,
-      title: "ODS / Agenda 2030",
-      description:
-        "Alineados con los Objetivos de Desarrollo Sostenible de la ONU, contribuyendo activamente a las metas globales.",
-    },
-  ];
+  {
+    icon: <Leaf className="h-8 w-8" />,
+    title: "Sostenibilidad",
+    description:
+    "Integramos prácticas sostenibles en cada proyecto, reduciendo la huella ambiental del sector turístico canario."
+  },
+  {
+    icon: <Recycle className="h-8 w-8" />,
+    title: "Regeneración",
+    description:
+    "Impulsamos modelos regenerativos que devuelven más al territorio de lo que toman, fortaleciendo ecosistemas locales."
+  },
+  {
+    icon: <Heart className="h-8 w-8" />,
+    title: "Turismo Ético y Responsable",
+    description:
+    "Promovemos un turismo que respeta las comunidades, la cultura y el patrimonio natural de Canarias."
+  },
+  {
+    icon: <Globe className="h-8 w-8" />,
+    title: "Turismo 360°",
+    description:
+    "Visión integral que conecta sostenibilidad, tecnología, comunidad y experiencia para un turismo transformador."
+  },
+  {
+    icon: <Target className="h-8 w-8" />,
+    title: "ODS / Agenda 2030",
+    description:
+    "Alineados con los Objetivos de Desarrollo Sostenible de la ONU, contribuyendo activamente a las metas globales."
+  }];
+
 
   const impactData = [
-    { value: "5", label: "ODS alineados", suffix: "" },
-    { value: "100", label: "eventos sostenibles", suffix: "+" },
-    { value: "3.000", label: "profesionales sensibilizados", suffix: "+" },
-    { value: "0", label: "huella neta de carbono objetivo", suffix: "" },
-  ];
+  { value: "5", label: "ODS alineados", suffix: "" },
+  { value: "100", label: "eventos sostenibles", suffix: "+" },
+  { value: "3.000", label: "profesionales sensibilizados", suffix: "+" },
+  { value: "0", label: "huella neta de carbono objetivo", suffix: "" }];
+
 
   return (
     <section className="section bg-gradient-to-b from-mihub-green/10 to-background dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
@@ -76,12 +76,12 @@ export default function SustainabilitySection() {
 
         {/* Pillars */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
-          {pillars.map((pillar, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-lg transition-all duration-300 border-mihub-green/20 animate-fade-in"
-              style={{ animationDelay: `${(index + 1) * 100}ms` }}
-            >
+          {pillars.map((pillar, index) =>
+          <Card
+            key={index}
+            className="group hover:shadow-lg transition-all duration-300 border-mihub-green/20 animate-fade-in"
+            style={{ animationDelay: `${(index + 1) * 100}ms` }}>
+            
               <CardContent className="p-6 text-center">
                 <div className="w-14 h-14 bg-mihub-green/20 rounded-full flex items-center justify-center mx-auto mb-4 text-mihub-green group-hover:scale-110 transition-transform">
                   {pillar.icon}
@@ -92,34 +92,34 @@ export default function SustainabilitySection() {
                 </p>
               </CardContent>
             </Card>
-          ))}
+          )}
         </div>
 
         {/* Impact Data */}
-        <div className="bg-mihub-green rounded-2xl p-8 md:p-12 text-white animate-fade-in">
-          <div className="text-center mb-8">
-            <TreePine className="h-10 w-10 mx-auto mb-3 opacity-80" />
-            <h3 className="text-2xl font-bold mb-2">
-              Nuestro impacto en cifras
-            </h3>
-            <p className="text-white/80 text-sm max-w-xl mx-auto">
-              Resultados tangibles de nuestro compromiso con un modelo
-              empresarial sostenible y responsable.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {impactData.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold mb-1">
-                  {item.value}
-                  {item.suffix}
-                </div>
-                <div className="text-white/70 text-sm">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
       </div>
-    </section>
-  );
+    </section>);
+
 }
