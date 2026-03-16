@@ -50,7 +50,7 @@ export default function HeroSection() {
           </p>
           
           {/* Líneas de actuación */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
               <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
               <h3 className="text-white font-semibold text-xs sm:text-sm">Innovación</h3>
