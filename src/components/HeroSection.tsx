@@ -20,7 +20,7 @@ export default function HeroSection() {
   // Calculate parallax effect
   const backgroundY = scrollY * 0.5;
   const contentY = scrollY * 0.2;
-  return <section className="relative h-screen min-h-[600px] overflow-hidden z-10">
+  return <section className="relative min-h-screen overflow-hidden z-10">
       {/* Background image with parallax */}
       <div className="absolute inset-0 bg-cover bg-center z-0" style={{
       backgroundImage: "url('/lovable-uploads/hero-bg.png')",
@@ -37,7 +37,7 @@ export default function HeroSection() {
     }}>
         <div className="max-w-4xl animate-fade-in">
           {/* Logo de miHUB - 40% más grande que el anterior */}
-          <div className="mb-2 sm:mb-3 mt-24 sm:mt-32">
+          <div className="mb-4 sm:mb-6 mt-28 sm:mt-36">
             <img alt="MiHub Logo" className="mx-auto h-20 sm:h-24 md:h-28 lg:h-36 w-auto filter brightness-0 invert object-fill rounded-none shadow-none" src="/lovable-uploads/125b1049-fdb6-4182-83c6-ce656dd361d4.png" />
           </div>
           
@@ -45,12 +45,12 @@ export default function HeroSection() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Innovación para el turismo y los sectores clave de la economía canaria
           </h1>
-          <p className="text-base text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed sm:text-base">
+          <p className="text-base text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed sm:text-base">
             Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones y proyectos innovadores que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
           {/* Líneas de actuación */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20">
               <Lightbulb className="h-6 w-6 sm:h-8 sm:w-8 text-white mb-2 mx-auto" />
               <h3 className="text-white font-semibold text-xs sm:text-sm">Innovación</h3>
@@ -69,7 +69,7 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="flex justify-center mb-16 sm:mb-24">
+          <div className="flex justify-center mb-20 sm:mb-28">
             <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
               <Link to="/proyectos">Conoce nuestros Servicios</Link>
             </Button>
