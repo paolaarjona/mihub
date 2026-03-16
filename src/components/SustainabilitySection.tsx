@@ -44,17 +44,17 @@ export default function SustainabilitySection() {
   ];
 
   return (
-    <section className="section bg-gradient-to-b from-emerald-50/50 to-background dark:from-emerald-950/20 dark:to-background relative overflow-hidden">
+    <section className="section bg-gradient-to-b from-mihub-green/10 to-background dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
       <DecorativeShapes variant="top-right" />
       <div className="container">
         {/* Manifesto */}
         <div className="text-center max-w-4xl mx-auto mb-16 animate-fade-in">
-          <span className="text-sm text-emerald-600 dark:text-emerald-400 font-medium uppercase tracking-wider">
+          <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
             Nuestro Compromiso
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
             Innovación al servicio del{" "}
-            <span className="text-emerald-600 dark:text-emerald-400">
+            <span className="text-mihub-green">
               territorio
             </span>
           </h2>
@@ -79,11 +79,11 @@ export default function SustainabilitySection() {
           {pillars.map((pillar, index) => (
             <Card
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 border-emerald-100 dark:border-emerald-900/30 animate-fade-in"
+              className="group hover:shadow-lg transition-all duration-300 border-mihub-green/20 animate-fade-in"
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
               <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-mihub-green/20 rounded-full flex items-center justify-center mx-auto mb-4 text-mihub-green group-hover:scale-110 transition-transform">
                   {pillar.icon}
                 </div>
                 <h3 className="font-semibold mb-2 text-sm">{pillar.title}</h3>
@@ -96,7 +96,7 @@ export default function SustainabilitySection() {
         </div>
 
         {/* Impact Data */}
-        <div className="bg-emerald-600 dark:bg-emerald-800 rounded-2xl p-8 md:p-12 text-white animate-fade-in">
+        <div className="bg-mihub-green rounded-2xl p-8 md:p-12 text-white animate-fade-in">
           <div className="text-center mb-8">
             <TreePine className="h-10 w-10 mx-auto mb-3 opacity-80" />
             <h3 className="text-2xl font-bold mb-2">
