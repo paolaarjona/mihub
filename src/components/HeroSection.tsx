@@ -20,7 +20,7 @@ export default function HeroSection() {
   // Calculate parallax effect
   const backgroundY = scrollY * 0.5;
   const contentY = scrollY * 0.2;
-  return <section className="relative h-screen min-h-[600px] overflow-hidden z-10">
+  return <section className="relative min-h-screen overflow-hidden z-10">
       {/* Background image with parallax */}
       <div className="absolute inset-0 bg-cover bg-center z-0" style={{
       backgroundImage: "url('/lovable-uploads/hero-bg.png')",
