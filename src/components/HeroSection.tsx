@@ -45,7 +45,7 @@ export default function HeroSection() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Innovación para el turismo y los sectores clave de la economía canaria
           </h1>
-          <p className="text-base text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed sm:text-base">
+          <p className="text-base text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed sm:text-base">
             Impulsamos la transformación digital y sostenible del sector empresarial canario a través de soluciones y proyectos innovadores que conectan el turismo responsable con las nuevas tecnologías.
           </p>
           
