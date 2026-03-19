@@ -153,7 +153,7 @@ export default function Index() {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center lg:text-left">
               <div className="mb-8">
-                <Badge variant="outline" className="mb-4">Una iniciativa de Grupo Martínez Abolafio</Badge>
+                <Badge variant="outline" className="mb-4">Una iniciativa de Fundación Martínez Abolafio</Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
