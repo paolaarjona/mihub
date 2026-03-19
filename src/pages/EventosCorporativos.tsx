@@ -129,7 +129,7 @@ export default function EventosCorporativos() {
                   className="glass-card rounded-xl text-center animate-fade-in"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
-                  <div className="mb-4 p-3 rounded-full bg-primary/10 inline-flex">
+                  <div className="mb-4 p-3 rounded-full bg-secondary/15 inline-flex">
                     {servicio.icon}
                   </div>
                   <h3 className="text-lg font-semibold mb-3">{servicio.title}</h3>
