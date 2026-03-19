@@ -65,22 +65,27 @@ export default function SustainabilitySection() {
               <span className="text-mihub-green">transformando vidas</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              MiHub nace del compromiso de la{" "}
+              MiHub nace del compromiso de{" "}
+              <strong className="text-foreground">Fundación Martínez Abolafio</strong>
+              , creada en 2014 como expresión del compromiso social del Grupo Martínez Abolafio.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              La Fundación trabaja para{" "}
               <strong className="text-foreground">
-                Fundación Martínez Abolafio
+                contribuir al desarrollo de una sociedad más creativa, sostenible e inclusiva en Canarias y África,
+              </strong>{" "}
+              impulsando iniciativas que generan oportunidades reales para las personas, fomentan el talento y promueven la innovación social.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              A través de sus proyectos, conecta personas, empresas e instituciones para dar respuesta a los principales retos sociales,{" "}
+              <strong className="text-foreground">
+                mejorar la calidad de vida y avanzar hacia un modelo de desarrollo más sostenible y equitativo.
               </strong>
-              , creada en 2014 por el Grupo Martínez Abolafio (GMA), con más de
-              50 años de trayectoria en España. La Fundación representa la
-              culminación de una visión transmitida de generación en generación:
-              trabajar por la mejora del entorno social y la búsqueda de un
-              futuro prometedor.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Cada proyecto, cada evento y cada colaboración en MiHub está
-              guiada por un principio fundamental:{" "}
+              En este contexto, <strong className="text-foreground">MiHub</strong> se configura como un espacio donde esa visión se activa, impulsando un{" "}
               <strong className="text-foreground">
-                construir un modelo turístico y empresarial que regenere,
-                respete y transforme Canarias para las generaciones futuras.
+                modelo turístico y empresarial que regenere, respete y transforme Canarias para las generaciones futuras.
               </strong>
             </p>
           </div>
