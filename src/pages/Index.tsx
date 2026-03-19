@@ -433,7 +433,7 @@ export default function Index() {
                 
                 {/* Button now appears first, before the form */}
                 <div className="mb-8 sm:mb-12">
-                  <Button asChild size="lg" className="btn-primary">
+                  <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg hover:shadow-xl transition-all duration-300">
                     <Link to="/contact">Contacta con nosotros</Link>
                   </Button>
                 </div>
