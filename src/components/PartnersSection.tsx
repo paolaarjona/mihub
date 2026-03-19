@@ -26,7 +26,7 @@ export default function PartnersSection() {
     },
     {
       name: "Santander",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png",
+      logo: "/lovable-uploads/santander-logo.png",
       description: "Socio estratégico en innovación financiera y transformación digital.",
       logoClass: ""
     },
