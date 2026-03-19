@@ -355,7 +355,7 @@ export default function Index() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                          <Camera className="w-8 h-8 text-primary" />
+                          <Camera className="w-8 h-8 text-secondary" />
                         </div>
                         <h4 className="font-semibold">Grabación Profesional</h4>
                         <p className="text-sm text-muted-foreground">Cámaras 4K y equipos de grabación</p>
