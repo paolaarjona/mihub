@@ -88,7 +88,7 @@ export default function PartnersSection() {
           slidesToScroll: 1,
           containScroll: false
         }} className="w-full">
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 pb-4">
               {partners.map((partner, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full overflow-visible">
                     <div className="w-full h-16 md:h-20 mb-3 md:mb-4 flex items-center justify-center">
