@@ -148,7 +148,7 @@ export default function Index() {
         <HeroSection />
         
         {/* About MiHub Summary */}
-        <section className="py-20 bg-background relative overflow-hidden">
+        <section className="py-10 md:py-14 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
             <div className="max-w-3xl mx-auto">

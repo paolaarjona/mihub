@@ -48,7 +48,7 @@ export default function SustainabilitySection() {
       <DecorativeShapes variant="top-right" />
       <div className="container">
         {/* Foundation Identity Block - linear layout */}
-        <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
+        <div className="max-w-4xl mx-auto mb-12 animate-fade-in">
 
           {/* Label + heading with logo to the right */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
@@ -137,18 +137,14 @@ export default function SustainabilitySection() {
 
         {/* Impact Data */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in">
-          {impactData.map((item, index) => {}
-
-
-
-
-
-
-
-
-
-
-          )}
+          {impactData.map((item, index) => (
+            <Card key={index} className="text-center border-mihub-green/20 bg-mihub-green/5">
+              <CardContent className="pt-6">
+                <p className="text-2xl font-bold text-mihub-green">{item.value}{item.suffix}</p>
+                <p className="text-xs text-muted-foreground mt-1">{item.label}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>);
