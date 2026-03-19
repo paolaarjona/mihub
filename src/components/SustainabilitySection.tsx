@@ -99,7 +99,7 @@ export default function SustainabilitySection() {
         <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-10" />
 
         {/* Commitment Manifesto */}
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-in">
           <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
             Nuestro Compromiso
           </span>
