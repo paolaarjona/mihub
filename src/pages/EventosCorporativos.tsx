@@ -29,22 +29,22 @@ export default function EventosCorporativos() {
 
   const servicios = [
     {
-      icon: <Calendar className="h-8 w-8 text-primary" />,
+      icon: <Calendar className="h-8 w-8 text-secondary" />,
       title: t.corporateEvents.services.organization.title,
       description: t.corporateEvents.services.organization.description
     },
     {
-      icon: <Users className="h-8 w-8 text-primary" />,
+      icon: <Users className="h-8 w-8 text-secondary" />,
       title: t.corporateEvents.services.experts.title,
       description: t.corporateEvents.services.experts.description
     },
     {
-      icon: <MapPin className="h-8 w-8 text-primary" />,
+      icon: <MapPin className="h-8 w-8 text-secondary" />,
       title: t.corporateEvents.services.venues.title,
       description: t.corporateEvents.services.venues.description
     },
     {
-      icon: <Trophy className="h-8 w-8 text-primary" />,
+      icon: <Trophy className="h-8 w-8 text-secondary" />,
       title: t.corporateEvents.services.experiences.title,
       description: t.corporateEvents.services.experiences.description
     }
