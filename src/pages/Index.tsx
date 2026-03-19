@@ -228,10 +228,10 @@ export default function Index() {
             </div>
             
             <Tabs defaultValue="salas" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="salas">Nuestras Salas</TabsTrigger>
-                <TabsTrigger value="plano">Plano del Espacio</TabsTrigger>
-                <TabsTrigger value="servicios">Servicios</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-3 bg-muted/50">
+                <TabsTrigger value="salas" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Nuestras Salas</TabsTrigger>
+                <TabsTrigger value="plano" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Plano del Espacio</TabsTrigger>
+                <TabsTrigger value="servicios" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Servicios</TabsTrigger>
               </TabsList>
 
               <TabsContent value="salas" className="mt-8">
