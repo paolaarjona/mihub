@@ -148,24 +148,42 @@ export default function Index() {
         <HeroSection />
         
         {/* About MiHub Summary */}
-        <section className="py-16 bg-background relative overflow-hidden">
+        <section className="py-20 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center lg:text-left">
-              <div className="mb-8">
-                <Badge variant="outline" className="mb-4">Una iniciativa de Fundación Martínez Abolafio</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="max-w-5xl mx-auto">
+              {/* Header */}
+              <div className="mb-14 max-w-3xl">
+                <h2 className="text-3xl md:text-5xl font-bold mb-2">
                   ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">MiHub es el primer <strong className="text-primary">centro de innovación turística de Canarias</strong>, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.</p>
-                <p className="text-muted-foreground leading-relaxed mb-4">Un espacio que conecta <strong className="text-primary">talento, empresas e instituciones</strong> para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.</p>
-                <p className="text-muted-foreground leading-relaxed">A través de la colaboración y la experimentación, MiHub contribuye a <strong className="text-primary">posicionar Canarias como un referente en turismo inteligente.</strong></p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-primary" />
+
+              {/* Two-column staggered layout */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10 mb-16">
+                {/* Left column - main description */}
+                <div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    MiHub es el primer <strong className="text-primary">centro de innovación turística de Canarias</strong>, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.
+                  </p>
+                </div>
+
+                {/* Right column - offset for visual rhythm */}
+                <div className="lg:pt-8">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Un espacio que conecta <strong className="text-primary">talento, empresas e instituciones</strong> para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    A través de la colaboración y la experimentación, MiHub contribuye a <strong className="text-primary">posicionar Canarias como un referente en turismo inteligente.</strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Three feature cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Ecosistema Colaborativo</h3>
                   <p className="text-sm text-muted-foreground">
@@ -173,9 +191,9 @@ export default function Index() {
                   </p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Camera className="w-8 h-8 text-primary" />
+                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <Camera className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Turismo Inteligente</h3>
                   <p className="text-sm text-muted-foreground">
@@ -183,9 +201,9 @@ export default function Index() {
                   </p>
                 </div>
                 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Wifi className="w-8 h-8 text-primary" />
+                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <Wifi className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Innovación Sostenible</h3>
                   <p className="text-sm text-muted-foreground">
