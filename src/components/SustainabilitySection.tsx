@@ -51,8 +51,8 @@ export default function SustainabilitySection() {
         <div className="max-w-4xl mx-auto mb-12 animate-fade-in">
 
           {/* Label + heading with logo to the right */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
-            <div>
+          <div className="flex flex-col lg:flex-row-reverse lg:items-end lg:justify-between gap-6 mb-8">
+            <div className="lg:text-right">
               <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
                 Fundación Martínez Abolafio
               </span>
