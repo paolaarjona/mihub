@@ -160,10 +160,9 @@ export default function Index() {
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHub es el primer centro de innovación turística de Canarias, un ecosistema
 empresarial diseñado para impulsar la transformación digital y sostenible del sector
 turístico canario.</p>
-                <p className="text-muted-foreground leading-relaxed">Respaldado por Grupo Martínez Abolafio, con más de 50 años de experiencia en el sector turístico y empresarial canario, MiHub conecta empresas, startups, instituciones y profesionales para crear soluciones innovadoras que posicionen a Canarias como referente en turismo inteligente y sostenible.<strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
-                  en el sector turístico y empresarial canario, MiHub conecta empresas, startups, 
-                  instituciones y profesionales para crear soluciones innovadoras que posicionen 
-                  a Canarias como referente en turismo inteligente y sostenible.
+                <p className="text-muted-foreground leading-relaxed">Un espacio que conecta talento, empresas e instituciones para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.
+                  <br /><br />
+                  A través de la colaboración y la experimentación, <strong>MiHub</strong> contribuye a posicionar Canarias como un referente en turismo inteligente.
                 </p>
               </div>
               
