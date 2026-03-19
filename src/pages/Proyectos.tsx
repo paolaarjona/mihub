@@ -303,7 +303,7 @@ export default function Proyectos() {
           <DecorativeShapes variant="top-right" />
           <div className="container">
             <div className="max-w-4xl mx-auto text-center animate-fade-in">
-              <span className="text-sm text-primary font-medium uppercase tracking-wider">
+              <span className="text-sm text-secondary font-medium uppercase tracking-wider">
                 Nuestros Servicios
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-6">
