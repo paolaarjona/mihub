@@ -119,7 +119,7 @@ export default function PartnersSection() {
           </div>
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <p className="text-muted-foreground mb-4">
             ¿Quieres formar parte de nuestro ecosistema de partners?
           </p>
