@@ -116,27 +116,27 @@ export default function Index() {
 
   // Ventajas competitivas
   const advantages = [{
-    icon: <Lightbulb className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Lightbulb className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Metodología Propia",
     description: "Proceso validado de transformación en 3 fases específico para empresas canarias."
   }, {
-    icon: <Users className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Users className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Ecosistema de Partners",
     description: "Red de colaboradores estratégicos: Oracle, Santander, Telefónica, Air Europa y más."
   }, {
-    icon: <Brain className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Brain className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Formación Especializada",
     description: "Programas de capacitación diseñados para profesionales y equipos directivos."
   }, {
-    icon: <Cog className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Cog className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Laboratorios de Innovación",
     description: "Espacios equipados para desarrollo de proyectos y pruebas de concepto."
   }, {
-    icon: <Target className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Target className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Think Tanks",
     description: "Sesiones de trabajo colaborativo con expertos del sector y la academia."
   }, {
-    icon: <Zap className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />,
+    icon: <Zap className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "50 años de experiencia",
     description: "Respaldo del Grupo Martínez Abolafio, líder industrial en Canarias."
   }];
