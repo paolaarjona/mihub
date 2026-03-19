@@ -58,14 +58,23 @@ export default function SustainabilitySection() {
             />
           </div>
 
-          {/* Label + heading */}
-          <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
-            Fundación Martínez Abolafio
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-8">
-            Impulsando oportunidades,{" "}
-            <span className="text-mihub-green">transformando vidas</span>
-          </h2>
+          {/* Label + heading with logo to the right */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+            <div>
+              <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
+                Fundación Martínez Abolafio
+              </span>
+              <h2 className="text-3xl md:text-5xl font-bold mt-2">
+                Impulsando oportunidades,{" "}
+                <span className="text-mihub-green">transformando vidas</span>
+              </h2>
+            </div>
+            <img
+              src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
+              alt="Logo Fundación Martínez Abolafio"
+              className="w-36 h-36 lg:w-44 lg:h-44 object-contain flex-shrink-0"
+            />
+          </div>
 
           {/* Text with clear hierarchy - first paragraph larger */}
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
