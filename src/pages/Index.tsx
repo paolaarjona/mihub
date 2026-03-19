@@ -151,7 +151,7 @@ export default function Index() {
         <section className="py-16 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center lg:text-left">
               <div className="mb-8">
                 <Badge variant="outline" className="mb-4">Una iniciativa de Grupo Martínez Abolafio</Badge>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
