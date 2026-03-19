@@ -1,4 +1,4 @@
-import { Calendar, Users, Lightbulb, Zap } from "lucide-react";
+import { Calendar, Users, Lightbulb, Zap, Handshake } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function TimelineSection() {
@@ -32,6 +32,13 @@ export default function TimelineSection() {
       description: "Foco en Inteligencia Artificial con nuevos socios, equipo directivo y metodología propia.",
       icon: <Zap className="h-5 w-5" />,
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop"
+    },
+    {
+      year: "2026",
+      title: "Expansión de Partners",
+      description: "Crecimiento de la red de socios estratégicos, alianzas con nuevas empresas e instituciones para escalar el impacto en el ecosistema canario.",
+      icon: <Handshake className="h-5 w-5" />,
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop"
     }
   ];
   
@@ -43,14 +50,14 @@ export default function TimelineSection() {
             Nuestra Historia
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-            7 años transformando Canarias
+            8 años transformando Canarias
           </h2>
           <p className="text-muted-foreground">
             Desde 2018, hemos evolucionado hasta convertirnos en el centro de referencia para la innovación empresarial.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {timelineEvents.map((event, index) => (
             <div key={index} className="glass-card rounded-xl p-5 h-full animate-fade-in" style={{ animationDelay: `${(index + 1) * 150}ms` }}>
               {/* Image */}
