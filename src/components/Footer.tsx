@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="animate-fade-in [animation-delay:100ms]">
             <h4 className="text-xl font-bold mb-4">MiHub 3.0</h4>
             <p className="text-muted-foreground mb-4">
-              MiHub es el hub de innovación y transformación del Grupo Martínez Abolafio, creado para impulsar la competitividad de las empresas canarias a través de la innovación, la sostenibilidad y la inteligencia artificial.
+              MiHUB es un espacio de innovación impulsado por Fundación Martínez Abolafio, creado para potenciar la transformación y competitividad de las empresas canarias a través de la innovación, la sostenibilidad y la inteligencia artificial.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/mihub-hubdeinnovacion/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
@@ -51,7 +51,7 @@ export default function Footer() {
             }, {
               name: "Contacto",
               path: "/contact"
-            }].map(link => <li key={link.name}>
+            }].map((link) => <li key={link.name}>
                   <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.name}
                   </Link>
