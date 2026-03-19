@@ -137,13 +137,13 @@ export default function SustainabilitySection() {
 
         {/* Impact Data */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in">
-          {impactData.map((item, index) =>
-          <Card key={index} className="text-center border-mihub-green/20 bg-mihub-green/5">
-              
+          {impactData.map((item, index) => {}
 
 
-            
-            </Card>
+
+
+
+
           )}
         </div>
       </div>
