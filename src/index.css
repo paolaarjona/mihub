@@ -18,14 +18,14 @@
     --primary-foreground: 0 0% 100%;
     
     /* Secondary: miHub Yellow/Gold #DAAC21 */
-    --secondary: 44 76% 49%;
+    --secondary: 45.1 73.7% 49.2%;
     --secondary-foreground: 0 0% 0%;
     
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     
     /* Accent: miHub Yellow */
-    --accent: 44 76% 49%;
+    --accent: 45.1 73.7% 49.2%;
     --accent-foreground: 0 0% 0%;
     
     --destructive: 0 100% 64%;
@@ -61,14 +61,14 @@
     --primary-foreground: 0 0% 100%;
     
     /* Secondary: miHub Yellow/Gold */
-    --secondary: 44 76% 49%;
+    --secondary: 45.1 73.7% 49.2%;
     --secondary-foreground: 0 0% 0%;
     
     --muted: 220 40% 20%;
     --muted-foreground: 215 20.2% 65.1%;
     
     /* Accent: miHub Yellow */
-    --accent: 44 76% 49%;
+    --accent: 45.1 73.7% 49.2%;
     --accent-foreground: 0 0% 0%;
     
     --destructive: 0 100% 64%;
