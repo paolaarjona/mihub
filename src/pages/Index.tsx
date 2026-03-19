@@ -395,7 +395,7 @@ export default function Index() {
           <div className="container relative z-10">
             <div className="animate-fade-in">
               <div className="max-w-4xl mx-auto text-center mb-8 lg:mb-12">
-                <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
+                <span className="text-xs sm:text-sm text-secondary font-medium uppercase tracking-wider">
                   Eventos Corporativos
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 sm:mb-6">
