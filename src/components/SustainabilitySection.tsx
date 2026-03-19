@@ -50,23 +50,22 @@ export default function SustainabilitySection() {
         {/* Foundation Identity Block - linear layout */}
         <div className="max-w-4xl mx-auto mb-12 animate-fade-in">
 
-          {/* Label + heading with logo to the right */}
-          <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:justify-between gap-6 mb-8">
-            <div className="lg:text-right">
-              <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
-                Fundación Martínez Abolafio
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">
-                Impulsando oportunidades,{" "}
-                <span className="text-mihub-green">transformando vidas</span>
-              </h2>
-            </div>
+          {/* Top bar: logo left, label right */}
+          <div className="flex items-center justify-between mb-8">
             <img
               src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
               alt="Logo Fundación Martínez Abolafio"
-              className="w-28 h-28 lg:w-36 lg:h-36 object-contain flex-shrink-0 lg:-ml-4 lg:mt-4" />
-            
+              className="w-20 h-20 lg:w-28 lg:h-28 object-contain" />
+            <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
+              Fundación Martínez Abolafio
+            </span>
           </div>
+
+          {/* Full-width heading below */}
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">
+            <span className="text-mihub-green">Impulsando oportunidades,</span>{" "}
+            <span className="text-primary font-bold">transformando vidas</span>
+          </h2>
 
           {/* Text with clear hierarchy - first paragraph larger */}
           <p className="text-base text-muted-foreground leading-relaxed mb-6 text-justify">
