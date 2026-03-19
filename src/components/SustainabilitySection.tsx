@@ -69,25 +69,25 @@ export default function SustainabilitySection() {
           </div>
 
           {/* Text with clear hierarchy - first paragraph larger */}
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-6">
             MiHub nace del compromiso de{" "}
             <strong className="text-mihub-green">Fundación Martínez Abolafio</strong>
             , creada en 2014 como expresión del compromiso social del Grupo Martínez Abolafio.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-6">
             La Fundación trabaja para{" "}
             <strong className="text-mihub-green">
               contribuir al desarrollo de una sociedad más creativa, sostenible e inclusiva en Canarias y África,
             </strong>{" "}
             impulsando iniciativas que generan oportunidades reales para las personas, fomentan el talento y promueven la innovación social.
           </p>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-6">
             A través de sus proyectos, conecta personas, empresas e instituciones para dar respuesta a los principales retos sociales,{" "}
             <strong className="text-mihub-green">
               mejorar la calidad de vida y avanzar hacia un modelo de desarrollo más sostenible y equitativo.
             </strong>
           </p>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             En este contexto, <strong className="text-mihub-green">MiHub</strong> se configura como un espacio donde esa visión se activa, impulsando un{" "}
             <strong className="text-mihub-green">
               modelo turístico y empresarial que regenere, respete y transforme Canarias para las generaciones futuras.
