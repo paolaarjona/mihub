@@ -37,12 +37,6 @@ export default function Footer() {
               name: "Servicios",
               path: "/servicios"
             }, {
-              name: "Sobre MiHub",
-              path: "/sobre-mihub"
-            }, {
-              name: "Proyectos",
-              path: "/proyectos"
-            }, {
               name: "Eventos Corporativos",
               path: "/eventos-corporativos"
             }, {
@@ -52,7 +46,7 @@ export default function Footer() {
               name: "Contacto",
               path: "/contact"
             }].map((link) => <li key={link.name}>
-                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors" onClick={() => window.scrollTo(0, 0)}>
                     {link.name}
                   </Link>
                 </li>)}
