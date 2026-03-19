@@ -151,7 +151,7 @@ export default function Index() {
         <section className="py-10 md:py-14 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-bold mb-8">
                 ¿Qué es <span className="text-primary">MiHUB</span>?
               </h2>
