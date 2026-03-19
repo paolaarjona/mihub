@@ -157,7 +157,7 @@ export default function Index() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHub es el primer centro de innovación turística de Canarias, un ecosistema
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed font-normal">MiHub es el primer centro de innovación turística de Canarias, un ecosistema
 empresarial diseñado para impulsar la transformación digital y sostenible del sector
 turístico canario.</p>
                 <p className="text-muted-foreground leading-relaxed">Un espacio que conecta talento, empresas e instituciones para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.
