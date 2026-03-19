@@ -17,7 +17,7 @@ export default function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a href="https://x.com/marinainnovahub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <img src="/lovable-uploads/x-logo-new.png" alt="X" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition-opacity" />
+                
                 <span className="sr-only">X</span>
               </a>
               <a href="https://www.instagram.com/marinainnovahub/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
