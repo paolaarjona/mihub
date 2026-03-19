@@ -54,7 +54,7 @@ export default function HeroSection() {
           </div>
           
           <div className="flex justify-center mb-20 sm:mb-28">
-            <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
+            <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px] rounded-full transform transition-all duration-300 hover:translate-y-[-2px] text-sm sm:text-base bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg">
               <Link to="/proyectos">Conoce nuestros Servicios</Link>
             </Button>
           </div>

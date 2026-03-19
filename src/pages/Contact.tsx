@@ -224,7 +224,7 @@ export default function Contact() {
                       
                       </div>
                       
-                      <Button type="submit" className="w-full btn-primary">
+                      <Button type="submit" variant="secondary" className="w-full rounded-full font-medium">
                         <Send className="mr-2 h-4 w-4" />
                         {t.contact.send}
                       </Button>
