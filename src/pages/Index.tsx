@@ -157,7 +157,9 @@ export default function Index() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   ¿Qué es <span className="text-primary">MiHUB</span>?
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHub es el primer centro de innovación turística de Canarias, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.</p>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">MiHub es el primer centro de innovación turística de Canarias, un ecosistema
+empresarial diseñado para impulsar la transformación digital y sostenible del sector
+turístico canario.</p>
                 <p className="text-muted-foreground leading-relaxed">Respaldado por Grupo Martínez Abolafio, con más de 50 años de experiencia en el sector turístico y empresarial canario, MiHub conecta empresas, startups, instituciones y profesionales para crear soluciones innovadoras que posicionen a Canarias como referente en turismo inteligente y sostenible.<strong>Grupo Martínez Abolafio</strong>, con más de 50 años de experiencia 
                   en el sector turístico y empresarial canario, MiHub conecta empresas, startups, 
                   instituciones y profesionales para crear soluciones innovadoras que posicionen 
@@ -465,9 +467,7 @@ export default function Index() {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {advantages.map((feature, index) => <div key={index} className="glass-card rounded-xl animate-fade-in flex flex-col items-center text-center" style={{
-              animationDelay: `${(index + 1) * 100}ms`
-            }}>
+              {advantages.map((feature, index) => <div key={index} className="glass-card rounded-xl animate-fade-in flex flex-col items-center text-center" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
                   <div className="mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-primary/10">
                     {feature.icon}
                   </div>
