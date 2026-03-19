@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Lightbulb, Building2, Leaf, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,33 +7,18 @@ export default function HeroSection() {
   const {
     t
   } = useLanguage();
-  const [scrollY, setScrollY] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  // Calculate parallax effect
-  const backgroundY = scrollY * 0.5;
-  const contentY = scrollY * 0.2;
   return <section className="relative min-h-screen overflow-hidden z-10">
-      {/* Background image with parallax */}
+      {/* Background image */}
       <div className="absolute inset-0 bg-cover bg-center z-0" style={{
-      backgroundImage: "url('/lovable-uploads/hero-bg.png')",
-      transform: `translateY(${backgroundY}px)`,
-      backgroundPosition: `center ${50 + scrollY * 0.05}%`
+      backgroundImage: "url('/lovable-uploads/hero-bg.png')"
     }} />
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-[#0a1628]/75 z-[1]" />
       
       {/* Content */}
-      <div className="relative z-[2] h-full flex flex-col justify-center items-center text-center px-4 sm:px-6" style={{
-      transform: `translateY(${contentY}px)`
-    }}>
+      <div className="relative z-[2] h-full flex flex-col justify-center items-center text-center px-4 sm:px-6">
         <div className="max-w-4xl animate-fade-in">
           {/* Logo de miHUB - 40% más grande que el anterior */}
           <div className="mb-4 sm:mb-6 mt-28 sm:mt-36">
