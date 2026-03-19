@@ -96,10 +96,10 @@ export default function SustainabilitySection() {
         </div>
 
         {/* Divider */}
-        <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-16" />
+        <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-10" />
 
         {/* Commitment Manifesto */}
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-10 animate-fade-in">
           <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
             Nuestro Compromiso
           </span>
@@ -115,7 +115,7 @@ export default function SustainabilitySection() {
         </div>
 
         {/* Pillars */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           {pillars.map((pillar, index) =>
           <Card
             key={index}

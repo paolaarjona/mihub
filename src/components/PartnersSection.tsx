@@ -69,7 +69,7 @@ export default function PartnersSection() {
   ];
   return <section className="section bg-muted/30">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
           <span className="text-sm text-secondary font-medium uppercase tracking-wider">
             Nuestro Ecosistema
           </span>
@@ -119,7 +119,7 @@ export default function PartnersSection() {
           </div>
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <p className="text-muted-foreground mb-4">
             ¿Quieres formar parte de nuestro ecosistema de partners?
           </p>

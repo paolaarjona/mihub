@@ -133,7 +133,7 @@
   }
   
   .section {
-    @apply py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 w-full;
+    @apply py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 w-full;
   }
   
   .glass-card {
