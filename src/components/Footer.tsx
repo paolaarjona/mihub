@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
             <h4 className="text-xl font-bold mb-4">MiHub 3.0</h4>
             <p className="text-muted-foreground mb-4">
