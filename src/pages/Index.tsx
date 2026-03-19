@@ -182,8 +182,8 @@ export default function Index() {
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Camera className="w-7 h-7 text-primary" />
+                  <div className="w-14 h-14 bg-secondary/15 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Camera className="w-7 h-7 text-secondary" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">Turismo Inteligente</h3>
                   <p className="text-sm text-muted-foreground">
