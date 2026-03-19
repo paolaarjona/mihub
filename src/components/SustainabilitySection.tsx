@@ -49,7 +49,6 @@ export default function SustainabilitySection() {
       <div className="container">
         {/* Foundation Identity Block - linear layout */}
         <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
-          </div>
 
           {/* Label + heading with logo to the right */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
