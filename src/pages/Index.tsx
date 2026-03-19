@@ -167,7 +167,7 @@ export default function Index() {
               </p>
 
               {/* Divider line */}
-              <div className="w-16 h-1 bg-primary rounded-full mb-12" />
+              <div className="w-16 h-1 bg-primary rounded-full mb-12 mx-auto" />
 
               {/* Feature highlights - horizontal grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
