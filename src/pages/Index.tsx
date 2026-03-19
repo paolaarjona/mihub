@@ -122,7 +122,7 @@ export default function Index() {
   }, {
     icon: <Users className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Ecosistema de Partners",
-    description: "Red de colaboradores estratégicos: Oracle, Santander, Telefónica, Air Europa y más."
+    description: "Red de colaboradores estratégicos: FTL, Fundación Once, ULPGC, Santander."
   }, {
     icon: <Brain className="h-10 w-10 sm:h-12 sm:w-12 text-secondary" />,
     title: "Formación Especializada",
