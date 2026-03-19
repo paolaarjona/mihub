@@ -136,8 +136,7 @@ export default function Contact() {
                       <h3 className="font-semibold mb-1">{t.contact.receptionHours}</h3>
                       <p className="text-muted-foreground">
                         {t.contact.checkInTime}<br />
-                        {t.contact.checkOutTime}<br />
-                        Domingos: Cerrado
+                        Sábados y Domingos: Cerrado
                       </p>
                     </div>
                   </div>
