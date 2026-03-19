@@ -145,9 +145,6 @@ export default function SustainabilitySection() {
               </CardContent>
             </Card>
           ))}
-
-
-          )}
         </div>
       </div>
     </section>);
