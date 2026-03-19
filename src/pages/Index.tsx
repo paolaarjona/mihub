@@ -291,8 +291,8 @@ export default function Index() {
                       <div className="space-y-4">
                         <div className="grid grid-cols-3 gap-4">
                           <div className="flex flex-col items-center text-center space-y-2">
-                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                              <MapPin className="w-6 h-6 text-primary" />
+                            <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
+                              <MapPin className="w-6 h-6 text-secondary" />
                             </div>
                             <span className="text-sm">Marina de Lanzarote</span>
                           </div>
