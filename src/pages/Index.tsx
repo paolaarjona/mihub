@@ -471,7 +471,7 @@ export default function Index() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {advantages.map((feature, index) => <div key={index} className="glass-card rounded-xl animate-fade-in flex flex-col items-center text-center" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
-                  <div className="mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-primary/10">
+                  <div className="mb-3 sm:mb-4 p-2 sm:p-3 rounded-full bg-secondary/15">
                     {feature.icon}
                   </div>
                   <h3 className="text-lg sm:text-xl font-semibold mb-2">{feature.title}</h3>
