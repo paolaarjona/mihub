@@ -90,7 +90,7 @@ export default function PartnersSection() {
         }} className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
               {partners.map((partner, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="group glass-card p-4 md:p-6 rounded-xl flex flex-col items-center text-center animate-fade-in hover:shadow-lg transition-all duration-300 h-full overflow-visible">
                     <div className="w-full h-16 md:h-20 mb-3 md:mb-4 flex items-center justify-center">
                       <img src={partner.logo} alt={partner.name} className={`${partner.logoClass || "max-h-12 md:max-h-14"} w-auto object-contain group-hover:scale-105 transition-transform`} />
                     </div>
