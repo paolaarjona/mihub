@@ -410,17 +410,17 @@ export default function Proyectos() {
               </div>
 
               {/* Portfolio de Proyectos con Empresas */}
-              <div className="glass-card rounded-2xl p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/20 dark:to-green-900/20 border-2 border-green-200 dark:border-green-800">
-                <h3 className="text-xl font-bold mb-6 text-green-900 dark:text-green-100">
+              <div className="glass-card rounded-2xl p-6 bg-gradient-to-br from-secondary/10 to-secondary/20 dark:from-secondary/10 dark:to-secondary/20 border-2 border-secondary/30 dark:border-secondary/40">
+                <h3 className="text-xl font-bold mb-6 text-secondary-foreground dark:text-secondary">
                   Portfolio de Proyectos con Empresas
                 </h3>
                 <ul className="space-y-3">
                   {portfolioEmpresasData.map((proyecto) => (
                     <li key={proyecto.id} className="flex items-start">
-                      <span className="text-green-600 dark:text-green-400 font-semibold mr-3">{proyecto.id}.</span>
+                      <span className="text-secondary font-semibold mr-3">{proyecto.id}.</span>
                       <button
                         onClick={() => handleProyectoClick(proyecto)}
-                        className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:underline text-left transition-colors"
+                        className="text-foreground/70 hover:text-secondary hover:underline text-left transition-colors"
                       >
                         {proyecto.name}
                       </button>
