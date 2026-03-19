@@ -371,7 +371,7 @@ export default function Index() {
                       
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                          <div className="w-8 h-8 bg-secondary rounded flex items-center justify-center">
                             <div className="w-4 h-4 bg-white rounded"></div>
                           </div>
                         </div>
