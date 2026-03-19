@@ -334,8 +334,8 @@ export default function Index() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                   {amenities.map((amenity, index) => <Card key={index} className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <amenity.icon className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
+                          <amenity.icon className="w-6 h-6 text-secondary" />
                         </div>
                         <div>
                           <h4 className="font-semibold mb-2">{amenity.name}</h4>
