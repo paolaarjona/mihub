@@ -64,7 +64,7 @@ export default function SustainabilitySection() {
             <img
               src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
               alt="Logo Fundación Martínez Abolafio"
-              className="w-36 h-36 lg:w-44 lg:h-44 object-contain flex-shrink-0 lg:-ml-4 lg:mt-4" />
+              className="w-28 h-28 lg:w-36 lg:h-36 object-contain flex-shrink-0 lg:-ml-4 lg:mt-4" />
             
           </div>
 
