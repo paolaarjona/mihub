@@ -98,10 +98,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.address}</h3>
                       <p className="text-muted-foreground">
-                        Marina de Lanzarote<br />
-                        Edificio MiHub 3.0<br />
-                        35500 Arrecife, Lanzarote<br />
-                        Islas Canarias, España
+                        Av. Olof Palme, 35500 Arrecife, Las Palmas
                       </p>
                     </div>
                   </div>
