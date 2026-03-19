@@ -458,7 +458,7 @@ export default function Index() {
           <DecorativeShapes variant="bottom-right" />
           <div className="container relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 animate-fade-in">
-              <span className="text-xs sm:text-sm text-primary font-medium uppercase tracking-wider">
+              <span className="text-xs sm:text-sm text-secondary font-medium uppercase tracking-wider">
                 ¿Por qué miHUB?
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-3 sm:mb-4">
