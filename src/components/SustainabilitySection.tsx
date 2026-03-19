@@ -147,10 +147,6 @@ export default function SustainabilitySection() {
           ))}
 
 
-
-
-
-
           )}
         </div>
       </div>
