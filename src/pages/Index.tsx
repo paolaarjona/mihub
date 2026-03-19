@@ -334,8 +334,8 @@ export default function Index() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                   {amenities.map((amenity, index) => <Card key={index} className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <amenity.icon className="w-6 h-6 text-primary" />
+                        <div className="w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
+                          <amenity.icon className="w-6 h-6 text-secondary" />
                         </div>
                         <div>
                           <h4 className="font-semibold mb-2">{amenity.name}</h4>
@@ -355,7 +355,7 @@ export default function Index() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                          <Camera className="w-8 h-8 text-primary" />
+                          <Camera className="w-8 h-8 text-secondary" />
                         </div>
                         <h4 className="font-semibold">Grabación Profesional</h4>
                         <p className="text-sm text-muted-foreground">Cámaras 4K y equipos de grabación</p>
@@ -363,7 +363,7 @@ export default function Index() {
                       
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                          <Users className="w-8 h-8 text-primary" />
+                          <Users className="w-8 h-8 text-secondary" />
                         </div>
                         <h4 className="font-semibold">Videoconferencia</h4>
                         <p className="text-sm text-muted-foreground">Sistemas de alta definición</p>
@@ -371,7 +371,7 @@ export default function Index() {
                       
                       <div className="text-center">
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-                          <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                          <div className="w-8 h-8 bg-secondary rounded flex items-center justify-center">
                             <div className="w-4 h-4 bg-white rounded"></div>
                           </div>
                         </div>
