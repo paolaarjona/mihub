@@ -47,66 +47,58 @@ export default function SustainabilitySection() {
     <section className="section bg-gradient-to-b from-mihub-green/10 to-background dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
       <DecorativeShapes variant="top-right" />
       <div className="container">
-        {/* Foundation Identity Block - redesigned with asymmetric layout */}
-        <div className="max-w-6xl mx-auto mb-20 animate-fade-in">
-          {/* Top: label + heading spanning full width */}
-          <div className="mb-10">
-            <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
-              Fundación Martínez Abolafio
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">
-              Impulsando oportunidades,{" "}
-              <span className="text-mihub-green">transformando vidas</span>
-            </h2>
+        {/* Foundation Identity Block - linear layout */}
+        <div className="max-w-3xl mx-auto mb-20 animate-fade-in">
+          {/* Logo centered */}
+          <div className="flex justify-center lg:justify-start mb-8">
+            <img
+              src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
+              alt="Logo Fundación Martínez Abolafio"
+              className="w-36 h-36 lg:w-44 lg:h-44 object-contain"
+            />
           </div>
 
-          {/* Three-column layout: logo | col1 | col2 */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Logo - takes 3 cols */}
-            <div className="lg:col-span-3 flex justify-center lg:justify-start">
-              <img
-                src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
-                alt="Logo Fundación Martínez Abolafio"
-                className="w-40 h-40 lg:w-48 lg:h-48 object-contain"
-              />
-            </div>
+          {/* Label + heading */}
+          <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
+            Fundación Martínez Abolafio
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-8">
+            Impulsando oportunidades,{" "}
+            <span className="text-mihub-green">transformando vidas</span>
+          </h2>
 
-            {/* First text column */}
-            <div className="lg:col-span-4 space-y-5">
-              <p className="text-muted-foreground leading-relaxed">
-                MiHub nace del compromiso de{" "}
-                <strong className="text-mihub-green">Fundación Martínez Abolafio</strong>
-                , creada en 2014 como expresión del compromiso social del Grupo Martínez Abolafio.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                La Fundación trabaja para{" "}
-                <strong className="text-mihub-green">
-                  contribuir al desarrollo de una sociedad más creativa, sostenible e inclusiva en Canarias y África,
-                </strong>{" "}
-                impulsando iniciativas que generan oportunidades reales para las personas, fomentan el talento y promueven la innovación social.
-              </p>
-            </div>
-
-            {/* Second text column */}
-            <div className="lg:col-span-5 space-y-5">
-              <p className="text-muted-foreground leading-relaxed">
-                A través de sus proyectos, conecta personas, empresas e instituciones para dar respuesta a los principales retos sociales,{" "}
-                <strong className="text-mihub-green">
-                  mejorar la calidad de vida y avanzar hacia un modelo de desarrollo más sostenible y equitativo.
-                </strong>
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                En este contexto, <strong className="text-mihub-green">MiHub</strong> se configura como un espacio donde esa visión se activa, impulsando un{" "}
-                <strong className="text-mihub-green">
-                  modelo turístico y empresarial que regenere, respete y transforme Canarias para las generaciones futuras.
-                </strong>
-              </p>
-            </div>
-          </div>
+          {/* Text with clear hierarchy - first paragraph larger */}
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            MiHub nace del compromiso de{" "}
+            <strong className="text-mihub-green">Fundación Martínez Abolafio</strong>
+            , creada en 2014 como expresión del compromiso social del Grupo Martínez Abolafio.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            La Fundación trabaja para{" "}
+            <strong className="text-mihub-green">
+              contribuir al desarrollo de una sociedad más creativa, sostenible e inclusiva en Canarias y África,
+            </strong>{" "}
+            impulsando iniciativas que generan oportunidades reales para las personas, fomentan el talento y promueven la innovación social.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            A través de sus proyectos, conecta personas, empresas e instituciones para dar respuesta a los principales retos sociales,{" "}
+            <strong className="text-mihub-green">
+              mejorar la calidad de vida y avanzar hacia un modelo de desarrollo más sostenible y equitativo.
+            </strong>
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            En este contexto, <strong className="text-mihub-green">MiHub</strong> se configura como un espacio donde esa visión se activa, impulsando un{" "}
+            <strong className="text-mihub-green">
+              modelo turístico y empresarial que regenere, respete y transforme Canarias para las generaciones futuras.
+            </strong>
+          </p>
         </div>
 
+        {/* Divider */}
+        <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-16" />
+
         {/* Commitment Manifesto */}
-        <div className="text-center max-w-4xl mx-auto mb-16 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
             Nuestro Compromiso
           </span>

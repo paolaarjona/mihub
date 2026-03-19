@@ -151,64 +151,60 @@ export default function Index() {
         <section className="py-20 bg-background relative overflow-hidden">
           <DecorativeShapes variant="top-right" />
           <div className="container">
-            <div className="max-w-5xl mx-auto">
-              {/* Header */}
-              <div className="mb-14 max-w-3xl">
-                <h2 className="text-3xl md:text-5xl font-bold mb-2">
-                  ¿Qué es <span className="text-primary">MiHUB</span>?
-                </h2>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">
+                ¿Qué es <span className="text-primary">MiHUB</span>?
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                MiHub es el primer <strong className="text-foreground">centro de innovación turística de Canarias</strong>, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Un espacio que conecta <strong className="text-foreground">talento, empresas e instituciones</strong> para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-12">
+                A través de la colaboración y la experimentación, MiHub contribuye a <strong className="text-foreground">posicionar Canarias como un referente en turismo inteligente.</strong>
+              </p>
 
-              {/* Two-column staggered layout */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10 mb-16">
-                {/* Left column - main description */}
-                <div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    MiHub es el primer <strong className="text-primary">centro de innovación turística de Canarias</strong>, un ecosistema empresarial diseñado para impulsar la transformación digital y sostenible del sector turístico canario.
-                  </p>
-                </div>
+              {/* Divider line */}
+              <div className="w-16 h-1 bg-primary rounded-full mb-12" />
 
-                {/* Right column - offset for visual rhythm */}
-                <div className="lg:pt-8">
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Un espacio que conecta <strong className="text-primary">talento, empresas e instituciones</strong> para activar proyectos, generar conocimiento y acelerar soluciones que integren tecnología, sostenibilidad y nuevas formas de entender el turismo.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A través de la colaboración y la experimentación, MiHub contribuye a <strong className="text-primary">posicionar Canarias como un referente en turismo inteligente.</strong>
-                  </p>
-                </div>
-              </div>
-
-              {/* Three feature cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              {/* Feature highlights - vertical list */}
+              <div className="space-y-8">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                     <Users className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Ecosistema Colaborativo</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Conectamos empresas, startups e instituciones para crear sinergias
-                  </p>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Ecosistema Colaborativo</h3>
+                    <p className="text-muted-foreground">
+                      Conectamos empresas, startups e instituciones para crear sinergias
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                     <Camera className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Turismo Inteligente</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Desarrollamos soluciones tecnológicas para el sector turístico
-                  </p>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Turismo Inteligente</h3>
+                    <p className="text-muted-foreground">
+                      Desarrollamos soluciones tecnológicas para el sector turístico
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10 hover:border-primary/25 transition-colors">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                     <Wifi className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Innovación Sostenible</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Promovemos la sostenibilidad en todas nuestras iniciativas
-                  </p>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Innovación Sostenible</h3>
+                    <p className="text-muted-foreground">
+                      Promovemos la sostenibilidad en todas nuestras iniciativas
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
