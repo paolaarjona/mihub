@@ -45,7 +45,7 @@ export default function TimelineSection() {
   return (
     <section className="section bg-card">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
+        <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
           <span className="text-sm text-secondary font-medium uppercase tracking-wider">
             Nuestra Historia
           </span>
