@@ -442,7 +442,7 @@ export default function Proyectos() {
               <p className="text-muted-foreground mb-8 text-lg">
                 Podemos adaptar nuestros servicios a las necesidades específicas de tu organización.
               </p>
-              <Button asChild size="lg" className="btn-primary">
+              <Button asChild size="lg" variant="secondary" className="rounded-full px-6 font-medium shadow-lg hover:shadow-xl transition-all duration-300">
                 <Link to="/contact">
                   Contacta con nosotros <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
