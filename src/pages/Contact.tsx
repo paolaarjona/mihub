@@ -92,8 +92,8 @@ export default function Contact() {
                 
                 <div className="glass-card p-6 space-y-6 mb-8">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                      <MapPin className="h-5 w-5 text-primary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/15 flex items-center justify-center mr-4">
+                      <MapPin className="h-5 w-5 text-secondary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.address}</h3>
@@ -104,8 +104,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                      <Phone className="h-5 w-5 text-primary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/15 flex items-center justify-center mr-4">
+                      <Phone className="h-5 w-5 text-secondary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.phone}</h3>
@@ -115,8 +115,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                      <Mail className="h-5 w-5 text-primary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/15 flex items-center justify-center mr-4">
+                      <Mail className="h-5 w-5 text-secondary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.email}</h3>
@@ -126,8 +126,8 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                      <Clock className="h-5 w-5 text-primary" />
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-secondary/15 flex items-center justify-center mr-4">
+                      <Clock className="h-5 w-5 text-secondary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.receptionHours}</h3>
