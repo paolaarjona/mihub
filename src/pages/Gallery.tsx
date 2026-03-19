@@ -147,7 +147,7 @@ export default function Gallery() {
                   className={cn(
                     "px-6 py-2 rounded-full transition-all",
                     activeFilter === category
-                      ? "bg-primary text-white shadow-lg"
+                      ? "bg-secondary text-secondary-foreground shadow-lg"
                       : "bg-card hover:bg-muted"
                   )}
                 >
