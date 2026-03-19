@@ -123,7 +123,7 @@ export default function PartnersSection() {
           <p className="text-muted-foreground mb-4">
             ¿Quieres formar parte de nuestro ecosistema de partners?
           </p>
-          <a href="/contact" className="btn-primary">
+          <a href="/contact" className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg transition-all duration-300">
             Conviértete en Partner
           </a>
         </div>
