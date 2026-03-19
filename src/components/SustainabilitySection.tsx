@@ -48,14 +48,7 @@ export default function SustainabilitySection() {
       <DecorativeShapes variant="top-right" />
       <div className="container">
         {/* Foundation Identity Block - linear layout */}
-        <div className="max-w-3xl mx-auto mb-20 animate-fade-in">
-          {/* Logo centered */}
-          <div className="flex justify-center lg:justify-start mb-8">
-            <img
-              src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
-              alt="Logo Fundación Martínez Abolafio"
-              className="w-36 h-36 lg:w-44 lg:h-44 object-contain"
-            />
+        <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
           </div>
 
           {/* Label + heading with logo to the right */}
