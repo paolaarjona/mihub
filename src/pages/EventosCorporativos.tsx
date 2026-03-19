@@ -152,7 +152,7 @@ export default function EventosCorporativos() {
                 {t.corporateEvents.cta.description}
               </p>
               <div className="flex justify-center">
-                <Button asChild size="lg" className="btn-primary">
+                <Button asChild size="lg" variant="secondary" className="rounded-full px-6 font-medium shadow-lg hover:shadow-xl transition-all duration-300">
                   <Link to="/contact">
                     {t.corporateEvents.cta.contactTeam} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
