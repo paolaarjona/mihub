@@ -169,42 +169,36 @@ export default function Index() {
               {/* Divider line */}
               <div className="w-16 h-1 bg-primary rounded-full mb-12" />
 
-              {/* Feature highlights - vertical list */}
-              <div className="space-y-8">
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <Users className="w-6 h-6 text-primary" />
+              {/* Feature highlights - horizontal grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-7 h-7 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Ecosistema Colaborativo</h3>
-                    <p className="text-muted-foreground">
-                      Conectamos empresas, startups e instituciones para crear sinergias
-                    </p>
-                  </div>
+                  <h3 className="font-bold text-lg mb-2">Ecosistema Colaborativo</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Conectamos empresas, startups e instituciones para crear sinergias
+                  </p>
                 </div>
                 
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <Camera className="w-6 h-6 text-primary" />
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Camera className="w-7 h-7 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Turismo Inteligente</h3>
-                    <p className="text-muted-foreground">
-                      Desarrollamos soluciones tecnológicas para el sector turístico
-                    </p>
-                  </div>
+                  <h3 className="font-bold text-lg mb-2">Turismo Inteligente</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Desarrollamos soluciones tecnológicas para el sector turístico
+                  </p>
                 </div>
                 
-                <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <Wifi className="w-6 h-6 text-primary" />
+                <div className="text-center">
+                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Wifi className="w-7 h-7 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-1">Innovación Sostenible</h3>
-                    <p className="text-muted-foreground">
-                      Promovemos la sostenibilidad en todas nuestras iniciativas
-                    </p>
-                  </div>
+                  <h3 className="font-bold text-lg mb-2">Innovación Sostenible</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Promovemos la sostenibilidad en todas nuestras iniciativas
+                  </p>
                 </div>
               </div>
             </div>
