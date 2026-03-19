@@ -401,7 +401,7 @@ export const en = {
     email: "Email",
     receptionHours: "Business Hours",
     checkInTime: "Monday to Friday: 9:00 - 18:00",
-    checkOutTime: "Saturdays: 9:00 - 14:00",
+    checkOutTime: "Saturdays and Sundays: Closed",
     sendMessage: "Send us a Message",
     fullName: "Full Name",
     phoneNumber: "Phone Number",
