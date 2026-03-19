@@ -41,7 +41,7 @@ export default function HeroSection() {
             <img alt="MiHub Logo" className="mx-auto h-20 sm:h-24 md:h-28 lg:h-36 w-auto filter brightness-0 invert object-fill rounded-none shadow-none" src="/lovable-uploads/125b1049-fdb6-4182-83c6-ce656dd361d4.png" />
           </div>
           
-          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Una iniciativa 100% impulsada y gestionada por Fundación Grupo Martínez Abolafio</span>
+          <span className="inline-block text-white/90 text-sm sm:text-base lg:text-lg mb-3 sm:mb-4 tracking-wide border-b border-white/30 pb-2">Una iniciativa 100% impulsada y gestionada por Fundación Martínez Abolafio</span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             Innovación para el turismo y los sectores clave de la economía canaria
           </h1>
