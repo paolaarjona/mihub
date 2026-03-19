@@ -70,7 +70,7 @@ export default function PartnersSection() {
   return <section className="section bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
-          <span className="text-sm text-primary font-medium uppercase tracking-wider">
+          <span className="text-sm text-secondary font-medium uppercase tracking-wider">
             Nuestro Ecosistema
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
