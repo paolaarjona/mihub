@@ -33,6 +33,15 @@ const testimonials: Testimonial[] = [
     content: "MiHub representa el futuro de la innovación empresarial en Canarias. En 7 años hemos transformado el ecosistema y ahora lideramos la adopción de IA en la región. MiHub representa un puente de crecimiento para los Empresarios de Canarias.",
     rating: 5
   },
+  {
+    id: 4,
+    name: "Salvador Medina",
+    position: "CEO",
+    company: "Valhalla Consultores",
+    avatar: "",
+    content: "La inteligencia artificial no es el futuro, es el presente. Desde Valhalla apostamos por MiHub como el epicentro de la innovación en Canarias, un lugar donde la IA y la estrategia empresarial convergen para transformar sectores enteros.",
+    rating: 5
+  },
 ];
 
 export default function TestimonialsSection() {
