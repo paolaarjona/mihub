@@ -56,7 +56,7 @@ export default function SustainabilitySection() {
               src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
               alt="Logo Fundación Martínez Abolafio"
               className="w-32 h-32 lg:w-40 lg:h-40 object-contain" />
-            <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
+            <span className="hidden sm:block text-sm text-mihub-green font-medium uppercase tracking-wider">
               Fundación Martínez Abolafio
             </span>
           </div>
