@@ -239,9 +239,9 @@ export default function Contact() {
                       
                       </div>
                       
-                      <Button type="submit" variant="secondary" className="w-full rounded-full font-medium">
+                      <Button type="submit" variant="secondary" className="w-full rounded-full font-medium" disabled={isSubmitting}>
                         <Send className="mr-2 h-4 w-4" />
-                        {t.contact.send}
+                        {isSubmitting ? "Enviando..." : t.contact.send}
                       </Button>
                     </form> :
 
