@@ -68,7 +68,7 @@ export default function SustainabilitySection() {
           <p className="text-base text-muted-foreground leading-relaxed mb-6 text-justify">
             MiHub nace del compromiso de{" "}
             <strong className="text-mihub-green">Fundación Martínez Abolafio</strong>
-            , creada en 2014 como expresión del compromiso social del Grupo Martínez Abolafio.
+            , creada en 2014 como vehículo del Grupo Martínez Abolafio para impulsar su compromiso social.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed mb-6 text-justify">
             La Fundación trabaja para{" "}
