@@ -228,10 +228,10 @@ export default function Index() {
             </div>
             
             <Tabs defaultValue="salas" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 bg-muted/50">
-                <TabsTrigger value="salas" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Nuestras Salas</TabsTrigger>
-                <TabsTrigger value="plano" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Plano del Espacio</TabsTrigger>
-                <TabsTrigger value="servicios" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Servicios</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 bg-muted/50 h-auto gap-1 p-1">
+                <TabsTrigger value="salas" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Nuestras Salas</TabsTrigger>
+                <TabsTrigger value="plano" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Plano del Espacio</TabsTrigger>
+                <TabsTrigger value="servicios" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Servicios</TabsTrigger>
               </TabsList>
 
               <TabsContent value="salas" className="mt-8">
