@@ -18,7 +18,7 @@ const servicios = [
     capacity: "8 participantes",
     image: "/lovable-uploads/5b5c64b9-3a51-426e-bd2f-5f0e23f02874.png",
     modalidad: "Presencial",
-    icon: <GraduationCap className="h-8 w-8 text-primary" />,
+    icon: <GraduationCap className="h-8 w-8 text-secondary" />,
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
   {
@@ -29,7 +29,7 @@ const servicios = [
     capacity: "12 participantes",
     image: "/lovable-uploads/e393983a-92e2-4bfe-bc08-b4ae09d9c5d6.png",
     modalidad: "Híbrido",
-    icon: <Brain className="h-8 w-8 text-primary" />,
+    icon: <Brain className="h-8 w-8 text-secondary" />,
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
   {
@@ -40,7 +40,7 @@ const servicios = [
     capacity: "4 empresas",
     image: "/lovable-uploads/c466127a-cb17-4b0a-acef-1ae82b555993.png",
     modalidad: "Personalizado",
-    icon: <Building2 className="h-8 w-8 text-primary" />,
+    icon: <Building2 className="h-8 w-8 text-secondary" />,
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
   {
@@ -51,7 +51,7 @@ const servicios = [
     capacity: "6 participantes",
     image: "/lovable-uploads/0330ec35-bffc-43bc-8054-a3be8d9d93d1.png",
     modalidad: "Presencial",
-    icon: <Search className="h-8 w-8 text-primary" />,
+    icon: <Search className="h-8 w-8 text-secondary" />,
     features: ["Análisis de retos", "Identificación de oportunidades", "Roadmap inicial", "Metodología ágil", "Informe de resultados"]
   }
 ];
@@ -340,7 +340,7 @@ export default function Proyectos() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
+                      <div className="p-2 rounded-lg bg-secondary/10">
                         {servicio.icon}
                       </div>
                       <div>
