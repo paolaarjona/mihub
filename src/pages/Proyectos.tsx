@@ -40,7 +40,7 @@ const servicios = [
     capacity: "4 empresas",
     image: "/lovable-uploads/c466127a-cb17-4b0a-acef-1ae82b555993.png",
     modalidad: "Personalizado",
-    icon: <Building2 className="h-8 w-8 text-primary" />,
+    icon: <Building2 className="h-8 w-8 text-secondary" />,
     features: ["6 meses de duración", "Implementación completa", "Equipo dedicado", "Formación interna", "Tecnología incluida"]
   },
   {
