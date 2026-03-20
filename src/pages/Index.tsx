@@ -234,7 +234,7 @@ export default function Index() {
                 <TabsTrigger value="servicios" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Servicios</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="salas" className="mt-8">
+              <TabsContent value="salas" className="mt-6 sm:mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {rooms.map((room) => <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="aspect-video relative overflow-hidden">
