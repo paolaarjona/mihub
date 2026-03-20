@@ -340,7 +340,7 @@ export default function Proyectos() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-primary/10">
+                      <div className="p-2 rounded-lg bg-secondary/10">
                         {servicio.icon}
                       </div>
                       <div>
