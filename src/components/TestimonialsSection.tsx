@@ -77,24 +77,24 @@ export default function TestimonialsSection() {
   }, []);
   
   return (
-    <section className="section bg-muted py-20">
+    <section className="section bg-muted py-12 sm:py-20">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             {t.testimonials.title}
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm sm:text-base">
             {t.testimonials.description}
           </p>
         </div>
         
         <div className="relative max-w-4xl mx-auto">
-          <div className="relative h-[400px] md:h-[300px]">
+          <div className="relative min-h-[480px] sm:min-h-[350px] md:min-h-[300px]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
                 className={cn(
-                  "absolute inset-0 glass-card p-8 md:p-10 transition-all duration-500",
+                  "absolute inset-0 glass-card p-5 sm:p-8 md:p-10 transition-all duration-500",
                   activeIndex === index 
                     ? "opacity-100 translate-x-0 z-10"
                     : index < activeIndex 
@@ -102,9 +102,9 @@ export default function TestimonialsSection() {
                       : "opacity-0 translate-x-full z-0"
                 )}
               >
-                <div className="flex flex-col md:flex-row gap-6 h-full">
-                  <div className="flex flex-col items-center md:items-start">
-                    <div className="rounded-full overflow-hidden w-20 h-20 mb-4 border-2 border-primary">
+                <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-5 sm:gap-6 h-full">
+                  <div className="flex flex-col items-center md:items-start shrink-0">
+                    <div className="rounded-full overflow-hidden w-16 h-16 sm:w-20 sm:h-20 mb-3 border-2 border-primary">
                       <img 
                         src={testimonial.avatar} 
                         alt={testimonial.name} 
@@ -119,13 +119,13 @@ export default function TestimonialsSection() {
                         />
                       ))}
                     </div>
-                    <h4 className="text-lg font-semibold text-center md:text-left">{testimonial.name}</h4>
-                    <p className="text-sm text-primary font-medium text-center md:text-left">{testimonial.position}</p>
-                    <p className="text-sm text-muted-foreground text-center md:text-left">{testimonial.company}</p>
+                    <h4 className="text-base sm:text-lg font-semibold">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-primary font-medium">{testimonial.position}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.company}</p>
                   </div>
                   
                   <div className="flex-1 flex items-center">
-                    <blockquote className="italic text-muted-foreground">
+                    <blockquote className="italic text-muted-foreground text-sm sm:text-base leading-relaxed">
                       "{testimonial.content}"
                     </blockquote>
                   </div>
@@ -134,10 +134,10 @@ export default function TestimonialsSection() {
             ))}
           </div>
           
-          <div className="flex justify-between mt-8">
+          <div className="flex justify-between items-center mt-6 sm:mt-8">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors"
+              className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors shrink-0"
               disabled={isAnimating}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -166,7 +166,7 @@ export default function TestimonialsSection() {
             
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors"
+              className="p-2 rounded-full bg-card hover:bg-muted border border-border transition-colors shrink-0"
               disabled={isAnimating}
             >
               <ChevronRight className="h-5 w-5" />

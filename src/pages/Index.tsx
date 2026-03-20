@@ -228,13 +228,13 @@ export default function Index() {
             </div>
             
             <Tabs defaultValue="salas" className="w-full">
-              <TabsList className="grid w-full grid-cols-3 bg-muted/50">
-                <TabsTrigger value="salas" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Nuestras Salas</TabsTrigger>
-                <TabsTrigger value="plano" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Plano del Espacio</TabsTrigger>
-                <TabsTrigger value="servicios" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Servicios</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 bg-muted/50 h-auto gap-1 p-1">
+                <TabsTrigger value="salas" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Nuestras Salas</TabsTrigger>
+                <TabsTrigger value="plano" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Plano del Espacio</TabsTrigger>
+                <TabsTrigger value="servicios" className="text-xs sm:text-sm text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm py-2.5">Servicios</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="salas" className="mt-8">
+              <TabsContent value="salas" className="mt-6 sm:mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {rooms.map((room) => <Card key={room.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="aspect-video relative overflow-hidden">
@@ -270,16 +270,16 @@ export default function Index() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="plano" className="mt-8">
-                <Card className="p-8">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold mb-4">Plano de MiHub 3.0</h3>
+              <TabsContent value="plano" className="mt-6 sm:mt-8">
+                <Card className="p-4 sm:p-8">
+                  <div className="text-center mb-4 sm:mb-8">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Plano de MiHub 3.0</h3>
                     <p className="text-muted-foreground">
                       Distribución inteligente de 205 m² en la Marina de Lanzarote
                     </p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-4 mb-8">
+                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-2 sm:p-4 mb-6 sm:mb-8">
                     <div className="bg-white rounded-lg shadow-inner overflow-hidden">
                       <img src="/lovable-uploads/plano-mihub.jpg" alt="Plano arquitectónico de MiHub 3.0" className="w-full h-auto" />
                     </div>
@@ -289,7 +289,7 @@ export default function Index() {
                     <div>
                       <h4 className="font-semibold mb-4 text-center">Ubicación Privilegiada</h4>
                       <div className="space-y-4">
-                        <div className="grid grid-cols-3 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
                           <div className="flex flex-col items-center text-center space-y-2">
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <MapPin className="w-6 h-6 text-secondary" />
@@ -330,8 +330,8 @@ export default function Index() {
                 </Card>
               </TabsContent>
 
-              <TabsContent value="servicios" className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <TabsContent value="servicios" className="mt-6 sm:mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
                   {amenities.map((amenity, index) => <Card key={index} className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
@@ -345,9 +345,9 @@ export default function Index() {
                     </Card>)}
                 </div>
 
-                <Card className="p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
+                <Card className="p-5 sm:p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold mb-4">Material Audiovisual Profesional</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Material Audiovisual Profesional</h3>
                     <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                       Equipamiento de última generación para garantizar el éxito de tus eventos.
                     </p>
