@@ -37,8 +37,8 @@ const testimonials: Testimonial[] = [
     id: 4,
     name: "Salvador Medina",
     position: "CEO",
-    company: "Valhalla Consultores",
-    avatar: "",
+    company: "Valhalla",
+    avatar: "/images/salvador-medina.png",
     content: "La inteligencia artificial no es el futuro, es el presente. Desde Valhalla apostamos por MiHub como el epicentro de la innovación en Canarias, un lugar donde la IA y la estrategia empresarial convergen para transformar sectores enteros.",
     rating: 5
   },
