@@ -306,7 +306,7 @@ export default function Index() {
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <Navigation className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Acceso directo desde el puerto</span>
+                            <span className="text-sm text-primary">Acceso directo desde el puerto</span>
                           </div>
                         </div>
                         
