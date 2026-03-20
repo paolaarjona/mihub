@@ -330,8 +330,8 @@ export default function Index() {
                 </Card>
               </TabsContent>
 
-              <TabsContent value="servicios" className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <TabsContent value="servicios" className="mt-6 sm:mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
                   {amenities.map((amenity, index) => <Card key={index} className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center">
