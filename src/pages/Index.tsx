@@ -270,8 +270,8 @@ export default function Index() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="plano" className="mt-8">
-                <Card className="p-8">
+              <TabsContent value="plano" className="mt-6 sm:mt-8">
+                <Card className="p-4 sm:p-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold mb-4">Plano de MiHub 3.0</h3>
                     <p className="text-muted-foreground">
