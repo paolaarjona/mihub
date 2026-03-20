@@ -325,7 +325,7 @@ export default function Proyectos() {
               {servicios.map((servicio, index) => (
                 <div 
                   key={servicio.id}
-                  className="glass-card rounded-2xl overflow-hidden animate-fade-in"
+                  className="glass-card rounded-2xl overflow-hidden animate-fade-in flex flex-col"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   <div className="aspect-video relative overflow-hidden">
@@ -338,7 +338,7 @@ export default function Proyectos() {
                       <Badge variant="secondary">{servicio.modalidad}</Badge>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-secondary/10">
                         {servicio.icon}
@@ -351,7 +351,7 @@ export default function Proyectos() {
                     <h3 className="text-xl font-semibold mb-3">{servicio.name}</h3>
                     <p className="text-muted-foreground mb-4">{servicio.description}</p>
                     
-                    <div className="space-y-2 mb-4">
+                    <div className="space-y-2 mb-4 flex-1">
                       <h4 className="text-sm font-semibold">Incluye:</h4>
                       <ul className="text-sm text-muted-foreground space-y-1">
                         {servicio.features.map((feature, idx) => (
@@ -363,7 +363,7 @@ export default function Proyectos() {
                       </ul>
                     </div>
                     
-                    <Button asChild variant="outline" className="w-full">
+                    <Button asChild variant="outline" className="w-full text-primary mt-auto">
                       <Link to="/contact">
                         Solicitar información <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
