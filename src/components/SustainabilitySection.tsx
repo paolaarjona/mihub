@@ -62,7 +62,7 @@ export default function SustainabilitySection() {
           </div>
 
           {/* Full-width heading below */}
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 whitespace-nowrap">
+          <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold mb-6 sm:whitespace-nowrap">
             <span className="text-mihub-green">Impulsando oportunidades,</span>{" "}
             <span className="text-primary font-bold">transformando vidas</span>
           </h2>
