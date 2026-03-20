@@ -51,18 +51,18 @@ export default function SustainabilitySection() {
         <div className="max-w-4xl mx-auto mb-12 animate-fade-in">
 
           {/* Top bar: logo left, label right */}
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between mb-4">
             <img
               src="/lovable-uploads/fundacion-martinez-abolafio-logo.png"
               alt="Logo Fundación Martínez Abolafio"
-              className="w-20 h-20 lg:w-28 lg:h-28 object-contain" />
+              className="w-16 h-16 lg:w-20 lg:h-20 object-contain" />
             <span className="text-sm text-mihub-green font-medium uppercase tracking-wider">
               Fundación Martínez Abolafio
             </span>
           </div>
 
           {/* Full-width heading below */}
-          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-8 whitespace-nowrap">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-6 whitespace-nowrap">
             <span className="text-mihub-green">Impulsando oportunidades,</span>{" "}
             <span className="text-primary font-bold">transformando vidas</span>
           </h2>
