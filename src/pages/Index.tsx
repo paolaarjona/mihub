@@ -229,9 +229,9 @@ export default function Index() {
             
             <Tabs defaultValue="salas" className="w-full">
               <TabsList className="grid w-full grid-cols-3 bg-muted/50">
-                <TabsTrigger value="salas" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Nuestras Salas</TabsTrigger>
-                <TabsTrigger value="plano" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Plano del Espacio</TabsTrigger>
-                <TabsTrigger value="servicios" className="data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Servicios</TabsTrigger>
+                <TabsTrigger value="salas" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Nuestras Salas</TabsTrigger>
+                <TabsTrigger value="plano" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Plano del Espacio</TabsTrigger>
+                <TabsTrigger value="servicios" className="text-primary data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:ring-2 data-[state=active]:ring-secondary data-[state=active]:shadow-sm">Servicios</TabsTrigger>
               </TabsList>
 
               <TabsContent value="salas" className="mt-8">
