@@ -11,14 +11,10 @@ export default function Footer() {
             <p className="text-muted-foreground mb-4">
               MiHUB es un espacio de innovación impulsado por Fundación Martínez Abolafio, creado para potenciar la transformación y competitividad de las empresas canarias a través de la innovación, la sostenibilidad y la inteligencia artificial.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               <a href="https://www.linkedin.com/company/mihub-hubdeinnovacion/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="https://x.com/marinainnovahub" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                
-                <span className="sr-only">X</span>
               </a>
               <a href="https://www.instagram.com/marinainnovahub/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={20} />
