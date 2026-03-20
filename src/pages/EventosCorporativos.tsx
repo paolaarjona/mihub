@@ -86,16 +86,16 @@ export default function EventosCorporativos() {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5">
               {eventPhotos.map((photo, index) => (
                 <div 
                   key={index}
-                  className={`relative overflow-hidden rounded-xl animate-fade-in group ${
+                  className={`relative overflow-hidden rounded-lg animate-fade-in group ${
                     index === 0 || index === 5 ? "md:col-span-2 md:row-span-2" : ""
                   }`}
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
-                  <div className={`${index === 0 || index === 5 ? "aspect-square" : "aspect-video"} overflow-hidden`}>
+                  <div className={`${index === 0 || index === 5 ? "aspect-square" : "aspect-[4/3]"} overflow-hidden`}>
                     <img 
                       src={photo.src}
                       alt={photo.alt}
