@@ -95,7 +95,6 @@ export default function SustainabilitySection() {
         </div>
 
 
-      <div className="container">
         {/* Divider */}
         <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-10" />
 
