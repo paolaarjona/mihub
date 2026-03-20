@@ -18,7 +18,7 @@ const servicios = [
     capacity: "8 participantes",
     image: "/lovable-uploads/5b5c64b9-3a51-426e-bd2f-5f0e23f02874.png",
     modalidad: "Presencial",
-    icon: <GraduationCap className="h-8 w-8 text-primary" />,
+    icon: <GraduationCap className="h-8 w-8 text-secondary" />,
     features: ["Certificación", "Metodología propia", "Networking", "Seguimiento personalizado", "Acceso a partners", "Materiales exclusivos"]
   },
   {
