@@ -404,7 +404,7 @@ export default function Index() {
                 <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
                   Organiza tu evento de innovación personalizado. Desde workshops hasta congresos de innovación, creamos experiencias que transforman equipos y empresas.
                 </p>
-                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-left max-w-2xl mx-auto">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-left max-w-2xl mx-auto text-primary">
                   <li className="flex items-center text-sm sm:text-base">
                     <div className="h-4 w-4 sm:h-5 sm:w-5 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-3 flex-shrink-0">
                       <ArrowRight className="h-2 w-2 sm:h-3 sm:w-3" />
