@@ -1,6 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Send, Check } from "lucide-react";
@@ -36,25 +38,38 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    // In a real app, this would send the form data to a server
-    console.log("Form submitted:", formData);
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          subject: formData.subject,
+          message: formData.message,
+        });
 
-    setIsSubmitted(true);
+      if (error) throw error;
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-    }, 3000);
+      setIsSubmitted(true);
+      toast.success("Mensaje enviado correctamente");
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      }, 3000);
+    } catch (err) {
+      console.error("Error sending message:", err);
+      toast.error("Error al enviar el mensaje. Inténtalo de nuevo.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -224,9 +239,9 @@ export default function Contact() {
                       
                       </div>
                       
-                      <Button type="submit" variant="secondary" className="w-full rounded-full font-medium">
+                      <Button type="submit" variant="secondary" className="w-full rounded-full font-medium" disabled={isSubmitting}>
                         <Send className="mr-2 h-4 w-4" />
-                        {t.contact.send}
+                        {isSubmitting ? "Enviando..." : t.contact.send}
                       </Button>
                     </form> :
 
