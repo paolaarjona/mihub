@@ -294,19 +294,19 @@ export default function Index() {
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <MapPin className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Marina de Lanzarote</span>
+                            <span className="text-sm text-primary">Marina de Lanzarote</span>
                           </div>
                           <div className="flex flex-col items-center text-center space-y-2">
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <Eye className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Vistas al puerto deportivo</span>
+                            <span className="text-sm text-primary">Vistas al puerto deportivo</span>
                           </div>
                           <div className="flex flex-col items-center text-center space-y-2">
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <Navigation className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Acceso directo desde el puerto</span>
+                            <span className="text-sm text-primary">Acceso directo desde el puerto</span>
                           </div>
                         </div>
                         
@@ -315,13 +315,13 @@ export default function Index() {
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <ShoppingBag className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Zona comercial y gastronómica</span>
+                            <span className="text-sm text-primary">Zona comercial y gastronómica</span>
                           </div>
                           <div className="flex flex-col items-center text-center space-y-2">
                             <div className="w-12 h-12 bg-secondary/15 rounded-full flex items-center justify-center">
                               <Car className="w-6 h-6 text-secondary" />
                             </div>
-                            <span className="text-sm">Parking disponible</span>
+                            <span className="text-sm text-primary">Parking disponible</span>
                           </div>
                         </div>
                       </div>
