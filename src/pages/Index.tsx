@@ -279,7 +279,7 @@ export default function Index() {
                     </p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-4 mb-8">
+                  <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-2 sm:p-4 mb-6 sm:mb-8">
                     <div className="bg-white rounded-lg shadow-inner overflow-hidden">
                       <img src="/lovable-uploads/plano-mihub.jpg" alt="Plano arquitectónico de MiHub 3.0" className="w-full h-auto" />
                     </div>
