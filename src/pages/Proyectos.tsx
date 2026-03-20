@@ -29,7 +29,7 @@ const servicios = [
     capacity: "12 participantes",
     image: "/lovable-uploads/e393983a-92e2-4bfe-bc08-b4ae09d9c5d6.png",
     modalidad: "Híbrido",
-    icon: <Brain className="h-8 w-8 text-primary" />,
+    icon: <Brain className="h-8 w-8 text-secondary" />,
     features: ["Un día intensivo", "Casos de uso", "Plan de acción", "Material de trabajo", "Seguimiento"]
   },
   {
