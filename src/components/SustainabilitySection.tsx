@@ -44,6 +44,7 @@ export default function SustainabilitySection() {
 
 
   return (
+    <>
     <section className="section bg-gradient-to-b from-mihub-green/10 to-background dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
       <DecorativeShapes variant="top-right" />
       <div className="container">
