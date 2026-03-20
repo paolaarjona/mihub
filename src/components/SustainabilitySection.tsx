@@ -99,7 +99,7 @@ export default function SustainabilitySection() {
     </section>
 
     {/* Nuestro Compromiso - separate white section */}
-    <section className="section bg-background relative overflow-hidden">
+    <section className="section bg-gradient-to-b from-mihub-green/10 to-mihub-green/5 dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
       <div className="container">
         {/* Divider */}
         <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-10" />
