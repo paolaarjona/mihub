@@ -44,8 +44,7 @@ export default function SustainabilitySection() {
 
 
   return (
-    <>
-    <section className="section bg-gradient-to-b from-mihub-green/10 to-background dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
+    <section className="section bg-mihub-green/10 dark:bg-mihub-green/5 relative overflow-hidden">
       <DecorativeShapes variant="top-right" />
       <div className="container">
         {/* Foundation Identity Block - linear layout */}
@@ -95,12 +94,7 @@ export default function SustainabilitySection() {
           </p>
         </div>
 
-      </div>
-    </section>
 
-    {/* Nuestro Compromiso - separate white section */}
-    <section className="section bg-gradient-to-b from-mihub-green/10 to-mihub-green/5 dark:from-mihub-green/5 dark:to-background relative overflow-hidden">
-      <div className="container">
         {/* Divider */}
         <div className="w-16 h-1 bg-mihub-green rounded-full mx-auto mb-10" />
 
@@ -141,7 +135,6 @@ export default function SustainabilitySection() {
           )}
         </div>
       </div>
-    </section>
-  </>);
+    </section>);
 
 }
