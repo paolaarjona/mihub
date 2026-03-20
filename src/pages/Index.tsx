@@ -345,9 +345,9 @@ export default function Index() {
                     </Card>)}
                 </div>
 
-                <Card className="p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
+                <Card className="p-5 sm:p-8 bg-gradient-to-r from-primary/5 to-secondary/5">
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold mb-4">Material Audiovisual Profesional</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Material Audiovisual Profesional</h3>
                     <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                       Equipamiento de última generación para garantizar el éxito de tus eventos.
                     </p>
