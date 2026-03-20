@@ -136,7 +136,6 @@ export default function SustainabilitySection() {
           )}
         </div>
       </div>
-    </section>
-  </>);
+    </section>);
 
 }
